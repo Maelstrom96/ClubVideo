@@ -21,12 +21,32 @@ namespace ClubVideo
 
         public bool HasPermission(string Perm)
         {
-            return UserPermissions.Contains(Perm.ToLower());
+            if (UserPermissions.Contains(Perm.ToLower())) return true; // Permission is in the HashSet.
+            if (HasWildCard(Perm)) return true;
+
+            return false; // Nothing true;
         }
 
         public void AddPermission(string Perm)
         {
             UserPermissions.Add(Perm.ToLower());
+        }
+
+        private bool HasWildCard(string Perm)
+        {
+            if (UserPermissions.Contains("*")) return true; // Has Admin wildcard
+
+            int LastIndex = 0;
+
+            for (int i = 0; i < Perm.Count(x => x == '.'); i++)
+            {
+                LastIndex = Perm.IndexOf(".", LastIndex);
+                string TempPerm = Perm.Substring(0, LastIndex + 1);
+
+                if (UserPermissions.Contains(TempPerm + "*")) return true;
+            }
+
+            return false; 
         }
 
         private void Load(int Userid)
