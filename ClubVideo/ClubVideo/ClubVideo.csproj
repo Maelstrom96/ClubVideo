@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_Menu.Designer.cs">
+      <DependentUpon>Admin_Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="Database_Connector.cs" />
     <Compile Include="Main_Menu.cs">
@@ -75,6 +81,9 @@
     <Compile Include="UserLogon.Designer.cs">
       <DependentUpon>UserLogon.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin_Menu.resx">
+      <DependentUpon>Admin_Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_Menu.resx">
       <DependentUpon>Main_Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +131,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Locked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

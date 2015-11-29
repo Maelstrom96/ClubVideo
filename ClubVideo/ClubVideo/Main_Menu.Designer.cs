@@ -32,6 +32,7 @@
             this.bt_Settings = new System.Windows.Forms.Button();
             this.bt_POS = new System.Windows.Forms.Button();
             this.bt_ManageMovies = new System.Windows.Forms.Button();
+            this.bt_Administration = new System.Windows.Forms.Button();
             this.bt_ManageMembers = new System.Windows.Forms.Button();
             this.bt_Logout = new System.Windows.Forms.Button();
             this.bt_Exit = new System.Windows.Forms.Button();
@@ -91,7 +92,7 @@
             this.bt_ManageMovies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ManageMovies.Image = global::ClubVideo.Properties.Resources.ManageMovies;
             this.bt_ManageMovies.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bt_ManageMovies.Location = new System.Drawing.Point(483, -2);
+            this.bt_ManageMovies.Location = new System.Drawing.Point(343, -2);
             this.bt_ManageMovies.Name = "bt_ManageMovies";
             this.bt_ManageMovies.Size = new System.Drawing.Size(134, 134);
             this.bt_ManageMovies.TabIndex = 0;
@@ -99,6 +100,23 @@
             this.bt_ManageMovies.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_ManageMovies.UseVisualStyleBackColor = true;
             this.bt_ManageMovies.TextChanged += new System.EventHandler(this.Button_Permissions);
+            // 
+            // bt_Administration
+            // 
+            this.bt_Administration.AutoSize = true;
+            this.bt_Administration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bt_Administration.FlatAppearance.BorderSize = 0;
+            this.bt_Administration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_Administration.Image = global::ClubVideo.Properties.Resources.Administration;
+            this.bt_Administration.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bt_Administration.Location = new System.Drawing.Point(623, -2);
+            this.bt_Administration.Name = "bt_Administration";
+            this.bt_Administration.Size = new System.Drawing.Size(134, 134);
+            this.bt_Administration.TabIndex = 0;
+            this.bt_Administration.Text = "administration";
+            this.bt_Administration.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bt_Administration.UseVisualStyleBackColor = true;
+            this.bt_Administration.TextChanged += new System.EventHandler(this.Button_Permissions);
             // 
             // bt_ManageMembers
             // 
@@ -108,7 +126,7 @@
             this.bt_ManageMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ManageMembers.Image = global::ClubVideo.Properties.Resources.ManageMembers;
             this.bt_ManageMembers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bt_ManageMembers.Location = new System.Drawing.Point(623, -2);
+            this.bt_ManageMembers.Location = new System.Drawing.Point(483, -2);
             this.bt_ManageMembers.Name = "bt_ManageMembers";
             this.bt_ManageMembers.Size = new System.Drawing.Size(134, 134);
             this.bt_ManageMembers.TabIndex = 0;
@@ -160,6 +178,7 @@
             this.Controls.Add(this.bt_Settings);
             this.Controls.Add(this.bt_POS);
             this.Controls.Add(this.bt_ManageMovies);
+            this.Controls.Add(this.bt_Administration);
             this.Controls.Add(this.bt_ManageMembers);
             this.Controls.Add(this.bt_Logout);
             this.Controls.Add(this.bt_Exit);
@@ -184,6 +203,7 @@
         private System.Windows.Forms.Button bt_POS;
         private System.Windows.Forms.Button bt_ManageMovies;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button bt_Administration;
     }
 }
 
