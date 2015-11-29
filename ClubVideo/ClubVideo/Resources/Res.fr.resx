@@ -121,7 +121,7 @@
     <value>Quitter</value>
   </data>
   <data name="Button_Menu_Logout" xml:space="preserve">
-    <value>Deconnexion</value>
+    <value>Déconnexion</value>
   </data>
   <data name="Button_Menu_ManageMembers" xml:space="preserve">
     <value>Gérer les membres</value>
@@ -138,7 +138,25 @@
   <data name="Confirm_Exit_Main_Menu" xml:space="preserve">
     <value>Êtes-vous sûr de vouloir quitter?</value>
   </data>
+  <data name="Exception_DB_Already_Open" xml:space="preserve">
+    <value>La connexion a déjà été ouverte.</value>
+  </data>
   <data name="Header_Exit_Main_Menu" xml:space="preserve">
     <value>Fermeture de l'application</value>
+  </data>
+  <data name="UserLogon_BadLogin" xml:space="preserve">
+    <value>Le nom d'utilisateur ou le mot de passe est invalide.</value>
+  </data>
+  <data name="UserLogon_Header" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+  <data name="UserLogon_LoginButton" xml:space="preserve">
+    <value>Connexion</value>
+  </data>
+  <data name="UserLogon_Password" xml:space="preserve">
+    <value>Mot de passe....</value>
+  </data>
+  <data name="UserLogon_Username" xml:space="preserve">
+    <value>Nom d'utilisateur....</value>
   </data>
 </root>

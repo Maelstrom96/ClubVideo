@@ -60,14 +60,16 @@
             this.bt_Settings.Name = "bt_Settings";
             this.bt_Settings.Size = new System.Drawing.Size(134, 134);
             this.bt_Settings.TabIndex = 0;
-            this.bt_Settings.Text = "Settings";
+            this.bt_Settings.Text = "settings";
             this.bt_Settings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_Settings.UseVisualStyleBackColor = true;
+            this.bt_Settings.TextChanged += new System.EventHandler(this.Button_Permissions);
             // 
             // bt_POS
             // 
             this.bt_POS.AutoSize = true;
             this.bt_POS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bt_POS.Enabled = false;
             this.bt_POS.FlatAppearance.BorderSize = 0;
             this.bt_POS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_POS.Image = global::ClubVideo.Properties.Resources.POS;
@@ -76,9 +78,10 @@
             this.bt_POS.Name = "bt_POS";
             this.bt_POS.Size = new System.Drawing.Size(134, 134);
             this.bt_POS.TabIndex = 0;
-            this.bt_POS.Text = "POS";
+            this.bt_POS.Text = "pos";
             this.bt_POS.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_POS.UseVisualStyleBackColor = true;
+            this.bt_POS.TextChanged += new System.EventHandler(this.Button_Permissions);
             // 
             // bt_ManageMovies
             // 
@@ -92,9 +95,10 @@
             this.bt_ManageMovies.Name = "bt_ManageMovies";
             this.bt_ManageMovies.Size = new System.Drawing.Size(134, 134);
             this.bt_ManageMovies.TabIndex = 0;
-            this.bt_ManageMovies.Text = "Manage Movies";
+            this.bt_ManageMovies.Text = "manage Movies";
             this.bt_ManageMovies.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_ManageMovies.UseVisualStyleBackColor = true;
+            this.bt_ManageMovies.TextChanged += new System.EventHandler(this.Button_Permissions);
             // 
             // bt_ManageMembers
             // 
@@ -108,9 +112,10 @@
             this.bt_ManageMembers.Name = "bt_ManageMembers";
             this.bt_ManageMembers.Size = new System.Drawing.Size(134, 134);
             this.bt_ManageMembers.TabIndex = 0;
-            this.bt_ManageMembers.Text = "Manage Members";
+            this.bt_ManageMembers.Text = "manage Members";
             this.bt_ManageMembers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_ManageMembers.UseVisualStyleBackColor = true;
+            this.bt_ManageMembers.TextChanged += new System.EventHandler(this.Button_Permissions);
             // 
             // bt_Logout
             // 
@@ -123,14 +128,14 @@
             this.bt_Logout.Name = "bt_Logout";
             this.bt_Logout.Size = new System.Drawing.Size(134, 134);
             this.bt_Logout.TabIndex = 0;
-            this.bt_Logout.Text = "Logout";
+            this.bt_Logout.Text = "logout";
             this.bt_Logout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_Logout.UseVisualStyleBackColor = true;
+            this.bt_Logout.Click += new System.EventHandler(this.bt_Logout_Click);
             // 
             // bt_Exit
             // 
             this.bt_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bt_Exit.Enabled = false;
             this.bt_Exit.FlatAppearance.BorderSize = 0;
             this.bt_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Exit.Image = global::ClubVideo.Properties.Resources.Exit;
@@ -139,9 +144,10 @@
             this.bt_Exit.Name = "bt_Exit";
             this.bt_Exit.Size = new System.Drawing.Size(134, 134);
             this.bt_Exit.TabIndex = 0;
-            this.bt_Exit.Text = "Exit";
+            this.bt_Exit.Text = "exit";
             this.bt_Exit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_Exit.UseVisualStyleBackColor = true;
+            this.bt_Exit.TextChanged += new System.EventHandler(this.Button_Permissions);
             this.bt_Exit.Click += new System.EventHandler(this.bt_Exit_Click);
             // 
             // Main_Menu
@@ -162,6 +168,7 @@
             this.MinimizeBox = false;
             this.Name = "Main_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Menu_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

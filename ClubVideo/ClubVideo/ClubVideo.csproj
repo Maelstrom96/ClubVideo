@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Oracle.DataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database.cs" />
     <Compile Include="Database_Connector.cs" />
     <Compile Include="Main_Menu.cs">
       <SubType>Form</SubType>
@@ -54,16 +57,17 @@
     <Compile Include="Permissions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Permission_Exceptions.Designer.cs">
+    <Compile Include="Properties\Exceptions.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Permission_Exceptions.settings</DependentUpon>
+      <DependentUpon>Exceptions.settings</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Security.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserLogon.cs">
       <SubType>Form</SubType>
@@ -81,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Res.en.resx" />
     <EmbeddedResource Include="Resources\Res.fr.resx" />
+    <EmbeddedResource Include="UserLogon.resx">
+      <DependentUpon>UserLogon.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -90,9 +97,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Properties\Permission_Exceptions.settings">
+    <None Include="Properties\Exceptions.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Permission_Exceptions.Designer.cs</LastGenOutput>
+      <LastGenOutput>Exceptions.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Line1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Locked.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -117,46 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Button_Menu_Exit" xml:space="preserve">
-    <value>Exit</value>
-  </data>
-  <data name="Button_Menu_Logout" xml:space="preserve">
-    <value>Logout</value>
-  </data>
-  <data name="Button_Menu_ManageMembers" xml:space="preserve">
-    <value>Manage Members</value>
-  </data>
-  <data name="Button_Menu_ManageMovies" xml:space="preserve">
-    <value>Manage Movies</value>
-  </data>
-  <data name="Button_Menu_POS" xml:space="preserve">
-    <value>Point of Sales</value>
-  </data>
-  <data name="Button_Menu_Settings" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="Confirm_Exit_Main_Menu" xml:space="preserve">
-    <value>Are you sure you want to quit?</value>
-  </data>
-  <data name="Exception_DB_Already_Open" xml:space="preserve">
-    <value>The connection as already been opened.</value>
-  </data>
-  <data name="Header_Exit_Main_Menu" xml:space="preserve">
-    <value>Exiting Application</value>
-  </data>
-  <data name="UserLogon_BadLogin" xml:space="preserve">
-    <value>The username or password is invalide.</value>
-  </data>
-  <data name="UserLogon_Header" xml:space="preserve">
-    <value>Login</value>
-  </data>
-  <data name="UserLogon_LoginButton" xml:space="preserve">
-    <value>Login</value>
-  </data>
-  <data name="UserLogon_Password" xml:space="preserve">
-    <value>Password....</value>
-  </data>
-  <data name="UserLogon_Username" xml:space="preserve">
-    <value>Username....</value>
-  </data>
 </root>

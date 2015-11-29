@@ -49,5 +49,41 @@ namespace ClubVideo.Properties {
                 return ((string)(this["DB_HostName"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("fr")]
+        public string Language {
+            get {
+                return ((string)(this["Language"]));
+            }
+            set {
+                this["Language"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1521")]
+        public int DB_Port {
+            get {
+                return ((int)(this["DB_Port"]));
+            }
+            set {
+                this["DB_Port"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ORCL.clg.qc.ca")]
+        public string DB_ServiceName {
+            get {
+                return ((string)(this["DB_ServiceName"]));
+            }
+            set {
+                this["DB_ServiceName"] = value;
+            }
+        }
     }
 }

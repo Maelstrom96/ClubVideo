@@ -13,11 +13,11 @@ namespace ClubVideo.Properties {
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
-    internal sealed partial class Permission_Exceptions : global::System.Configuration.ApplicationSettingsBase {
+    internal sealed partial class Exceptions : global::System.Configuration.ApplicationSettingsBase {
         
-        private static Permission_Exceptions defaultInstance = ((Permission_Exceptions)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Permission_Exceptions())));
+        private static Exceptions defaultInstance = ((Exceptions)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Exceptions())));
         
-        public static Permission_Exceptions Default {
+        public static Exceptions Default {
             get {
                 return defaultInstance;
             }

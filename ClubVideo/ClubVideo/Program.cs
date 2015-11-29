@@ -8,6 +8,8 @@ namespace ClubVideo
 {
     static class Program
     {
+        public static bool Exit = false;
+
         /// <summary>
         /// Point d'entrée principal de l'application.
         /// </summary>
@@ -16,7 +18,9 @@ namespace ClubVideo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main_Menu());
+
+            while (!Exit)
+                Application.Run(new Main_Menu());
         }
     }
 }
