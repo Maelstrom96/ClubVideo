@@ -12,9 +12,76 @@ namespace ClubVideo
 {
     public partial class SidebySideSelection : Form
     {
-        public SidebySideSelection()
+        List<string> startSelectionAllList;
+        List<string> startSelectedList;
+
+        public SidebySideSelection(List<string> listSelectionAll, List<string> listSelected, string Header)
         {
             InitializeComponent();
+            Init();
+
+            // Backup Selections
+            startSelectionAllList = new List<string>(listSelectionAll);
+            startSelectedList = new List<string>(listSelected);
+
+            //Write list
+            AddStringList(listSelectionAll, lv_Selection);
+            AddStringList(listSelected, lv_Selected);
+        }
+
+        private void Init()
+        {
+
+        }
+
+        private void AddStringList(List<String> items, ListBox listView)
+        {
+            foreach (string item in items)
+            {
+                if (!startSelectedList.Contains(item)) listView.Items.Add(item);
+            }
+        }
+
+        private void bt_Add_Click(object sender, EventArgs e)
+        {
+            AddSelected();
+        }
+
+        private void AddSelected()
+        {
+            for (int i = lv_Selection.SelectedItems.Count - 1; i >= 0; i--)
+            {
+                lv_Selected.Items.Add(lv_Selection.SelectedItems[i]);
+                lv_Selection.Items.Remove(lv_Selection.SelectedItems[i]);
+            }
+        }
+
+        private void bt_Remove_Click(object sender, EventArgs e)
+        {
+            RemoveSelected();
+        }
+
+        private void RemoveSelected()
+        {
+            for(int i = lv_Selected.SelectedItems.Count - 1; i >= 0; i--)
+            {
+                lv_Selection.Items.Add(lv_Selected.SelectedItems[i]);
+                lv_Selected.Items.Remove(lv_Selected.SelectedItems[i]);
+            }
+        }
+
+        private void RemoveAll()
+        {
+            for (int i = lv_Selected.Items.Count - 1; i >= 0; i--)
+            {
+                lv_Selection.Items.Add(lv_Selected.Items[i]);
+                lv_Selected.Items.Remove(lv_Selected.Items[i]);
+            }
+        }
+
+        private void bt_Erase_Click(object sender, EventArgs e)
+        {
+            RemoveAll();
         }
     }
 }

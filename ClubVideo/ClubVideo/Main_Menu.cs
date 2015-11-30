@@ -27,9 +27,12 @@ namespace ClubVideo
             LoadSettings();
             LoadSettingsDB();
             LoadDataBase();
+            Database.FillDataSet();
 
             //TEMP
             //Database_Connector.AddUser("Test", "test");
+            //SidebySideSelection ss = new SidebySideSelection(Database.GetData.ListPermissions(), new List<string>(), "Test");
+            //ss.ShowDialog();
 
             if (UserLogin() != DialogResult.OK) Close();
 

@@ -11,9 +11,9 @@ namespace ClubVideo
     public static class Database
     {
         private static DataSet DS = new DataSet();
-        private static OracleDataAdapter Movie_DataAdapter;
 
-        private static string Movie_Select = "SELECT * FROM movies";
+        private static string Movies_Select = "SELECT * FROM movies";
+        private static string Permissions_Select = "SELECT * FROM permissions";
 
         public static DataSet DataSet
         {
@@ -28,24 +28,55 @@ namespace ClubVideo
             DS.Clear();
         }
 
-        private static void GetMovies()
+        private static void GetDBData(string TableName, string SelectSQL)
         {
-            Movie_DataAdapter = new OracleDataAdapter(new OracleCommand(Movie_Select, Database_Connector.GetConnection()));
-            Movie_DataAdapter.Fill(DS, "Movies");
+            OracleDataAdapter DataAdapter = new OracleDataAdapter(new OracleCommand(SelectSQL, Database_Connector.GetConnection()));
+            DataAdapter.Fill(DS, TableName);
             Database_Connector.CloseConnection();
         }
 
         public static void FillDataSet()
         {
-            GetMovies();
+            //GetDBData("Movies", Movies_Select);
+            GetDBData("Permissions", Permissions_Select);
+        }
+
+        public static class GetData
+        {
+            public static List<string> ListPermissions()
+            {
+                List<string> ListPermissions = new List<string>();
+
+                foreach(DataRow dr in DS.Tables["Permissions"].Rows)
+                {
+                    ListPermissions.Add(dr["Permission"].ToString());
+                }
+
+                // SORT
+                ListPermissions = ListPermissions.OrderBy(q => q).ToList();
+
+                return ListPermissions;
+            }
         }
 
         public static class Update
         {
+            public static void All()
+            {
+                Movies();
+                Permissions();
+            }
+
             public static void Movies()
             {
-                DS.Tables["ListeEtudiants"].Clear();
-                GetMovies();
+                DS.Tables["Movies"].Clear();
+                GetDBData("Movies", Movies_Select);
+            }
+
+            public static void Permissions()
+            {
+                DS.Tables["Permissions"].Clear();
+                GetDBData("Permissions", Permissions_Select);
             }
         }
     }
