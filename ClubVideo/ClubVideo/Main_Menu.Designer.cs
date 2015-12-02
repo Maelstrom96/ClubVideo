@@ -65,6 +65,7 @@
             this.bt_Settings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_Settings.UseVisualStyleBackColor = true;
             this.bt_Settings.TextChanged += new System.EventHandler(this.Button_Permissions);
+            this.bt_Settings.Click += new System.EventHandler(this.bt_Settings_Click);
             // 
             // bt_POS
             // 

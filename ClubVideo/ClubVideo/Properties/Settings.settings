@@ -12,7 +12,7 @@
       <Value Profile="(Default)">mercure.clg.qc.ca</Value>
     </Setting>
     <Setting Name="Language" Type="System.String" Scope="User">
-      <Value Profile="(Default)">fr</Value>
+      <Value Profile="(Default)">en</Value>
     </Setting>
     <Setting Name="DB_Port" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">1521</Value>
@@ -20,9 +20,12 @@
     <Setting Name="DB_ServiceName" Type="System.String" Scope="User">
       <Value Profile="(Default)">ORCL.clg.qc.ca</Value>
     </Setting>
-    <Setting Name="Languages" Type="System.Collections.Generic.List&lt;System.String&gt;" Scope="User">
-      <Value Profile="(Default)">en
-fr</Value>
+    <Setting Name="Languages" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;en&lt;/string&gt;
+  &lt;string&gt;fr&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -52,7 +52,7 @@ namespace ClubVideo.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("fr")]
+        [global::System.Configuration.DefaultSettingValueAttribute("en")]
         public string Language {
             get {
                 return ((string)(this["Language"]));
@@ -88,10 +88,12 @@ namespace ClubVideo.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("en\r\nfr")]
-        public global::System.Collections.Generic.List<System.String> Languages {
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring>en</string>\r\n  <string>fr</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection Languages {
             get {
-                return ((global::System.Collections.Generic.List<System.String>)(this["Languages"]));
+                return ((global::System.Collections.Specialized.StringCollection)(this["Languages"]));
             }
             set {
                 this["Languages"] = value;

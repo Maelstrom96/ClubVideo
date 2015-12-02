@@ -159,4 +159,10 @@
   <data name="UserLogon_Username" xml:space="preserve">
     <value>Nom d'utilisateur....</value>
   </data>
+  <data name="User_Settings_ChangeLanguage" xml:space="preserve">
+    <value>Langue d'affichage :</value>
+  </data>
+  <data name="User_Settings_Header" xml:space="preserve">
+    <value>Paramètres utilisateur</value>
+  </data>
 </root>

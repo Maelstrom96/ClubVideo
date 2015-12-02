@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 using System.Drawing;
+using ClubVideo.Properties;
 
 namespace ClubVideo
 {
@@ -145,6 +146,76 @@ namespace ClubVideo
             }
 
             return movie;
+        }
+
+        public static class Select
+        {
+            public static string LanguageSetting()
+            {
+                string value = null;
+
+                OracleConnection conn_ = Database_Connector.GetConnection();
+                string select = "SELECT value FROM user_settings WHERE user_id=:userid AND key=:keyp";
+                OracleCommand cmd = new OracleCommand(select, conn_);
+                cmd.Parameters.Add(new OracleParameter("userid", Main.user.ID.ToString()));
+                cmd.Parameters.Add(new OracleParameter("keyp", "Language"));
+
+                OracleDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    value = Convert.ToString(dr["value"]);
+                }
+                else 
+                {
+                    value = Settings.Default.Language;
+                    Insert.LanguageSetting(Settings.Default.Language);
+                }
+                conn_.Close();
+
+                return value;
+            }
+        }
+
+        public static class Insert
+        {
+            public static void LanguageSetting(string Language)
+            {
+                string insert = "INSERT INTO user_settings VALUES (:userid, :keyp, :valuep)";
+
+                OracleCommand cmd = new OracleCommand(insert, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("userid", Main.user.ID.ToString()));
+                cmd.Parameters.Add(new OracleParameter("keyp", "Language"));
+                cmd.Parameters.Add(new OracleParameter("valuep", Language));
+
+                cmd.ExecuteNonQuery();
+
+                Settings.Default.Language = Language;
+            }
+        }
+
+        public static class Update
+        {
+            public static void UserPassword()
+            {
+                
+            }
+
+            public static void LanguageSetting(string Language)
+            {
+                string update = "UPDATE user_settings SET value=:valuep WHERE user_id=:userid AND key=:keyp";
+
+                OracleCommand cmd = new OracleCommand(update, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("valuep", Language));
+                cmd.Parameters.Add(new OracleParameter("userid", Main.user.ID.ToString()));
+                cmd.Parameters.Add(new OracleParameter("keyp", "Language"));
+
+                cmd.ExecuteNonQuery();
+
+                Settings.Default.Language = Language;
+            }
         }
     }
 }

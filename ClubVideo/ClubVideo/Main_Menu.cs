@@ -94,5 +94,12 @@ namespace ClubVideo
 
             bt.Enabled = Main.user.Permissions.HasPermission(cleanPerm);
         }
+
+        private void bt_Settings_Click(object sender, EventArgs e)
+        {
+            User_Settings usettingsForm = new User_Settings();
+            usettingsForm.ShowDialog();
+            LoadLanguage();
+        }
     }
 }
