@@ -51,11 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_User.cs">
+    <Compile Include="UserCU.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_User.Designer.cs">
-      <DependentUpon>Add_User.cs</DependentUpon>
+    <Compile Include="UserCU.Designer.cs">
+      <DependentUpon>UserCU.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin_Menu.cs">
       <SubType>Form</SubType>
@@ -124,8 +124,8 @@
     <Compile Include="User_Settings.Designer.cs">
       <DependentUpon>User_Settings.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Add_User.resx">
-      <DependentUpon>Add_User.cs</DependentUpon>
+    <EmbeddedResource Include="UserCU.resx">
+      <DependentUpon>UserCU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_Menu.resx">
       <DependentUpon>Admin_Menu.cs</DependentUpon>

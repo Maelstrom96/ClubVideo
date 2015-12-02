@@ -153,6 +153,45 @@
   <data name="Header_Exit_Main_Menu" xml:space="preserve">
     <value>Exiting Application</value>
   </data>
+  <data name="Manage_Users_ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Manage_Users_LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Manage_Users_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Manage_Users_Search" xml:space="preserve">
+    <value>Search :</value>
+  </data>
+  <data name="Manage_Users_Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="UserCU_ConfPassword" xml:space="preserve">
+    <value>Confirm Password :</value>
+  </data>
+  <data name="UserCU_Header_Add" xml:space="preserve">
+    <value>Add User</value>
+  </data>
+  <data name="UserCU_Header_Modify" xml:space="preserve">
+    <value>Modify User</value>
+  </data>
+  <data name="UserCU_LastName" xml:space="preserve">
+    <value>Last Name :</value>
+  </data>
+  <data name="UserCU_Name" xml:space="preserve">
+    <value>Name :</value>
+  </data>
+  <data name="UserCU_Password" xml:space="preserve">
+    <value>Password :</value>
+  </data>
+  <data name="UserCU_ResetPassword" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+  <data name="UserCU_Username" xml:space="preserve">
+    <value>Username :</value>
+  </data>
   <data name="UserLogon_BadLogin" xml:space="preserve">
     <value>The username or password is invalid.</value>
   </data>

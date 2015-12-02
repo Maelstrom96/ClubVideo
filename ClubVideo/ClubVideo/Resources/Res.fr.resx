@@ -153,6 +153,45 @@
   <data name="Header_Exit_Main_Menu" xml:space="preserve">
     <value>Fermeture de l'application</value>
   </data>
+  <data name="Manage_Users_ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Manage_Users_LastName" xml:space="preserve">
+    <value>Prénom</value>
+  </data>
+  <data name="Manage_Users_Name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="Manage_Users_Search" xml:space="preserve">
+    <value>Recherche :</value>
+  </data>
+  <data name="Manage_Users_Username" xml:space="preserve">
+    <value>Nom d'utilisateur</value>
+  </data>
+  <data name="UserCU_ConfPassword" xml:space="preserve">
+    <value>Confirmer :</value>
+  </data>
+  <data name="UserCU_Header_Add" xml:space="preserve">
+    <value>Ajout d'un usagée</value>
+  </data>
+  <data name="UserCU_Header_Modify" xml:space="preserve">
+    <value>Modification d'un usagée</value>
+  </data>
+  <data name="UserCU_LastName" xml:space="preserve">
+    <value>Nom :</value>
+  </data>
+  <data name="UserCU_Name" xml:space="preserve">
+    <value>Prénom :</value>
+  </data>
+  <data name="UserCU_Password" xml:space="preserve">
+    <value>Mot de passe :</value>
+  </data>
+  <data name="UserCU_ResetPassword" xml:space="preserve">
+    <value>Réinitialisation du mot de passe</value>
+  </data>
+  <data name="UserCU_Username" xml:space="preserve">
+    <value>Nom d'utilisateur :</value>
+  </data>
   <data name="UserLogon_BadLogin" xml:space="preserve">
     <value>Le nom d'utilisateur ou le mot de passe est invalide.</value>
   </data>

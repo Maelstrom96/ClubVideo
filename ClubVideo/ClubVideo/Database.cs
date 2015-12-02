@@ -14,7 +14,7 @@ namespace ClubVideo
 
         private static string Movies_Select = "SELECT * FROM movies";
         private static string Permissions_Select = "SELECT * FROM permissions";
-        private static string Users_Select = "SELECT ID, NAME, LASTNAME FROM Users";
+        private static string Users_Select = "SELECT ID, USERNAME, NAME, LASTNAME FROM Users";
 
         public static DataSet DataSet
         {

@@ -31,7 +31,6 @@ namespace ClubVideo
             //InsertMovie AddMovieForm = new InsertMovie(Database_Connector.GetFromIMDB("tt2975590"));
             //AddMovieForm.ShowDialog();
 
-            Main.culInfo = CultureInfo.CreateSpecificCulture(Properties.Settings.Default.Language);
             LoadLanguage();
         }
 
@@ -84,7 +83,6 @@ namespace ClubVideo
         private void Main_Menu_FormClosed(object sender, FormClosedEventArgs e)
         {
             Database_Connector.CloseConnection();
-            Settings.Default.Reset();
         }
 
         private void Button_Permissions(object sender, EventArgs e)

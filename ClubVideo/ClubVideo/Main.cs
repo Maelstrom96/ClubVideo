@@ -11,11 +11,13 @@ namespace ClubVideo
 {
     public class Main
     {
+        private static CultureInfo info_;
+
         public static bool Exit { get; set; }
         public static ResourceManager resManager { get; set; }
-        public static CultureInfo culInfo { 
-            get; 
-            set; 
+        public static CultureInfo culInfo {
+            get { return info_; }
+            set { info_ = value; } 
         }
         public static User user { get; set; }
 
@@ -35,6 +37,9 @@ namespace ClubVideo
                 else
                 {
                     Main_Menu.Menu = Main_Menu.Submenu.NULL;
+
+                    info_ = CultureInfo.CreateSpecificCulture(Properties.Settings.Default.Language);
+
                     while (Main_Menu.Menu != Main_Menu.Submenu.Quit && Main_Menu.Menu != Main_Menu.Submenu.Logout)
                     {
                         // Show Main Menu
@@ -66,7 +71,6 @@ namespace ClubVideo
         private void LoadSettings()
         {
             resManager = new ResourceManager("ClubVideo.Resources.Res", typeof(Main).Assembly);
-            culInfo = CultureInfo.CreateSpecificCulture(Properties.Settings.Default.Language);
         }
 
         private void LoadDataBase()
