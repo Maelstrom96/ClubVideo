@@ -44,7 +44,7 @@ namespace ClubVideo
             {
                 Database_Connector.Update.LanguageSetting(cb_LanguageSetting.Text);
 
-                MessageBox.Show("test");
+                MessageBox.Show(Main.resManager.GetString("User_Settings_Save_Success", Main.culInfo));
             }
             catch (Exception e)
             {

@@ -165,4 +165,7 @@
   <data name="User_Settings_Header" xml:space="preserve">
     <value>User Settings</value>
   </data>
+  <data name="User_Settings_Save_Success" xml:space="preserve">
+    <value>The settings have been saved.</value>
+  </data>
 </root>

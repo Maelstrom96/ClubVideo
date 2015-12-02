@@ -35,11 +35,14 @@
             // 
             // bt_Save
             // 
+            this.bt_Save.BackgroundImage = global::ClubVideo.Properties.Resources.Save;
+            this.bt_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bt_Save.FlatAppearance.BorderSize = 0;
+            this.bt_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Save.Location = new System.Drawing.Point(204, 352);
             this.bt_Save.Name = "bt_Save";
             this.bt_Save.Size = new System.Drawing.Size(75, 71);
             this.bt_Save.TabIndex = 0;
-            this.bt_Save.Text = "button1";
             this.bt_Save.UseVisualStyleBackColor = true;
             this.bt_Save.Click += new System.EventHandler(this.bt_Save_Click);
             // 
