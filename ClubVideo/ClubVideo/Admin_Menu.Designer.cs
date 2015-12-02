@@ -69,6 +69,7 @@
             this.bt_Back.Text = "back";
             this.bt_Back.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_Back.UseVisualStyleBackColor = true;
+            this.bt_Back.Click += new System.EventHandler(this.bt_Back_Click);
             // 
             // bt_ManageMembers
             // 

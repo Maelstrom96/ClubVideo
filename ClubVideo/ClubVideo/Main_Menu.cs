@@ -16,10 +16,13 @@ namespace ClubVideo
 {
     public partial class Main_Menu : Form
     {
+        public enum Submenu {Administration, Logout, Quit, NULL};
+        static Submenu menu = Submenu.NULL;
+        public static Submenu Menu { get { return menu; } set { menu = value; } }
+
         public Main_Menu()
         {
             InitializeComponent();
-
             //TEMP TEST
             //Database_Connector.AddUser("Test", "test");
             //SidebySideSelection ss = new SidebySideSelection(Database.GetData.ListPermissions(), new List<string>(), "Test");
@@ -41,6 +44,7 @@ namespace ClubVideo
             bt_ManageMembers.Text = Main.resManager.GetString("Button_Menu_ManageMembers", Main.culInfo);
             bt_ManageMovies.Text = Main.resManager.GetString("Button_Menu_ManageMovies", Main.culInfo);
             bt_POS.Text = Main.resManager.GetString("Button_Menu_POS", Main.culInfo);
+            bt_Administration.Text = Main.resManager.GetString("Button_Menu_Administration", Main.culInfo);
         }
 
         private void SwitchLanguage(string LanguageCode)
@@ -67,12 +71,14 @@ namespace ClubVideo
             if (MessageBox.Show(Main.resManager.GetString("Confirm_Exit_Main_Menu", Main.culInfo), Main.resManager.GetString("Header_Exit_Main_Menu", Main.culInfo), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Main.Exit = true;
+                menu = Submenu.Quit;
                 Close();
             }
         }
 
         private void bt_Logout_Click(object sender, EventArgs e)
         {
+            menu = Submenu.Logout;
             Close();
         }
 
@@ -100,6 +106,12 @@ namespace ClubVideo
             User_Settings usettingsForm = new User_Settings();
             usettingsForm.ShowDialog();
             LoadLanguage();
+        }
+
+        private void bt_Administration_Click(object sender, EventArgs e)
+        {
+            Menu = Submenu.Administration;
+            Close();
         }
     }
 }

@@ -118,6 +118,7 @@
             this.bt_Administration.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_Administration.UseVisualStyleBackColor = true;
             this.bt_Administration.TextChanged += new System.EventHandler(this.Button_Permissions);
+            this.bt_Administration.Click += new System.EventHandler(this.bt_Administration_Click);
             // 
             // bt_ManageMembers
             // 

@@ -65,7 +65,7 @@ namespace ClubVideo
 
             while (dr.Read())
             {
-                UserPermissions.Add(dr["PERMISSION"].ToString());
+                UserPermissions.Add(dr["PERMISSION"].ToString().ToLower());
             }
 
             Database_Connector.CloseConnection();

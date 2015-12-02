@@ -32,11 +32,25 @@ namespace ClubVideo
                 if (UserLogin() != DialogResult.OK) Exit = true;
                 else
                 {
-                    // Show Main Menu
-                    Main_Menu main_menuForm = new Main_Menu();
-                    main_menuForm.ShowDialog();
+                    Main_Menu.Menu = Main_Menu.Submenu.NULL;
+                    while (Main_Menu.Menu != Main_Menu.Submenu.Quit && Main_Menu.Menu != Main_Menu.Submenu.Logout)
+                    {
+                        // Show Main Menu
+                        Main_Menu main_menuForm = new Main_Menu();
+                        main_menuForm.ShowDialog();
 
-
+                        switch (Main_Menu.Menu)
+                        {
+                            case Main_Menu.Submenu.Administration:
+                                // Show Admin Menu
+                                Admin_Menu admin_menuForm = new Admin_Menu();
+                                admin_menuForm.ShowDialog();
+                                Main_Menu.Menu = Main_Menu.Submenu.NULL;
+                                break;
+                            default:
+                                break;
+                        }
+                    }
                 }
             }
         }

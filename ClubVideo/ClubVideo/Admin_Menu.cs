@@ -16,5 +16,10 @@ namespace ClubVideo
         {
             InitializeComponent();
         }
+
+        private void bt_Back_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
