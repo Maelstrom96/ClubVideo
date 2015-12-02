@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_User.Designer.cs">
+      <DependentUpon>Add_User.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,12 @@
     </Compile>
     <Compile Include="Main_Menu.Designer.cs">
       <DependentUpon>Main_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_Users.Designer.cs">
+      <DependentUpon>Manage_Users.cs</DependentUpon>
     </Compile>
     <Compile Include="MovieObject.cs" />
     <Compile Include="Permissions.cs" />
