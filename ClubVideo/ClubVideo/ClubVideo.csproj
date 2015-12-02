@@ -118,6 +118,9 @@
     <Compile Include="User_Settings.Designer.cs">
       <DependentUpon>User_Settings.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add_User.resx">
+      <DependentUpon>Add_User.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_Menu.resx">
       <DependentUpon>Admin_Menu.cs</DependentUpon>
     </EmbeddedResource>
