@@ -15,11 +15,25 @@ namespace ClubVideo
         public Admin_Menu()
         {
             InitializeComponent();
+
+            LoadLanguage();
         }
 
         private void bt_Back_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void LoadLanguage()
+        {
+            bt_Back.Text = Main.resManager.GetString("Button_Admin_Menu_Back", Main.culInfo);
+            bt_ManageUsers.Text = Main.resManager.GetString("Button_Admin_Menu_ManageUsers", Main.culInfo);
+        }
+
+        private void bt_ManageUsers_Click(object sender, EventArgs e)
+        {
+            Manage_Users musers_Form = new Manage_Users();
+            musers_Form.ShowDialog();
         }
     }
 }

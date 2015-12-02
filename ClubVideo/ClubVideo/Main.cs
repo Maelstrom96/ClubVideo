@@ -23,7 +23,6 @@ namespace ClubVideo
         {
             LoadSettings();
             LoadDataBase();
-            Database.FillDataSet();
         }
 
         public void Run()

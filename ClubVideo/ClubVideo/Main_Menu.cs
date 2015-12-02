@@ -37,8 +37,6 @@ namespace ClubVideo
 
         private void LoadLanguage()
         {
-            Main.culInfo = CultureInfo.CreateSpecificCulture(Properties.Settings.Default.Language);
-
             bt_Exit.Text = Main.resManager.GetString("Button_Menu_Exit", Main.culInfo);
             bt_Logout.Text = Main.resManager.GetString("Button_Menu_Logout", Main.culInfo);
             bt_Settings.Text = Main.resManager.GetString("Button_Menu_Settings", Main.culInfo);
