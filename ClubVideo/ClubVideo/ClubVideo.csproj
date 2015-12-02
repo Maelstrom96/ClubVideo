@@ -78,6 +78,12 @@
     <Compile Include="Main_Menu.Designer.cs">
       <DependentUpon>Main_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage_Movies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_Movies.Designer.cs">
+      <DependentUpon>Manage_Movies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manage_Users.cs">
       <SubType>Form</SubType>
     </Compile>
