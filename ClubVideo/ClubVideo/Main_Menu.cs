@@ -29,14 +29,20 @@ namespace ClubVideo
             LoadDataBase();
             Database.FillDataSet();
 
-            //TEMP
+            //TEMP TEST
             //Database_Connector.AddUser("Test", "test");
             //SidebySideSelection ss = new SidebySideSelection(Database.GetData.ListPermissions(), new List<string>(), "Test");
             //ss.ShowDialog();
+            //MovieObject movie = Database_Connector.GetFromIMDB("tt2975590");
+            //InsertMovie AddMovieForm = new InsertMovie(Database_Connector.GetFromIMDB("tt2975590"));
+            //AddMovieForm.ShowDialog();
 
-            if (UserLogin() != DialogResult.OK) Close();
-
-            LoadLanguage();
+            if (UserLogin() != DialogResult.OK) 
+            {
+                Program.Exit = true;
+                Close();
+            }
+            else LoadLanguage();
         }
 
         private DialogResult UserLogin()
@@ -124,7 +130,12 @@ namespace ClubVideo
             Button bt = (Button)sender;
             string PermString = this.Name.ToString() + '.' + bt.Name.ToString();
 
-            bt.Enabled = user.Permissions.HasPermission(PermString);
+            int index = PermString.IndexOf("bt_");
+            string cleanPerm = (index < 0)
+                ? PermString
+                : PermString.Remove(index, 3);
+
+            bt.Enabled = user.Permissions.HasPermission(cleanPerm);
         }
     }
 }

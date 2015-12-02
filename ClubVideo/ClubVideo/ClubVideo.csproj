@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.DataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -55,12 +59,19 @@
     </Compile>
     <Compile Include="Database.cs" />
     <Compile Include="Database_Connector.cs" />
+    <Compile Include="InsertMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertMovie.Designer.cs">
+      <DependentUpon>InsertMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main_Menu.Designer.cs">
       <DependentUpon>Main_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MovieObject.cs" />
     <Compile Include="Permissions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,6 +102,9 @@
     <EmbeddedResource Include="Admin_Menu.resx">
       <DependentUpon>Admin_Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InsertMovie.resx">
+      <DependentUpon>InsertMovie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main_Menu.resx">
       <DependentUpon>Main_Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +121,7 @@
     <EmbeddedResource Include="UserLogon.resx">
       <DependentUpon>UserLogon.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

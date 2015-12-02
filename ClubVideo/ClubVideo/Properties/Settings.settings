@@ -20,5 +20,9 @@
     <Setting Name="DB_ServiceName" Type="System.String" Scope="User">
       <Value Profile="(Default)">ORCL.clg.qc.ca</Value>
     </Setting>
+    <Setting Name="Languages" Type="System.Collections.Generic.List&lt;System.String&gt;" Scope="User">
+      <Value Profile="(Default)">en
+fr</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

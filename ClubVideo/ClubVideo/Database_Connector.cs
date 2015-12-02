@@ -3,9 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
+using System.Drawing;
 
 namespace ClubVideo
 {
@@ -55,7 +58,7 @@ namespace ClubVideo
 
             string insert = "INSERT INTO Users (ID, Username, Password, Guid) VALUES (UserID.NEXTVAL, :username, :password, :userguid)";
 
-            OracleCommand cmd = new OracleCommand(insert, conn_);
+            OracleCommand cmd = new OracleCommand(insert, GetConnection());
 
             cmd.Parameters.Add(new OracleParameter("username", username));
             cmd.Parameters.Add(new OracleParameter("password", hashedPassword));
@@ -70,7 +73,7 @@ namespace ClubVideo
 
             string select = "SELECT Id, Password, Guid FROM Users WHERE LOWER(username)=LOWER(:username)";
 
-            OracleCommand cmd = new OracleCommand(select, conn_);
+            OracleCommand cmd = new OracleCommand(select, GetConnection());
 
             cmd.Parameters.Add(new OracleParameter("username", username.ToLower()));
 
@@ -91,6 +94,57 @@ namespace ClubVideo
             }
 
             return userId;
+        }
+
+        public static MovieObject GetFromIMDB(string id)
+        {
+            string url = "http://www.omdbapi.com/?i=" + id + "&plot=full&r=json";
+            string urlfr = "https://api.themoviedb.org/3/find/" + id + "?external_source=imdb_id&language=fr&api_key=51418c9e34d1e5629a84126ff72fe09a";
+            string json;
+            string jsonfr;
+            MovieObject movie;
+
+            using (WebClient wc = new WebClient())
+            {
+                wc.Encoding = System.Text.Encoding.UTF8;
+                json = wc.DownloadString(url);
+                jsonfr = wc.DownloadString(urlfr);
+            }
+            dynamic data = JObject.Parse(json);
+            dynamic datafr = JObject.Parse(jsonfr);
+
+            try
+            {
+                movie = new MovieObject();
+
+                // EN
+                movie.Nom_en = data["Title"];
+                movie.Description_en = data["Plot"];
+                movie.Rated = data["Rated"];
+                movie.Runtime = data["Runtime"];
+                movie.Year = data["Year"];
+                movie.Director = data["Director"];
+
+                // FR
+                movie.Description_fr = datafr["movie_results"][0]["overview"];
+                movie.Nom_fr = datafr["movie_results"][0]["title"];
+
+                string imgurl = data["Poster"];
+                // Load Image
+                var request = WebRequest.Create(imgurl);
+
+                using (var response = request.GetResponse())
+                using (var stream = response.GetResponseStream())
+                {
+                    movie.Poster = Bitmap.FromStream(stream);
+                }
+            }
+            catch (Exception e)
+            {
+                movie = null;
+            }
+
+            return movie;
         }
     }
 }

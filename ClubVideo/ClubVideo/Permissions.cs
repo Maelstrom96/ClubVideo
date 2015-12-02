@@ -51,11 +51,16 @@ namespace ClubVideo
 
         private void Load(int Userid)
         {
-            string select = "SELECT PERMISSION FROM USER_PERMISSIONS where USER_ID=:userid UNION ALL SELECT PERMISSION FROM USER_GROUPS inner join GROUP_PERMISSIONS on USER_GROUPS.GROUP_ID=GROUP_PERMISSIONS.GROUP_ID where USER_GROUPS.USER_ID=:userid";
+            string select = "SELECT PERMISSION FROM USER_PERMISSIONS where USER_ID=:userid " +
+                "UNION ALL SELECT PERMISSION FROM USER_GROUPS inner join GROUP_PERMISSIONS " +
+                "on USER_GROUPS.GROUP_ID=GROUP_PERMISSIONS.GROUP_ID where USER_GROUPS.USER_ID=:userid";
 
             OracleCommand cmd = new OracleCommand(select, Database_Connector.GetConnection());
 
-            cmd.Parameters.Add(new OracleParameter("userid", UserID.ToString()));
+            OracleParameter uid = new OracleParameter("userid", OracleDbType.Int32);
+            uid.Value = Userid;
+
+            cmd.Parameters.Add(uid);
             OracleDataReader dr = cmd.ExecuteReader();
 
             while (dr.Read())

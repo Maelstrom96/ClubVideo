@@ -85,5 +85,17 @@ namespace ClubVideo.Properties {
                 this["DB_ServiceName"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("en\r\nfr")]
+        public global::System.Collections.Generic.List<System.String> Languages {
+            get {
+                return ((global::System.Collections.Generic.List<System.String>)(this["Languages"]));
+            }
+            set {
+                this["Languages"] = value;
+            }
+        }
     }
 }

@@ -20,6 +20,9 @@ namespace ClubVideo
             InitializeComponent();
             Init();
 
+            // Set form header text
+            Text = Header;
+
             // Backup Selections
             startSelectionAllList = new List<string>(listSelectionAll);
             startSelectedList = new List<string>(listSelected);
