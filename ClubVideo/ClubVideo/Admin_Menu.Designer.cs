@@ -33,7 +33,7 @@
             this.bt_ManageMembers = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bt_Settings = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bt_ManageUsers = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -113,21 +113,22 @@
             this.bt_Settings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_Settings.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // bt_ManageUsers
             // 
-            this.button1.AutoSize = true;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::ClubVideo.Properties.Resources.ManageMovies;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(475, -1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 134);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "manage Users";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.bt_ManageUsers.AutoSize = true;
+            this.bt_ManageUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bt_ManageUsers.FlatAppearance.BorderSize = 0;
+            this.bt_ManageUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_ManageUsers.Image = global::ClubVideo.Properties.Resources.ManageMovies;
+            this.bt_ManageUsers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bt_ManageUsers.Location = new System.Drawing.Point(475, -1);
+            this.bt_ManageUsers.Name = "bt_ManageUsers";
+            this.bt_ManageUsers.Size = new System.Drawing.Size(134, 134);
+            this.bt_ManageUsers.TabIndex = 1;
+            this.bt_ManageUsers.Text = "manage Users";
+            this.bt_ManageUsers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bt_ManageUsers.UseVisualStyleBackColor = true;
+            this.bt_ManageUsers.Click += new System.EventHandler(this.bt_ManageUsers_Click);
             // 
             // button2
             // 
@@ -154,7 +155,7 @@
             this.Controls.Add(this.bt_Settings);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bt_ManageUsers);
             this.Controls.Add(this.bt_ManageMovies);
             this.Controls.Add(this.bt_Back);
             this.Controls.Add(this.bt_ManageMembers);
@@ -176,7 +177,7 @@
         private System.Windows.Forms.Button bt_Back;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bt_Settings;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bt_ManageUsers;
         private System.Windows.Forms.Button button2;
     }
 }

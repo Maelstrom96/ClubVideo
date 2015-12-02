@@ -62,7 +62,12 @@ namespace ClubVideo
 
             public static DataTable Users()
             {
-                return DS.Tables["Users"].Clone();
+                DataTable tmp = DS.Tables["Users"].Clone();
+
+                foreach (DataRow dr in DS.Tables["Users"].Rows) 
+                    tmp.Rows.Add(dr.ItemArray);
+
+                return tmp;
             }
         }
 

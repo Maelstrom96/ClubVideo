@@ -28,23 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_Users = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lb_SearchUser = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Users)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_Users
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 59);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(810, 482);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv_Users.AllowUserToAddRows = false;
+            this.dgv_Users.AllowUserToDeleteRows = false;
+            this.dgv_Users.AllowUserToOrderColumns = true;
+            this.dgv_Users.AllowUserToResizeRows = false;
+            this.dgv_Users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Users.Location = new System.Drawing.Point(12, 59);
+            this.dgv_Users.Name = "dgv_Users";
+            this.dgv_Users.RowTemplate.Height = 24;
+            this.dgv_Users.Size = new System.Drawing.Size(810, 482);
+            this.dgv_Users.TabIndex = 0;
             // 
             // textBox1
             // 
@@ -108,10 +112,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lb_SearchUser);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_Users);
             this.Name = "Manage_Users";
             this.Text = "Manage_Users";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Users)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,7 +123,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_Users;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lb_SearchUser;
         private System.Windows.Forms.Button button1;
