@@ -63,6 +63,16 @@ namespace ClubVideo.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_User {
+            get {
+                object obj = ResourceManager.GetObject("Add_User", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Administration {
             get {
                 object obj = ResourceManager.GetObject("Administration", resourceCulture);
@@ -83,9 +93,29 @@ namespace ClubVideo.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Delete_User {
+            get {
+                object obj = ResourceManager.GetObject("Delete_User", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Done {
             get {
                 object obj = ResourceManager.GetObject("Done", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Edit_User {
+            get {
+                object obj = ResourceManager.GetObject("Edit_User", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

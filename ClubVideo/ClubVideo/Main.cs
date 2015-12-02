@@ -13,7 +13,10 @@ namespace ClubVideo
     {
         public static bool Exit { get; set; }
         public static ResourceManager resManager { get; set; }
-        public static CultureInfo culInfo { get; set; }
+        public static CultureInfo culInfo { 
+            get; 
+            set; 
+        }
         public static User user { get; set; }
 
         public Main()

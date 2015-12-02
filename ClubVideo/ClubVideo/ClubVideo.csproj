@@ -127,6 +127,9 @@
     <EmbeddedResource Include="Main_Menu.resx">
       <DependentUpon>Main_Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Manage_Users.resx">
+      <DependentUpon>Manage_Users.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -199,6 +202,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add_User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit_User.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

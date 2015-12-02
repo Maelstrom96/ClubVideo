@@ -31,6 +31,7 @@ namespace ClubVideo
             //InsertMovie AddMovieForm = new InsertMovie(Database_Connector.GetFromIMDB("tt2975590"));
             //AddMovieForm.ShowDialog();
 
+            Main.culInfo = CultureInfo.CreateSpecificCulture(Properties.Settings.Default.Language);
             LoadLanguage();
         }
 
