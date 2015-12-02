@@ -11,6 +11,7 @@ namespace ClubVideo
 {
     public class Main
     {
+        public static bool Exit { get; set; }
         public static ResourceManager resManager { get; set; }
         public static CultureInfo culInfo { get; set; }
         public static User user { get; set; }
@@ -24,13 +25,19 @@ namespace ClubVideo
 
         public void Run()
         {
-            if (UserLogin() != DialogResult.OK)
+            Exit = false;
+            while (!Exit)
             {
-                Program.Exit = true;
-            }
-            else
-            {
-                Application.Run(new Main_Menu());
+                // Connexion
+                if (UserLogin() != DialogResult.OK) Exit = true;
+                else
+                {
+                    // Show Main Menu
+                    Main_Menu main_menuForm = new Main_Menu();
+                    main_menuForm.ShowDialog();
+
+
+                }
             }
         }
 

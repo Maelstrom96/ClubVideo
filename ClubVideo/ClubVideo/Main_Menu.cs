@@ -66,7 +66,7 @@ namespace ClubVideo
         {
             if (MessageBox.Show(Main.resManager.GetString("Confirm_Exit_Main_Menu", Main.culInfo), Main.resManager.GetString("Header_Exit_Main_Menu", Main.culInfo), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Program.Exit = true;
+                Main.Exit = true;
                 Close();
             }
         }

@@ -8,8 +8,6 @@ namespace ClubVideo
 {
     static class Program
     {
-        public static bool Exit = false;
-
         /// <summary>
         /// Point d'entrée principal de l'application.
         /// </summary>
