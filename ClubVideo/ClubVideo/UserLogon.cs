@@ -24,18 +24,18 @@ namespace ClubVideo
         private void InitText()
         {
             // tb_Username
-            tb_Username.Text = Main_Menu.resManager.GetString("UserLogon_Username", Main_Menu.culInfo);
+            tb_Username.Text = Main.resManager.GetString("UserLogon_Username", Main.culInfo);
             tb_Username.ForeColor = SystemColors.ControlLight;
 
             // tb_Password
-            tb_Password.Text = Main_Menu.resManager.GetString("UserLogon_Password", Main_Menu.culInfo);
+            tb_Password.Text = Main.resManager.GetString("UserLogon_Password", Main.culInfo);
             tb_Password.ForeColor = SystemColors.ControlLight;
 
             // bt_Login
-            bt_Login.Text = Main_Menu.resManager.GetString("UserLogon_LoginButton", Main_Menu.culInfo);
+            bt_Login.Text = Main.resManager.GetString("UserLogon_LoginButton", Main.culInfo);
 
             // Header
-            Text = Main_Menu.resManager.GetString("UserLogon_Header", Main_Menu.culInfo);
+            Text = Main.resManager.GetString("UserLogon_Header", Main.culInfo);
         }
 
         public void tb_Password_RemoveText(object sender, EventArgs e)
@@ -49,7 +49,7 @@ namespace ClubVideo
         {
             if (tb_Password.Text == "")
             {
-                tb_Password.Text = Main_Menu.resManager.GetString("UserLogon_Password", Main_Menu.culInfo);
+                tb_Password.Text = Main.resManager.GetString("UserLogon_Password", Main.culInfo);
                 tb_Password.ForeColor = SystemColors.ControlLight;
                 tb_Password.PasswordChar = '\0';
             }
@@ -66,7 +66,7 @@ namespace ClubVideo
         {
             if (tb_Username.Text == "")
             {
-                tb_Username.Text = Main_Menu.resManager.GetString("UserLogon_Username", Main_Menu.culInfo);
+                tb_Username.Text = Main.resManager.GetString("UserLogon_Username", Main.culInfo);
                 tb_Username.ForeColor = SystemColors.ControlLight;
             }
 
@@ -74,13 +74,13 @@ namespace ClubVideo
 
         private void Login_Click(object sender, EventArgs e)
         {
-            Main_Menu.user = new User();
-            if (Main_Menu.user.Login(tb_Username.Text, tb_Password.Text))
+            Main.user = new User();
+            if (Main.user.Login(tb_Username.Text, tb_Password.Text))
             {
                 DialogResult = DialogResult.OK;
                 Close();
             }
-            else MessageBox.Show(Main_Menu.resManager.GetString("UserLogon_BadLogin", Main_Menu.culInfo));
+            else MessageBox.Show(Main.resManager.GetString("UserLogon_BadLogin", Main.culInfo));
         }
 
         private void textbox_KeyDown(object sender, KeyEventArgs e)

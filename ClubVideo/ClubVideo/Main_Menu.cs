@@ -16,18 +16,9 @@ namespace ClubVideo
 {
     public partial class Main_Menu : Form
     {
-        public static ResourceManager resManager;    
-        public static CultureInfo culInfo;
-        public static User user { get; set; }
-
         public Main_Menu()
         {
             InitializeComponent();
-
-            LoadSettings();
-            LoadSettingsDB();
-            LoadDataBase();
-            Database.FillDataSet();
 
             //TEMP TEST
             //Database_Connector.AddUser("Test", "test");
@@ -37,53 +28,19 @@ namespace ClubVideo
             //InsertMovie AddMovieForm = new InsertMovie(Database_Connector.GetFromIMDB("tt2975590"));
             //AddMovieForm.ShowDialog();
 
-            if (UserLogin() != DialogResult.OK) 
-            {
-                Program.Exit = true;
-                Close();
-            }
-            else LoadLanguage();
-        }
-
-        private DialogResult UserLogin()
-        {
-            UserLogon formLogon = new UserLogon();
-            return formLogon.ShowDialog();
-        }
-
-        private void LoadDataBase()
-        {
-            try
-            {
-                Database_Connector.OpenConnection();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-        }
-
-
-        private void LoadSettingsDB()
-        {
-            culInfo = CultureInfo.CreateSpecificCulture(Properties.Settings.Default.Language);
-        }
-
-        private void LoadSettings()
-        {
-            resManager = new ResourceManager("ClubVideo.Resources.Res", typeof(Main_Menu).Assembly);
+            LoadLanguage();
         }
 
         private void LoadLanguage()
         {
-            culInfo = CultureInfo.CreateSpecificCulture(Properties.Settings.Default.Language);
+            Main.culInfo = CultureInfo.CreateSpecificCulture(Properties.Settings.Default.Language);
 
-            bt_Exit.Text = resManager.GetString("Button_Menu_Exit", culInfo);
-            bt_Logout.Text = resManager.GetString("Button_Menu_Logout", culInfo);
-            bt_Settings.Text = resManager.GetString("Button_Menu_Settings", culInfo);
-            bt_ManageMembers.Text = resManager.GetString("Button_Menu_ManageMembers", culInfo);
-            bt_ManageMovies.Text = resManager.GetString("Button_Menu_ManageMovies", culInfo);
-            bt_POS.Text = resManager.GetString("Button_Menu_POS", culInfo);
+            bt_Exit.Text = Main.resManager.GetString("Button_Menu_Exit", Main.culInfo);
+            bt_Logout.Text = Main.resManager.GetString("Button_Menu_Logout", Main.culInfo);
+            bt_Settings.Text = Main.resManager.GetString("Button_Menu_Settings", Main.culInfo);
+            bt_ManageMembers.Text = Main.resManager.GetString("Button_Menu_ManageMembers", Main.culInfo);
+            bt_ManageMovies.Text = Main.resManager.GetString("Button_Menu_ManageMovies", Main.culInfo);
+            bt_POS.Text = Main.resManager.GetString("Button_Menu_POS", Main.culInfo);
         }
 
         private void SwitchLanguage(string LanguageCode)
@@ -107,7 +64,7 @@ namespace ClubVideo
 
         private void bt_Exit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(resManager.GetString("Confirm_Exit_Main_Menu",culInfo), resManager.GetString("Header_Exit_Main_Menu", culInfo), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show(Main.resManager.GetString("Confirm_Exit_Main_Menu", Main.culInfo), Main.resManager.GetString("Header_Exit_Main_Menu", Main.culInfo), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Program.Exit = true;
                 Close();
@@ -135,7 +92,7 @@ namespace ClubVideo
                 ? PermString
                 : PermString.Remove(index, 3);
 
-            bt.Enabled = user.Permissions.HasPermission(cleanPerm);
+            bt.Enabled = Main.user.Permissions.HasPermission(cleanPerm);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace ClubVideo
             }
             else
             {
-                throw new Exception(Main_Menu.resManager.GetString("Exception_DB_Already_Open", Main_Menu.culInfo));
+                throw new Exception(Main.resManager.GetString("Exception_DB_Already_Open", Main.culInfo));
             }
         }
 

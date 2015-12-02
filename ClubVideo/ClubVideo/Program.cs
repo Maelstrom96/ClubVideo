@@ -19,8 +19,8 @@ namespace ClubVideo
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            while (!Exit)
-                Application.Run(new Main_Menu());
+            Main main = new Main();
+            main.Run();
         }
     }
 }

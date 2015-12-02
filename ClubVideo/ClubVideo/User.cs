@@ -63,7 +63,7 @@ namespace ClubVideo
             OracleConnection conn_ = Database_Connector.GetConnection();
             string select = "SELECT key, value FROM user_settings WHERE user_id=:userid";
             OracleCommand cmd = new OracleCommand(select, conn_);
-            cmd.Parameters.Add(new OracleParameter("userid", Main_Menu.user.ID.ToString()));
+            cmd.Parameters.Add(new OracleParameter("userid", Main.user.ID.ToString()));
 
             OracleDataReader dr = cmd.ExecuteReader();
 
