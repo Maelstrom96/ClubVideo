@@ -16,12 +16,12 @@ namespace ClubVideo
         MovieObject movie;
         MovieObject finalMovie;
 
-        public InsertMovie(MovieObject movie_)
+        public InsertMovie(MovieObject movie_, bool _edit = true)
         {
             if (movie_ == null) movie = new MovieObject();
             else movie = movie_;
 
-            edit = true;
+            edit = _edit;
 
             InitializeComponent();
 
