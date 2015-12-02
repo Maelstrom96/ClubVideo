@@ -65,6 +65,7 @@
     <Compile Include="InsertMovie.Designer.cs">
       <DependentUpon>InsertMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main.cs" />
     <Compile Include="Main_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
