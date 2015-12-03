@@ -24,6 +24,9 @@ namespace ClubVideo
         private void LoadLanguage()
         {
             lb_ChangeLanguageSetting.Text = Main.resManager.GetString("User_Settings_ChangeLanguage", Main.culInfo);
+            lb_ChangePassword.Text = Main.resManager.GetString("User_Settings_ChangePassword", Main.culInfo);
+            lb_Password.Text = Main.resManager.GetString("User_Settings_Password", Main.culInfo);
+            lb_ConfPassword.Text = Main.resManager.GetString("User_Settings_ConfPassword", Main.culInfo);
             Text = Main.resManager.GetString("User_Settings_Header", Main.culInfo);
         }
 

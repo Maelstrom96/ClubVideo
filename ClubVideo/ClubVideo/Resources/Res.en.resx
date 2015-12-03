@@ -210,8 +210,17 @@
   <data name="User_Settings_ChangeLanguage" xml:space="preserve">
     <value>Language of UI :</value>
   </data>
+  <data name="User_Settings_ChangePassword" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="User_Settings_ConfPassword" xml:space="preserve">
+    <value>Confirm Password :</value>
+  </data>
   <data name="User_Settings_Header" xml:space="preserve">
     <value>User Settings</value>
+  </data>
+  <data name="User_Settings_Password" xml:space="preserve">
+    <value>Password :</value>
   </data>
   <data name="User_Settings_Save_Success" xml:space="preserve">
     <value>The settings have been saved.</value>

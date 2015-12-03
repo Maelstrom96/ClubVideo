@@ -210,8 +210,17 @@
   <data name="User_Settings_ChangeLanguage" xml:space="preserve">
     <value>Langue d'affichage :</value>
   </data>
+  <data name="User_Settings_ChangePassword" xml:space="preserve">
+    <value>Modifier le mot de passe</value>
+  </data>
+  <data name="User_Settings_ConfPassword" xml:space="preserve">
+    <value>Confirmer :</value>
+  </data>
   <data name="User_Settings_Header" xml:space="preserve">
     <value>Paramètres utilisateur</value>
+  </data>
+  <data name="User_Settings_Password" xml:space="preserve">
+    <value>Mot de passe :</value>
   </data>
   <data name="User_Settings_Save_Success" xml:space="preserve">
     <value>Les paramètres ont bien été enregistrés.</value>
