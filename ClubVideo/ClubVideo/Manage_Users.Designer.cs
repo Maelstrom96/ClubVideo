@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_Users = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lb_SearchUser = new System.Windows.Forms.Label();
@@ -49,9 +49,9 @@
             this.dgv_Users.Name = "dgv_Users";
             this.dgv_Users.ReadOnly = true;
             this.dgv_Users.RowHeadersVisible = false;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgv_Users.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgv_Users.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Users.RowTemplate.Height = 24;
             this.dgv_Users.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Users.Size = new System.Drawing.Size(810, 482);
@@ -111,6 +111,7 @@
             this.bt_DeleteUsers.Size = new System.Drawing.Size(86, 82);
             this.bt_DeleteUsers.TabIndex = 3;
             this.bt_DeleteUsers.UseVisualStyleBackColor = true;
+            this.bt_DeleteUsers.Click += new System.EventHandler(this.bt_DeleteUsers_Click);
             // 
             // Manage_Users
             // 

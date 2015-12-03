@@ -177,6 +177,22 @@ namespace ClubVideo
             }
         }
 
+        public static class Delete
+        {
+            public static void User(int id)
+            {
+                string insert = "DELETE FROM users where id=:userid";
+
+                OracleCommand cmd = new OracleCommand(insert, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("userid", id));
+
+                cmd.ExecuteNonQuery();
+
+                Database.Update.Users();
+            }
+        }
+
         public static class Insert
         {
             public static void LanguageSetting(string Language)

@@ -47,6 +47,8 @@ namespace ClubVideo
         {
             UserCU AddUser_Form = new UserCU();
             AddUser_Form.ShowDialog();
+
+            LoadUsers();
         }
 
         private void bt_EditUser_Click(object sender, EventArgs e)
@@ -60,6 +62,8 @@ namespace ClubVideo
 
                 UserCU ModifyUser_Form = new UserCU(id, username, name, lastName);
                 ModifyUser_Form.ShowDialog();
+
+                LoadUsers();
             }
         }
 
@@ -67,6 +71,18 @@ namespace ClubVideo
         {
             if (dgv_Users.SelectedRows.Count > 1) bt_EditUser.Enabled = false;
             else bt_EditUser.Enabled = true;
+        }
+
+        private void bt_DeleteUsers_Click(object sender, EventArgs e)
+        {
+            foreach(DataGridViewRow row in dgv_Users.SelectedRows)
+            {
+                if (row.Cells[0].Value.ToString() != Main.user.ID.ToString())
+                    Database_Connector.Delete.User(int.Parse(row.Cells[0].Value.ToString()));
+                else
+                    MessageBox.Show("You can't delete yourself!");
+            }
+            LoadUsers();
         }
     }
 }
