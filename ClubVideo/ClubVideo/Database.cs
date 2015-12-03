@@ -38,7 +38,7 @@ namespace ClubVideo
 
         public static void FillDataSet()
         {
-            //GetDBData("Movies", Movies_Select);
+            GetDBData("Movies", Movies_Select);
             GetDBData("Permissions", Permissions_Select);
             GetDBData("Users", Users_Select);
         }
