@@ -80,19 +80,16 @@ namespace ClubVideo
             }
             else
             {
-                if ((tb_Password.Text != String.Empty || tb_ConfPassword.Text != String.Empty))
+                try
                 {
-                    try
-                    {
-                        if (tb_Username.Text.Equals(string.Empty)) throw new Exception("USERNAME_EMPTY");
-                        PasswordValid();
-                        Database_Connector.AddUser(tb_Username.Text, tb_Password.Text, tb_Name.Text, tb_LastName.Text);
-                        Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
+                    if (tb_Username.Text.Equals(string.Empty)) throw new Exception("USERNAME_EMPTY");
+                    PasswordValid();
+                    Database_Connector.AddUser(tb_Username.Text, tb_Password.Text, tb_Name.Text, tb_LastName.Text);
+                    Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
             }
         }
