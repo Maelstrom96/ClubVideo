@@ -31,12 +31,14 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bt_Settings = new System.Windows.Forms.Button();
             this.bt_POS = new System.Windows.Forms.Button();
-            this.bt_ManageMovies = new System.Windows.Forms.Button();
+            this.bt_SearchMovies = new System.Windows.Forms.Button();
             this.bt_Administration = new System.Windows.Forms.Button();
-            this.bt_ManageMembers = new System.Windows.Forms.Button();
+            this.bt_SearchMembers = new System.Windows.Forms.Button();
             this.bt_Logout = new System.Windows.Forms.Button();
             this.bt_Exit = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -85,22 +87,22 @@
             this.bt_POS.UseVisualStyleBackColor = true;
             this.bt_POS.TextChanged += new System.EventHandler(this.Button_Permissions);
             // 
-            // bt_ManageMovies
+            // bt_SearchMovies
             // 
-            this.bt_ManageMovies.AutoSize = true;
-            this.bt_ManageMovies.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bt_ManageMovies.FlatAppearance.BorderSize = 0;
-            this.bt_ManageMovies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_ManageMovies.Image = global::ClubVideo.Properties.Resources.ManageMovies;
-            this.bt_ManageMovies.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bt_ManageMovies.Location = new System.Drawing.Point(343, -2);
-            this.bt_ManageMovies.Name = "bt_ManageMovies";
-            this.bt_ManageMovies.Size = new System.Drawing.Size(134, 134);
-            this.bt_ManageMovies.TabIndex = 0;
-            this.bt_ManageMovies.Text = "manage Movies";
-            this.bt_ManageMovies.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.bt_ManageMovies.UseVisualStyleBackColor = true;
-            this.bt_ManageMovies.TextChanged += new System.EventHandler(this.Button_Permissions);
+            this.bt_SearchMovies.AutoSize = true;
+            this.bt_SearchMovies.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bt_SearchMovies.FlatAppearance.BorderSize = 0;
+            this.bt_SearchMovies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_SearchMovies.Image = global::ClubVideo.Properties.Resources.ManageMovies;
+            this.bt_SearchMovies.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bt_SearchMovies.Location = new System.Drawing.Point(162, -2);
+            this.bt_SearchMovies.Name = "bt_SearchMovies";
+            this.bt_SearchMovies.Size = new System.Drawing.Size(134, 134);
+            this.bt_SearchMovies.TabIndex = 0;
+            this.bt_SearchMovies.Text = "search Movies";
+            this.bt_SearchMovies.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bt_SearchMovies.UseVisualStyleBackColor = true;
+            this.bt_SearchMovies.TextChanged += new System.EventHandler(this.Button_Permissions);
             // 
             // bt_Administration
             // 
@@ -120,22 +122,22 @@
             this.bt_Administration.TextChanged += new System.EventHandler(this.Button_Permissions);
             this.bt_Administration.Click += new System.EventHandler(this.bt_Administration_Click);
             // 
-            // bt_ManageMembers
+            // bt_SearchMembers
             // 
-            this.bt_ManageMembers.AutoSize = true;
-            this.bt_ManageMembers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bt_ManageMembers.FlatAppearance.BorderSize = 0;
-            this.bt_ManageMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_ManageMembers.Image = global::ClubVideo.Properties.Resources.ManageMembers;
-            this.bt_ManageMembers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bt_ManageMembers.Location = new System.Drawing.Point(483, -2);
-            this.bt_ManageMembers.Name = "bt_ManageMembers";
-            this.bt_ManageMembers.Size = new System.Drawing.Size(134, 134);
-            this.bt_ManageMembers.TabIndex = 0;
-            this.bt_ManageMembers.Text = "manage Members";
-            this.bt_ManageMembers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.bt_ManageMembers.UseVisualStyleBackColor = true;
-            this.bt_ManageMembers.TextChanged += new System.EventHandler(this.Button_Permissions);
+            this.bt_SearchMembers.AutoSize = true;
+            this.bt_SearchMembers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bt_SearchMembers.FlatAppearance.BorderSize = 0;
+            this.bt_SearchMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_SearchMembers.Image = global::ClubVideo.Properties.Resources.Search_Member;
+            this.bt_SearchMembers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bt_SearchMembers.Location = new System.Drawing.Point(302, -2);
+            this.bt_SearchMembers.Name = "bt_SearchMembers";
+            this.bt_SearchMembers.Size = new System.Drawing.Size(134, 134);
+            this.bt_SearchMembers.TabIndex = 0;
+            this.bt_SearchMembers.Text = "search Members";
+            this.bt_SearchMembers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bt_SearchMembers.UseVisualStyleBackColor = true;
+            this.bt_SearchMembers.TextChanged += new System.EventHandler(this.Button_Permissions);
             // 
             // bt_Logout
             // 
@@ -170,18 +172,29 @@
             this.bt_Exit.TextChanged += new System.EventHandler(this.Button_Permissions);
             this.bt_Exit.Click += new System.EventHandler(this.bt_Exit_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ClubVideo.Properties.Resources.Line1;
+            this.pictureBox2.Location = new System.Drawing.Point(118, -2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(43, 134);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
             // Main_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1198, 132);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bt_Settings);
             this.Controls.Add(this.bt_POS);
-            this.Controls.Add(this.bt_ManageMovies);
+            this.Controls.Add(this.bt_SearchMovies);
             this.Controls.Add(this.bt_Administration);
-            this.Controls.Add(this.bt_ManageMembers);
+            this.Controls.Add(this.bt_SearchMembers);
             this.Controls.Add(this.bt_Logout);
             this.Controls.Add(this.bt_Exit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -191,6 +204,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Menu_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,12 +214,13 @@
 
         private System.Windows.Forms.Button bt_Exit;
         private System.Windows.Forms.Button bt_Logout;
-        private System.Windows.Forms.Button bt_ManageMembers;
         private System.Windows.Forms.Button bt_Settings;
         private System.Windows.Forms.Button bt_POS;
-        private System.Windows.Forms.Button bt_ManageMovies;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button bt_Administration;
+        private System.Windows.Forms.Button bt_SearchMembers;
+        private System.Windows.Forms.Button bt_SearchMovies;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

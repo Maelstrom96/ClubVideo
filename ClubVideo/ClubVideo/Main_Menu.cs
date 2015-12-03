@@ -40,8 +40,8 @@ namespace ClubVideo
             bt_Exit.Text = Main.resManager.GetString("Button_Menu_Exit", Main.culInfo);
             bt_Logout.Text = Main.resManager.GetString("Button_Menu_Logout", Main.culInfo);
             bt_Settings.Text = Main.resManager.GetString("Button_Menu_Settings", Main.culInfo);
-            bt_ManageMembers.Text = Main.resManager.GetString("Button_Menu_ManageMembers", Main.culInfo);
-            bt_ManageMovies.Text = Main.resManager.GetString("Button_Menu_ManageMovies", Main.culInfo);
+            bt_SearchMembers.Text = Main.resManager.GetString("Button_Menu_SearchMembers", Main.culInfo);
+            bt_SearchMovies.Text = Main.resManager.GetString("Button_Menu_SearchMovies", Main.culInfo);
             bt_POS.Text = Main.resManager.GetString("Button_Menu_POS", Main.culInfo);
             bt_Administration.Text = Main.resManager.GetString("Button_Menu_Administration", Main.culInfo);
         }

@@ -132,14 +132,14 @@
   <data name="Button_Menu_Logout" xml:space="preserve">
     <value>Logout</value>
   </data>
-  <data name="Button_Menu_ManageMembers" xml:space="preserve">
-    <value>Manage Members</value>
-  </data>
-  <data name="Button_Menu_ManageMovies" xml:space="preserve">
-    <value>Manage Movies</value>
-  </data>
   <data name="Button_Menu_POS" xml:space="preserve">
     <value>Point of Sales</value>
+  </data>
+  <data name="Button_Menu_SearchMembers" xml:space="preserve">
+    <value>Search Members</value>
+  </data>
+  <data name="Button_Menu_SearchMovies" xml:space="preserve">
+    <value>Search Movies</value>
   </data>
   <data name="Button_Menu_Settings" xml:space="preserve">
     <value>Settings</value>
