@@ -49,6 +49,8 @@ namespace ClubVideo
             {
                 List<string> ListPermissions = new List<string>();
 
+                if (DS.Tables["Permissions"].Rows.Count == 0) throw new Exception("PERMLIST_EMPTY");
+
                 foreach(DataRow dr in DS.Tables["Permissions"].Rows)
                 {
                     ListPermissions.Add(dr["Permission"].ToString());
@@ -65,6 +67,16 @@ namespace ClubVideo
                 DataTable tmp = DS.Tables["Users"].Clone();
 
                 foreach (DataRow dr in DS.Tables["Users"].Rows) 
+                    tmp.Rows.Add(dr.ItemArray);
+
+                return tmp;
+            }
+
+            public static DataTable Movies()
+            {
+                DataTable tmp = DS.Tables["Movies"].Clone();
+
+                foreach (DataRow dr in DS.Tables["Movies"].Rows)
                     tmp.Rows.Add(dr.ItemArray);
 
                 return tmp;
