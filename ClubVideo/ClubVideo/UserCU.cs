@@ -13,6 +13,9 @@ namespace ClubVideo
 {
     public partial class UserCU : Form
     {
+        bool Modify = false;
+        int userId;
+
         /// <summary>
         /// Enter Adding Mode.
         /// </summary>
@@ -33,11 +36,13 @@ namespace ClubVideo
         /// <param name="lastName"></param>
         public UserCU(int id, string username, string name, string lastName) : this()
         {
+            userId = id;
             tb_Username.Text = username;
             tb_Name.Text = name;
             tb_LastName.Text = lastName;
             lb_ResetPassword.Visible = true;
             lb_ResetPassword.Show();
+            Modify = true;
 
             bt_Finish.BackgroundImage = ClubVideo.Properties.Resources.Edit_User;
 
@@ -52,6 +57,58 @@ namespace ClubVideo
             lb_LastName.Text = Main.resManager.GetString("UserCU_LastName", Main.culInfo);
             lb_Password.Text = Main.resManager.GetString("UserCU_Password", Main.culInfo);
             lb_ConfPassword.Text = Main.resManager.GetString("UserCU_ConfPassword", Main.culInfo);
+        }
+
+        private void bt_Finish_Click(object sender, EventArgs e)
+        {
+            if (Modify)
+            {
+                try
+                {
+                    Database_Connector.Update.User(userId, tb_Username.Text, tb_Name.Text, tb_LastName.Text);
+                    if ((tb_Password.Text != String.Empty || tb_ConfPassword.Text != String.Empty))
+                    {
+                        PasswordValid();
+                        Database_Connector.Update.UserPassword(userId, tb_Password.Text);
+                    }
+                    Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                if ((tb_Password.Text != String.Empty || tb_ConfPassword.Text != String.Empty))
+                {
+                    try
+                    {
+                        if (tb_Username.Text.Equals(string.Empty)) throw new Exception("USERNAME_EMPTY");
+                        PasswordValid();
+                        Database_Connector.AddUser(tb_Username.Text, tb_Password.Text, tb_Name.Text, tb_LastName.Text);
+                        Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void PasswordValid()
+        {
+            if (tb_Password.Text == String.Empty || tb_ConfPassword.Text == String.Empty) throw new Exception("PASSWORD_EMPTY");
+            if (tb_Password.Text != tb_ConfPassword.Text) throw new Exception("PASSWORD_NOT_MATCHING");
+        }
+
+        private void Textbox_KeyDown(object obj, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                bt_Finish_Click(null, null);
+            }
         }
     }
 }

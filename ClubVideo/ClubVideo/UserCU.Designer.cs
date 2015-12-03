@@ -39,8 +39,8 @@
             this.lb_ConfPassword = new System.Windows.Forms.Label();
             this.tb_ConfPassword = new System.Windows.Forms.TextBox();
             this.lb_Line = new System.Windows.Forms.Label();
-            this.bt_Finish = new System.Windows.Forms.Button();
             this.lb_ResetPassword = new System.Windows.Forms.Label();
+            this.bt_Finish = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lb_Username
@@ -58,6 +58,7 @@
             this.tb_Username.Name = "tb_Username";
             this.tb_Username.Size = new System.Drawing.Size(238, 22);
             this.tb_Username.TabIndex = 1;
+            this.tb_Username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Textbox_KeyDown);
             // 
             // lb_Name
             // 
@@ -73,7 +74,8 @@
             this.tb_Name.Location = new System.Drawing.Point(139, 69);
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(238, 22);
-            this.tb_Name.TabIndex = 1;
+            this.tb_Name.TabIndex = 2;
+            this.tb_Name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Textbox_KeyDown);
             // 
             // lb_LastName
             // 
@@ -89,7 +91,8 @@
             this.tb_LastName.Location = new System.Drawing.Point(139, 97);
             this.tb_LastName.Name = "tb_LastName";
             this.tb_LastName.Size = new System.Drawing.Size(238, 22);
-            this.tb_LastName.TabIndex = 1;
+            this.tb_LastName.TabIndex = 3;
+            this.tb_LastName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Textbox_KeyDown);
             // 
             // lb_Password
             // 
@@ -104,8 +107,10 @@
             // 
             this.tb_Password.Location = new System.Drawing.Point(139, 190);
             this.tb_Password.Name = "tb_Password";
+            this.tb_Password.PasswordChar = '●';
             this.tb_Password.Size = new System.Drawing.Size(238, 22);
-            this.tb_Password.TabIndex = 1;
+            this.tb_Password.TabIndex = 4;
+            this.tb_Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Textbox_KeyDown);
             // 
             // lb_ConfPassword
             // 
@@ -120,8 +125,10 @@
             // 
             this.tb_ConfPassword.Location = new System.Drawing.Point(139, 218);
             this.tb_ConfPassword.Name = "tb_ConfPassword";
+            this.tb_ConfPassword.PasswordChar = '●';
             this.tb_ConfPassword.Size = new System.Drawing.Size(238, 22);
-            this.tb_ConfPassword.TabIndex = 1;
+            this.tb_ConfPassword.TabIndex = 5;
+            this.tb_ConfPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Textbox_KeyDown);
             // 
             // lb_Line
             // 
@@ -131,6 +138,16 @@
             this.lb_Line.Size = new System.Drawing.Size(384, 17);
             this.lb_Line.TabIndex = 2;
             this.lb_Line.Text = "_______________________________________________";
+            // 
+            // lb_ResetPassword
+            // 
+            this.lb_ResetPassword.Location = new System.Drawing.Point(12, 152);
+            this.lb_ResetPassword.Name = "lb_ResetPassword";
+            this.lb_ResetPassword.Size = new System.Drawing.Size(379, 23);
+            this.lb_ResetPassword.TabIndex = 5;
+            this.lb_ResetPassword.Text = "reset Password";
+            this.lb_ResetPassword.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lb_ResetPassword.Visible = false;
             // 
             // bt_Finish
             // 
@@ -142,17 +159,9 @@
             this.bt_Finish.Name = "bt_Finish";
             this.bt_Finish.Size = new System.Drawing.Size(86, 82);
             this.bt_Finish.TabIndex = 4;
+            this.bt_Finish.TabStop = false;
             this.bt_Finish.UseVisualStyleBackColor = true;
-            // 
-            // lb_ResetPassword
-            // 
-            this.lb_ResetPassword.Location = new System.Drawing.Point(12, 152);
-            this.lb_ResetPassword.Name = "lb_ResetPassword";
-            this.lb_ResetPassword.Size = new System.Drawing.Size(379, 23);
-            this.lb_ResetPassword.TabIndex = 5;
-            this.lb_ResetPassword.Text = "reset Password";
-            this.lb_ResetPassword.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lb_ResetPassword.Visible = false;
+            this.bt_Finish.Click += new System.EventHandler(this.bt_Finish_Click);
             // 
             // UserCU
             // 

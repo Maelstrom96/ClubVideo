@@ -80,9 +80,18 @@ namespace ClubVideo
                 if (row.Cells[0].Value.ToString() != Main.user.ID.ToString())
                     Database_Connector.Delete.User(int.Parse(row.Cells[0].Value.ToString()));
                 else
-                    MessageBox.Show("You can't delete yourself!");
+                    MessageBox.Show("You can't delete yourself!"); // LANGUAGE SUPPORT TODO
             }
             LoadUsers();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            bs_Users.Filter = "CONVERT(ID, 'System.String') like '" + 
+                tb_Search.Text + "%' or USERNAME like '" + tb_Search.Text + "%' or NAME like '" +
+                tb_Search.Text + "%' or LASTNAME like '" + tb_Search.Text + "%'";
+        }
+
+
     }
 }

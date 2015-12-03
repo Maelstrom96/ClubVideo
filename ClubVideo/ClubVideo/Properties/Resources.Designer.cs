@@ -143,6 +143,16 @@ namespace ClubVideo.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Group_User {
+            get {
+                object obj = ResourceManager.GetObject("Group_User", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Left_Arrow {
             get {
                 object obj = ResourceManager.GetObject("Left_Arrow", resourceCulture);
@@ -196,6 +206,16 @@ namespace ClubVideo.Properties {
         internal static System.Drawing.Bitmap ManageMovies {
             get {
                 object obj = ResourceManager.GetObject("ManageMovies", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Perm_User {
+            get {
+                object obj = ResourceManager.GetObject("Perm_User", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -52,20 +52,26 @@ namespace ClubVideo
         {
             conn_.Close();
         }
-        static public void AddUser(string username, string password)
+        static public void AddUser(string username, string password, string name, string lastName)
         {
+            if (Select.UsernameExist(0, username)) throw new Exception("USERNAME_ALREADY_EXIST");
+
             Guid userGuid = System.Guid.NewGuid();
             string hashedPassword = Security.HashSHA1(password + userGuid.ToString());
 
-            string insert = "INSERT INTO Users (ID, Username, Password, Guid) VALUES (UserID.NEXTVAL, :username, :password, :userguid)";
+            string insert = "INSERT INTO Users (ID, Username, Password, Guid, Name, LastName) VALUES (UserID.NEXTVAL, :username, :password, :userguid, :name, :lastname)";
 
             OracleCommand cmd = new OracleCommand(insert, GetConnection());
 
             cmd.Parameters.Add(new OracleParameter("username", username));
             cmd.Parameters.Add(new OracleParameter("password", hashedPassword));
             cmd.Parameters.Add(new OracleParameter("userguid", userGuid.ToString()));
+            cmd.Parameters.Add(new OracleParameter("name", name));
+            cmd.Parameters.Add(new OracleParameter("lastname", lastName));
 
             cmd.ExecuteNonQuery();
+
+            Database.Update.Users();
         }
 
         public static int GetUserIdByUsernameAndPassword(string username, string password)
@@ -175,6 +181,44 @@ namespace ClubVideo
 
                 return value;
             }
+
+            public static bool UsernameExist(int id, string username)
+            {
+                string select = "SELECT id, username FROM users where LOWER(username)=LOWER(:username)";
+                OracleCommand cmd = new OracleCommand(select, GetConnection());
+                cmd.Parameters.Add(new OracleParameter("username", username));
+
+                OracleDataReader dr = cmd.ExecuteReader();
+
+                if (dr.Read())
+                {
+                    if (dr["id"].ToString() == id.ToString()) return false;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            public static string GUID(int id)
+            {
+                string select = "SELECT Guid FROM Users WHERE id=:id";
+                OracleCommand cmd = new OracleCommand(select, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("id", id));
+
+                OracleDataReader dr = cmd.ExecuteReader();
+
+                if(dr.Read())
+                {
+                    return Convert.ToString(dr["guid"]);
+                }
+                else
+                {
+                    throw new Exception("ERROR_USERID_NOT_FOUND");
+                }
+            }
         }
 
         public static class Delete
@@ -213,9 +257,39 @@ namespace ClubVideo
 
         public static class Update
         {
-            public static void UserPassword()
+            public static void UserPassword(int id, string password)
             {
-                
+                string hashedPassword = Security.HashSHA1(password + Select.GUID(id));
+
+                string update = "UPDATE users SET password=:password WHERE id=:userid";
+
+                OracleCommand cmd = new OracleCommand(update, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("password", hashedPassword));
+                cmd.Parameters.Add(new OracleParameter("userid", id));
+
+                cmd.ExecuteNonQuery();
+
+                CloseConnection();
+            }
+
+            public static void User(int id, string username, string name, string lastName)
+            {
+                if (username.Equals(string.Empty)) throw new Exception("USERNAME_CANNOT_BE_NULL");
+                if (Select.UsernameExist(id, username)) throw new Exception("USERNAME_EXIST");
+
+                string update = "UPDATE users SET username=:username, name=:name, lastname=:lastname WHERE id=:userid";
+
+                OracleCommand cmd = new OracleCommand(update, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("username", username));
+                cmd.Parameters.Add(new OracleParameter("keyp", name));
+                cmd.Parameters.Add(new OracleParameter("keyp", lastName));
+                cmd.Parameters.Add(new OracleParameter("userid", id));
+
+                cmd.ExecuteNonQuery();
+
+                Database.Update.Users();
             }
 
             public static void LanguageSetting(string Language)

@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_Users = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_Search = new System.Windows.Forms.TextBox();
             this.lb_SearchUser = new System.Windows.Forms.Label();
-            this.bt_AddUser = new System.Windows.Forms.Button();
-            this.bt_EditUser = new System.Windows.Forms.Button();
             this.bt_DeleteUsers = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.bt_EditUser = new System.Windows.Forms.Button();
+            this.bt_AddUser = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Users)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,21 +51,22 @@
             this.dgv_Users.Name = "dgv_Users";
             this.dgv_Users.ReadOnly = true;
             this.dgv_Users.RowHeadersVisible = false;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgv_Users.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgv_Users.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Users.RowTemplate.Height = 24;
             this.dgv_Users.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Users.Size = new System.Drawing.Size(810, 482);
             this.dgv_Users.TabIndex = 0;
             this.dgv_Users.SelectionChanged += new System.EventHandler(this.dgv_Users_SelectionChanged);
             // 
-            // textBox1
+            // tb_Search
             // 
-            this.textBox1.Location = new System.Drawing.Point(99, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(272, 22);
-            this.textBox1.TabIndex = 1;
+            this.tb_Search.Location = new System.Drawing.Point(99, 27);
+            this.tb_Search.Name = "tb_Search";
+            this.tb_Search.Size = new System.Drawing.Size(272, 22);
+            this.tb_Search.TabIndex = 1;
+            this.tb_Search.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lb_SearchUser
             // 
@@ -74,18 +77,31 @@
             this.lb_SearchUser.TabIndex = 2;
             this.lb_SearchUser.Text = "Search :";
             // 
-            // bt_AddUser
+            // bt_DeleteUsers
             // 
-            this.bt_AddUser.BackgroundImage = global::ClubVideo.Properties.Resources.Add_User;
-            this.bt_AddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bt_AddUser.FlatAppearance.BorderSize = 0;
-            this.bt_AddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_AddUser.Location = new System.Drawing.Point(828, 75);
-            this.bt_AddUser.Name = "bt_AddUser";
-            this.bt_AddUser.Size = new System.Drawing.Size(86, 82);
-            this.bt_AddUser.TabIndex = 3;
-            this.bt_AddUser.UseVisualStyleBackColor = true;
-            this.bt_AddUser.Click += new System.EventHandler(this.bt_AddUser_Click);
+            this.bt_DeleteUsers.BackgroundImage = global::ClubVideo.Properties.Resources.Delete_User;
+            this.bt_DeleteUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bt_DeleteUsers.FlatAppearance.BorderSize = 0;
+            this.bt_DeleteUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_DeleteUsers.Location = new System.Drawing.Point(828, 433);
+            this.bt_DeleteUsers.Name = "bt_DeleteUsers";
+            this.bt_DeleteUsers.Size = new System.Drawing.Size(86, 82);
+            this.bt_DeleteUsers.TabIndex = 3;
+            this.bt_DeleteUsers.UseVisualStyleBackColor = true;
+            this.bt_DeleteUsers.Click += new System.EventHandler(this.bt_DeleteUsers_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::ClubVideo.Properties.Resources.Perm_User;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(828, 257);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(86, 82);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.bt_EditUser_Click);
             // 
             // bt_EditUser
             // 
@@ -93,25 +109,38 @@
             this.bt_EditUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_EditUser.FlatAppearance.BorderSize = 0;
             this.bt_EditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_EditUser.Location = new System.Drawing.Point(828, 190);
+            this.bt_EditUser.Location = new System.Drawing.Point(828, 169);
             this.bt_EditUser.Name = "bt_EditUser";
             this.bt_EditUser.Size = new System.Drawing.Size(86, 82);
             this.bt_EditUser.TabIndex = 3;
             this.bt_EditUser.UseVisualStyleBackColor = true;
             this.bt_EditUser.Click += new System.EventHandler(this.bt_EditUser_Click);
             // 
-            // bt_DeleteUsers
+            // bt_AddUser
             // 
-            this.bt_DeleteUsers.BackgroundImage = global::ClubVideo.Properties.Resources.Delete_User;
-            this.bt_DeleteUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bt_DeleteUsers.FlatAppearance.BorderSize = 0;
-            this.bt_DeleteUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_DeleteUsers.Location = new System.Drawing.Point(828, 310);
-            this.bt_DeleteUsers.Name = "bt_DeleteUsers";
-            this.bt_DeleteUsers.Size = new System.Drawing.Size(86, 82);
-            this.bt_DeleteUsers.TabIndex = 3;
-            this.bt_DeleteUsers.UseVisualStyleBackColor = true;
-            this.bt_DeleteUsers.Click += new System.EventHandler(this.bt_DeleteUsers_Click);
+            this.bt_AddUser.BackgroundImage = global::ClubVideo.Properties.Resources.Add_User;
+            this.bt_AddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bt_AddUser.FlatAppearance.BorderSize = 0;
+            this.bt_AddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_AddUser.Location = new System.Drawing.Point(828, 81);
+            this.bt_AddUser.Name = "bt_AddUser";
+            this.bt_AddUser.Size = new System.Drawing.Size(86, 82);
+            this.bt_AddUser.TabIndex = 3;
+            this.bt_AddUser.UseVisualStyleBackColor = true;
+            this.bt_AddUser.Click += new System.EventHandler(this.bt_AddUser_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::ClubVideo.Properties.Resources.Group_User;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(828, 345);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(86, 82);
+            this.button2.TabIndex = 3;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.bt_EditUser_Click);
             // 
             // Manage_Users
             // 
@@ -119,10 +148,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(939, 553);
             this.Controls.Add(this.bt_DeleteUsers);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.bt_EditUser);
             this.Controls.Add(this.bt_AddUser);
             this.Controls.Add(this.lb_SearchUser);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_Search);
             this.Controls.Add(this.dgv_Users);
             this.Name = "Manage_Users";
             this.Text = "Manage_Users";
@@ -135,10 +166,12 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgv_Users;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_Search;
         private System.Windows.Forms.Label lb_SearchUser;
         private System.Windows.Forms.Button bt_AddUser;
         private System.Windows.Forms.Button bt_EditUser;
         private System.Windows.Forms.Button bt_DeleteUsers;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

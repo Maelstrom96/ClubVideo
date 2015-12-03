@@ -23,6 +23,7 @@ namespace ClubVideo
         public Main_Menu()
         {
             InitializeComponent();
+
             //TEMP TEST
             //Database_Connector.AddUser("Test", "test");
             //SidebySideSelection ss = new SidebySideSelection(Database.GetData.ListPermissions(), new List<string>(), "Test");
