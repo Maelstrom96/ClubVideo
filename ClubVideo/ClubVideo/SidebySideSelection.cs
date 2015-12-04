@@ -15,6 +15,9 @@ namespace ClubVideo
         List<string> startSelectionAllList;
         List<string> startSelectedList;
 
+        List<string> DeletedList;
+        List<string> AddedList;
+
         public SidebySideSelection(List<string> listSelectionAll, List<string> listSelected, string Header)
         {
             InitializeComponent();
@@ -34,14 +37,15 @@ namespace ClubVideo
 
         private void Init()
         {
-
+            DeletedList = new List<string>();
+            AddedList = new List<string>();
         }
 
         private void AddStringList(List<String> items, ListBox listView)
         {
             foreach (string item in items)
             {
-                if (!startSelectedList.Contains(item)) listView.Items.Add(item);
+                if (!startSelectedList.Contains(item) || listView.Name != "lv_Selection") listView.Items.Add(item);
             }
         }
 
@@ -85,6 +89,21 @@ namespace ClubVideo
         private void bt_Erase_Click(object sender, EventArgs e)
         {
             RemoveAll();
+        }
+
+        private void bt_Accept_Click(object sender, EventArgs e)
+        {
+
+
+            DialogResult = DialogResult.OK;
+            Close();
+        }
+
+        private static List<string> GetDifferences(List<string> old_, List<string> new_)
+        {
+            List<string> tmpList = new List<string>();
+
+            return tmpList;
         }
     }
 }

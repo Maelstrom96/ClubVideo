@@ -32,6 +32,8 @@ namespace ClubVideo
             dgv_Users.Columns[2].HeaderText = Main.resManager.GetString("Manage_Users_Name", Main.culInfo);
             // Last Name SGV
             dgv_Users.Columns[3].HeaderText = Main.resManager.GetString("Manage_Users_LastName", Main.culInfo);
+
+            Text = Main.resManager.GetString("Manage_Users_Header", Main.culInfo);
         }
 
         private void LoadUsers()
@@ -90,6 +92,22 @@ namespace ClubVideo
             bs_Users.Filter = "CONVERT(ID, 'System.String') like '" + 
                 tb_Search.Text + "%' or USERNAME like '" + tb_Search.Text + "%' or NAME like '" +
                 tb_Search.Text + "%' or LASTNAME like '" + tb_Search.Text + "%'";
+        }
+
+        private void bt_PermsEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<string> perms = Database.GetData.ListPermissions();
+                List<string> userPerms = Database_Connector.Select.UserPermissions(int.Parse(dgv_Users.SelectedRows[0].Cells[0].Value.ToString()));
+
+                SidebySideSelection sbs_Form = new SidebySideSelection(perms, userPerms, "Users Permissions");
+                sbs_Form.ShowDialog();
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
 

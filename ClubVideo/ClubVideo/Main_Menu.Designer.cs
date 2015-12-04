@@ -129,7 +129,6 @@
             this.bt_SearchMembers.FlatAppearance.BorderSize = 0;
             this.bt_SearchMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_SearchMembers.Image = global::ClubVideo.Properties.Resources.Search_Member;
-            this.bt_SearchMembers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_SearchMembers.Location = new System.Drawing.Point(302, -2);
             this.bt_SearchMembers.Name = "bt_SearchMembers";
             this.bt_SearchMembers.Size = new System.Drawing.Size(134, 134);

@@ -30,7 +30,7 @@
         {
             this.lv_Selection = new System.Windows.Forms.ListBox();
             this.lv_Selected = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.bt_Accept = new System.Windows.Forms.Button();
             this.bt_Remove = new System.Windows.Forms.Button();
             this.bt_Erase = new System.Windows.Forms.Button();
             this.bt_Add = new System.Windows.Forms.Button();
@@ -58,17 +58,18 @@
             this.lv_Selected.Sorted = true;
             this.lv_Selected.TabIndex = 3;
             // 
-            // button2
+            // bt_Accept
             // 
-            this.button2.BackgroundImage = global::ClubVideo.Properties.Resources.Done;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(390, 344);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(59, 54);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = true;
+            this.bt_Accept.BackgroundImage = global::ClubVideo.Properties.Resources.Done;
+            this.bt_Accept.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bt_Accept.FlatAppearance.BorderSize = 0;
+            this.bt_Accept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_Accept.Location = new System.Drawing.Point(390, 344);
+            this.bt_Accept.Name = "bt_Accept";
+            this.bt_Accept.Size = new System.Drawing.Size(59, 54);
+            this.bt_Accept.TabIndex = 1;
+            this.bt_Accept.UseVisualStyleBackColor = true;
+            this.bt_Accept.Click += new System.EventHandler(this.bt_Accept_Click);
             // 
             // bt_Remove
             // 
@@ -116,7 +117,7 @@
             this.ClientSize = new System.Drawing.Size(836, 436);
             this.Controls.Add(this.lv_Selected);
             this.Controls.Add(this.lv_Selection);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bt_Accept);
             this.Controls.Add(this.bt_Remove);
             this.Controls.Add(this.bt_Erase);
             this.Controls.Add(this.bt_Add);
@@ -135,7 +136,7 @@
         private System.Windows.Forms.Button bt_Remove;
         private System.Windows.Forms.ListBox lv_Selected;
         private System.Windows.Forms.Button bt_Erase;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button bt_Accept;
 
 
     }

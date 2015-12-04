@@ -156,6 +156,26 @@ namespace ClubVideo
 
         public static class Select
         {
+            public static List<string> UserPermissions(int userid)
+            {
+                List<string> tempPerms = new List<string>();
+                string select = "SELECT PERMISSION FROM USER_PERMISSIONS WHERE USER_ID=:userid";
+                OracleCommand cmd = new OracleCommand(select, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("userid", userid));
+
+                OracleDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    tempPerms.Add(dr["PERMISSION"].ToString());
+                }
+
+                CloseConnection();
+
+                return tempPerms;
+            }
+
             public static string LanguageSetting()
             {
                 string value = null;
