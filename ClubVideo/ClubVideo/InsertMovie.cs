@@ -15,6 +15,7 @@ namespace ClubVideo
         bool edit;
         MovieObject movie;
         MovieObject finalMovie;
+        BindingSource _bs;
 
         public InsertMovie(MovieObject movie_, bool _edit = true)
         {
@@ -26,6 +27,24 @@ namespace ClubVideo
             InitializeComponent();
 
             LoadText();
+        }
+
+        public InsertMovie(BindingSource bs)
+        {
+            InitializeComponent();
+            _bs = bs;
+            Height += 30;
+            btn_Next.Location = new Point(lb_DescFR.Location.X + 250, lb_DescFR.Location.Y + 130);
+            btn_Previous.Location = new Point(lb_DescFR.Location.X + 175, lb_DescFR.Location.Y + 130);
+            btn_Next.Visible = true;
+            btn_Previous.Visible = true;
+
+            lb_TitreEN.DataBindings.Add("text", bs, "NAME_EN");
+            lb_TitreFR.DataBindings.Add("text", bs, "NAME_FR");
+            lb_DescEN.DataBindings.Add("text", bs, "DESCRIPTION_EN");
+            lb_DescFR.DataBindings.Add("text", bs, "DESCRIPTION_FR");
+            lb_Date.DataBindings.Add("text", bs, "RELEASEDATE");
+            pictureBox1.DataBindings.Add("image", bs, "IMAGE", true);
         }
 
         private void LoadText()
@@ -112,6 +131,16 @@ namespace ClubVideo
         private void InsertMovie_Click(object sender, EventArgs e)
         {
             Focus();
+        }
+
+        private void btn_Next_Click(object sender, EventArgs e)
+        {
+            this.BindingContext[_bs].Position += 1;
+        }
+
+        private void btn_Previous_Click(object sender, EventArgs e)
+        {
+            this.BindingContext[_bs].Position -= 1;
         }
     }
 }

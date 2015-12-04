@@ -44,9 +44,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ClubVideo.Properties.Resources.Line1;
-            this.pictureBox1.Location = new System.Drawing.Point(893, -2);
+            this.pictureBox1.Location = new System.Drawing.Point(670, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 134);
+            this.pictureBox1.Size = new System.Drawing.Size(32, 109);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -59,9 +60,10 @@
             this.bt_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Settings.Image = global::ClubVideo.Properties.Resources.Settings;
             this.bt_Settings.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bt_Settings.Location = new System.Drawing.Point(763, -2);
+            this.bt_Settings.Location = new System.Drawing.Point(572, -2);
+            this.bt_Settings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_Settings.Name = "bt_Settings";
-            this.bt_Settings.Size = new System.Drawing.Size(134, 134);
+            this.bt_Settings.Size = new System.Drawing.Size(106, 109);
             this.bt_Settings.TabIndex = 0;
             this.bt_Settings.Text = "settings";
             this.bt_Settings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -79,8 +81,9 @@
             this.bt_POS.Image = global::ClubVideo.Properties.Resources.POS;
             this.bt_POS.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_POS.Location = new System.Drawing.Point(-1, -2);
+            this.bt_POS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_POS.Name = "bt_POS";
-            this.bt_POS.Size = new System.Drawing.Size(134, 134);
+            this.bt_POS.Size = new System.Drawing.Size(106, 109);
             this.bt_POS.TabIndex = 0;
             this.bt_POS.Text = "pos";
             this.bt_POS.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -95,14 +98,16 @@
             this.bt_SearchMovies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_SearchMovies.Image = global::ClubVideo.Properties.Resources.ManageMovies;
             this.bt_SearchMovies.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bt_SearchMovies.Location = new System.Drawing.Point(162, -2);
+            this.bt_SearchMovies.Location = new System.Drawing.Point(122, -2);
+            this.bt_SearchMovies.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_SearchMovies.Name = "bt_SearchMovies";
-            this.bt_SearchMovies.Size = new System.Drawing.Size(134, 134);
+            this.bt_SearchMovies.Size = new System.Drawing.Size(106, 109);
             this.bt_SearchMovies.TabIndex = 0;
             this.bt_SearchMovies.Text = "search Movies";
             this.bt_SearchMovies.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_SearchMovies.UseVisualStyleBackColor = true;
             this.bt_SearchMovies.TextChanged += new System.EventHandler(this.Button_Permissions);
+            this.bt_SearchMovies.Click += new System.EventHandler(this.bt_SearchMovies_Click);
             // 
             // bt_Administration
             // 
@@ -112,9 +117,10 @@
             this.bt_Administration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Administration.Image = global::ClubVideo.Properties.Resources.Administration;
             this.bt_Administration.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bt_Administration.Location = new System.Drawing.Point(623, -2);
+            this.bt_Administration.Location = new System.Drawing.Point(467, -2);
+            this.bt_Administration.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_Administration.Name = "bt_Administration";
-            this.bt_Administration.Size = new System.Drawing.Size(134, 134);
+            this.bt_Administration.Size = new System.Drawing.Size(106, 109);
             this.bt_Administration.TabIndex = 0;
             this.bt_Administration.Text = "administration";
             this.bt_Administration.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -129,9 +135,11 @@
             this.bt_SearchMembers.FlatAppearance.BorderSize = 0;
             this.bt_SearchMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_SearchMembers.Image = global::ClubVideo.Properties.Resources.Search_Member;
-            this.bt_SearchMembers.Location = new System.Drawing.Point(302, -2);
+            this.bt_SearchMembers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bt_SearchMembers.Location = new System.Drawing.Point(226, -2);
+            this.bt_SearchMembers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_SearchMembers.Name = "bt_SearchMembers";
-            this.bt_SearchMembers.Size = new System.Drawing.Size(134, 134);
+            this.bt_SearchMembers.Size = new System.Drawing.Size(106, 109);
             this.bt_SearchMembers.TabIndex = 0;
             this.bt_SearchMembers.Text = "search Members";
             this.bt_SearchMembers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -145,9 +153,10 @@
             this.bt_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Logout.Image = global::ClubVideo.Properties.Resources.Logout;
             this.bt_Logout.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bt_Logout.Location = new System.Drawing.Point(931, -2);
+            this.bt_Logout.Location = new System.Drawing.Point(698, -2);
+            this.bt_Logout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_Logout.Name = "bt_Logout";
-            this.bt_Logout.Size = new System.Drawing.Size(134, 134);
+            this.bt_Logout.Size = new System.Drawing.Size(100, 109);
             this.bt_Logout.TabIndex = 0;
             this.bt_Logout.Text = "logout";
             this.bt_Logout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -161,9 +170,10 @@
             this.bt_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Exit.Image = global::ClubVideo.Properties.Resources.Exit;
             this.bt_Exit.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.bt_Exit.Location = new System.Drawing.Point(1065, -2);
+            this.bt_Exit.Location = new System.Drawing.Point(799, -2);
+            this.bt_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_Exit.Name = "bt_Exit";
-            this.bt_Exit.Size = new System.Drawing.Size(134, 134);
+            this.bt_Exit.Size = new System.Drawing.Size(100, 109);
             this.bt_Exit.TabIndex = 0;
             this.bt_Exit.Text = "exit";
             this.bt_Exit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -174,18 +184,19 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ClubVideo.Properties.Resources.Line1;
-            this.pictureBox2.Location = new System.Drawing.Point(118, -2);
+            this.pictureBox2.Location = new System.Drawing.Point(88, -2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(43, 134);
+            this.pictureBox2.Size = new System.Drawing.Size(32, 109);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // Main_Menu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1198, 132);
+            this.ClientSize = new System.Drawing.Size(898, 107);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -197,6 +208,7 @@
             this.Controls.Add(this.bt_Logout);
             this.Controls.Add(this.bt_Exit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Main_Menu";
