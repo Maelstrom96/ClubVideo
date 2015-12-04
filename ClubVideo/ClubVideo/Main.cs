@@ -25,6 +25,7 @@ namespace ClubVideo
         {
             LoadSettings();
             LoadDataBase();
+
         }
 
         public void Run()

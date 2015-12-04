@@ -111,5 +111,11 @@ namespace ClubVideo
             Menu = Submenu.Administration;
             Close();
         }
+
+        private void bt_SearchMovies_Click(object sender, EventArgs e)
+        {
+            Manage_Movies movies = new Manage_Movies();
+            movies.ShowDialog();
+        }
     }
 }
