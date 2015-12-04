@@ -29,9 +29,12 @@ namespace ClubVideo
             LoadText();
         }
 
-        public InsertMovie(BindingSource bs)
+        public InsertMovie(BindingSource bs, string Header)
         {
             InitializeComponent();
+
+            Text = Header;
+
             _bs = bs;
             Height += 30;
             btn_Next.Location = new Point(lb_DescFR.Location.X + 250, lb_DescFR.Location.Y + 130);
@@ -39,12 +42,31 @@ namespace ClubVideo
             btn_Next.Visible = true;
             btn_Previous.Visible = true;
 
+            SetLabelCursor(System.Windows.Forms.Cursors.Default);
+
             lb_TitreEN.DataBindings.Add("text", bs, "NAME_EN");
             lb_TitreFR.DataBindings.Add("text", bs, "NAME_FR");
             lb_DescEN.DataBindings.Add("text", bs, "DESCRIPTION_EN");
             lb_DescFR.DataBindings.Add("text", bs, "DESCRIPTION_FR");
             lb_Date.DataBindings.Add("text", bs, "RELEASEDATE");
             pictureBox1.DataBindings.Add("image", bs, "IMAGE", true);
+        }
+
+        private void LoadLanguage()
+        {
+
+        }
+
+        private void SetLabelCursor(System.Windows.Forms.Cursor cursormode)
+        {
+            lb_TitreEN.Cursor = cursormode;
+            lb_TitreFR.Cursor = cursormode;
+            lb_Rating.Cursor = cursormode;
+            lb_Time.Cursor = cursormode;
+            lb_Date.Cursor = cursormode;
+            lb_DescEN.Cursor = cursormode;
+            lb_DescFR.Cursor = cursormode;
+            lb_Director.Cursor = cursormode;
         }
 
         private void LoadText()
@@ -55,9 +77,9 @@ namespace ClubVideo
             lb_DescEN.Text = movie.Description_en;
             lb_DescFR.Text = movie.Description_fr;
             lb_Rating.Text = movie.Rated;
-            lb_Time.Text = movie.Runtime;
+            lb_Time.Text = movie.Runtime.ToString();
             lb_Director.Text = movie.Director;
-            lb_Date.Text = movie.Year;
+            lb_Date.Text = movie.Year.ToString();
         }
 
         private void SaveFinalMovie()
@@ -69,7 +91,7 @@ namespace ClubVideo
             finalMovie.Description_en = lb_DescEN.Text;
             finalMovie.Description_fr = lb_DescFR.Text;
             finalMovie.Rated = lb_Rating.Text;
-            finalMovie.Runtime = lb_Time.Text;
+            finalMovie.Runtime = int.Parse(lb_Time.Text);
             finalMovie.Director = lb_Director.Text;
         }
 

@@ -25,10 +25,13 @@ namespace ClubVideo
             InitializeComponent();
 
             //TEMP TEST
+
             //Database_Connector.AddUser("Test", "test");
             //SidebySideSelection ss = new SidebySideSelection(Database.GetData.ListPermissions(), new List<string>(), "Test");
             //ss.ShowDialog();
             //MovieObject movie = Database_Connector.GetFromIMDB("tt2975590");
+            //Database_Connector.Insert.Movie(Database_Connector.GetFromIMDB("tt1951266"));
+
             //InsertMovie AddMovieForm = new InsertMovie(Database_Connector.GetFromIMDB("tt2975590"));
             //AddMovieForm.ShowDialog();
 
@@ -114,6 +117,7 @@ namespace ClubVideo
 
         private void bt_SearchMovies_Click(object sender, EventArgs e)
         {
+            Hide();
             Manage_Movies movies = new Manage_Movies();
             movies.ShowDialog();
         }
