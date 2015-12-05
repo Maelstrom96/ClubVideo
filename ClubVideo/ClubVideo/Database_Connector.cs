@@ -303,7 +303,7 @@ namespace ClubVideo
 
                 Image pb_Image = movie.Poster;
                 MemoryStream memoryStream = new MemoryStream();
-                pb_Image.Save(memoryStream, ImageFormat.Png);
+                pb_Image.Save(memoryStream, ImageFormat.Jpeg);
                 byte[] imageBt = memoryStream.ToArray();
 
                 image.Value = imageBt;

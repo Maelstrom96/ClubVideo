@@ -30,7 +30,7 @@ namespace ClubVideo
             //SidebySideSelection ss = new SidebySideSelection(Database.GetData.ListPermissions(), new List<string>(), "Test");
             //ss.ShowDialog();
             //MovieObject movie = Database_Connector.GetFromIMDB("tt2975590");
-            //Database_Connector.Insert.Movie(Database_Connector.GetFromIMDB("tt1951266"));
+            //Database_Connector.Insert.Movie(Database_Connector.GetFromIMDB("tt2975590"));
 
             //InsertMovie AddMovieForm = new InsertMovie(Database_Connector.GetFromIMDB("tt2975590"));
             //AddMovieForm.ShowDialog();
