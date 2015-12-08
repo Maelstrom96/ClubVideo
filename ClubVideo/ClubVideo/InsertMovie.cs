@@ -48,7 +48,10 @@ namespace ClubVideo
             lb_TitreFR.DataBindings.Add("text", bs, "NAME_FR");
             lb_DescEN.DataBindings.Add("text", bs, "DESCRIPTION_EN");
             lb_DescFR.DataBindings.Add("text", bs, "DESCRIPTION_FR");
+            lb_Rating.DataBindings.Add("text", bs, "RATING");
             lb_Date.DataBindings.Add("text", bs, "RELEASEDATE");
+            lb_Time.DataBindings.Add("text", bs, "RUNTIME");
+            //lb_Director.DataBindings.Add("text", bs, "DIRECTOR");
             pictureBox1.DataBindings.Add("image", bs, "IMAGE", true);
         }
 
