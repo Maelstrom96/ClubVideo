@@ -76,7 +76,9 @@
             this.Controls.Add(this.tb_Search);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(732, 490);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(732, 490);
             this.Name = "Manage_Movies";
             this.Text = "Manage_Movies";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SearchResults)).EndInit();
