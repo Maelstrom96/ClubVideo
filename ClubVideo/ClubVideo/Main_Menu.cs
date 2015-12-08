@@ -121,5 +121,12 @@ namespace ClubVideo
             Manage_Movies movies = new Manage_Movies();
             movies.ShowDialog();
         }
+
+        private void bt_SearchMembers_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Manage_Members members = new Manage_Members();
+            members.ShowDialog();
+        }
     }
 }

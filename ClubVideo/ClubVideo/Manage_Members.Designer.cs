@@ -1,6 +1,6 @@
 ﻿namespace ClubVideo
 {
-    partial class Manage_Movies
+    partial class Manage_Members
     {
         /// <summary>
         /// Required designer variable.

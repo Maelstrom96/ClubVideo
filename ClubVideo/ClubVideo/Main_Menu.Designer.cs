@@ -45,7 +45,7 @@
             // 
             this.pictureBox1.Image = global::ClubVideo.Properties.Resources.Line1;
             this.pictureBox1.Location = new System.Drawing.Point(670, -2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 109);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -61,7 +61,7 @@
             this.bt_Settings.Image = global::ClubVideo.Properties.Resources.Settings;
             this.bt_Settings.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_Settings.Location = new System.Drawing.Point(572, -2);
-            this.bt_Settings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Settings.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Settings.Name = "bt_Settings";
             this.bt_Settings.Size = new System.Drawing.Size(106, 109);
             this.bt_Settings.TabIndex = 0;
@@ -81,7 +81,7 @@
             this.bt_POS.Image = global::ClubVideo.Properties.Resources.POS;
             this.bt_POS.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_POS.Location = new System.Drawing.Point(-1, -2);
-            this.bt_POS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_POS.Margin = new System.Windows.Forms.Padding(2);
             this.bt_POS.Name = "bt_POS";
             this.bt_POS.Size = new System.Drawing.Size(106, 109);
             this.bt_POS.TabIndex = 0;
@@ -99,7 +99,7 @@
             this.bt_SearchMovies.Image = global::ClubVideo.Properties.Resources.ManageMovies;
             this.bt_SearchMovies.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_SearchMovies.Location = new System.Drawing.Point(122, -2);
-            this.bt_SearchMovies.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_SearchMovies.Margin = new System.Windows.Forms.Padding(2);
             this.bt_SearchMovies.Name = "bt_SearchMovies";
             this.bt_SearchMovies.Size = new System.Drawing.Size(106, 109);
             this.bt_SearchMovies.TabIndex = 0;
@@ -118,7 +118,7 @@
             this.bt_Administration.Image = global::ClubVideo.Properties.Resources.Administration;
             this.bt_Administration.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_Administration.Location = new System.Drawing.Point(467, -2);
-            this.bt_Administration.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Administration.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Administration.Name = "bt_Administration";
             this.bt_Administration.Size = new System.Drawing.Size(106, 109);
             this.bt_Administration.TabIndex = 0;
@@ -137,7 +137,7 @@
             this.bt_SearchMembers.Image = global::ClubVideo.Properties.Resources.Search_Member;
             this.bt_SearchMembers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_SearchMembers.Location = new System.Drawing.Point(226, -2);
-            this.bt_SearchMembers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_SearchMembers.Margin = new System.Windows.Forms.Padding(2);
             this.bt_SearchMembers.Name = "bt_SearchMembers";
             this.bt_SearchMembers.Size = new System.Drawing.Size(106, 109);
             this.bt_SearchMembers.TabIndex = 0;
@@ -145,6 +145,7 @@
             this.bt_SearchMembers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_SearchMembers.UseVisualStyleBackColor = true;
             this.bt_SearchMembers.TextChanged += new System.EventHandler(this.Button_Permissions);
+            this.bt_SearchMembers.Click += new System.EventHandler(this.bt_SearchMembers_Click);
             // 
             // bt_Logout
             // 
@@ -154,7 +155,7 @@
             this.bt_Logout.Image = global::ClubVideo.Properties.Resources.Logout;
             this.bt_Logout.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_Logout.Location = new System.Drawing.Point(698, -2);
-            this.bt_Logout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Logout.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Logout.Name = "bt_Logout";
             this.bt_Logout.Size = new System.Drawing.Size(100, 109);
             this.bt_Logout.TabIndex = 0;
@@ -171,7 +172,7 @@
             this.bt_Exit.Image = global::ClubVideo.Properties.Resources.Exit;
             this.bt_Exit.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.bt_Exit.Location = new System.Drawing.Point(799, -2);
-            this.bt_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Exit.Name = "bt_Exit";
             this.bt_Exit.Size = new System.Drawing.Size(100, 109);
             this.bt_Exit.TabIndex = 0;
@@ -185,7 +186,7 @@
             // 
             this.pictureBox2.Image = global::ClubVideo.Properties.Resources.Line1;
             this.pictureBox2.Location = new System.Drawing.Point(88, -2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 109);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -208,7 +209,7 @@
             this.Controls.Add(this.bt_Logout);
             this.Controls.Add(this.bt_Exit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Main_Menu";
