@@ -42,7 +42,9 @@ namespace ClubVideo
             }
             else if (form == "fonts")
             {
-
+                Controls["LBL_fontColor"].Text = Main.resManager.GetString("User_Settings_Fonts_fontColor", Main.culInfo);
+                Controls["LBL_fontStyle"].Text = Main.resManager.GetString("User_Settings_Fonts_fontStyle", Main.culInfo);
+                Controls["LBL_select"].Text = Main.resManager.GetString("User_Settings_Fonts_Selection", Main.culInfo);
             }
         }
         private void SaveSettings()
@@ -178,12 +180,16 @@ namespace ClubVideo
         {
             if (!bClicked)
             {
-
+                Fonts_AddLabel(sender);
                 LoadLanguage("fonts");
+                
+                Controls["LBL_select"].Location = new Point(Controls["LBL_select"].Location.X - Controls["LBL_select"].Width / 2, Controls["LBL_select"].Location.Y);
             }
             else
             {
-
+                Controls["LBL_fontColor"].Dispose();
+                Controls["LBL_fontStyle"].Dispose();
+                Controls["LBL_select"].Dispose();
             }
         }
 
@@ -332,7 +338,6 @@ namespace ClubVideo
             Color darkBlue = Color.FromArgb(10,61,101);
             Label LBL = new Label();
             LBL.Name = "LBL_" + name;
-            LBL.Text = name == "currentPassword" ? "Your current password" : name == "newPassword" ? "New Password" : "Confirm Password";
             LBL.Font = new Font("Arial", 14);
             LBL.BackColor = Color.White;
             LBL.ForeColor = darkBlue;
@@ -351,7 +356,7 @@ namespace ClubVideo
             TB.PasswordChar = '●';
             TB.BackColor = Color.White;
             TB.ForeColor = Color.Black;
-            TB.BorderStyle = BorderStyle.FixedSingle; Pen p = new Pen(Color.Red);
+            TB.BorderStyle = BorderStyle.Fixed3D;
 
             return TB;
         }
@@ -417,7 +422,34 @@ namespace ClubVideo
 
         // Fenêtre Settings FONTS
 
+        private void Fonts_AddLabel(Button sender)
+        {
+            int pX = (this.Width - sender.Width) / 2;
+            Label LBL = Pass_CreateLabel("select", pX, 37);
+            Controls.Add(LBL);
+            LBL.BringToFront();
+            
+            LBL = Pass_CreateLabel("fontColor", 80, Controls["LBL_select"].Location.Y + 40);
+            Controls.Add(LBL);
+            LBL.BringToFront();
+            
+            LBL = Pass_CreateLabel("fontStyle", 80, Controls["LBL_fontColor"].Location.Y + 40);
+            Controls.Add(LBL);
+            LBL.BringToFront();
+        }
 
+        private Label Fonts_CreateLabel(string name, int X, int Y)
+        {
+            Label LBL = new Label();
+            LBL.Name = "LBL_" + name;
+            LBL.Location = new Point(X, Y);
+            LBL.BackColor = Color.White;
+            LBL.ForeColor = BLUE;
+            LBL.Font = new Font("Arial", 14);
+            LBL.AutoSize = true;
+
+            return LBL;
+        }
 
         // Fenêtre Settings Général
         private void AddTriangle(Button sender)

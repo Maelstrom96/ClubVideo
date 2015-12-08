@@ -210,6 +210,15 @@
   <data name="UserLogon_Username" xml:space="preserve">
     <value>Nom d'utilisateur....</value>
   </data>
+  <data name="User_Settings_Fonts_fontColor" xml:space="preserve">
+    <value>Couleur</value>
+  </data>
+  <data name="User_Settings_Fonts_fontStyle" xml:space="preserve">
+    <value>Style</value>
+  </data>
+  <data name="User_Settings_Fonts_Selection" xml:space="preserve">
+    <value>Vous pouvez modifier la police à votre goût ici!</value>
+  </data>
   <data name="User_Settings_Hover_Fonts" xml:space="preserve">
     <value>Polices</value>
   </data>
