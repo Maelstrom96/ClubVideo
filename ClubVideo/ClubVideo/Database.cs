@@ -145,7 +145,7 @@ namespace ClubVideo
             public static void Members()
             {
                 DS.Tables["Members"].Clear();
-                GetDBData("Members", Users_Select);
+                GetDBData("Members", Members_Select);
             }
         }
     }
