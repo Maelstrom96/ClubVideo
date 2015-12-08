@@ -98,11 +98,23 @@ namespace ClubVideo
         {
             try
             {
-                List<string> perms = Database.GetData.ListPermissions();
-                List<string> userPerms = Database_Connector.Select.UserPermissions(int.Parse(dgv_Users.SelectedRows[0].Cells[0].Value.ToString()));
+                int userid = int.Parse(dgv_Users.SelectedRows[0].Cells[0].Value.ToString());
 
-                SidebySideSelection sbs_Form = new SidebySideSelection(perms, userPerms, "Users Permissions");
-                sbs_Form.ShowDialog();
+                if (userid == Main.user.ID) throw new Exception("You can't change your own permissions!");
+
+                List<string> perms = Database.GetData.ListPermissions();
+                List<string> userPerms = Database_Connector.Select.UserPermissions(userid);
+
+                SidebySideSelection sbs_Form = new SidebySideSelection(perms, userPerms, "Users Permissions Edit");
+                DialogResult dr = sbs_Form.ShowDialog();
+
+                if (dr == DialogResult.OK)
+                {
+                    if (sbs_Form.AddedList.Count > 0)
+                        Database_Connector.Insert.UserPermissions(userid, sbs_Form.AddedList);
+                    if (sbs_Form.DeletedList.Count > 0)
+                        Database_Connector.Delete.UserPermissions(userid, sbs_Form.DeletedList);
+                }
             }
             catch (Exception ex) 
             {

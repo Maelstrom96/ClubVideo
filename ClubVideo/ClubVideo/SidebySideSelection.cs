@@ -15,8 +15,8 @@ namespace ClubVideo
         List<string> startSelectionAllList;
         List<string> startSelectedList;
 
-        List<string> DeletedList;
-        List<string> AddedList;
+        public List<string> DeletedList;
+        public List<string> AddedList;
 
         public SidebySideSelection(List<string> listSelectionAll, List<string> listSelected, string Header)
         {
@@ -93,17 +93,23 @@ namespace ClubVideo
 
         private void bt_Accept_Click(object sender, EventArgs e)
         {
-
+            GetDifferences();
 
             DialogResult = DialogResult.OK;
             Close();
         }
 
-        private static List<string> GetDifferences(List<string> old_, List<string> new_)
+        private void GetDifferences()
         {
-            List<string> tmpList = new List<string>();
+            foreach (string perm in lv_Selected.Items)
+            {
+                if (!startSelectedList.Contains(perm)) AddedList.Add(perm);
+            }
 
-            return tmpList;
+            foreach (string perm in startSelectedList)
+            {
+                if (!lv_Selected.Items.Contains(perm)) DeletedList.Add(perm);
+            }
         }
     }
 }

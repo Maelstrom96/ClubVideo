@@ -260,6 +260,24 @@ namespace ClubVideo
 
         public static class Delete
         {
+            public static void UserPermissions(int userid, List<string> ParamsToDel)
+            {
+                string delete = "DELETE FROM user_permissions WHERE user_id=:userid AND LOWER(permission)=LOWER(:permission)";
+
+                OracleCommand cmd = new OracleCommand(delete, GetConnection());
+
+                foreach (string param in ParamsToDel)
+                {
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.Add(new OracleParameter("userid", userid));
+                    cmd.Parameters.Add(new OracleParameter("permission", param));
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                if (userid == Main.user.ID) Database.Update.Permissions();
+            }
+
             public static void User(int id)
             {
                 string insert = "DELETE FROM users where id=:userid";
@@ -276,6 +294,25 @@ namespace ClubVideo
 
         public static class Insert
         {
+            public static void UserPermissions(int userid, List<string> ParamsToAdd)
+            {
+                string insert = "INSERT INTO user_permissions VALUES (:userid, :permission)";
+
+                OracleCommand cmd = new OracleCommand(insert, GetConnection());
+
+
+                foreach (string param in ParamsToAdd)
+                {
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.Add(new OracleParameter("userid", userid));
+                    cmd.Parameters.Add(new OracleParameter("permission", param));
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                if (userid == Main.user.ID) Database.Update.Permissions();
+            }
+
             public static void LanguageSetting(string Language)
             {
                 string insert = "INSERT INTO user_settings VALUES (:userid, :keyp, :valuep)";
