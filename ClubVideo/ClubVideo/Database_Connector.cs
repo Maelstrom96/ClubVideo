@@ -186,6 +186,12 @@ namespace ClubVideo
                 return tempPerms;
             }
 
+            /// <summary>
+            /// 
+            /// 
+            /// Comment : If the user doesn't have the settings, insert them.
+            /// </summary>
+            /// <returns></returns>
             public static string LanguageSetting()
             {
                 string value = null;
@@ -204,6 +210,7 @@ namespace ClubVideo
                 }
                 else 
                 {
+                    // Insert default value here.
                     value = Settings.Default.Language;
                     Insert.LanguageSetting(Settings.Default.Language);
                 }
