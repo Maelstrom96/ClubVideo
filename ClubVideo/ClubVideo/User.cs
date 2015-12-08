@@ -11,13 +11,13 @@ namespace ClubVideo
     public class User
     {
         private string Name;
-        private string Username;
+        public string Username { get; private set; }
         private string LastName;
         private int UserID;
 
         public int ID
         {
-            get{ 
+            get { 
                 return UserID;
             }
         }
@@ -27,7 +27,8 @@ namespace ClubVideo
 
         public Permissions Permissions 
         {
-            get{ 
+            get 
+            { 
                 return Perms;
             }
         }
