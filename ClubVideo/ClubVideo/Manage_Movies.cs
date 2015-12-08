@@ -24,7 +24,7 @@ namespace ClubVideo
             source = new BindingSource();
             source.DataSource = ds;
             dgv_SearchResults.DataSource = source;
-            dgv_SearchResults.Columns[6].Visible = false;
+            dgv_SearchResults.Columns[8].Visible = false;
             
         }
 
@@ -42,7 +42,7 @@ namespace ClubVideo
         {
             if(dgv_SearchResults.SelectedRows.Count  == 1)
             {
-                InsertMovie movie = new InsertMovie(source);
+                InsertMovie movie = new InsertMovie(source, "Detail Film");
                 movie.Show();
             }
         }

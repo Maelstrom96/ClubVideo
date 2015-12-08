@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 using System.Drawing;
 using ClubVideo.Properties;
+using System.IO;
+using System.Drawing.Imaging;
 
 namespace ClubVideo
 {
@@ -124,12 +126,20 @@ namespace ClubVideo
             {
                 movie = new MovieObject();
 
+                string runtime = data["Runtime"];
+                runtime = new String(runtime.TakeWhile(Char.IsDigit).ToArray());
+                if (runtime.Equals(string.Empty)) runtime = "0";
+
+                string Year = data["Year"];
+                Year = new String(Year.TakeWhile(Char.IsDigit).ToArray());
+                if (Year.Equals(string.Empty)) Year = "0";
+
                 // EN
                 movie.Nom_en = data["Title"];
                 movie.Description_en = data["Plot"];
                 movie.Rated = data["Rated"];
-                movie.Runtime = data["Runtime"];
-                movie.Year = data["Year"];
+                movie.Runtime = int.Parse(runtime);
+                movie.Year = int.Parse(Year); // Released -> Release date.
                 movie.Director = data["Director"];
 
                 // FR
@@ -176,6 +186,12 @@ namespace ClubVideo
                 return tempPerms;
             }
 
+            /// <summary>
+            /// 
+            /// 
+            /// Comment : If the user doesn't have the settings, insert them.
+            /// </summary>
+            /// <returns></returns>
             public static string LanguageSetting()
             {
                 string value = null;
@@ -194,6 +210,7 @@ namespace ClubVideo
                 }
                 else 
                 {
+                    // Insert default value here.
                     value = Settings.Default.Language;
                     Insert.LanguageSetting(Settings.Default.Language);
                 }
@@ -272,6 +289,37 @@ namespace ClubVideo
                 cmd.ExecuteNonQuery();
 
                 Settings.Default.Language = Language;
+            }
+
+            public static void Movie(MovieObject movie)
+            {
+                string insert = "INSERT INTO movies VALUES (MOVIEID.NEXTVAL, :name_en, :name_fr, :desc_en, :desc_fr, :releasedate, :rating, :runtime, :image)";
+
+                OracleCommand cmd = new OracleCommand(insert, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("name_en", movie.Nom_en));
+                cmd.Parameters.Add(new OracleParameter("name_fr", movie.Nom_fr));
+                cmd.Parameters.Add(new OracleParameter("desc_en", movie.Description_en));
+                cmd.Parameters.Add(new OracleParameter("desc_fr", movie.Description_fr));
+                cmd.Parameters.Add(new OracleParameter("releasedate", movie.Year));
+                cmd.Parameters.Add(new OracleParameter("rating", movie.Rated));
+                cmd.Parameters.Add(new OracleParameter("runtime", movie.Runtime));
+
+                // Add Image
+                OracleParameter image = new OracleParameter("image", OracleDbType.Blob);
+
+                Image pb_Image = movie.Poster;
+                MemoryStream memoryStream = new MemoryStream();
+                pb_Image.Save(memoryStream, ImageFormat.Jpeg);
+                byte[] imageBt = memoryStream.ToArray();
+
+                image.Value = imageBt;
+
+                cmd.Parameters.Add(image);
+
+                cmd.ExecuteNonQuery();
+                CloseConnection();
+                Database.Update.Movies();
             }
         }
 

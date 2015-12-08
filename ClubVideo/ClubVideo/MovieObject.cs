@@ -14,9 +14,9 @@ namespace ClubVideo
         public string Nom_fr { get; set; }
         public string Description_en { get; set; }
         public string Description_fr { get; set; }
-        public string Year { get; set; }
+        public int Year { get; set; }
         public string Rated { get; set; }
-        public string Runtime { get; set; }
+        public int Runtime { get; set; }
         public string Director { get; set; }
         public Image Poster {get; set;}
     }
