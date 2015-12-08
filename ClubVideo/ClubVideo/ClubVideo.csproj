@@ -233,6 +233,36 @@
   <ItemGroup>
     <None Include="Resources\Search_Member.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fonts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fonts_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lang_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fonts_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lang_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangle.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
