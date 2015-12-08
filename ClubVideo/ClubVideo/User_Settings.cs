@@ -17,8 +17,6 @@ namespace ClubVideo
         {
             InitializeComponent();
 
-            LoadLanguage();
-
             foreach (Control c in this.Controls)
             {
                 if (c is Button)
@@ -29,12 +27,23 @@ namespace ClubVideo
             }
         }
 
-        private void LoadLanguage()
+        private void LoadLanguage(string form)
         {
-            lb_ChangePassword.Text = Main.resManager.GetString("User_Settings_ChangePassword", Main.culInfo);
-            lb_Password.Text = Main.resManager.GetString("User_Settings_Password", Main.culInfo);
-            lb_ConfPassword.Text = Main.resManager.GetString("User_Settings_ConfPassword", Main.culInfo);
-            Text = Main.resManager.GetString("User_Settings_Header", Main.culInfo);
+            if (form == "lang")
+            {
+                Controls["LBL_LanguageSelection"].Text = Main.resManager.GetString("User_Settings_Lang_Selection", Main.culInfo);
+            }
+            else if (form == "password")
+            {
+                Controls["B_confirm"].Text = Main.resManager.GetString("User_Settings_Pass_Button", Main.culInfo);
+                Controls["LBL_currentPassword"].Text = Main.resManager.GetString("User_Settings_Pass_CurrentPass", Main.culInfo);
+                Controls["LBL_newPassword"].Text = Main.resManager.GetString("User_Settings_Pass_NewPass", Main.culInfo);
+                Controls["LBL_confirmPassword"].Text = Main.resManager.GetString("User_Settings_Pass_ConfirmPass", Main.culInfo);
+            }
+            else if (form == "fonts")
+            {
+
+            }
         }
         private void SaveSettings()
         {
@@ -135,6 +144,8 @@ namespace ClubVideo
                 Lang_AddRadioButton("fr");
                 Lang_AddRadioButton("en");
                 Lang_AddLabel();
+
+                LoadLanguage("lang");
             }
             else
             {
@@ -149,6 +160,8 @@ namespace ClubVideo
             {
                 Pass_AddTextBox(sender);
                 Pass_AddButon(sender);
+
+                LoadLanguage("password");
             }
             else
             {
@@ -166,6 +179,7 @@ namespace ClubVideo
             if (!bClicked)
             {
 
+                LoadLanguage("fonts");
             }
             else
             {
@@ -270,7 +284,7 @@ namespace ClubVideo
         {
             Database_Connector.Update.LanguageSetting(sender.Text.ToLower());
             Main.culInfo = CultureInfo.CreateSpecificCulture(sender.Text.ToLower());
-            LoadLanguage();
+            LoadLanguage("lang");
             SaveSettings();
         }
 
@@ -345,7 +359,6 @@ namespace ClubVideo
         {
             Button B = new Button();
             B.Name = "B_" + name.ToLower();
-            B.Text = name;
             B.TextAlign = ContentAlignment.MiddleCenter;
             B.Font = new Font("Arial", 14);
             B.Width = 192;
@@ -388,6 +401,12 @@ namespace ClubVideo
             }
             else if (Controls["TB_newPassword"].Text == String.Empty || Controls["TB_confirmPassword"].Text == String.Empty)
                 throw new Exception("PASSWORD_EMPTY");
+            else if (Controls["TB_currentPassword"].Text == Controls["TB_newPassword"].Text)
+            {
+                Controls["TB_newPassword"].Text = "";
+                Controls["TB_confirmPassword"].Text = "";
+                throw new Exception("PASSWORD_SAME");
+            }
             else if (Controls["TB_newPassword"].Text != Controls["TB_confirmPassword"].Text)
             {
                 Controls["TB_confirmPassword"].Text = "";
@@ -425,7 +444,7 @@ namespace ClubVideo
         }
         private void AddLabel(Button sender)
         {
-            Label LBL = Createlabel(sender);
+            Label LBL = CreateLabel(sender);
             Controls.Add(LBL);
             LBL.BringToFront();
         }
@@ -458,11 +477,18 @@ namespace ClubVideo
             PNL.Location = new Point(pX, 0);
             return PNL;
         }
-        private Label Createlabel(Button sender)
+        private Label CreateLabel(Button sender)
         {
             Label LBL = new Label();
             LBL.Name = "LBL" + sender.Name.Substring(1);
-            LBL.Text = sender.Name == "B_lang" ? "Languages" : sender.Name == "B_fonts" ? "Fonts" : "Change Password";
+
+            if (sender.Name == "B_lang")
+                LBL.Text = Main.resManager.GetString("User_Settings_Hover_Lang", Main.culInfo);
+            else if (sender.Name == "B_fonts")
+                LBL.Text = Main.resManager.GetString("User_Settings_Hover_Fonts", Main.culInfo);
+            else
+                LBL.Text = Main.resManager.GetString("User_Settings_Hover_Password", Main.culInfo);
+
             LBL.Font = new Font("Arial", 11, FontStyle.Bold);
             LBL.TextAlign = ContentAlignment.MiddleCenter;
             LBL.BackColor = BLUE;

@@ -210,20 +210,29 @@
   <data name="UserLogon_Username" xml:space="preserve">
     <value>Username....</value>
   </data>
-  <data name="User_Settings_ChangeLanguage" xml:space="preserve">
-    <value>Language of UI :</value>
+  <data name="User_Settings_Hover_Fonts" xml:space="preserve">
+    <value>Fonts</value>
   </data>
-  <data name="User_Settings_ChangePassword" xml:space="preserve">
-    <value>Change Password</value>
+  <data name="User_Settings_Hover_Lang" xml:space="preserve">
+    <value>Languages</value>
   </data>
-  <data name="User_Settings_ConfPassword" xml:space="preserve">
-    <value>Confirm Password :</value>
+  <data name="User_Settings_Hover_Password" xml:space="preserve">
+    <value>Password</value>
   </data>
-  <data name="User_Settings_Header" xml:space="preserve">
-    <value>User Settings</value>
+  <data name="User_Settings_Lang_Selection" xml:space="preserve">
+    <value>Select your prefered language</value>
   </data>
-  <data name="User_Settings_Password" xml:space="preserve">
-    <value>Password :</value>
+  <data name="User_Settings_Pass_Button" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="User_Settings_Pass_ConfirmPass" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="User_Settings_Pass_CurrentPass" xml:space="preserve">
+    <value>Current password</value>
+  </data>
+  <data name="User_Settings_Pass_NewPass" xml:space="preserve">
+    <value>New password</value>
   </data>
   <data name="User_Settings_Save_Success" xml:space="preserve">
     <value>The settings have been saved.</value>

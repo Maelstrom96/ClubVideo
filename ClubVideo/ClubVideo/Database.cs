@@ -12,7 +12,26 @@ namespace ClubVideo
     {
         private static DataSet DS = new DataSet();
 
-        private static string Movies_Select = "SELECT * FROM movies";
+        private static string Movies_Select = @"with NBCopy as
+            (
+              select movie_id, count(movie_id) as NBCOPIES
+              from movies_copies
+              group by movies_copies.movie_id
+            )
+
+            select
+                Movies.id,
+                Movies.name_en,
+                Movies.name_fr,
+                Movies.description_fr,
+                Movies.description_en,
+                Movies.releasedate,
+                Movies.rating,
+                Movies.runtime,
+                Movies.image,
+                coalesce(NBCopy.NBCOPIES, 0) as NBCOPIES
+            from Movies left outer join NBCopy on NBCopy.Movie_ID = Movies.ID";
+
         private static string Permissions_Select = "SELECT * FROM permissions";
         private static string Users_Select = "SELECT ID, USERNAME, NAME, LASTNAME FROM Users";
 

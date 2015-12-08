@@ -28,64 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tb_ConfPassword = new System.Windows.Forms.TextBox();
-            this.lb_ConfPassword = new System.Windows.Forms.Label();
-            this.tb_Password = new System.Windows.Forms.TextBox();
-            this.lb_Password = new System.Windows.Forms.Label();
-            this.lb_ChangePassword = new System.Windows.Forms.Label();
             this.B_lang = new System.Windows.Forms.Button();
             this.B_password = new System.Windows.Forms.Button();
             this.B_fonts = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // tb_ConfPassword
-            // 
-            this.tb_ConfPassword.Location = new System.Drawing.Point(106, 273);
-            this.tb_ConfPassword.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_ConfPassword.Name = "tb_ConfPassword";
-            this.tb_ConfPassword.PasswordChar = '●';
-            this.tb_ConfPassword.Size = new System.Drawing.Size(120, 20);
-            this.tb_ConfPassword.TabIndex = 9;
-            // 
-            // lb_ConfPassword
-            // 
-            this.lb_ConfPassword.Location = new System.Drawing.Point(2, 276);
-            this.lb_ConfPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_ConfPassword.Name = "lb_ConfPassword";
-            this.lb_ConfPassword.Size = new System.Drawing.Size(100, 15);
-            this.lb_ConfPassword.TabIndex = 6;
-            this.lb_ConfPassword.Text = "confirm Password :";
-            this.lb_ConfPassword.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // tb_Password
-            // 
-            this.tb_Password.Location = new System.Drawing.Point(106, 250);
-            this.tb_Password.Margin = new System.Windows.Forms.Padding(2);
-            this.tb_Password.Name = "tb_Password";
-            this.tb_Password.PasswordChar = '●';
-            this.tb_Password.Size = new System.Drawing.Size(120, 20);
-            this.tb_Password.TabIndex = 8;
-            // 
-            // lb_Password
-            // 
-            this.lb_Password.Location = new System.Drawing.Point(4, 253);
-            this.lb_Password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_Password.Name = "lb_Password";
-            this.lb_Password.Size = new System.Drawing.Size(98, 15);
-            this.lb_Password.TabIndex = 7;
-            this.lb_Password.Text = "password :";
-            this.lb_Password.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // lb_ChangePassword
-            // 
-            this.lb_ChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ChangePassword.Location = new System.Drawing.Point(-2, 220);
-            this.lb_ChangePassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_ChangePassword.Name = "lb_ChangePassword";
-            this.lb_ChangePassword.Size = new System.Drawing.Size(236, 19);
-            this.lb_ChangePassword.TabIndex = 10;
-            this.lb_ChangePassword.Text = "Change Password";
-            this.lb_ChangePassword.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // B_lang
             // 
@@ -146,11 +92,6 @@
             this.Controls.Add(this.B_fonts);
             this.Controls.Add(this.B_password);
             this.Controls.Add(this.B_lang);
-            this.Controls.Add(this.lb_ChangePassword);
-            this.Controls.Add(this.tb_ConfPassword);
-            this.Controls.Add(this.lb_ConfPassword);
-            this.Controls.Add(this.tb_Password);
-            this.Controls.Add(this.lb_Password);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
@@ -159,17 +100,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User_Settings";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tb_ConfPassword;
-        private System.Windows.Forms.Label lb_ConfPassword;
-        private System.Windows.Forms.TextBox tb_Password;
-        private System.Windows.Forms.Label lb_Password;
-        private System.Windows.Forms.Label lb_ChangePassword;
         private System.Windows.Forms.Button B_lang;
         private System.Windows.Forms.Button B_password;
         private System.Windows.Forms.Button B_fonts;
