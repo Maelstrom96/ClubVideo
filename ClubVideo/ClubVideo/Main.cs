@@ -6,6 +6,7 @@ using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace ClubVideo
 {
@@ -21,11 +22,16 @@ namespace ClubVideo
         }
         public static User user { get; set; }
 
+        public static Color BLUE = Color.FromArgb(34, 105, 159);
+        public static Color fontColor { get; set; }
+        public static string fontStyle { get; set; }
+
         public Main()
         {
+            fontColor = Color.Red;
+            fontStyle = "Arial";
             LoadSettings();
             LoadDataBase();
-
         }
 
         public void Run()

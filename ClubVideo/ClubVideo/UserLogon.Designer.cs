@@ -37,19 +37,21 @@
             // 
             // bt_Login
             // 
-            this.bt_Login.Location = new System.Drawing.Point(152, 269);
+            this.bt_Login.Location = new System.Drawing.Point(54, 223);
+            this.bt_Login.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Login.Name = "bt_Login";
-            this.bt_Login.Size = new System.Drawing.Size(228, 50);
+            this.bt_Login.Size = new System.Drawing.Size(171, 41);
             this.bt_Login.TabIndex = 3;
             this.bt_Login.UseVisualStyleBackColor = true;
             this.bt_Login.Click += new System.EventHandler(this.Login_Click);
             // 
             // tb_Password
             // 
-            this.tb_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Password.Location = new System.Drawing.Point(120, 219);
+            this.tb_Password.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Password.Location = new System.Drawing.Point(30, 182);
+            this.tb_Password.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Password.Name = "tb_Password";
-            this.tb_Password.Size = new System.Drawing.Size(286, 36);
+            this.tb_Password.Size = new System.Drawing.Size(216, 29);
             this.tb_Password.TabIndex = 2;
             this.tb_Password.Enter += new System.EventHandler(this.tb_Password_RemoveText);
             this.tb_Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox_KeyDown);
@@ -57,11 +59,12 @@
             // 
             // tb_Username
             // 
-            this.tb_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Username.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Username.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.tb_Username.Location = new System.Drawing.Point(120, 166);
+            this.tb_Username.Location = new System.Drawing.Point(30, 139);
+            this.tb_Username.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Username.Name = "tb_Username";
-            this.tb_Username.Size = new System.Drawing.Size(286, 36);
+            this.tb_Username.Size = new System.Drawing.Size(216, 29);
             this.tb_Username.TabIndex = 1;
             this.tb_Username.Enter += new System.EventHandler(this.tb_Username_RemoveText);
             this.tb_Username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textbox_KeyDown);
@@ -71,24 +74,27 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = global::ClubVideo.Properties.Resources.Locked;
-            this.pictureBox1.Location = new System.Drawing.Point(197, 16);
+            this.pictureBox1.Image = global::ClubVideo.Properties.Resources.Locked_Blue;
+            this.pictureBox1.Location = new System.Drawing.Point(88, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 123);
+            this.pictureBox1.Size = new System.Drawing.Size(101, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
             // UserLogon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 353);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(278, 287);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tb_Username);
             this.Controls.Add(this.tb_Password);
             this.Controls.Add(this.bt_Login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "UserLogon";

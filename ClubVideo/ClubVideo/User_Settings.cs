@@ -21,8 +21,8 @@ namespace ClubVideo
             {
                 if (c is Button)
                 {
-                    ((Button)c).FlatAppearance.MouseDownBackColor = BLUE;
-                    ((Button)c).FlatAppearance.MouseOverBackColor = BLUE;
+                    ((Button)c).FlatAppearance.MouseDownBackColor = Main.BLUE;
+                    ((Button)c).FlatAppearance.MouseOverBackColor = Main.BLUE;
                 }
             }
         }
@@ -59,9 +59,6 @@ namespace ClubVideo
             }
         }
 
-        // Couleur primaire du form
-        private Color BLUE = Color.FromArgb(34, 105, 159);
-
         // Button Events
         private bool bClicked = false;
         private void Button_Enter(object send, EventArgs e)
@@ -69,8 +66,8 @@ namespace ClubVideo
             if (!bClicked)
             {
                 Button sender = (Button)send;
-                sender.BackColor = BLUE;
-                sender.FlatAppearance.MouseOverBackColor = BLUE;
+                sender.BackColor = Main.BLUE;
+                sender.FlatAppearance.MouseOverBackColor = Main.BLUE;
                 sender.BackgroundImage = GetImage(sender.Name.Substring(2) + "_hover");
 
                 AddLabel(sender);
@@ -102,7 +99,7 @@ namespace ClubVideo
         private void CreateSubForm(Button sender)
         {
             Controls["LBL" + sender.Name.Substring(1)].Visible = false;
-            sender.BackColor = BLUE;
+            sender.BackColor = Main.BLUE;
             sender.BackgroundImage = GetImage(sender.Name.Substring(2) + "_small");
             sender.Width = 101;
 
@@ -146,8 +143,10 @@ namespace ClubVideo
                 Lang_AddRadioButton("fr");
                 Lang_AddRadioButton("en");
                 Lang_AddLabel();
-
                 LoadLanguage("lang");
+
+                int pX = (this.Width - B_lang.Width) / 2 - Controls["LBL_LanguageSelection"].Width / 2 + B_lang.Width;
+                Controls["LBL_LanguageSelection"].Location = new Point(pX, Controls["LBL_LanguageSelection"].Location.Y);
             }
             else
             {
@@ -184,12 +183,14 @@ namespace ClubVideo
                 LoadLanguage("fonts");
                 
                 Controls["LBL_select"].Location = new Point(Controls["LBL_select"].Location.X - Controls["LBL_select"].Width / 2, Controls["LBL_select"].Location.Y);
+                Fonts_AddButton();
             }
             else
             {
                 Controls["LBL_fontColor"].Dispose();
                 Controls["LBL_fontStyle"].Dispose();
                 Controls["LBL_select"].Dispose();
+                Controls["B_fontColor"].Dispose();
             }
         }
 
@@ -206,10 +207,9 @@ namespace ClubVideo
         {
             Label LBL = new Label();
             LBL.Name = "LBL_LanguageSelection";
-            LBL.Text = "Select your prefered language";
-            LBL.Font = new Font("Arial", 12, FontStyle.Bold);
+            LBL.Font = new Font(Main.fontStyle, 12, FontStyle.Bold);
             LBL.TextAlign = ContentAlignment.MiddleCenter;
-            LBL.ForeColor = BLUE;
+            LBL.ForeColor = Main.fontColor;
             LBL.BackColor = Color.White;
             LBL.Width = this.Width - B_lang.Width;
 
@@ -230,23 +230,23 @@ namespace ClubVideo
             RadioButton RB = new RadioButton();
             RB.Name = "RB_" + lang.ToLower();
             RB.Text = lang.ToUpper();
-            RB.Font = new Font("Arial", 24, FontStyle.Bold);
+            RB.Font = new Font(Main.fontStyle, 24, FontStyle.Bold);
             RB.TextAlign = ContentAlignment.MiddleCenter;
             RB.Size = new Size(85, 85);
             RB.Appearance = Appearance.Button;
             RB.FlatStyle = FlatStyle.Flat;
 
-            RB.FlatAppearance.CheckedBackColor = BLUE;
+            RB.FlatAppearance.CheckedBackColor = Main.fontColor;
             RB.BackColor = Color.White;
             if (lang.ToLower() == Main.culInfo.Name.Substring(0, 2))
             {
                 RB.Checked = true;
                 RB.ForeColor = Color.White;
-                RB.FlatAppearance.MouseOverBackColor = BLUE;
+                RB.FlatAppearance.MouseOverBackColor = Main.fontColor;
             }
             else
             {
-                RB.ForeColor = BLUE;
+                RB.ForeColor = Main.fontColor;
                 RB.FlatAppearance.MouseOverBackColor = DefaultBackColor;
             }
 
@@ -268,16 +268,16 @@ namespace ClubVideo
                 if (c is RadioButton)
                 {
                     RadioButton RB = (RadioButton)c;
-                    RB.ForeColor = BLUE;
+                    RB.ForeColor = Main.fontColor;
 
                     if (RB.Checked)
                     {
                         RB.ForeColor = Color.White;
-                        RB.FlatAppearance.MouseOverBackColor = BLUE;
+                        RB.FlatAppearance.MouseOverBackColor = Main.fontColor;
                     }
                     else
                     {
-                        RB.ForeColor = BLUE;
+                        RB.ForeColor = Main.fontColor;
                         RB.FlatAppearance.MouseOverBackColor = DefaultBackColor;
                     }
                 }
@@ -335,12 +335,11 @@ namespace ClubVideo
 
         private Label Pass_CreateLabel(string name, int X, int Y)
         {
-            Color darkBlue = Color.FromArgb(10,61,101);
             Label LBL = new Label();
             LBL.Name = "LBL_" + name;
-            LBL.Font = new Font("Arial", 14);
+            LBL.Font = new Font(Main.fontStyle, 14);
             LBL.BackColor = Color.White;
-            LBL.ForeColor = darkBlue;
+            LBL.ForeColor = Main.fontColor;
             LBL.Location = new Point(X, Y);
             LBL.AutoSize = true;
 
@@ -351,7 +350,7 @@ namespace ClubVideo
             TextBox TB = new TextBox();
             TB.Name = "TB_" + name;
             TB.Width = isLong ? 397 : 189;
-            TB.Font = new Font("Arial", 17);
+            TB.Font = new Font(Main.fontStyle, 17);
             TB.Location = new Point(X, Y);
             TB.PasswordChar = '●';
             TB.BackColor = Color.White;
@@ -365,10 +364,10 @@ namespace ClubVideo
             Button B = new Button();
             B.Name = "B_" + name.ToLower();
             B.TextAlign = ContentAlignment.MiddleCenter;
-            B.Font = new Font("Arial", 14);
+            B.Font = new Font(Main.fontStyle, 14);
             B.Width = 192;
             B.Height = 42;
-            B.BackColor = BLUE;
+            B.BackColor = Main.fontColor;
             B.ForeColor = Color.White;
             B.FlatStyle = FlatStyle.Flat;
             B.FlatAppearance.BorderSize = 0;
@@ -421,7 +420,6 @@ namespace ClubVideo
 
 
         // Fenêtre Settings FONTS
-
         private void Fonts_AddLabel(Button sender)
         {
             int pX = (this.Width - sender.Width) / 2;
@@ -437,6 +435,12 @@ namespace ClubVideo
             Controls.Add(LBL);
             LBL.BringToFront();
         }
+        private void Fonts_AddButton()
+        {
+            Button B = Fonts_CreateButton();
+            Controls.Add(B);
+            B.BringToFront();
+        }
 
         private Label Fonts_CreateLabel(string name, int X, int Y)
         {
@@ -444,12 +448,48 @@ namespace ClubVideo
             LBL.Name = "LBL_" + name;
             LBL.Location = new Point(X, Y);
             LBL.BackColor = Color.White;
-            LBL.ForeColor = BLUE;
-            LBL.Font = new Font("Arial", 14);
+            LBL.ForeColor = Main.fontColor;
+            LBL.Font = new Font(Main.fontStyle, 14);
             LBL.AutoSize = true;
 
             return LBL;
         }
+        private Button Fonts_CreateButton()
+        {
+            Button B = new Button();
+            B.Name = "B_fontColor";
+            B.BackColor = Main.fontColor;
+            B.FlatStyle = FlatStyle.Flat;
+            B.FlatAppearance.BorderSize = 0;
+
+            int pX = Controls["LBL_fontColor"].Location.X + Controls["LBL_fontColor"].Width + 30;
+            B.Location = new Point(pX, Controls["LBL_fontColor"].Location.Y);
+            B.Size = new Size(40, 20);
+            B.Click += B_fontColor_Click;
+
+            return B;
+        }
+
+        void B_fontColor_Click(object sender, EventArgs e)
+        {
+            ColorDialog CD = new ColorDialog();
+            CD.AllowFullOpen = true;
+            CD.CustomColors = new int[] { Main.BLUE.ToArgb() };
+            CD.ShowDialog();
+            if (CD.Color != Color.White && CD.Color != null)
+            {
+                Main.fontColor = CD.Color;
+
+                Controls["LBL_fontColor"].ForeColor = CD.Color;
+                Controls["LBL_fontStyle"].ForeColor = CD.Color;
+                Controls["LBL_select"].ForeColor = CD.Color;
+                Controls["B_fontColor"].BackColor = CD.Color;
+            }
+
+            this.Refresh();
+        }
+
+
 
         // Fenêtre Settings Général
         private void AddTriangle(Button sender)
@@ -521,9 +561,9 @@ namespace ClubVideo
             else
                 LBL.Text = Main.resManager.GetString("User_Settings_Hover_Password", Main.culInfo);
 
-            LBL.Font = new Font("Arial", 11, FontStyle.Bold);
+            LBL.Font = new Font(Main.fontStyle, 11, FontStyle.Bold);
             LBL.TextAlign = ContentAlignment.MiddleCenter;
-            LBL.BackColor = BLUE;
+            LBL.BackColor = Main.BLUE;
             LBL.ForeColor = Color.White;
 
             LBL.Height = 28;

@@ -205,10 +205,10 @@
     <value>Login</value>
   </data>
   <data name="UserLogon_Password" xml:space="preserve">
-    <value>Password....</value>
+    <value>Password</value>
   </data>
   <data name="UserLogon_Username" xml:space="preserve">
-    <value>Username....</value>
+    <value>Username</value>
   </data>
   <data name="User_Settings_Fonts_fontColor" xml:space="preserve">
     <value>Font color</value>
