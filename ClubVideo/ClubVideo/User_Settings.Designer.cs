@@ -99,6 +99,7 @@
             this.Name = "User_Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User_Settings";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.User_Settings_FormClosing);
             this.ResumeLayout(false);
 
         }
