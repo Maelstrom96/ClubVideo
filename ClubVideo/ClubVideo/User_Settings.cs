@@ -29,6 +29,7 @@ namespace ClubVideo
 
         private void LoadLanguage(string form)
         {
+            Text = Main.resManager.GetString("User_Settings_Header", Main.culInfo);
             if (form == "lang")
             {
                 Controls["LBL_LanguageSelection"].Text = Main.resManager.GetString("User_Settings_Lang_Selection", Main.culInfo);
@@ -475,8 +476,9 @@ namespace ClubVideo
             ColorDialog CD = new ColorDialog();
             CD.AllowFullOpen = true;
             CD.CustomColors = new int[] { Main.BLUE.ToArgb() };
-            CD.ShowDialog();
-            if (CD.Color != Color.White && CD.Color != null)
+            DialogResult DR = CD.ShowDialog();
+        
+            if (DR == DialogResult.OK && CD.Color != Color.White)
             {
                 Main.fontColor = CD.Color;
 
@@ -579,6 +581,11 @@ namespace ClubVideo
         {
             object img = Properties.Resources.ResourceManager.GetObject(imgName);
             return (Image)img;
+        }
+
+        private void User_Settings_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //SaveSettings();
         }
     }
 }

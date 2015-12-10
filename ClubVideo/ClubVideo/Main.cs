@@ -28,7 +28,7 @@ namespace ClubVideo
 
         public Main()
         {
-            fontColor = Color.Red;
+            fontColor = BLUE;
             fontStyle = "Arial";
             LoadSettings();
             LoadDataBase();
