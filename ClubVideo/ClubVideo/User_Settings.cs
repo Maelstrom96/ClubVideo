@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClubVideo.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -209,7 +210,7 @@ namespace ClubVideo
             LBL.Name = "LBL_LanguageSelection";
             LBL.Font = new Font(Main.fontStyle, 12, FontStyle.Bold);
             LBL.TextAlign = ContentAlignment.MiddleCenter;
-            LBL.ForeColor = Main.fontColor;
+            LBL.ForeColor = Main.GetColor();
             LBL.BackColor = Color.White;
             LBL.Width = this.Width - B_lang.Width;
 
@@ -236,17 +237,17 @@ namespace ClubVideo
             RB.Appearance = Appearance.Button;
             RB.FlatStyle = FlatStyle.Flat;
 
-            RB.FlatAppearance.CheckedBackColor = Main.fontColor;
+            RB.FlatAppearance.CheckedBackColor = Main.GetColor();
             RB.BackColor = Color.White;
             if (lang.ToLower() == Main.culInfo.Name.Substring(0, 2))
             {
                 RB.Checked = true;
                 RB.ForeColor = Color.White;
-                RB.FlatAppearance.MouseOverBackColor = Main.fontColor;
+                RB.FlatAppearance.MouseOverBackColor = Main.GetColor();
             }
             else
             {
-                RB.ForeColor = Main.fontColor;
+                RB.ForeColor = Main.GetColor();
                 RB.FlatAppearance.MouseOverBackColor = DefaultBackColor;
             }
 
@@ -268,16 +269,16 @@ namespace ClubVideo
                 if (c is RadioButton)
                 {
                     RadioButton RB = (RadioButton)c;
-                    RB.ForeColor = Main.fontColor;
+                    RB.ForeColor = Main.GetColor();
 
                     if (RB.Checked)
                     {
                         RB.ForeColor = Color.White;
-                        RB.FlatAppearance.MouseOverBackColor = Main.fontColor;
+                        RB.FlatAppearance.MouseOverBackColor = Main.GetColor();
                     }
                     else
                     {
-                        RB.ForeColor = Main.fontColor;
+                        RB.ForeColor = Main.GetColor();
                         RB.FlatAppearance.MouseOverBackColor = DefaultBackColor;
                     }
                 }
@@ -339,7 +340,7 @@ namespace ClubVideo
             LBL.Name = "LBL_" + name;
             LBL.Font = new Font(Main.fontStyle, 14);
             LBL.BackColor = Color.White;
-            LBL.ForeColor = Main.fontColor;
+            LBL.ForeColor = Main.GetColor();
             LBL.Location = new Point(X, Y);
             LBL.AutoSize = true;
 
@@ -367,7 +368,7 @@ namespace ClubVideo
             B.Font = new Font(Main.fontStyle, 14);
             B.Width = 192;
             B.Height = 42;
-            B.BackColor = Main.fontColor;
+            B.BackColor = Main.GetColor();
             B.ForeColor = Color.White;
             B.FlatStyle = FlatStyle.Flat;
             B.FlatAppearance.BorderSize = 0;
@@ -448,7 +449,7 @@ namespace ClubVideo
             LBL.Name = "LBL_" + name;
             LBL.Location = new Point(X, Y);
             LBL.BackColor = Color.White;
-            LBL.ForeColor = Main.fontColor;
+            LBL.ForeColor = Main.GetColor();
             LBL.Font = new Font(Main.fontStyle, 14);
             LBL.AutoSize = true;
 
@@ -458,7 +459,7 @@ namespace ClubVideo
         {
             Button B = new Button();
             B.Name = "B_fontColor";
-            B.BackColor = Main.fontColor;
+            B.BackColor = Main.GetColor();
             B.FlatStyle = FlatStyle.Flat;
             B.FlatAppearance.BorderSize = 0;
 
@@ -474,16 +475,15 @@ namespace ClubVideo
         {
             ColorDialog CD = new ColorDialog();
             CD.AllowFullOpen = true;
-            CD.CustomColors = new int[] { Main.BLUE.ToArgb() };
             CD.ShowDialog();
             if (CD.Color != Color.White && CD.Color != null)
             {
-                Main.fontColor = CD.Color;
+                Properties.Settings.Default.UI_Color = ColorTranslator.ToHtml(CD.Color);
 
-                Controls["LBL_fontColor"].ForeColor = CD.Color;
-                Controls["LBL_fontStyle"].ForeColor = CD.Color;
-                Controls["LBL_select"].ForeColor = CD.Color;
-                Controls["B_fontColor"].BackColor = CD.Color;
+                Controls["LBL_fontColor"].ForeColor = Main.GetColor();
+                Controls["LBL_fontStyle"].ForeColor = Main.GetColor();
+                Controls["LBL_select"].ForeColor = Main.GetColor();
+                Controls["B_fontColor"].BackColor = Main.GetColor();
             }
 
             this.Refresh();

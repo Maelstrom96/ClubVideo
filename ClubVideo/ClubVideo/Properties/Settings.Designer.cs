@@ -99,5 +99,17 @@ namespace ClubVideo.Properties {
                 this["Languages"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("#22699F")]
+        public string UI_Color {
+            get {
+                return ((string)(this["UI_Color"]));
+            }
+            set {
+                this["UI_Color"] = value;
+            }
+        }
     }
 }

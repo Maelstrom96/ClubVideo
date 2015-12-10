@@ -28,7 +28,6 @@ namespace ClubVideo
 
         public Main()
         {
-            fontColor = Color.Red;
             fontStyle = "Arial";
             LoadSettings();
             LoadDataBase();
@@ -91,6 +90,11 @@ namespace ClubVideo
             {
                 MessageBox.Show(e.Message);
             }
+        }
+
+        public static Color GetColor()
+        {
+            return ColorTranslator.FromHtml(Properties.Settings.Default.UI_Color);
         }
     }
 }

@@ -27,5 +27,8 @@
   &lt;string&gt;fr&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
     </Setting>
+    <Setting Name="UI_Color" Type="System.String" Scope="User">
+      <Value Profile="(Default)">#22699F</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -61,24 +61,27 @@ namespace ClubVideo
 
         private void LoadSettings()
         {
-            Settings.Default["Language"] = Database_Connector.Select.LanguageSetting();
+            //Settings.Default["Language"] = Database_Connector.Select.LanguageSetting();
 
-            /* Fonction to load ALL SETTINGS */ 
-            //OracleConnection conn_ = Database_Connector.GetConnection();
-            //string select = "SELECT key, value FROM user_settings WHERE user_id=:userid";
-            //OracleCommand cmd = new OracleCommand(select, conn_);
-            //cmd.Parameters.Add(new OracleParameter("userid", Main.user.ID.ToString()));
+            /* Fonction to load ALL SETTINGS */
+            OracleConnection conn_ = Database_Connector.GetConnection();
+            string select = "SELECT key, value FROM user_settings WHERE user_id=:userid";
+            OracleCommand cmd = new OracleCommand(select, conn_);
+            cmd.Parameters.Add(new OracleParameter("userid", Main.user.ID.ToString()));
 
-            //OracleDataReader dr = cmd.ExecuteReader();
+            OracleDataReader dr = cmd.ExecuteReader();
 
-            //while (dr.Read())
-            //{
-            //    string key = Convert.ToString(dr["key"]);
-            //    string value = Convert.ToString(dr["value"]);
+            while (dr.Read())
+            {
+                string key = Convert.ToString(dr["key"]);
+                string value = Convert.ToString(dr["value"]);
 
-            //    Settings.Default[key] = value;
-            //}
-            //conn_.Close();
+                Settings.Default[key] = value;
+            }
+            conn_.Close();
+
+            // Load into Main
+
         }
 
         private void LoadPermissions()
