@@ -25,9 +25,10 @@ namespace ClubVideo
                     ((Button)c).FlatAppearance.MouseOverBackColor = Main.BLUE;
                 }
             }
+            LoadLanguage();
         }
 
-        private void LoadLanguage(string form)
+        private void LoadLanguage(string form = "")
         {
             Text = Main.resManager.GetString("User_Settings_Header", Main.culInfo);
             if (form == "lang")
@@ -219,7 +220,7 @@ namespace ClubVideo
 
             return LBL;
         }
-
+        
         private void Lang_AddRadioButton(string lang)
         {
             RadioButton RB = Lang_CreateRadioButton(lang);

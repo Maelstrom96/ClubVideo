@@ -21,7 +21,7 @@ namespace ClubVideo
             set { info_ = value; } 
         }
         public static User user { get; set; }
-
+        
         public static Color BLUE = Color.FromArgb(34, 105, 159);
         public static Color fontColor { get; set; }
         public static string fontStyle { get; set; }
