@@ -418,7 +418,7 @@ namespace ClubVideo
             }
         }
 
-
+   
         // Fenêtre Settings FONTS
         private void Fonts_AddLabel(Button sender)
         {
@@ -504,6 +504,19 @@ namespace ClubVideo
                     ((Button)c).FlatAppearance.MouseOverBackColor = Main.GetColor();
                 }
             }
+        }
+
+        private ComboBox Fonts_CreateComboBox()
+        {
+            ComboBox CB = new ComboBox();
+            CB.Name = "CB_fontStyle";
+            CB.Cursor = Cursors.Hand;
+            
+            
+            foreach(string s in Properties.Settings.Default.Fonts)
+                CB.Items.Add(s);
+
+            return CB;
         }
         
         // Fenêtre Settings Général
