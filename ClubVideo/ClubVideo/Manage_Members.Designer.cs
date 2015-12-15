@@ -33,6 +33,7 @@
             this.dgv_SearchResults = new System.Windows.Forms.DataGridView();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_Modify = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SearchResults)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,11 +92,22 @@
             this.btn_Delete.Visible = false;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
+            // btn_Modify
+            // 
+            this.btn_Modify.Location = new System.Drawing.Point(467, 22);
+            this.btn_Modify.Name = "btn_Modify";
+            this.btn_Modify.Size = new System.Drawing.Size(75, 23);
+            this.btn_Modify.TabIndex = 5;
+            this.btn_Modify.Text = "Modifier";
+            this.btn_Modify.UseVisualStyleBackColor = true;
+            this.btn_Modify.Click += new System.EventHandler(this.btn_Modify_Click);
+            // 
             // Manage_Members
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 451);
+            this.Controls.Add(this.btn_Modify);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.dgv_SearchResults);
@@ -120,5 +132,6 @@
         private System.Windows.Forms.DataGridView dgv_SearchResults;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.Button btn_Modify;
     }
 }

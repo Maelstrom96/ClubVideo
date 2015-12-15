@@ -47,7 +47,7 @@ namespace ClubVideo
         {
             if (dgv_SearchResults.SelectedRows.Count == 1)
             {
-                UpdateMembers members = new UpdateMembers(source, "Detail Membre");
+                UpdateMembers members = new UpdateMembers(source, "Detail Membre", false);
                 members.Show();
             }
         }
@@ -74,6 +74,13 @@ namespace ClubVideo
         {
             if (dgv_SearchResults.SelectedRows.Count == 1) btn_Delete.Visible = true;
             else btn_Delete.Visible = false;
+        }
+
+        private void btn_Modify_Click(object sender, EventArgs e)
+        {
+            UpdateMembers members = new UpdateMembers(source, "Detail Membre", true);
+            members.ShowDialog();
+            LoadMembers();
         }
     }
 }
