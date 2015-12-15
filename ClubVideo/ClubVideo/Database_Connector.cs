@@ -280,15 +280,28 @@ namespace ClubVideo
 
             public static void User(int id)
             {
-                string insert = "DELETE FROM users where id=:userid";
+                string delete = "DELETE FROM users where id=:userid";
 
-                OracleCommand cmd = new OracleCommand(insert, GetConnection());
+                OracleCommand cmd = new OracleCommand(delete, GetConnection());
 
                 cmd.Parameters.Add(new OracleParameter("userid", id));
 
                 cmd.ExecuteNonQuery();
 
                 Database.Update.Users();
+            }
+
+            public static void Member(int id)
+            {
+                string delete = "DELETE FROM members where id=:memberid";
+
+                OracleCommand cmd = new OracleCommand(delete, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("memberid", id));
+
+                cmd.ExecuteNonQuery();
+
+                Database.Update.Members();
             }
         }
 
@@ -311,6 +324,25 @@ namespace ClubVideo
                 }
 
                 if (userid == Main.user.ID) Database.Update.Permissions();
+            }
+
+            public static void Member(MemberObject obj)
+            {
+                string insert = "INSERT INTO members VALUES (MEMBERID.NEXTVAL, :name, :last_name, :address, :postalcode, :city, :province, :telephonenumber)";
+
+                OracleCommand cmd = new OracleCommand(insert, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("name", obj.Name));
+                cmd.Parameters.Add(new OracleParameter("last_name", obj.LastName));
+                cmd.Parameters.Add(new OracleParameter("address", obj.Address));
+                cmd.Parameters.Add(new OracleParameter("postalcode", obj.PostalCode));
+                cmd.Parameters.Add(new OracleParameter("city", obj.City));
+                cmd.Parameters.Add(new OracleParameter("province", obj.Province));
+                cmd.Parameters.Add(new OracleParameter("telephonenumber", obj.TelNumber));
+
+                cmd.ExecuteNonQuery();
+                CloseConnection();
+                Database.Update.Members();
             }
 
             public static void LanguageSetting(string Language)
@@ -388,8 +420,8 @@ namespace ClubVideo
                 OracleCommand cmd = new OracleCommand(update, GetConnection());
 
                 cmd.Parameters.Add(new OracleParameter("username", username));
-                cmd.Parameters.Add(new OracleParameter("keyp", name));
-                cmd.Parameters.Add(new OracleParameter("keyp", lastName));
+                cmd.Parameters.Add(new OracleParameter("name", name));
+                cmd.Parameters.Add(new OracleParameter("lastname", lastName));
                 cmd.Parameters.Add(new OracleParameter("userid", id));
 
                 cmd.ExecuteNonQuery();
@@ -410,6 +442,11 @@ namespace ClubVideo
                 cmd.ExecuteNonQuery();
 
                 Settings.Default.Language = Language;
+            }
+
+            public static void Member(MemberObject obj)
+            {
+
             }
         }
     }

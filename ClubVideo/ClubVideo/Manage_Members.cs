@@ -12,19 +12,24 @@ namespace ClubVideo
 {
     public partial class Manage_Members : Form
     {
-        BindingSource source;
-        DataTable ds;
+        private BindingSource source;
+        private DataTable ds;
         
 
         public Manage_Members()
         {
             InitializeComponent();
             Database.Update.Members();
+            LoadMembers();
+        }
+
+        private void LoadMembers()
+        {
             ds = Database.GetData.Members();
+
             source = new BindingSource();
             source.DataSource = ds;
             dgv_SearchResults.DataSource = source;
-            
         }
 
         private void Search()
@@ -32,17 +37,18 @@ namespace ClubVideo
             source.Filter = "CONVERT(ID, 'System.String') like '" + tb_Search.Text + "%'" +
                 "or NAME like '" + tb_Search.Text + "%'" +
                 "or LAST_NAME like '" + tb_Search.Text + "%'" +
-                "or ADRESS like '%" + tb_Search.Text + "%'" +
+                "or ADDRESS like '%" + tb_Search.Text + "%'" +
                 "or POSTALCODE like '%" + tb_Search.Text + "%'" +
                 "or CONVERT(TELEPHONENUMBER, 'System.String') like '%" + tb_Search.Text + "%'";
+
         }
 
         private void dgv_SearchResults_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (dgv_SearchResults.SelectedRows.Count == 1)
             {
-                InsertMovie movie = new InsertMovie(source, "Detail Membre");
-                movie.Show();
+                UpdateMembers members = new UpdateMembers(source, "Detail Membre");
+                members.Show();
             }
         }
 
@@ -54,7 +60,20 @@ namespace ClubVideo
         private void btn_Add_Click(object sender, EventArgs e)
         {
             UpdateMembers members = new UpdateMembers();
-            members.Show();
+            members.ShowDialog();
+            LoadMembers();
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            Database_Connector.Delete.Member(int.Parse(dgv_SearchResults.SelectedRows[0].Cells[0].Value.ToString()));
+            LoadMembers();
+        }
+
+        private void dgv_SearchResults_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgv_SearchResults.SelectedRows.Count == 1) btn_Delete.Visible = true;
+            else btn_Delete.Visible = false;
         }
     }
 }
