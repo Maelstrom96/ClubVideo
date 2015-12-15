@@ -446,7 +446,22 @@ namespace ClubVideo
 
             public static void Member(MemberObject obj)
             {
+                string update = "UPDATE members SET name=:name, last_name=:last_name, address=:address, postalcode=:postalcode, city=:city, province=:province, telephonenumber:telephonenumber WHERE id=:memberid";
 
+                OracleCommand cmd = new OracleCommand(update, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("name", obj.Name));
+                cmd.Parameters.Add(new OracleParameter("last_name", obj.LastName));
+                cmd.Parameters.Add(new OracleParameter("address", obj.Address));
+                cmd.Parameters.Add(new OracleParameter("postalcode", obj.PostalCode));
+                cmd.Parameters.Add(new OracleParameter("city", obj.City));
+                cmd.Parameters.Add(new OracleParameter("province", obj.Province));
+                cmd.Parameters.Add(new OracleParameter("telephonenumber", obj.TelNumber));
+                cmd.Parameters.Add(new OracleParameter("memberid", obj.ID));
+
+                cmd.ExecuteNonQuery();
+
+                Database.Update.Members();
             }
         }
     }
