@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tb_Search = new System.Windows.Forms.TextBox();
             this.dgv_SearchResults = new System.Windows.Forms.DataGridView();
+            this.btn_Add = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SearchResults)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,11 +68,22 @@
             this.dgv_SearchResults.TabIndex = 2;
             this.dgv_SearchResults.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgv_SearchResults_MouseDoubleClick);
             // 
-            // Manage_Movies
+            // btn_Add
+            // 
+            this.btn_Add.Location = new System.Drawing.Point(314, 23);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(75, 23);
+            this.btn_Add.TabIndex = 3;
+            this.btn_Add.Text = "Add";
+            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            // 
+            // Manage_Members
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 452);
+            this.ClientSize = new System.Drawing.Size(716, 451);
+            this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.dgv_SearchResults);
             this.Controls.Add(this.tb_Search);
             this.Controls.Add(this.label1);
@@ -79,7 +91,7 @@
             this.MaximumSize = new System.Drawing.Size(732, 490);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(732, 490);
-            this.Name = "Manage_Movies";
+            this.Name = "Manage_Members";
             this.Text = "Manage_Movies";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SearchResults)).EndInit();
             this.ResumeLayout(false);
@@ -92,5 +104,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tb_Search;
         private System.Windows.Forms.DataGridView dgv_SearchResults;
+        private System.Windows.Forms.Button btn_Add;
     }
 }

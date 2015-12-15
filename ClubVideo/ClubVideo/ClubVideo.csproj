@@ -57,6 +57,12 @@
     <Compile Include="Manage_Members.Designer.cs">
       <DependentUpon>Manage_Members.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateMembers.Designer.cs">
+      <DependentUpon>UpdateMembers.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserCU.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manage_Movies.resx">
       <DependentUpon>Manage_Movies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateMembers.resx">
+      <DependentUpon>UpdateMembers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserCU.resx">
       <DependentUpon>UserCU.cs</DependentUpon>
