@@ -84,6 +84,7 @@ namespace ClubVideo
             try
             {
                 MemberObject oMember = new MemberObject();
+                oMember.ID = int.Parse(((DataRowView)this._bs.Current).Row["ID"].ToString());
                 oMember.Name = txb_Name.Text.ToString();
                 oMember.LastName = txb_LastName.Text.ToString();
                 oMember.Address = txb_Adress.Text.ToString();
@@ -91,7 +92,7 @@ namespace ClubVideo
                 oMember.City = txb_City.Text.ToString();
                 oMember.Province = txb_Province.Text.ToString();
                 oMember.TelNumber = int.Parse(txb_Telephone.Text.ToString());
-                Database_Connector.Insert.Member(oMember);
+                Database_Connector.Update.Member(oMember);
                 MessageBox.Show("Modification fait!");
                 this.Close();
 

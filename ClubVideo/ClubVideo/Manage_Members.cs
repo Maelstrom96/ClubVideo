@@ -79,7 +79,7 @@ namespace ClubVideo
         private void btn_Modify_Click(object sender, EventArgs e)
         {
             UpdateMembers members = new UpdateMembers(source, "Detail Membre", true);
-            members.Show();
+            members.ShowDialog();
             LoadMembers();
         }
     }
