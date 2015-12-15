@@ -183,7 +183,8 @@ namespace ClubVideo
                 LoadLanguage("fonts");
                 
                 Controls["LBL_select"].Location = new Point(Controls["LBL_select"].Location.X - Controls["LBL_select"].Width / 2, Controls["LBL_select"].Location.Y);
-                Fonts_AddButton();
+                Fonts_AddButton(); 
+                Fonts_AddComboBox();
             }
             else
             {
@@ -441,6 +442,12 @@ namespace ClubVideo
             Controls.Add(B);
             B.BringToFront();
         }
+        private void Fonts_AddComboBox()
+        {
+            ComboBox CB = Fonts_CreateComboBox();
+            Controls.Add(CB);
+            CB.BringToFront();
+        }
 
         private Label Fonts_CreateLabel(string name, int X, int Y)
         {
@@ -454,14 +461,23 @@ namespace ClubVideo
 
             return LBL;
         }
-        private ComboBox Fonts_CreateComboBox(int X, int Y)
+        private ComboBox Fonts_CreateComboBox()
         {
             ComboBox CB = new ComboBox();
             CB.Name = "CB_fontStyle";
-            CB.Location = new Point(X, Y);
             CB.BackColor = Color.White;
             CB.ForeColor = Color.Black;
-            
+            CB.Size = new Size(140, 20);
+            CB.FlatStyle = FlatStyle.Flat;
+            CB.DrawMode = DrawMode.OwnerDrawFixed;
+
+            CB.DrawItem += CB_fontStyle_DrawItem;
+
+            int pX = Controls["LBL_fontStyle"].Location.X + Controls["LBL_fontStyle"].Width + 10;
+            CB.Location = new Point(pX, Controls["LBL_fontStyle"].Location.Y);
+
+            foreach (FontFamily font in System.Drawing.FontFamily.Families)
+                CB.Items.Add(font.Name);
 
             return CB;
         }
@@ -507,6 +523,14 @@ namespace ClubVideo
             
             this.Refresh();
         }
+        void CB_fontStyle_DrawItem(object send, DrawItemEventArgs e)
+        {
+            // IF NOT DRAWN
+            ComboBox sender = (ComboBox)send;
+            Brush brush = Brushes.Black;
+            string text = sender.Items[e.Index].ToString();
+            e.Graphics.DrawString(text, new Font(text, 10), brush, e.Bounds);
+        }
 
         void UpdateColors()
         {
@@ -518,19 +542,6 @@ namespace ClubVideo
                     ((Button)c).FlatAppearance.MouseOverBackColor = Main.GetColor();
                 }
             }
-        }
-
-        private ComboBox Fonts_CreateComboBox()
-        {
-            ComboBox CB = new ComboBox();
-            CB.Name = "CB_fontStyle";
-            CB.Cursor = Cursors.Hand;
-            
-            
-            foreach(string s in Properties.Settings.Default.Fonts)
-                CB.Items.Add(s);
-
-            return CB;
         }
         
         // Fenêtre Settings Général
