@@ -301,7 +301,7 @@ namespace ClubVideo
 
                 cmd.ExecuteNonQuery();
 
-                Database.Update.Users();
+                Database.Update.Members();
             }
         }
 
