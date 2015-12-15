@@ -46,6 +46,7 @@
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Previous = new System.Windows.Forms.Button();
             this.btn_Next = new System.Windows.Forms.Button();
+            this.btn_Modify = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -172,7 +173,7 @@
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(327, 251);
+            this.btn_Cancel.Location = new System.Drawing.Point(244, 251);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(75, 23);
             this.btn_Cancel.TabIndex = 8;
@@ -202,11 +203,23 @@
             this.btn_Next.Visible = false;
             this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
             // 
+            // btn_Modify
+            // 
+            this.btn_Modify.Location = new System.Drawing.Point(342, 251);
+            this.btn_Modify.Name = "btn_Modify";
+            this.btn_Modify.Size = new System.Drawing.Size(75, 23);
+            this.btn_Modify.TabIndex = 10;
+            this.btn_Modify.Text = "Modifier";
+            this.btn_Modify.UseVisualStyleBackColor = true;
+            this.btn_Modify.Visible = false;
+            this.btn_Modify.Click += new System.EventHandler(this.btn_Modify_Click);
+            // 
             // UpdateMembers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 287);
+            this.Controls.Add(this.btn_Modify);
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.btn_Previous);
             this.Controls.Add(this.btn_Cancel);
@@ -252,5 +265,6 @@
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_Previous;
         private System.Windows.Forms.Button btn_Next;
+        private System.Windows.Forms.Button btn_Modify;
     }
 }
