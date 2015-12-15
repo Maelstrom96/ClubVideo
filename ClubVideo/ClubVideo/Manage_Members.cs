@@ -41,8 +41,8 @@ namespace ClubVideo
         {
             if (dgv_SearchResults.SelectedRows.Count == 1)
             {
-                InsertMovie movie = new InsertMovie(source, "Detail Membre");
-                movie.Show();
+                UpdateMembers members = new UpdateMembers(source, "Detail Membre");
+                members.Show();
             }
         }
 

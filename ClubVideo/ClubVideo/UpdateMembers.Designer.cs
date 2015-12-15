@@ -44,6 +44,8 @@
             this.txb_Province = new System.Windows.Forms.TextBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
+            this.btn_Previous = new System.Windows.Forms.Button();
+            this.btn_Next = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -176,12 +178,37 @@
             this.btn_Cancel.TabIndex = 8;
             this.btn_Cancel.Text = "Annuler";
             this.btn_Cancel.UseVisualStyleBackColor = true;
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
+            // 
+            // btn_Previous
+            // 
+            this.btn_Previous.Location = new System.Drawing.Point(15, 251);
+            this.btn_Previous.Name = "btn_Previous";
+            this.btn_Previous.Size = new System.Drawing.Size(75, 23);
+            this.btn_Previous.TabIndex = 9;
+            this.btn_Previous.Text = "Precedent";
+            this.btn_Previous.UseVisualStyleBackColor = true;
+            this.btn_Previous.Visible = false;
+            this.btn_Previous.Click += new System.EventHandler(this.btn_Previous_Click);
+            // 
+            // btn_Next
+            // 
+            this.btn_Next.Location = new System.Drawing.Point(122, 251);
+            this.btn_Next.Name = "btn_Next";
+            this.btn_Next.Size = new System.Drawing.Size(75, 23);
+            this.btn_Next.TabIndex = 9;
+            this.btn_Next.Text = "Suivant";
+            this.btn_Next.UseVisualStyleBackColor = true;
+            this.btn_Next.Visible = false;
+            this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
             // 
             // UpdateMembers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 287);
+            this.Controls.Add(this.btn_Next);
+            this.Controls.Add(this.btn_Previous);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.txb_Province);
@@ -223,5 +250,7 @@
         private System.Windows.Forms.TextBox txb_Province;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Cancel;
+        private System.Windows.Forms.Button btn_Previous;
+        private System.Windows.Forms.Button btn_Next;
     }
 }
