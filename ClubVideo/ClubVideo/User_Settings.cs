@@ -454,6 +454,17 @@ namespace ClubVideo
 
             return LBL;
         }
+        private ComboBox Fonts_CreateComboBox(int X, int Y)
+        {
+            ComboBox CB = new ComboBox();
+            CB.Name = "CB_fontStyle";
+            CB.Location = new Point(X, Y);
+            CB.BackColor = Color.White;
+            CB.ForeColor = Color.Black;
+            
+
+            return CB;
+        }
         private Button Fonts_CreateButton()
         {
             Button B = new Button();
@@ -566,7 +577,8 @@ namespace ClubVideo
             return img;
         }
 
-        private void ChangeImageColor_HSL(HSLColor prevColor, HSLColor newColor)
+        // A FAIRE PEUT-ÊTRE SI ON A LE TEMPS // A FAIRE PEUT-ÊTRE SI ON A LE TEMPS // A FAIRE PEUT-ÊTRE SI ON A LE TEMPS // A FAIRE PEUT-ÊTRE SI ON A LE TEMPS
+        private void ChangeImageColor_HSL(HSLColor prevColor, HSLColor newColor) 
         {
             foreach (Control c in Controls)
             {
