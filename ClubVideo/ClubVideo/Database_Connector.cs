@@ -290,6 +290,19 @@ namespace ClubVideo
 
                 Database.Update.Users();
             }
+
+            public static void Member(int id)
+            {
+                string insert = "DELETE FROM members where id=:memberid";
+
+                OracleCommand cmd = new OracleCommand(insert, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("memberid", id));
+
+                cmd.ExecuteNonQuery();
+
+                Database.Update.Users();
+            }
         }
 
         public static class Insert
@@ -407,8 +420,8 @@ namespace ClubVideo
                 OracleCommand cmd = new OracleCommand(update, GetConnection());
 
                 cmd.Parameters.Add(new OracleParameter("username", username));
-                cmd.Parameters.Add(new OracleParameter("keyp", name));
-                cmd.Parameters.Add(new OracleParameter("keyp", lastName));
+                cmd.Parameters.Add(new OracleParameter("name", name));
+                cmd.Parameters.Add(new OracleParameter("lastname", lastName));
                 cmd.Parameters.Add(new OracleParameter("userid", id));
 
                 cmd.ExecuteNonQuery();
@@ -429,6 +442,11 @@ namespace ClubVideo
                 cmd.ExecuteNonQuery();
 
                 Settings.Default.Language = Language;
+            }
+
+            public static void Member(MemberObject obj)
+            {
+
             }
         }
     }
