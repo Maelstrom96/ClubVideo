@@ -313,6 +313,25 @@ namespace ClubVideo
                 if (userid == Main.user.ID) Database.Update.Permissions();
             }
 
+            public static void Member(MemberObject obj)
+            {
+                string insert = "INSERT INTO members VALUES (MEMBERID.NEXTVAL, :name, :last_name, :address, :postalcode, :city, :province, :telephonenumber)";
+
+                OracleCommand cmd = new OracleCommand(insert, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("name", obj.Name));
+                cmd.Parameters.Add(new OracleParameter("last_name", obj.LastName));
+                cmd.Parameters.Add(new OracleParameter("address", obj.Address));
+                cmd.Parameters.Add(new OracleParameter("postalcode", obj.PostalCode));
+                cmd.Parameters.Add(new OracleParameter("city", obj.City));
+                cmd.Parameters.Add(new OracleParameter("province", obj.Province));
+                cmd.Parameters.Add(new OracleParameter("telephonenumber", obj.TelNumber));
+
+                cmd.ExecuteNonQuery();
+                CloseConnection();
+                Database.Update.Members();
+            }
+
             public static void LanguageSetting(string Language)
             {
                 string insert = "INSERT INTO user_settings VALUES (:userid, :keyp, :valuep)";
