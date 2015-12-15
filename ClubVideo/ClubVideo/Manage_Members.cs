@@ -44,6 +44,7 @@ namespace ClubVideo
             {
                 UpdateMembers members = new UpdateMembers(source, "Detail Membre");
                 members.Show();
+                source.DataSource = Database.GetData.Members();
             }
         }
 
@@ -65,7 +66,7 @@ namespace ClubVideo
 
         private void dgv_SearchResults_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgv_SearchResults.Rows.Count == 1)
+            if (dgv_SearchResults.SelectedRows.Count == 1)
                 btn_Delete.Visible = true;
         }
     }

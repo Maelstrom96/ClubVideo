@@ -40,7 +40,22 @@ namespace ClubVideo
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                MemberObject oMember = new MemberObject();
+                oMember.Name = txb_Name.Text.ToString();
+                oMember.LastName = txb_LastName.Text.ToString();
+                oMember.Address = txb_Adress.Text.ToString();
+                oMember.PostalCode = txb_PostalCode.Text.ToString();
+                oMember.City = txb_City.Text.ToString();
+                oMember.Province = txb_Province.Text.ToString();
+                oMember.TelNumber = int.Parse(txb_Telephone.Text.ToString());
+                Database_Connector.Insert.Member(oMember);
+                MessageBox.Show("Ajout fait!");
+                this.Close();
+                
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void btn_Next_Click(object sender, EventArgs e)
