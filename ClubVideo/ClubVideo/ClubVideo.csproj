@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HSLColor.cs" />
     <Compile Include="Manage_Members.cs">
       <SubType>Form</SubType>
     </Compile>
