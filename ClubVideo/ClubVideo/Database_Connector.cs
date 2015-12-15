@@ -446,7 +446,7 @@ namespace ClubVideo
 
             public static void Member(MemberObject obj)
             {
-                string update = "UPDATE members SET name=:name, last_name=:last_name, address=:address, postalcode=:postalcode, city=:city, province=:province, telephonenumber:telephonenumber WHERE id=:memberid";
+                string update = "UPDATE members SET name=:name, last_name=:last_name, address=:address, postalcode=:postalcode, city=:city, province=:province, telephonenumber=:telephonenumber WHERE id=:memberid";
 
                 OracleCommand cmd = new OracleCommand(update, GetConnection());
 
