@@ -473,19 +473,22 @@ namespace ClubVideo
 
         void B_fontColor_Click(object sender, EventArgs e)
         {
+            Color prevColor = ColorTranslator.FromHtml(Properties.Settings.Default.UI_Color);
             ColorDialog CD = new ColorDialog();
             CD.AllowFullOpen = true;
             DialogResult DR = CD.ShowDialog();
         
             if (DR == DialogResult.OK && CD.Color != Color.White)
             {
+                HSLColor HSLnewColor = new HSLColor(CD.Color);
                 Properties.Settings.Default.UI_Color = ColorTranslator.ToHtml(CD.Color);
                 Controls["LBL_fontColor"].ForeColor = Main.GetColor();
                 Controls["LBL_fontStyle"].ForeColor = Main.GetColor();
                 Controls["LBL_select"].ForeColor = Main.GetColor();
                 Controls["B_fontColor"].BackColor = Main.GetColor();
                 Controls["B_fonts"].BackColor = Main.GetColor();
-
+                Controls["PB_triangle"].BackgroundImage = new Bitmap(ChangeImageColor_GetPixel("triangle"));
+                Controls["PB_triangle"].BackgroundImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
 
                 ((Button)sender).BackColor = Main.GetColor();
                 UpdateColors();
@@ -524,7 +527,7 @@ namespace ClubVideo
         {
             PictureBox PB = new PictureBox();
             PB.Name = "PB_triangle";
-            PB.Image = GetImage("triangle");
+            PB.BackgroundImage = new Bitmap(ChangeImageColor_GetPixel("triangle"));
             PB.Size = new Size(12, 31);
             PB.BackColor = Color.White;
             PB.SizeMode = PictureBoxSizeMode.Zoom;
@@ -535,12 +538,47 @@ namespace ClubVideo
             else
             {
                 pX = this.Width - sender.Width - PB.Width - 16;
-                PB.Image.RotateFlip(RotateFlipType.Rotate180FlipNone);
+                PB.BackgroundImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
             }
             PB.Location = new Point(pX, 35);
 
             Controls.Add(PB);
             PB.BringToFront();
+        }
+
+        private Bitmap ChangeImageColor_GetPixel(string imgName)
+        {
+            Bitmap img = new Bitmap(GetImage(imgName));
+            for (int i = 0; i < img.Width; i++)
+            {
+                for (int j = 0; j < img.Height; j++)
+                {
+                    Color pixel = img.GetPixel(i, j);
+
+                    if ((pixel.R > 30 || pixel.G > 100 || pixel.B > 150))
+                    {
+                        Color newColor = ColorTranslator.FromHtml(Properties.Settings.Default.UI_Color);
+                        pixel = Color.FromArgb(pixel.A, newColor.R, newColor.G, newColor.B);
+                        img.SetPixel(i, j, pixel);
+                    }
+                }
+            }
+            return img;
+        }
+
+        private void ChangeImageColor_HSL(HSLColor prevColor, HSLColor newColor)
+        {
+            foreach (Control c in Controls)
+            {
+                if (c is PictureBox)
+                {
+
+                }
+                else if (c is Button)
+                {
+
+                }
+            }
         }
         private void AddLabel(Button sender)
         {
