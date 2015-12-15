@@ -12,19 +12,24 @@ namespace ClubVideo
 {
     public partial class Manage_Members : Form
     {
-        BindingSource source;
-        DataTable ds;
+        private BindingSource source;
+        private DataTable ds;
         
 
         public Manage_Members()
         {
             InitializeComponent();
             Database.Update.Members();
+            LoadMembers();
+        }
+
+        private void LoadMembers()
+        {
             ds = Database.GetData.Members();
+
             source = new BindingSource();
             source.DataSource = ds;
             dgv_SearchResults.DataSource = source;
-            
         }
 
         private void Search()
@@ -44,7 +49,6 @@ namespace ClubVideo
             {
                 UpdateMembers members = new UpdateMembers(source, "Detail Membre");
                 members.Show();
-                source.DataSource = Database.GetData.Members();
             }
         }
 
@@ -56,7 +60,8 @@ namespace ClubVideo
         private void btn_Add_Click(object sender, EventArgs e)
         {
             UpdateMembers members = new UpdateMembers();
-            members.Show();
+            members.ShowDialog();
+            LoadMembers();
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
@@ -66,8 +71,8 @@ namespace ClubVideo
 
         private void dgv_SearchResults_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgv_SearchResults.SelectedRows.Count == 1)
-                btn_Delete.Visible = true;
+            if (dgv_SearchResults.SelectedRows.Count == 1) btn_Delete.Visible = true;
+            else btn_Delete.Visible = false;
         }
     }
 }
