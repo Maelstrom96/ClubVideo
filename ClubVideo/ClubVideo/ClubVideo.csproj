@@ -57,6 +57,7 @@
     <Compile Include="Manage_Members.Designer.cs">
       <DependentUpon>Manage_Members.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberObject.cs" />
     <Compile Include="UpdateMembers.cs">
       <SubType>Form</SubType>
     </Compile>
