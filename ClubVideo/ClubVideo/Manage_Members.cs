@@ -66,7 +66,8 @@ namespace ClubVideo
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            //Database_Connector.Delete.User(int.Parse(row.Cells[0].Value.ToString()));
+            Database_Connector.Delete.Member(int.Parse(dgv_SearchResults.SelectedRows[0].Cells[0].Value.ToString()));
+            LoadMembers();
         }
 
         private void dgv_SearchResults_SelectionChanged(object sender, EventArgs e)
