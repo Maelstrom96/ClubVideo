@@ -280,9 +280,9 @@ namespace ClubVideo
 
             public static void User(int id)
             {
-                string insert = "DELETE FROM users where id=:userid";
+                string delete = "DELETE FROM users where id=:userid";
 
-                OracleCommand cmd = new OracleCommand(insert, GetConnection());
+                OracleCommand cmd = new OracleCommand(delete, GetConnection());
 
                 cmd.Parameters.Add(new OracleParameter("userid", id));
 
@@ -293,15 +293,15 @@ namespace ClubVideo
 
             public static void Member(int id)
             {
-                string insert = "DELETE FROM members where id=:memberid";
+                string delete = "DELETE FROM members where id=:memberid";
 
-                OracleCommand cmd = new OracleCommand(insert, GetConnection());
+                OracleCommand cmd = new OracleCommand(delete, GetConnection());
 
                 cmd.Parameters.Add(new OracleParameter("memberid", id));
 
                 cmd.ExecuteNonQuery();
 
-                Database.Update.Users();
+                Database.Update.Members();
             }
         }
 
