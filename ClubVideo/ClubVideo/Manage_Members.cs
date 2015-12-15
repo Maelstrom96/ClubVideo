@@ -32,9 +32,10 @@ namespace ClubVideo
             source.Filter = "CONVERT(ID, 'System.String') like '" + tb_Search.Text + "%'" +
                 "or NAME like '" + tb_Search.Text + "%'" +
                 "or LAST_NAME like '" + tb_Search.Text + "%'" +
-                "or ADRESS like '%" + tb_Search.Text + "%'" +
+                "or ADDRESS like '%" + tb_Search.Text + "%'" +
                 "or POSTALCODE like '%" + tb_Search.Text + "%'" +
                 "or CONVERT(TELEPHONENUMBER, 'System.String') like '%" + tb_Search.Text + "%'";
+
         }
 
         private void dgv_SearchResults_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -55,6 +56,17 @@ namespace ClubVideo
         {
             UpdateMembers members = new UpdateMembers();
             members.Show();
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dgv_SearchResults_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgv_SearchResults.Rows.Count == 1)
+                btn_Delete.Visible = true;
         }
     }
 }

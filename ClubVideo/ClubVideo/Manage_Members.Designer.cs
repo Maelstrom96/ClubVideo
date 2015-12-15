@@ -32,6 +32,7 @@
             this.tb_Search = new System.Windows.Forms.TextBox();
             this.dgv_SearchResults = new System.Windows.Forms.DataGridView();
             this.btn_Add = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SearchResults)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +67,7 @@
             this.dgv_SearchResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_SearchResults.Size = new System.Drawing.Size(692, 369);
             this.dgv_SearchResults.TabIndex = 2;
+            this.dgv_SearchResults.SelectionChanged += new System.EventHandler(this.dgv_SearchResults_SelectionChanged);
             this.dgv_SearchResults.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgv_SearchResults_MouseDoubleClick);
             // 
             // btn_Add
@@ -78,11 +80,23 @@
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
+            // btn_Delete
+            // 
+            this.btn_Delete.Location = new System.Drawing.Point(629, 22);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_Delete.TabIndex = 4;
+            this.btn_Delete.Text = "Supprimer";
+            this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Visible = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
+            // 
             // Manage_Members
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 451);
+            this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.dgv_SearchResults);
             this.Controls.Add(this.tb_Search);
@@ -105,5 +119,6 @@
         private System.Windows.Forms.TextBox tb_Search;
         private System.Windows.Forms.DataGridView dgv_SearchResults;
         private System.Windows.Forms.Button btn_Add;
+        private System.Windows.Forms.Button btn_Delete;
     }
 }
