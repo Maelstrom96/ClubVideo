@@ -315,13 +315,13 @@ namespace ClubVideo
 
             public static void Member(MemberObject obj)
             {
-                string insert = "INSERT INTO members VALUES (MEMBERID.NEXTVAL, :name, :last_name, :adress, :postalcode, :city, :province, :telephonenumber)";
+                string insert = "INSERT INTO members VALUES (MEMBERID.NEXTVAL, :name, :last_name, :address, :postalcode, :city, :province, :telephonenumber)";
 
                 OracleCommand cmd = new OracleCommand(insert, GetConnection());
 
                 cmd.Parameters.Add(new OracleParameter("name", obj.Name));
                 cmd.Parameters.Add(new OracleParameter("last_name", obj.LastName));
-                cmd.Parameters.Add(new OracleParameter("adress", obj.Adress));
+                cmd.Parameters.Add(new OracleParameter("address", obj.Address));
                 cmd.Parameters.Add(new OracleParameter("postalcode", obj.PostalCode));
                 cmd.Parameters.Add(new OracleParameter("city", obj.City));
                 cmd.Parameters.Add(new OracleParameter("province", obj.Province));
