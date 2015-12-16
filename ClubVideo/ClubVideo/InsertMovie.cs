@@ -186,8 +186,8 @@ namespace ClubVideo
                 oMovie.ID = int.Parse(((DataRowView)this._bs.Current).Row["ID"].ToString());
                 oMovie.Nom_en = lb_TitreEN.Text.ToString();
                 oMovie.Nom_fr = lb_TitreFR.Text.ToString();
-                oMovie.Description_fr = lb_DescEN.Text.ToString();
-                oMovie.Description_en = lb_DescFR.Text.ToString();
+                oMovie.Description_fr = lb_DescFR.Text.ToString();
+                oMovie.Description_en = lb_DescEN.Text.ToString();
                 oMovie.Year = int.Parse(lb_Date.Text.ToString());
                 oMovie.Rated = lb_Rating.Text.ToString();
                 oMovie.Runtime = int.Parse(lb_Time.Text.ToString());
@@ -195,10 +195,12 @@ namespace ClubVideo
                 oMovie.Poster= pictureBox1.Image;
                 Database_Connector.Update.Movie(oMovie);
                 MessageBox.Show("Modification fait!");
+
                 this.Close();
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
+
     }
 }
