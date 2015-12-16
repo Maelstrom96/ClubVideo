@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_Movie_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Movie_Menu.Designer.cs">
+      <DependentUpon>Add_Movie_Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="HSLColor.cs" />
     <Compile Include="Manage_Members.cs">
       <SubType>Form</SubType>
@@ -138,6 +144,9 @@
     <Compile Include="User_Settings.Designer.cs">
       <DependentUpon>User_Settings.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add_Movie_Menu.resx">
+      <DependentUpon>Add_Movie_Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manage_Members.resx">
       <DependentUpon>Manage_Members.cs</DependentUpon>
     </EmbeddedResource>
