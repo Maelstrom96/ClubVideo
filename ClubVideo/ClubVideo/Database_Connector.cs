@@ -463,6 +463,27 @@ namespace ClubVideo
 
                 Database.Update.Members();
             }
+
+            public static void Movie(MovieObject obj)
+            {
+                string update = "UPDATE movie SET name=:name, last_name=:last_name, address=:address, postalcode=:postalcode, city=:city, province=:province, telephonenumber=:telephonenumber WHERE id=:movieid";
+
+                OracleCommand cmd = new OracleCommand(update, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("movieid", obj.ID));
+                cmd.Parameters.Add(new OracleParameter("nameEN", obj.Nom_en));
+                cmd.Parameters.Add(new OracleParameter("nameFR", obj.Nom_fr));
+                cmd.Parameters.Add(new OracleParameter("descEN", obj.Description_en));
+                cmd.Parameters.Add(new OracleParameter("descFR", obj.Description_fr));
+                cmd.Parameters.Add(new OracleParameter("year", obj.Year));
+                cmd.Parameters.Add(new OracleParameter("rated", obj.Rated));
+                cmd.Parameters.Add(new OracleParameter("runtime", obj.Runtime));
+                
+
+                cmd.ExecuteNonQuery();
+
+                Database.Update.Members();
+            }
         }
     }
 }

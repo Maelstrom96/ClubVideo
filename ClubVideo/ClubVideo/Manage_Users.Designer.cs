@@ -47,8 +47,8 @@
             this.dgv_Users.AllowUserToOrderColumns = true;
             this.dgv_Users.AllowUserToResizeRows = false;
             this.dgv_Users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Users.Location = new System.Drawing.Point(9, 48);
-            this.dgv_Users.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv_Users.Location = new System.Drawing.Point(9, 52);
+            this.dgv_Users.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_Users.Name = "dgv_Users";
             this.dgv_Users.ReadOnly = true;
             this.dgv_Users.RowHeadersVisible = false;
@@ -57,14 +57,14 @@
             this.dgv_Users.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Users.RowTemplate.Height = 24;
             this.dgv_Users.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Users.Size = new System.Drawing.Size(608, 392);
+            this.dgv_Users.Size = new System.Drawing.Size(684, 388);
             this.dgv_Users.TabIndex = 0;
             this.dgv_Users.SelectionChanged += new System.EventHandler(this.dgv_Users_SelectionChanged);
             // 
             // tb_Search
             // 
-            this.tb_Search.Location = new System.Drawing.Point(413, 20);
-            this.tb_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_Search.Location = new System.Drawing.Point(463, 24);
+            this.tb_Search.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Search.Name = "tb_Search";
             this.tb_Search.Size = new System.Drawing.Size(205, 20);
             this.tb_Search.TabIndex = 1;
@@ -73,7 +73,7 @@
             // lb_SearchUser
             // 
             this.lb_SearchUser.AutoSize = true;
-            this.lb_SearchUser.Location = new System.Drawing.Point(363, 22);
+            this.lb_SearchUser.Location = new System.Drawing.Point(413, 26);
             this.lb_SearchUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_SearchUser.Name = "lb_SearchUser";
             this.lb_SearchUser.Size = new System.Drawing.Size(47, 13);
@@ -86,10 +86,10 @@
             this.bt_DeleteUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_DeleteUsers.FlatAppearance.BorderSize = 0;
             this.bt_DeleteUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_DeleteUsers.Location = new System.Drawing.Point(621, 352);
-            this.bt_DeleteUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_DeleteUsers.Location = new System.Drawing.Point(224, 5);
+            this.bt_DeleteUsers.Margin = new System.Windows.Forms.Padding(2);
             this.bt_DeleteUsers.Name = "bt_DeleteUsers";
-            this.bt_DeleteUsers.Size = new System.Drawing.Size(64, 67);
+            this.bt_DeleteUsers.Size = new System.Drawing.Size(48, 43);
             this.bt_DeleteUsers.TabIndex = 3;
             this.bt_DeleteUsers.UseVisualStyleBackColor = true;
             this.bt_DeleteUsers.Click += new System.EventHandler(this.bt_DeleteUsers_Click);
@@ -100,10 +100,10 @@
             this.bt_PermsEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_PermsEdit.FlatAppearance.BorderSize = 0;
             this.bt_PermsEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_PermsEdit.Location = new System.Drawing.Point(621, 209);
-            this.bt_PermsEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_PermsEdit.Location = new System.Drawing.Point(120, 5);
+            this.bt_PermsEdit.Margin = new System.Windows.Forms.Padding(2);
             this.bt_PermsEdit.Name = "bt_PermsEdit";
-            this.bt_PermsEdit.Size = new System.Drawing.Size(64, 67);
+            this.bt_PermsEdit.Size = new System.Drawing.Size(48, 43);
             this.bt_PermsEdit.TabIndex = 3;
             this.bt_PermsEdit.UseVisualStyleBackColor = true;
             this.bt_PermsEdit.Click += new System.EventHandler(this.bt_PermsEdit_Click);
@@ -114,10 +114,10 @@
             this.bt_EditUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_EditUser.FlatAppearance.BorderSize = 0;
             this.bt_EditUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_EditUser.Location = new System.Drawing.Point(621, 137);
-            this.bt_EditUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_EditUser.Location = new System.Drawing.Point(68, 5);
+            this.bt_EditUser.Margin = new System.Windows.Forms.Padding(2);
             this.bt_EditUser.Name = "bt_EditUser";
-            this.bt_EditUser.Size = new System.Drawing.Size(64, 67);
+            this.bt_EditUser.Size = new System.Drawing.Size(48, 43);
             this.bt_EditUser.TabIndex = 3;
             this.bt_EditUser.UseVisualStyleBackColor = true;
             this.bt_EditUser.Click += new System.EventHandler(this.bt_EditUser_Click);
@@ -128,10 +128,10 @@
             this.bt_AddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_AddUser.FlatAppearance.BorderSize = 0;
             this.bt_AddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_AddUser.Location = new System.Drawing.Point(621, 66);
-            this.bt_AddUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_AddUser.Location = new System.Drawing.Point(16, 5);
+            this.bt_AddUser.Margin = new System.Windows.Forms.Padding(2);
             this.bt_AddUser.Name = "bt_AddUser";
-            this.bt_AddUser.Size = new System.Drawing.Size(64, 67);
+            this.bt_AddUser.Size = new System.Drawing.Size(48, 43);
             this.bt_AddUser.TabIndex = 3;
             this.bt_AddUser.UseVisualStyleBackColor = true;
             this.bt_AddUser.Click += new System.EventHandler(this.bt_AddUser_Click);
@@ -142,10 +142,10 @@
             this.bt_GroupsEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_GroupsEdit.FlatAppearance.BorderSize = 0;
             this.bt_GroupsEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_GroupsEdit.Location = new System.Drawing.Point(621, 280);
-            this.bt_GroupsEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_GroupsEdit.Location = new System.Drawing.Point(172, 5);
+            this.bt_GroupsEdit.Margin = new System.Windows.Forms.Padding(2);
             this.bt_GroupsEdit.Name = "bt_GroupsEdit";
-            this.bt_GroupsEdit.Size = new System.Drawing.Size(64, 67);
+            this.bt_GroupsEdit.Size = new System.Drawing.Size(48, 43);
             this.bt_GroupsEdit.TabIndex = 3;
             this.bt_GroupsEdit.UseVisualStyleBackColor = true;
             this.bt_GroupsEdit.Click += new System.EventHandler(this.bt_EditUser_Click);
@@ -163,7 +163,9 @@
             this.Controls.Add(this.lb_SearchUser);
             this.Controls.Add(this.tb_Search);
             this.Controls.Add(this.dgv_Users);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Manage_Users";
             this.Text = "Manage_Users";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Users)).EndInit();
