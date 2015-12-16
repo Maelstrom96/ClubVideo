@@ -46,7 +46,7 @@
             this.bt_ManageMovies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ManageMovies.Image = global::ClubVideo.Properties.Resources.ManageMovies;
             this.bt_ManageMovies.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bt_ManageMovies.Location = new System.Drawing.Point(481, -1);
+            this.bt_ManageMovies.Location = new System.Drawing.Point(-1, -1);
             this.bt_ManageMovies.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_ManageMovies.Name = "bt_ManageMovies";
             this.bt_ManageMovies.Size = new System.Drawing.Size(118, 121);
@@ -81,7 +81,7 @@
             this.bt_ManageMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ManageMembers.Image = global::ClubVideo.Properties.Resources.ManageMembers;
             this.bt_ManageMembers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bt_ManageMembers.Location = new System.Drawing.Point(603, -1);
+            this.bt_ManageMembers.Location = new System.Drawing.Point(121, -1);
             this.bt_ManageMembers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_ManageMembers.Name = "bt_ManageMembers";
             this.bt_ManageMembers.Size = new System.Drawing.Size(118, 121);
@@ -115,7 +115,7 @@
             this.bt_ManageUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ManageUsers.Image = global::ClubVideo.Properties.Resources.ManageMovies;
             this.bt_ManageUsers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bt_ManageUsers.Location = new System.Drawing.Point(359, -1);
+            this.bt_ManageUsers.Location = new System.Drawing.Point(603, -1);
             this.bt_ManageUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_ManageUsers.Name = "bt_ManageUsers";
             this.bt_ManageUsers.Size = new System.Drawing.Size(118, 121);
@@ -133,7 +133,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::ClubVideo.Properties.Resources.ManageMovies;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(237, -1);
+            this.button2.Location = new System.Drawing.Point(481, -1);
             this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(118, 121);
