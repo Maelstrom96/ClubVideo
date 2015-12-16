@@ -37,7 +37,7 @@
             // lb_Search
             // 
             this.lb_Search.AutoSize = true;
-            this.lb_Search.Location = new System.Drawing.Point(12, 24);
+            this.lb_Search.Location = new System.Drawing.Point(526, 21);
             this.lb_Search.Name = "lb_Search";
             this.lb_Search.Size = new System.Drawing.Size(47, 13);
             this.lb_Search.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // tb_Search
             // 
-            this.tb_Search.Location = new System.Drawing.Point(62, 21);
+            this.tb_Search.Location = new System.Drawing.Point(576, 18);
             this.tb_Search.Name = "tb_Search";
             this.tb_Search.Size = new System.Drawing.Size(128, 20);
             this.tb_Search.TabIndex = 1;
@@ -71,7 +71,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 451);
+            this.ClientSize = new System.Drawing.Size(716, 452);
             this.Controls.Add(this.dgv_SearchResults);
             this.Controls.Add(this.tb_Search);
             this.Controls.Add(this.lb_Search);
