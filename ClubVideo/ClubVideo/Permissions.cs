@@ -42,8 +42,10 @@ namespace ClubVideo
             {
                 LastIndex = Perm.IndexOf(".", LastIndex);
                 string TempPerm = Perm.Substring(0, LastIndex + 1);
+                TempPerm += "*";
+                TempPerm = TempPerm.ToLower();
 
-                if (UserPermissions.Contains(TempPerm + "*")) return true;
+                if (UserPermissions.Contains(TempPerm)) return true;
             }
 
             return false; 
