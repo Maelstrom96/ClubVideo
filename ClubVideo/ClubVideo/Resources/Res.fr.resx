@@ -285,4 +285,7 @@
   <data name="Manage_Movies_RUNTIME" xml:space="preserve">
     <value>Durée (minute)</value>
   </data>
+  <data name="Manage_Movies_Search" xml:space="preserve">
+    <value>Recherche : </value>
+  </data>
 </root>
