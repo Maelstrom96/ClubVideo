@@ -255,6 +255,12 @@
   <data name="Manage_Movies_DESCRIPTION_FR" xml:space="preserve">
     <value>Description français</value>
   </data>
+  <data name="Manage_Movies_Header" xml:space="preserve">
+    <value>Affichage et recherche des films &amp; copies</value>
+  </data>
+  <data name="Manage_Movies_Header_Modif" xml:space="preserve">
+    <value>Gestion des films &amp; copies</value>
+  </data>
   <data name="Manage_Movies_ID" xml:space="preserve">
     <value>Identifiant</value>
   </data>
