@@ -333,4 +333,22 @@
   <data name="Manage_Members_TELEPHONENUMBER" xml:space="preserve">
     <value>N. de téléphone</value>
   </data>
+  <data name="Add_Mobie_Menu_Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="Add_Movie_Menu_From_IMDB" xml:space="preserve">
+    <value>Importer à partir d'IMDB</value>
+  </data>
+  <data name="Add_Movie_Menu_From_Manual" xml:space="preserve">
+    <value>Importer manuellement</value>
+  </data>
+  <data name="Add_Movie_Menu_Header" xml:space="preserve">
+    <value>Ajout d'un film...</value>
+  </data>
+  <data name="Add_Movie_Menu_OK" xml:space="preserve">
+    <value>Importer</value>
+  </data>
+  <data name="Add_Movie_Menu_URL" xml:space="preserve">
+    <value>Lien :</value>
+  </data>
 </root>
