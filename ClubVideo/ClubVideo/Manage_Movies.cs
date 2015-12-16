@@ -59,6 +59,24 @@ namespace ClubVideo
             tb_Search.Location = new Point(lb_Search.Location.X + (int)width.Width, lb_Search.Location.Y - height_Diff);
         }
 
+        private void LoadPermissions()
+        {
+            Button[] bt_Perms = { btn_Add, btn_Delete, btn_Modify };
+
+            foreach (Button button in bt_Perms)
+            {
+                string PermString = Name.ToString() + '.' + button.Name.ToString();
+
+                int index = PermString.IndexOf("btn_");
+                string cleanPerm = (index < 0)
+                    ? PermString
+                    : PermString.Remove(index, 4);
+
+                button.Enabled = Main.user.Permissions.HasPermission(cleanPerm);
+                button.Visible = button.Enabled;
+            }
+        }
+
         private void Search()
         {
             source.Filter = "CONVERT(ID, 'System.String') like '" + tb_Search.Text + "%'" +
@@ -88,6 +106,22 @@ namespace ClubVideo
             InsertMovie movies = new InsertMovie(source, "Modification de film", true);
             movies.ShowDialog();
             LoadMovies();
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            Add_Movie_Menu Amm = new Add_Movie_Menu();
+            DialogResult dr = Amm.ShowDialog();
+
+            switch (dr)
+            {
+                case DialogResult.OK :
+                    Database.Update.Movies();
+                    LoadMovies();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

@@ -39,12 +39,14 @@
             // 
             // lb_Search
             // 
-            this.lb_Search.AutoSize = true;
-            this.lb_Search.Location = new System.Drawing.Point(483, 48);
+            this.lb_Search.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lb_Search.Location = new System.Drawing.Point(460, 48);
             this.lb_Search.Name = "lb_Search";
-            this.lb_Search.Size = new System.Drawing.Size(47, 13);
+            this.lb_Search.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb_Search.Size = new System.Drawing.Size(70, 17);
             this.lb_Search.TabIndex = 0;
             this.lb_Search.Text = "Search :";
+            this.lb_Search.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // tb_Search
             // 
@@ -82,6 +84,7 @@
             this.btn_Add.Size = new System.Drawing.Size(53, 57);
             this.btn_Add.TabIndex = 7;
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_Modify
             // 
