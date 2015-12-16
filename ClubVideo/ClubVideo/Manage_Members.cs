@@ -24,6 +24,17 @@ namespace ClubVideo
             Database.Update.Members();
             LoadMembers();
             LoadLanguage();
+            SetButtonsVisibility();
+        }
+
+        private void SetButtonsVisibility()
+        {
+            if (!Modification_Mode)
+            {
+                btn_Add.Hide();
+                btn_Delete.Hide();
+                btn_Modify.Hide();
+            }
         }
 
         private void LoadMembers()
@@ -102,7 +113,7 @@ namespace ClubVideo
 
         private void dgv_SearchResults_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgv_SearchResults.SelectedRows.Count == 1) btn_Delete.Visible = true;
+            if (dgv_SearchResults.SelectedRows.Count == 1 && Modification_Mode) btn_Delete.Visible = true;
             else btn_Delete.Visible = false;
         }
 
