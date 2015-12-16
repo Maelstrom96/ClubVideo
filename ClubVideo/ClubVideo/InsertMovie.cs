@@ -29,18 +29,28 @@ namespace ClubVideo
             LoadText();
         }
 
-        public InsertMovie(BindingSource bs, string Header)
+        public InsertMovie(BindingSource bs, string Header, bool _edit = false)
         {
             InitializeComponent();
+            edit = _edit;
+
+            Height += 30;
+            if(edit)
+            {
+                btn_Modify.Location = new Point(lb_DescFR.Location.X + 350, lb_DescFR.Location.Y + 130);
+                btn_Modify.Visible = true;
+            }
+            else
+            {
+                btn_Next.Location = new Point(lb_DescFR.Location.X + 250, lb_DescFR.Location.Y + 130);
+                btn_Previous.Location = new Point(lb_DescFR.Location.X + 175, lb_DescFR.Location.Y + 130);
+                btn_Next.Visible = true;
+                btn_Previous.Visible = true;
+            }
 
             Text = Header;
 
             _bs = bs;
-            Height += 30;
-            btn_Next.Location = new Point(lb_DescFR.Location.X + 250, lb_DescFR.Location.Y + 130);
-            btn_Previous.Location = new Point(lb_DescFR.Location.X + 175, lb_DescFR.Location.Y + 130);
-            btn_Next.Visible = true;
-            btn_Previous.Visible = true;
 
             SetLabelCursor(System.Windows.Forms.Cursors.Default);
 
@@ -166,6 +176,29 @@ namespace ClubVideo
         private void btn_Previous_Click(object sender, EventArgs e)
         {
             this.BindingContext[_bs].Position -= 1;
+        }
+
+        private void btn_Modify_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MovieObject oMovie = new MovieObject();
+                oMovie.ID = int.Parse(((DataRowView)this._bs.Current).Row["ID"].ToString());
+                oMovie.Nom_en = lb_TitreEN.Text.ToString();
+                oMovie.Nom_fr = lb_TitreFR.Text.ToString();
+                oMovie.Description_fr = lb_DescEN.Text.ToString();
+                oMovie.Description_en = lb_DescFR.Text.ToString();
+                oMovie.Year = int.Parse(lb_Date.Text.ToString());
+                oMovie.Rated = lb_Rating.Text.ToString();
+                oMovie.Runtime = int.Parse(lb_Time.Text.ToString());
+                oMovie.Director = lb_Director.Text.ToString();
+                oMovie.Poster= pictureBox1.Image;
+                Database_Connector.Update.Movie(oMovie);
+                MessageBox.Show("Modification fait!");
+                this.Close();
+
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
     }
 }

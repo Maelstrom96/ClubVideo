@@ -42,7 +42,7 @@
             // lb_Search
             // 
             this.lb_Search.AutoSize = true;
-            this.lb_Search.Location = new System.Drawing.Point(480, 46);
+            this.lb_Search.Location = new System.Drawing.Point(480, 48);
             this.lb_Search.Name = "lb_Search";
             this.lb_Search.Size = new System.Drawing.Size(47, 13);
             this.lb_Search.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             // tb_Search
             // 
-            this.tb_Search.Location = new System.Drawing.Point(533, 43);
+            this.tb_Search.Location = new System.Drawing.Point(533, 45);
             this.tb_Search.Name = "tb_Search";
             this.tb_Search.Size = new System.Drawing.Size(171, 20);
             this.tb_Search.TabIndex = 1;
