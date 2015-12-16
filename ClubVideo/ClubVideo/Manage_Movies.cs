@@ -15,7 +15,6 @@ namespace ClubVideo
         BindingSource source;
         DataTable ds;
         private bool Modification_Mode;
-        MovieObject oMovie;
         
 
         public Manage_Movies(bool Modification = false)
