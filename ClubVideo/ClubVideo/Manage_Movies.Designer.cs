@@ -37,7 +37,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 45);
+            this.label1.Location = new System.Drawing.Point(12, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 0;
@@ -45,9 +45,9 @@
             // 
             // tb_Search
             // 
-            this.tb_Search.Location = new System.Drawing.Point(66, 45);
+            this.tb_Search.Location = new System.Drawing.Point(62, 21);
             this.tb_Search.Name = "tb_Search";
-            this.tb_Search.Size = new System.Drawing.Size(100, 20);
+            this.tb_Search.Size = new System.Drawing.Size(128, 20);
             this.tb_Search.TabIndex = 1;
             this.tb_Search.TextChanged += new System.EventHandler(this.tb_Search_TextChanged);
             // 
@@ -59,11 +59,11 @@
             this.dgv_SearchResults.AllowUserToOrderColumns = true;
             this.dgv_SearchResults.AllowUserToResizeRows = false;
             this.dgv_SearchResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_SearchResults.Location = new System.Drawing.Point(12, 71);
+            this.dgv_SearchResults.Location = new System.Drawing.Point(12, 47);
             this.dgv_SearchResults.Name = "dgv_SearchResults";
             this.dgv_SearchResults.ReadOnly = true;
             this.dgv_SearchResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_SearchResults.Size = new System.Drawing.Size(692, 369);
+            this.dgv_SearchResults.Size = new System.Drawing.Size(692, 393);
             this.dgv_SearchResults.TabIndex = 2;
             this.dgv_SearchResults.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dgv_SearchResults_MouseDoubleClick);
             // 
@@ -71,7 +71,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 452);
+            this.ClientSize = new System.Drawing.Size(716, 451);
             this.Controls.Add(this.dgv_SearchResults);
             this.Controls.Add(this.tb_Search);
             this.Controls.Add(this.label1);
