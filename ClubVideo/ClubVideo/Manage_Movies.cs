@@ -15,6 +15,7 @@ namespace ClubVideo
         BindingSource source;
         DataTable ds;
         private bool Modification_Mode;
+        MovieObject oMovie;
         
 
         public Manage_Movies(bool Modification = false)
@@ -73,13 +74,20 @@ namespace ClubVideo
             if(dgv_SearchResults.SelectedRows.Count  == 1)
             {
                 InsertMovie movie = new InsertMovie(source, "Detail Film");
-                movie.Show();
+                movie.ShowDialog();
             }
         }
 
         private void tb_Search_TextChanged(object sender, EventArgs e)
         {
             Search();
+        }
+
+        private void btn_Modify_Click(object sender, EventArgs e)
+        {
+            InsertMovie movies = new InsertMovie(source, "Modification de film", true);
+            movies.ShowDialog();
+            LoadMovies();
         }
     }
 }

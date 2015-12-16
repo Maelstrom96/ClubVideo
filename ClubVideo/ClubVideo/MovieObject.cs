@@ -10,6 +10,7 @@ namespace ClubVideo
 {
     public class MovieObject
     {
+        public int ID { get; set; }
         public string Nom_en { get; set; }
         public string Nom_fr { get; set; }
         public string Description_en { get; set; }

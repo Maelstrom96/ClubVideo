@@ -34,7 +34,14 @@
       <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
   &lt;string&gt;Arial&lt;/string&gt;
+  &lt;string&gt;Calibri&lt;/string&gt;
+  &lt;string&gt;Comic Sans MS&lt;/string&gt;
+  &lt;string&gt;Times New Roman&lt;/string&gt;
+  &lt;string&gt;Microsoft Sans Serif&lt;/string&gt;
 &lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="UI_Font" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Arial</Value>
     </Setting>
   </Settings>
 </SettingsFile>
