@@ -14,13 +14,16 @@ namespace ClubVideo
     {
         private BindingSource source;
         private DataTable ds;
-        
+        private bool Modification_Mode;
 
-        public Manage_Members()
+        public Manage_Members(bool Modification = false)
         {
             InitializeComponent();
+            Modification_Mode = Modification;
+
             Database.Update.Members();
             LoadMembers();
+            LoadLanguage();
         }
 
         private void LoadMembers()
@@ -30,6 +33,33 @@ namespace ClubVideo
             source = new BindingSource();
             source.DataSource = ds;
             dgv_SearchResults.DataSource = source;
+        }
+
+        private void LoadLanguage()
+        {
+            // Header text
+            if (Modification_Mode) Text = Main.resManager.GetString("Manage_Members_Header_Modif", Main.culInfo);
+            else Text = Main.resManager.GetString("Manage_Members_Header", Main.culInfo);
+
+            // tooltips
+            toolTip.SetToolTip(btn_Add, Main.resManager.GetString("Manage_Members_Add_Tip", Main.culInfo));
+            toolTip.SetToolTip(btn_Modify, Main.resManager.GetString("Manage_Members_Modify_Tip", Main.culInfo));
+            toolTip.SetToolTip(btn_Delete, Main.resManager.GetString("Manage_Members_Delete_Tip", Main.culInfo));
+            toolTip.SetToolTip(tb_Search, Main.resManager.GetString("Manage_Members_Search_Tip", Main.culInfo));
+
+            // DGV Columns headers
+            foreach(DataGridViewColumn column in dgv_SearchResults.Columns)
+            {
+                column.HeaderText = Main.resManager.GetString("Manage_Members_" + column.Name, Main.culInfo);
+            }
+
+            // lb_Search text
+            lb_Search.Text = Main.resManager.GetString("Manage_Members_Search", Main.culInfo);
+
+            // Set tb_Search position relative to lb_Search
+            int height_Diff = (tb_Search.Height - lb_Search.Height) / 2;
+            SizeF width = lb_Search.CreateGraphics().MeasureString(lb_Search.Text, lb_Search.Font);
+            tb_Search.Location = new Point(lb_Search.Location.X + (int)width.Width, lb_Search.Location.Y - height_Diff);
         }
 
         private void Search()
