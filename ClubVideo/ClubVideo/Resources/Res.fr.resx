@@ -288,16 +288,49 @@
   <data name="Manage_Movies_Search" xml:space="preserve">
     <value>Recherche : </value>
   </data>
+  <data name="Manage_Members_ADDRESS" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
   <data name="Manage_Members_Add_Tip" xml:space="preserve">
     <value>Ajouter un membre...</value>
+  </data>
+  <data name="Manage_Members_CITY" xml:space="preserve">
+    <value>Ville</value>
   </data>
   <data name="Manage_Members_Delete_Tip" xml:space="preserve">
     <value>Supprimer un membre...</value>
   </data>
+  <data name="Manage_Members_Header" xml:space="preserve">
+    <value>Affichage et recherche de membres</value>
+  </data>
+  <data name="Manage_Members_Header_Modif" xml:space="preserve">
+    <value>Gestion des membres</value>
+  </data>
+  <data name="Manage_Members_ID" xml:space="preserve">
+    <value>Identifiant</value>
+  </data>
+  <data name="Manage_Members_LAST_NAME" xml:space="preserve">
+    <value>Nom de famille</value>
+  </data>
   <data name="Manage_Members_Modify_Tip" xml:space="preserve">
     <value>Modifier un membre...</value>
   </data>
+  <data name="Manage_Members_NAME" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="Manage_Members_POSTALCODE" xml:space="preserve">
+    <value>Code postal</value>
+  </data>
+  <data name="Manage_Members_PROVINCE" xml:space="preserve">
+    <value>Province</value>
+  </data>
+  <data name="Manage_Members_Search" xml:space="preserve">
+    <value>Recherche : </value>
+  </data>
   <data name="Manage_Members_Search_Tip" xml:space="preserve">
     <value>Effectuer une recherche sur toutes les colonnes du tableau.</value>
+  </data>
+  <data name="Manage_Members_TELEPHONENUMBER" xml:space="preserve">
+    <value>N. de téléphone</value>
   </data>
 </root>
