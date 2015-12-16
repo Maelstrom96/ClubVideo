@@ -23,11 +23,9 @@ namespace ClubVideo
         public static User user { get; set; }
         
         //public static Color BLUE = Color.FromArgb(34, 105, 159);
-        public static string fontStyle { get; set; }
 
         public Main()
         {
-            fontStyle = "Arial";
             LoadSettings();
             LoadDataBase();
         }
@@ -94,6 +92,16 @@ namespace ClubVideo
         public static Color GetColor()
         {
             return ColorTranslator.FromHtml(Properties.Settings.Default.UI_Color);
+        }
+        public static string GetFont()
+        {
+            return Properties.Settings.Default.UI_Font;
+        }
+
+        public static void RefreshForms()
+        {
+            foreach (Form form in Application.OpenForms)
+                form.Refresh();
         }
     }
 }
