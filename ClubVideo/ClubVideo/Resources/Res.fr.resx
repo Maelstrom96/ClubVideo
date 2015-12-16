@@ -258,6 +258,9 @@
   <data name="Manage_Movies_ID" xml:space="preserve">
     <value>Identifiant</value>
   </data>
+  <data name="Manage_Movies_IMAGE" xml:space="preserve">
+    <value>Affiche</value>
+  </data>
   <data name="Manage_Movies_NAME_EN" xml:space="preserve">
     <value>Nom anglais</value>
   </data>
