@@ -89,6 +89,7 @@
             this.bt_ManageMembers.Text = "manage Members";
             this.bt_ManageMembers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_ManageMembers.UseVisualStyleBackColor = true;
+            this.bt_ManageMembers.Click += new System.EventHandler(this.bt_ManageMembers_Click);
             // 
             // bt_Settings
             // 

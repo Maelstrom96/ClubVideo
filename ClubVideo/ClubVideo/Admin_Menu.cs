@@ -34,6 +34,15 @@ namespace ClubVideo
         {
             Manage_Users musers_Form = new Manage_Users();
             musers_Form.ShowDialog();
+            Show();
+        }
+
+        private void bt_ManageMembers_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Manage_Members members = new Manage_Members(true);
+            members.ShowDialog();
+            Show();
         }
     }
 }
