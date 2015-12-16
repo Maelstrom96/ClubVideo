@@ -466,7 +466,7 @@ namespace ClubVideo
 
             public static void Movie(MovieObject obj)
             {
-                string update = "UPDATE movie SET name=:name, last_name=:last_name, address=:address, postalcode=:postalcode, city=:city, province=:province, telephonenumber=:telephonenumber WHERE id=:movieid";
+                string update = "UPDATE movie SET name_EN=:nameEN, name_FR=:nameFR, DESCRIPTION_EN=:descEN, DESCRIPTION_FR=:descFR, RELEASEDATE=:year, RATING=:rated, RUNTIME=:runtime WHERE id=:movieid";
 
                 OracleCommand cmd = new OracleCommand(update, GetConnection());
 
