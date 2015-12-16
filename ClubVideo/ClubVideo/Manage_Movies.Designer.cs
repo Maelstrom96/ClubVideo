@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lb_Search = new System.Windows.Forms.Label();
             this.tb_Search = new System.Windows.Forms.TextBox();
             this.dgv_SearchResults = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SearchResults)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lb_Search
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Search :";
+            this.lb_Search.AutoSize = true;
+            this.lb_Search.Location = new System.Drawing.Point(12, 24);
+            this.lb_Search.Name = "lb_Search";
+            this.lb_Search.Size = new System.Drawing.Size(47, 13);
+            this.lb_Search.TabIndex = 0;
+            this.lb_Search.Text = "Search :";
             // 
             // tb_Search
             // 
@@ -74,7 +74,7 @@
             this.ClientSize = new System.Drawing.Size(716, 451);
             this.Controls.Add(this.dgv_SearchResults);
             this.Controls.Add(this.tb_Search);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lb_Search);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(732, 490);
             this.MinimizeBox = false;
@@ -89,7 +89,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_Search;
         private System.Windows.Forms.TextBox tb_Search;
         private System.Windows.Forms.DataGridView dgv_SearchResults;
     }
