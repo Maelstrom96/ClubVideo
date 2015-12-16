@@ -249,4 +249,31 @@
   <data name="User_Settings_Header" xml:space="preserve">
     <value>Paramètres de l'utilisateur</value>
   </data>
+  <data name="Manage_Movies_DESCRIPTION_EN" xml:space="preserve">
+    <value>Description anglais</value>
+  </data>
+  <data name="Manage_Movies_DESCRIPTION_FR" xml:space="preserve">
+    <value>Description français</value>
+  </data>
+  <data name="Manage_Movies_ID" xml:space="preserve">
+    <value>Identifiant</value>
+  </data>
+  <data name="Manage_Movies_NAME_EN" xml:space="preserve">
+    <value>Nom anglais</value>
+  </data>
+  <data name="Manage_Movies_NAME_FR" xml:space="preserve">
+    <value>Nom Français</value>
+  </data>
+  <data name="Manage_Movies_NBCOPIES" xml:space="preserve">
+    <value>Nombre de copies total</value>
+  </data>
+  <data name="Manage_Movies_RATING" xml:space="preserve">
+    <value>Classification</value>
+  </data>
+  <data name="Manage_Movies_RELEASEDATE" xml:space="preserve">
+    <value>Année de sortie</value>
+  </data>
+  <data name="Manage_Movies_RUNTIME" xml:space="preserve">
+    <value>Durée</value>
+  </data>
 </root>
