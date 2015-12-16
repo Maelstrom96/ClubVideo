@@ -288,4 +288,13 @@
   <data name="Manage_Movies_Search" xml:space="preserve">
     <value>Recherche : </value>
   </data>
+  <data name="Manage_Members_Add_Tip" xml:space="preserve">
+    <value>Ajouter un membre...</value>
+  </data>
+  <data name="Manage_Members_Delete_Tip" xml:space="preserve">
+    <value>Supprimer un membre...</value>
+  </data>
+  <data name="Manage_Members_Modify_Tip" xml:space="preserve">
+    <value>Modifier un membre...</value>
+  </data>
 </root>
