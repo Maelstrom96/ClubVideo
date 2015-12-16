@@ -44,5 +44,11 @@ namespace ClubVideo
             members.ShowDialog();
             Show();
         }
+
+        private void bt_ManageMovies_Click(object sender, EventArgs e)
+        {
+            Manage_Movies movies = new Manage_Movies(true);
+            movies.ShowDialog();
+        }
     }
 }

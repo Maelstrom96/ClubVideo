@@ -26,6 +26,12 @@ namespace ClubVideo
 
             LoadMovies();
             LoadLanguage();
+            if (Modification_Mode)
+            {
+                btn_Add.Visible = true;
+                btn_Delete.Visible = true;
+                btn_Modify.Visible = true;
+            }
         }
 
         private void LoadMovies()
