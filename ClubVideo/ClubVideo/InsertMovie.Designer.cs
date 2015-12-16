@@ -54,7 +54,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(18, 18);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 241);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -286,6 +286,7 @@
             this.btn_Modify.Text = "Modifier";
             this.btn_Modify.UseVisualStyleBackColor = true;
             this.btn_Modify.Visible = false;
+            this.btn_Modify.Click += new System.EventHandler(this.btn_Modify_Click);
             // 
             // InsertMovie
             // 
@@ -313,7 +314,7 @@
             this.Controls.Add(this.lb_TitreEN);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "InsertMovie";

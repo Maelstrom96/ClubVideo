@@ -47,6 +47,20 @@ namespace ClubVideo
             bt_SearchMovies.Text = Main.resManager.GetString("Button_Menu_SearchMovies", Main.culInfo);
             bt_POS.Text = Main.resManager.GetString("Button_Menu_POS", Main.culInfo);
             bt_Administration.Text = Main.resManager.GetString("Button_Menu_Administration", Main.culInfo);
+
+            UpdateFonts();
+        }
+
+        private void UpdateFonts()
+        {
+            foreach (Control c in this.Controls)
+            {
+                if (c is Button)
+                {
+                    c.Font = new Font(Main.GetFont(), 9);
+                    c.ForeColor = Main.GetColor();
+                }
+            }
         }
 
         private void SwitchLanguage(string LanguageCode)

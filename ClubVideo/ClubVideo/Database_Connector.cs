@@ -466,11 +466,11 @@ namespace ClubVideo
 
             public static void Movie(MovieObject obj)
             {
-                string update = "UPDATE movie SET name_EN=:nameEN, name_FR=:nameFR, DESCRIPTION_EN=:descEN, DESCRIPTION_FR=:descFR, RELEASEDATE=:year, RATING=:rated, RUNTIME=:runtime WHERE id=:movieid";
-
+                //string update = "UPDATE movies SET NAME_EN=:nameEN, NAME_FR=:nameFR, DESCRIPTION_EN=:descEN, DESCRIPTION_FR=:descFR, RELEASEDATE=:year, RATING=:rated, RUNTIME=:runtime WHERE ID=:movieid";
+                string update = "UPDATE movies SET NAME_EN=:nameEN, NAME_FR=:nameFR, DESCRIPTION_EN=:descEN, DESCRIPTION_FR=:descFR, RELEASEDATE=:year, RATING=:rated, RUNTIME=:runtime WHERE ID=:movieID";
                 OracleCommand cmd = new OracleCommand(update, GetConnection());
 
-                cmd.Parameters.Add(new OracleParameter("movieid", obj.ID));
+                
                 cmd.Parameters.Add(new OracleParameter("nameEN", obj.Nom_en));
                 cmd.Parameters.Add(new OracleParameter("nameFR", obj.Nom_fr));
                 cmd.Parameters.Add(new OracleParameter("descEN", obj.Description_en));
@@ -478,11 +478,11 @@ namespace ClubVideo
                 cmd.Parameters.Add(new OracleParameter("year", obj.Year));
                 cmd.Parameters.Add(new OracleParameter("rated", obj.Rated));
                 cmd.Parameters.Add(new OracleParameter("runtime", obj.Runtime));
-                
+                cmd.Parameters.Add(new OracleParameter("movieID", obj.ID));
 
-                cmd.ExecuteNonQuery();
+                int rows = cmd.ExecuteNonQuery();
 
-                Database.Update.Members();
+                 Database.Update.Movies();
             }
         }
     }

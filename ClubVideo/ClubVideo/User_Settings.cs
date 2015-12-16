@@ -209,7 +209,7 @@ namespace ClubVideo
         {
             Label LBL = new Label();
             LBL.Name = "LBL_LanguageSelection";
-            LBL.Font = new Font(Main.fontStyle, 12, FontStyle.Bold);
+            LBL.Font = new Font(Main.GetFont(), 12, FontStyle.Bold);
             LBL.TextAlign = ContentAlignment.MiddleCenter;
             LBL.ForeColor = Main.GetColor();
             LBL.BackColor = Color.White;
@@ -232,7 +232,7 @@ namespace ClubVideo
             RadioButton RB = new RadioButton();
             RB.Name = "RB_" + lang.ToLower();
             RB.Text = lang.ToUpper();
-            RB.Font = new Font(Main.fontStyle, 24, FontStyle.Bold);
+            RB.Font = new Font(Main.GetFont(), 24, FontStyle.Bold);
             RB.TextAlign = ContentAlignment.MiddleCenter;
             RB.Size = new Size(85, 85);
             RB.Appearance = Appearance.Button;
@@ -339,7 +339,7 @@ namespace ClubVideo
         {
             Label LBL = new Label();
             LBL.Name = "LBL_" + name;
-            LBL.Font = new Font(Main.fontStyle, 14);
+            LBL.Font = new Font(Main.GetFont(), 14);
             LBL.BackColor = Color.White;
             LBL.ForeColor = Main.GetColor();
             LBL.Location = new Point(X, Y);
@@ -352,7 +352,7 @@ namespace ClubVideo
             TextBox TB = new TextBox();
             TB.Name = "TB_" + name;
             TB.Width = isLong ? 397 : 189;
-            TB.Font = new Font(Main.fontStyle, 17);
+            TB.Font = new Font(Main.GetFont(), 17);
             TB.Location = new Point(X, Y);
             TB.PasswordChar = '●';
             TB.BackColor = Color.White;
@@ -366,7 +366,7 @@ namespace ClubVideo
             Button B = new Button();
             B.Name = "B_" + name.ToLower();
             B.TextAlign = ContentAlignment.MiddleCenter;
-            B.Font = new Font(Main.fontStyle, 14);
+            B.Font = new Font(Main.GetFont(), 14);
             B.Width = 192;
             B.Height = 42;
             B.BackColor = Main.GetColor();
@@ -457,7 +457,7 @@ namespace ClubVideo
             LBL.Location = new Point(X, Y);
             LBL.BackColor = Color.White;
             LBL.ForeColor = Main.GetColor();
-            LBL.Font = new Font(Main.fontStyle, 14);
+            LBL.Font = new Font(Main.GetFont(), 14);
             LBL.AutoSize = true;
 
             return LBL;
@@ -472,9 +472,10 @@ namespace ClubVideo
             CB.FlatStyle = FlatStyle.Popup;
             CB.DropDownStyle = ComboBoxStyle.DropDownList;
             CB.Cursor = Cursors.Hand;
-            CB.SelectedValueChanged += CB_fontStyle_SelectedValueChanged;
+            //CB.SelectedValueChanged += CB_fontStyle_SelectedValueChanged;
+            CB.SelectedIndexChanged += CB_fontStyle_SelectedIndexChanged;
             
-            CB.DrawMode = DrawMode.OwnerDrawFixed;
+            //CB.DrawMode = DrawMode.OwnerDrawFixed;
             CB.DrawItem += CB_fontStyle_DrawItem;
 
             int pX = Controls["LBL_fontStyle"].Location.X + Controls["LBL_fontStyle"].Width + 10;
@@ -487,16 +488,20 @@ namespace ClubVideo
                     CB.SelectedIndex = CB.Items.Count - 1;
             }
 
+            CB.DrawMode = DrawMode.Normal;
             return CB;
         }
 
-        void CB_fontStyle_SelectedValueChanged(object send, EventArgs e)
+        void CB_fontStyle_SelectedIndexChanged(object send, EventArgs e)
         {
             ComboBox sender = (ComboBox)send;
-            if (sender.SelectedValue != null)
-                Properties.Settings.Default.UI_Font = sender.SelectedValue.ToString();
-            else
-                Properties.Settings.Default.UI_Font = Properties.Settings.Default.Fonts[0];
+            string font = sender.Text != "" ? sender.Text : Properties.Settings.Default.Fonts[0];
+            Properties.Settings.Default.UI_Font = font;
+
+            Controls["LBL_select"].Font = new Font(Main.GetFont(), 14);
+            Controls["LBL_fontColor"].Font = new Font(Main.GetFont(), 14);
+            Controls["LBL_fontStyle"].Font = new Font(Main.GetFont(), 14);
+            Main.RefreshForms();
         }
         private Button Fonts_CreateButton()
         {
@@ -537,8 +542,8 @@ namespace ClubVideo
                 ((Button)sender).BackColor = Main.GetColor();
                 UpdateColors();
             }
-            
-            this.Refresh();
+
+            Main.RefreshForms();
         }
         void CB_fontStyle_DrawItem(object send, DrawItemEventArgs e)
         {
@@ -668,7 +673,7 @@ namespace ClubVideo
             else
                 LBL.Text = Main.resManager.GetString("User_Settings_Hover_Password", Main.culInfo);
 
-            LBL.Font = new Font(Main.fontStyle, 11, FontStyle.Bold);
+            LBL.Font = new Font(Main.GetFont(), 11, FontStyle.Bold);
             LBL.TextAlign = ContentAlignment.MiddleCenter;
             LBL.BackColor = Main.GetColor();
             LBL.ForeColor = Color.White;
