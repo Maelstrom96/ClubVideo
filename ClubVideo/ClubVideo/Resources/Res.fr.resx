@@ -297,4 +297,7 @@
   <data name="Manage_Members_Modify_Tip" xml:space="preserve">
     <value>Modifier un membre...</value>
   </data>
+  <data name="Manage_Members_Search_Tip" xml:space="preserve">
+    <value>Effectuer une recherche sur toutes les colonnes du tableau.</value>
+  </data>
 </root>
