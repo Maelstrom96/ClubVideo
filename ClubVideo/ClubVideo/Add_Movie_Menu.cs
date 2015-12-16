@@ -53,10 +53,49 @@ namespace ClubVideo
             Height += Deplacement;
         }
 
+        private void ImportFromIMDB()
+        {
+            string URL = tb_Url.Text;
+            string id;
+            int IndexIDStart;
+            int IndexIDEnd;
+
+            IndexIDStart = URL.IndexOf("/title/") + 7;
+            if (IndexIDStart == -1) throw new Exception("IMDB_ID_NOT_FOUND");
+
+            IndexIDEnd = URL.IndexOf("/", IndexIDStart);
+
+            if (IndexIDEnd == -1 && URL.IndexOf("tt") == 0) id = URL;
+            else if (IndexIDEnd != -1) id = URL.Substring(IndexIDStart, IndexIDEnd - IndexIDStart);
+            else throw new Exception("ID_FORMAT_INVALID");
+
+            Database_Connector.Insert.Movie(Database_Connector.GetFromIMDB(id));
+        }
+
         private void bt_Cancel_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel;
             Close();
+        }
+
+        private void bt_OK_Click(object sender, EventArgs e)
+        {
+            if (rb_IMDB.Checked)
+            {
+                try
+                {
+                    ImportFromIMDB();
+                    MessageBox.Show("MOVIE_IMPORT_SUCCESS");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+
+            }
         }
     }
 }

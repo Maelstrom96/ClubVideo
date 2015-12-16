@@ -77,6 +77,7 @@
             this.bt_OK.TabIndex = 2;
             this.bt_OK.Text = "ok";
             this.bt_OK.UseVisualStyleBackColor = true;
+            this.bt_OK.Click += new System.EventHandler(this.bt_OK_Click);
             // 
             // lb_Url
             // 
