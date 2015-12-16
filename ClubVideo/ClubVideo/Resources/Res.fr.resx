@@ -277,6 +277,6 @@
     <value>Année de sortie</value>
   </data>
   <data name="Manage_Movies_RUNTIME" xml:space="preserve">
-    <value>Durée</value>
+    <value>Durée (minute)</value>
   </data>
 </root>
