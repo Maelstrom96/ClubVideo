@@ -123,5 +123,11 @@ namespace ClubVideo
                     break;
             }
         }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            Database_Connector.Delete.Movie(int.Parse(dgv_SearchResults.SelectedRows[0].Cells[0].Value.ToString()));
+            LoadMovies();
+        }
     }
 }

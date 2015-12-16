@@ -303,6 +303,19 @@ namespace ClubVideo
 
                 Database.Update.Members();
             }
+
+            public static void Movie(int id)
+            {
+                string delete = "DELETE FROM movies where id=:movieid";
+
+                OracleCommand cmd = new OracleCommand(delete, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("movieid", id));
+
+                cmd.ExecuteNonQuery();
+
+                Database.Update.Movies();
+            }
         }
 
         public static class Insert
@@ -466,10 +479,8 @@ namespace ClubVideo
 
             public static void Movie(MovieObject obj)
             {
-                //string update = "UPDATE movies SET NAME_EN=:nameEN, NAME_FR=:nameFR, DESCRIPTION_EN=:descEN, DESCRIPTION_FR=:descFR, RELEASEDATE=:year, RATING=:rated, RUNTIME=:runtime WHERE ID=:movieid";
                 string update = "UPDATE movies SET NAME_EN=:nameEN, NAME_FR=:nameFR, DESCRIPTION_EN=:descEN, DESCRIPTION_FR=:descFR, RELEASEDATE=:year, RATING=:rated, RUNTIME=:runtime WHERE ID=:movieID";
                 OracleCommand cmd = new OracleCommand(update, GetConnection());
-
                 
                 cmd.Parameters.Add(new OracleParameter("nameEN", obj.Nom_en));
                 cmd.Parameters.Add(new OracleParameter("nameFR", obj.Nom_fr));
@@ -480,7 +491,7 @@ namespace ClubVideo
                 cmd.Parameters.Add(new OracleParameter("runtime", obj.Runtime));
                 cmd.Parameters.Add(new OracleParameter("movieID", obj.ID));
 
-                int rows = cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
 
                  Database.Update.Movies();
             }
