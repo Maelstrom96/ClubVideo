@@ -76,6 +76,7 @@ namespace ClubVideo
             toolTip.SetToolTip(btn_Modify, Main.resManager.GetString("Manage_Members_Modify_Tip", Main.culInfo));
             toolTip.SetToolTip(btn_Delete, Main.resManager.GetString("Manage_Members_Delete_Tip", Main.culInfo));
             toolTip.SetToolTip(tb_Search, Main.resManager.GetString("Manage_Members_Search_Tip", Main.culInfo));
+            toolTip.SetToolTip(lb_Search, Main.resManager.GetString("Manage_Members_Search_Tip", Main.culInfo));
 
             // DGV Columns headers
             foreach(DataGridViewColumn column in dgv_SearchResults.Columns)
