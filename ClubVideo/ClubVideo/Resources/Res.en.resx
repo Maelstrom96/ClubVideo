@@ -249,4 +249,88 @@
   <data name="User_Settings_Header" xml:space="preserve">
     <value>User Settings</value>
   </data>
+  <data name="Manage_Members_ADDRESS" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Manage_Members_Add_Tip" xml:space="preserve">
+    <value>Add a member...</value>
+  </data>
+  <data name="Manage_Members_CITY" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Manage_Members_Delete_Tip" xml:space="preserve">
+    <value>Delete a member...</value>
+  </data>
+  <data name="Manage_Members_Header" xml:space="preserve">
+    <value>Display and Search Members</value>
+  </data>
+  <data name="Manage_Members_Header_Modif" xml:space="preserve">
+    <value>Members Management</value>
+  </data>
+  <data name="Manage_Members_ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Manage_Members_LAST_NAME" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Manage_Members_Modify_Tip" xml:space="preserve">
+    <value>Modify a membre...</value>
+  </data>
+  <data name="Manage_Members_NAME" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Manage_Members_POSTALCODE" xml:space="preserve">
+    <value>Postal Code</value>
+  </data>
+  <data name="Manage_Members_PROVINCE" xml:space="preserve">
+    <value>Province</value>
+  </data>
+  <data name="Manage_Members_Search" xml:space="preserve">
+    <value>Search : </value>
+  </data>
+  <data name="Manage_Members_Search_Tip" xml:space="preserve">
+    <value>Search all columns of the table.</value>
+  </data>
+  <data name="Manage_Members_TELEPHONENUMBER" xml:space="preserve">
+    <value>Telephone Number</value>
+  </data>
+  <data name="Manage_Movies_DESCRIPTION_EN" xml:space="preserve">
+    <value>English Description</value>
+  </data>
+  <data name="Manage_Movies_DESCRIPTION_FR" xml:space="preserve">
+    <value>French Description</value>
+  </data>
+  <data name="Manage_Movies_Header" xml:space="preserve">
+    <value>Display and Search Movies &amp; Copies</value>
+  </data>
+  <data name="Manage_Movies_Header_Modif" xml:space="preserve">
+    <value>Movies &amp; Copies Management</value>
+  </data>
+  <data name="Manage_Movies_ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Manage_Movies_IMAGE" xml:space="preserve">
+    <value>Poster</value>
+  </data>
+  <data name="Manage_Movies_NAME_EN" xml:space="preserve">
+    <value>English Title</value>
+  </data>
+  <data name="Manage_Movies_NAME_FR" xml:space="preserve">
+    <value>French Title</value>
+  </data>
+  <data name="Manage_Movies_NBCOPIES" xml:space="preserve">
+    <value>Total Number of copies</value>
+  </data>
+  <data name="Manage_Movies_RATING" xml:space="preserve">
+    <value>Rating</value>
+  </data>
+  <data name="Manage_Movies_RELEASEDATE" xml:space="preserve">
+    <value>Year of release</value>
+  </data>
+  <data name="Manage_Movies_RUNTIME" xml:space="preserve">
+    <value>Runtime (minute)</value>
+  </data>
+  <data name="Manage_Movies_Search" xml:space="preserve">
+    <value>Search : </value>
+  </data>
 </root>
