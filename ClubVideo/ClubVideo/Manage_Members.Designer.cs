@@ -42,7 +42,7 @@
             // lb_Search
             // 
             this.lb_Search.AutoSize = true;
-            this.lb_Search.Location = new System.Drawing.Point(21, 25);
+            this.lb_Search.Location = new System.Drawing.Point(480, 46);
             this.lb_Search.Name = "lb_Search";
             this.lb_Search.Size = new System.Drawing.Size(47, 13);
             this.lb_Search.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             // tb_Search
             // 
-            this.tb_Search.Location = new System.Drawing.Point(75, 25);
+            this.tb_Search.Location = new System.Drawing.Point(533, 43);
             this.tb_Search.Name = "tb_Search";
             this.tb_Search.Size = new System.Drawing.Size(171, 20);
             this.tb_Search.TabIndex = 1;
@@ -79,7 +79,7 @@
             this.btn_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Delete.FlatAppearance.BorderSize = 0;
             this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Delete.Location = new System.Drawing.Point(639, 6);
+            this.btn_Delete.Location = new System.Drawing.Point(125, 6);
             this.btn_Delete.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(53, 57);
@@ -93,7 +93,7 @@
             this.btn_Modify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Modify.FlatAppearance.BorderSize = 0;
             this.btn_Modify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Modify.Location = new System.Drawing.Point(582, 6);
+            this.btn_Modify.Location = new System.Drawing.Point(68, 6);
             this.btn_Modify.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Modify.Name = "btn_Modify";
             this.btn_Modify.Size = new System.Drawing.Size(53, 57);
@@ -107,7 +107,7 @@
             this.btn_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_Add.FlatAppearance.BorderSize = 0;
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Add.Location = new System.Drawing.Point(525, 6);
+            this.btn_Add.Location = new System.Drawing.Point(11, 6);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(53, 57);
@@ -119,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 451);
+            this.ClientSize = new System.Drawing.Size(716, 452);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.btn_Modify);
             this.Controls.Add(this.btn_Delete);
