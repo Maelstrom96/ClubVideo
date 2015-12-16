@@ -24,6 +24,7 @@ namespace ClubVideo
             Database.Update.Members();
             LoadMembers();
             LoadLanguage();
+            LoadPermissions();
             SetButtonsVisibility();
         }
 
@@ -34,6 +35,24 @@ namespace ClubVideo
                 btn_Add.Hide();
                 btn_Delete.Hide();
                 btn_Modify.Hide();
+            }
+        }
+
+        private void LoadPermissions()
+        {
+            Button[] bt_Perms = { btn_Add, btn_Delete, btn_Modify };
+
+            foreach (Button button in bt_Perms)
+            {
+                string PermString = Name.ToString() + '.' + button.Name.ToString();
+
+                int index = PermString.IndexOf("btn_");
+                string cleanPerm = (index < 0)
+                    ? PermString
+                    : PermString.Remove(index, 4);
+
+                button.Enabled = Main.user.Permissions.HasPermission(cleanPerm);
+                button.Visible = button.Enabled;
             }
         }
 
@@ -113,7 +132,7 @@ namespace ClubVideo
 
         private void dgv_SearchResults_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgv_SearchResults.SelectedRows.Count == 1 && Modification_Mode) btn_Delete.Visible = true;
+            if (dgv_SearchResults.SelectedRows.Count == 1 && Modification_Mode && btn_Delete.Enabled) btn_Delete.Visible = true;
             else btn_Delete.Visible = false;
         }
 
