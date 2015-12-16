@@ -192,6 +192,7 @@ namespace ClubVideo
                 Controls["LBL_fontStyle"].Dispose();
                 Controls["LBL_select"].Dispose();
                 Controls["B_fontColor"].Dispose();
+                Controls["CB_fontStyle"].Dispose();
             }
         }
 
@@ -468,18 +469,34 @@ namespace ClubVideo
             CB.BackColor = Color.White;
             CB.ForeColor = Color.Black;
             CB.Size = new Size(140, 20);
-            CB.FlatStyle = FlatStyle.Flat;
+            CB.FlatStyle = FlatStyle.Popup;
+            CB.DropDownStyle = ComboBoxStyle.DropDownList;
+            CB.Cursor = Cursors.Hand;
+            CB.SelectedValueChanged += CB_fontStyle_SelectedValueChanged;
+            
             CB.DrawMode = DrawMode.OwnerDrawFixed;
-
             CB.DrawItem += CB_fontStyle_DrawItem;
 
             int pX = Controls["LBL_fontStyle"].Location.X + Controls["LBL_fontStyle"].Width + 10;
             CB.Location = new Point(pX, Controls["LBL_fontStyle"].Location.Y);
 
-            foreach (FontFamily font in System.Drawing.FontFamily.Families)
-                CB.Items.Add(font.Name);
+            foreach (string s in Properties.Settings.Default.Fonts)
+            {
+                CB.Items.Add(s);
+                if (s == Properties.Settings.Default.UI_Font)
+                    CB.SelectedIndex = CB.Items.Count - 1;
+            }
 
             return CB;
+        }
+
+        void CB_fontStyle_SelectedValueChanged(object send, EventArgs e)
+        {
+            ComboBox sender = (ComboBox)send;
+            if (sender.SelectedValue != null)
+                Properties.Settings.Default.UI_Font = sender.SelectedValue.ToString();
+            else
+                Properties.Settings.Default.UI_Font = Properties.Settings.Default.Fonts[0];
         }
         private Button Fonts_CreateButton()
         {
@@ -530,6 +547,7 @@ namespace ClubVideo
             Brush brush = Brushes.Black;
             string text = sender.Items[e.Index].ToString();
             e.Graphics.DrawString(text, new Font(text, 10), brush, e.Bounds);
+            sender.Refresh();
         }
 
         void UpdateColors()
