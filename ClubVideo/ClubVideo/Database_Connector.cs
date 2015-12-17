@@ -322,7 +322,7 @@ namespace ClubVideo
         {
             public static void Category(CategoryObject obj)
             {
-                string insert = "INSERT INTO members VALUES (CATEGORYID.NEXTVAL, :name_en, :name_fr, :description_en, :description_fr, :price)";
+                string insert = "INSERT INTO categories VALUES (CATEGORYID.NEXTVAL, :name_en, :name_fr, :description_en, :description_fr, :price)";
 
                 OracleCommand cmd = new OracleCommand(insert, GetConnection());
 
