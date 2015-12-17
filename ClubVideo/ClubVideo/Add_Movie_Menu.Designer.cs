@@ -34,6 +34,9 @@
             this.bt_OK = new System.Windows.Forms.Button();
             this.lb_Url = new System.Windows.Forms.Label();
             this.tb_Url = new System.Windows.Forms.TextBox();
+            this.lb_Line = new System.Windows.Forms.Label();
+            this.lb_Category = new System.Windows.Forms.Label();
+            this.cb_Categories = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // rb_IMDB
@@ -61,7 +64,7 @@
             // 
             // bt_Cancel
             // 
-            this.bt_Cancel.Location = new System.Drawing.Point(36, 105);
+            this.bt_Cancel.Location = new System.Drawing.Point(36, 141);
             this.bt_Cancel.Name = "bt_Cancel";
             this.bt_Cancel.Size = new System.Drawing.Size(96, 32);
             this.bt_Cancel.TabIndex = 2;
@@ -71,7 +74,7 @@
             // 
             // bt_OK
             // 
-            this.bt_OK.Location = new System.Drawing.Point(150, 105);
+            this.bt_OK.Location = new System.Drawing.Point(150, 141);
             this.bt_OK.Name = "bt_OK";
             this.bt_OK.Size = new System.Drawing.Size(96, 32);
             this.bt_OK.TabIndex = 2;
@@ -98,11 +101,43 @@
             this.tb_Url.TabIndex = 4;
             this.tb_Url.Visible = false;
             // 
+            // lb_Line
+            // 
+            this.lb_Line.AutoSize = true;
+            this.lb_Line.Location = new System.Drawing.Point(12, 81);
+            this.lb_Line.Name = "lb_Line";
+            this.lb_Line.Size = new System.Drawing.Size(259, 13);
+            this.lb_Line.TabIndex = 5;
+            this.lb_Line.Text = "---------------------------------------------------------------------------------" +
+    "---";
+            // 
+            // lb_Category
+            // 
+            this.lb_Category.Location = new System.Drawing.Point(-13, 110);
+            this.lb_Category.Name = "lb_Category";
+            this.lb_Category.Size = new System.Drawing.Size(100, 18);
+            this.lb_Category.TabIndex = 6;
+            this.lb_Category.Text = "dep";
+            this.lb_Category.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // cb_Categories
+            // 
+            this.cb_Categories.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_Categories.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cb_Categories.FormattingEnabled = true;
+            this.cb_Categories.Location = new System.Drawing.Point(93, 107);
+            this.cb_Categories.Name = "cb_Categories";
+            this.cb_Categories.Size = new System.Drawing.Size(166, 21);
+            this.cb_Categories.TabIndex = 7;
+            // 
             // Add_Movie_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 153);
+            this.ClientSize = new System.Drawing.Size(284, 185);
+            this.Controls.Add(this.cb_Categories);
+            this.Controls.Add(this.lb_Category);
+            this.Controls.Add(this.lb_Line);
             this.Controls.Add(this.tb_Url);
             this.Controls.Add(this.lb_Url);
             this.Controls.Add(this.bt_OK);
@@ -128,5 +163,8 @@
         private System.Windows.Forms.Button bt_OK;
         private System.Windows.Forms.Label lb_Url;
         private System.Windows.Forms.TextBox tb_Url;
+        private System.Windows.Forms.Label lb_Line;
+        private System.Windows.Forms.Label lb_Category;
+        private System.Windows.Forms.ComboBox cb_Categories;
     }
 }
