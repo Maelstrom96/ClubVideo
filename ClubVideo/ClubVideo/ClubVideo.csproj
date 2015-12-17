@@ -342,9 +342,6 @@
     <None Include="Resources\Exit_White.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Provinces.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\ManageCategories.png" />
   </ItemGroup>
   <ItemGroup>
@@ -355,6 +352,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Back_White.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Provinces.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

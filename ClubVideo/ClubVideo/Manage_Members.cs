@@ -101,7 +101,8 @@ namespace ClubVideo
                 "or LAST_NAME like '" + tb_Search.Text + "%'" +
                 "or ADDRESS like '%" + tb_Search.Text + "%'" +
                 "or POSTALCODE like '%" + tb_Search.Text + "%'" +
-                "or CONVERT(TELEPHONENUMBER, 'System.String') like '%" + tb_Search.Text + "%'";
+                "or CONVERT(TELEPHONENUMBER, 'System.String') like '%" + tb_Search.Text + "%'"+
+                "or PROVINCE like '%" + tb_Search + "%'";
 
         }
 
