@@ -85,11 +85,38 @@ namespace ClubVideo
         {
             if (Modification_Mode)
             {
-
+                ModifyCategory();
             }
             else
             {
                 InsertCategory();
+            }
+        }
+
+        private void ModifyCategory()
+        {
+            CategoryObject obj = null;
+            try
+            {
+                obj = GetFilledCategoryObject();
+                Database_Connector.Update.Category(obj);
+                DialogResult = DialogResult.OK;
+            }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("PRICE_IS_NULL");
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("PRICE_INVALIDE_FORMAT");
+            }
+            catch (OverflowException)
+            {
+                MessageBox.Show("PRICE_VALUE_OVERFLOW");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
             }
         }
 
