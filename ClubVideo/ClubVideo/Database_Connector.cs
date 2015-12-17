@@ -212,7 +212,7 @@ namespace ClubVideo
                 {
                     // Insert default value here.
                     value = Settings.Default.Language;
-                    Insert.LanguageSetting(Settings.Default.Language);
+                    //Insert.LanguageSetting(Settings.Default.Language);
                 }
                 conn_.Close();
 
@@ -358,19 +358,17 @@ namespace ClubVideo
                 Database.Update.Members();
             }
 
-            public static void LanguageSetting(string Language)
+            public static void Settings(string key, string value)
             {
                 string insert = "INSERT INTO user_settings VALUES (:userid, :keyp, :valuep)";
 
                 OracleCommand cmd = new OracleCommand(insert, GetConnection());
 
                 cmd.Parameters.Add(new OracleParameter("userid", Main.user.ID.ToString()));
-                cmd.Parameters.Add(new OracleParameter("keyp", "Language"));
-                cmd.Parameters.Add(new OracleParameter("valuep", Language));
+                cmd.Parameters.Add(new OracleParameter("keyp", key));
+                cmd.Parameters.Add(new OracleParameter("valuep", value));
 
                 cmd.ExecuteNonQuery();
-
-                Settings.Default.Language = Language;
             }
 
             public static void Movie(MovieObject movie)
@@ -442,19 +440,17 @@ namespace ClubVideo
                 Database.Update.Users();
             }
 
-            public static void LanguageSetting(string Language)
+            public static int Settings(string key, string value)
             {
                 string update = "UPDATE user_settings SET value=:valuep WHERE user_id=:userid AND key=:keyp";
 
                 OracleCommand cmd = new OracleCommand(update, GetConnection());
 
-                cmd.Parameters.Add(new OracleParameter("valuep", Language));
+                cmd.Parameters.Add(new OracleParameter("valuep", value));
                 cmd.Parameters.Add(new OracleParameter("userid", Main.user.ID.ToString()));
-                cmd.Parameters.Add(new OracleParameter("keyp", "Language"));
+                cmd.Parameters.Add(new OracleParameter("keyp", key));
 
-                cmd.ExecuteNonQuery();
-
-                Settings.Default.Language = Language;
+                return cmd.ExecuteNonQuery();
             }
 
             public static void Member(MemberObject obj)
