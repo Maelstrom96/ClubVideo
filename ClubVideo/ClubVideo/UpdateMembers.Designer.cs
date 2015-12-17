@@ -172,7 +172,7 @@
             this.btn_Cancel.Location = new System.Drawing.Point(244, 251);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(75, 23);
-            this.btn_Cancel.TabIndex = 8;
+            this.btn_Cancel.TabIndex = 11;
             this.btn_Cancel.Text = "Annuler";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
@@ -182,7 +182,7 @@
             this.btn_Previous.Location = new System.Drawing.Point(15, 251);
             this.btn_Previous.Name = "btn_Previous";
             this.btn_Previous.Size = new System.Drawing.Size(75, 23);
-            this.btn_Previous.TabIndex = 9;
+            this.btn_Previous.TabIndex = 10;
             this.btn_Previous.Text = "Precedent";
             this.btn_Previous.UseVisualStyleBackColor = true;
             this.btn_Previous.Visible = false;
@@ -204,7 +204,7 @@
             this.btn_Modify.Location = new System.Drawing.Point(342, 251);
             this.btn_Modify.Name = "btn_Modify";
             this.btn_Modify.Size = new System.Drawing.Size(75, 23);
-            this.btn_Modify.TabIndex = 10;
+            this.btn_Modify.TabIndex = 8;
             this.btn_Modify.Text = "Modifier";
             this.btn_Modify.UseVisualStyleBackColor = true;
             this.btn_Modify.Visible = false;
@@ -216,7 +216,7 @@
             this.cb_Provinces.Location = new System.Drawing.Point(307, 161);
             this.cb_Provinces.Name = "cb_Provinces";
             this.cb_Provinces.Size = new System.Drawing.Size(100, 21);
-            this.cb_Provinces.TabIndex = 11;
+            this.cb_Provinces.TabIndex = 6;
             // 
             // UpdateMembers
             // 
