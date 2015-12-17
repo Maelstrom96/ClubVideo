@@ -211,10 +211,10 @@
     <value>Username</value>
   </data>
   <data name="User_Settings_Fonts_fontColor" xml:space="preserve">
-    <value>Font color</value>
+    <value>Font Color</value>
   </data>
   <data name="User_Settings_Fonts_fontStyle" xml:space="preserve">
-    <value>Font style</value>
+    <value>Font Style</value>
   </data>
   <data name="User_Settings_Fonts_Selection" xml:space="preserve">
     <value>You can modify your font preferences here!</value>
@@ -325,10 +325,10 @@
     <value>Rating</value>
   </data>
   <data name="Manage_Movies_RELEASEDATE" xml:space="preserve">
-    <value>Year of release</value>
+    <value>Released Year</value>
   </data>
   <data name="Manage_Movies_RUNTIME" xml:space="preserve">
-    <value>Runtime (minute)</value>
+    <value>Runtime (minutes)</value>
   </data>
   <data name="Manage_Movies_Search" xml:space="preserve">
     <value>Search : </value>

@@ -36,6 +36,15 @@ namespace ClubVideo
             //AddMovieForm.ShowDialog();
 
             LoadLanguage();
+
+            foreach (Control c in Controls)
+            {
+                if (c is Button)
+                {
+                    //Button sender = (Button)c;
+                    //sender.Image = Img_ToColor(c.Name.Substring(3), true);
+                }
+            }
         }
 
         private void LoadLanguage()
@@ -141,6 +150,96 @@ namespace ClubVideo
             Hide();
             Manage_Members members = new Manage_Members();
             members.ShowDialog();
+        }
+
+        private void bt_Logout_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Img_ToColor("Locked_Blue_small", false);
+            ((Button)sender).FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+        }
+
+        private void bt_Logout_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Img_ToColor("Unlocked_Blue_small", false);
+        }
+
+        private void bt_MouseEnter(object send, EventArgs e)
+        {
+            Button sender = (Button)send;
+            sender.Image = Img_ToWhite(sender.Name.Substring(3));
+            sender.FlatAppearance.MouseOverBackColor = Main.GetColor();
+            sender.ForeColor = Color.White;
+        }
+
+        private void bt_MouseLeave(object send, EventArgs e)
+        {
+            Button sender = (Button)send;
+            sender.Image = Img_ToColor(sender.Name.Substring(3), false);
+            sender.FlatAppearance.MouseOverBackColor = Color.White;
+            sender.ForeColor = Main.GetColor();
+        }
+
+        private Image Img_ToWhite(string imgName)
+        {
+            Bitmap img = new Bitmap(Main.GetImage(imgName));
+
+            for (int i = 0; i < img.Width; i++)
+            {
+                for (int j = 0; j < img.Height; j++)
+                {
+                    Color pixel = img.GetPixel(i, j);
+                    if ((pixel.R > Main.GetColor().R * 0.9 || pixel.G > Main.GetColor().G * 0.9 || pixel.B > Main.GetColor().B * 0.9))
+                    {
+                        pixel = Color.FromArgb(pixel.A, Color.White.R, Color.White.G, Color.White.B);
+                        img.SetPixel(i, j, pixel);
+                    }
+                }
+            }
+            return img;
+        }
+
+        private Image Img_ToColor(string imgName, bool start)
+        {
+            Bitmap img = new Bitmap(Main.GetImage(imgName));
+            for (int i = 0; i < img.Width; i++)
+            {
+                for (int j = 0; j < img.Height; j++)
+                {
+                    Color pixel = img.GetPixel(i, j);
+
+                    if (imgName == "Unlocked_Blue_small" || imgName == "Locked_Blue_small")
+                    {
+                        //if ((start && (pixel.R > Main.BLUE.R * 0.95 || pixel.G > Main.BLUE.G * 0.95 || pixel.B > Main.BLUE.B * 0.95))
+                        //    || ((pixel.R > Main.previousColor.R * 0.98 && pixel.G > Main.previousColor.G * 0.98 && pixel.B > Main.previousColor.B * 0.98)
+                        //    && (pixel.R < Main.previousColor.R * 1.02 && pixel.G < Main.previousColor.G * 1.02 && pixel.B < Main.previousColor.B * 1.02)))
+                        //{
+                        //    Color newColor = Main.GetColor();
+                        //    pixel = Color.FromArgb(pixel.A, newColor.R, newColor.G, newColor.B);
+                        //    img.SetPixel(i, j, pixel);
+                        //}
+                        //else if ((start && (pixel.R > Main.BLUE.R * 0.9 || pixel.G > Main.BLUE.G * 0.9 || pixel.B > Main.BLUE.B * 0.9))
+                        //    || ((pixel.R > Main.previousColor.R * 0.8 && pixel.G > Main.previousColor.G * 0.8 && pixel.B > Main.previousColor.B * 0.8)
+                        //    && (pixel.R < Main.previousColor.R * 1.2 && pixel.G < Main.previousColor.G * 1.2 && pixel.B < Main.previousColor.B * 1.2)))
+                        //{
+                        //    Color newColor = Main.GetColor();
+                        //    pixel = Color.FromArgb(pixel.A, (int)(newColor.R * 0.9), (int)(newColor.G * 0.9), (int)(newColor.B * 0.9));
+                        //    img.SetPixel(i, j, pixel);
+                        //}
+                    }
+                    else
+                    {
+                        if ((start && (pixel.R > Main.BLUE.R * 0.9 || pixel.G > Main.BLUE.G * 0.9 || pixel.B > Main.BLUE.B * 0.9))
+                            || (pixel.R > Main.previousColor.R * 0.9 || pixel.G > Main.previousColor.G * 0.9 || pixel.B > Main.previousColor.B * 0.9))
+                        {
+                            Color newColor = Main.GetColor();
+                            pixel = Color.FromArgb(pixel.A, newColor.R, newColor.G, newColor.B);
+                            img.SetPixel(i, j, pixel);
+                        }
+                    }
+                }
+            }
+            Main.previousColor = Main.GetColor();
+            return img;
         }
     }
 }

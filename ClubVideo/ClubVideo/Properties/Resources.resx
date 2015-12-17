@@ -211,9 +211,6 @@
   <data name="triangle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\triangle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Locked_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Locked_Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="member_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\member_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -222,5 +219,20 @@
   </data>
   <data name="member_edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\member_edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Locked_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Locked_Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Locked_Blue_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Locked_Blue_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Unlocked_Blue_small" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Unlocked_Blue_small.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SearchMembers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SearchMembers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SearchMovies" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SearchMovies.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

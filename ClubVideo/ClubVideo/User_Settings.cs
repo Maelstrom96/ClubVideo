@@ -63,7 +63,7 @@ namespace ClubVideo
                 Button sender = (Button)send;
                 sender.BackColor = Main.GetColor();
                 sender.FlatAppearance.MouseOverBackColor = Main.GetColor();
-                sender.BackgroundImage = GetImage(sender.Name.Substring(2) + "_hover");
+                sender.BackgroundImage = Main.GetImage(sender.Name.Substring(2) + "_hover");
 
                 AddLabel(sender);
             }
@@ -74,7 +74,7 @@ namespace ClubVideo
             {
                 Button sender = (Button)send;
                 sender.BackColor = Color.White;
-                sender.BackgroundImage = GetImage(sender.Name.Substring(2));
+                sender.BackgroundImage = Main.GetImage(sender.Name.Substring(2));
 
                 Controls.Remove(Controls["LBL" + sender.Name.Substring(1)]);
             }
@@ -99,7 +99,7 @@ namespace ClubVideo
         {
             Controls["LBL" + sender.Name.Substring(1)].Visible = false;
             sender.BackColor = Main.GetColor();
-            sender.BackgroundImage = GetImage(sender.Name.Substring(2) + "_small");
+            sender.BackgroundImage = Main.GetImage(sender.Name.Substring(2) + "_small");
             sender.Width = 101;
 
             if (sender.Location.X < this.Width / 2)
@@ -121,7 +121,7 @@ namespace ClubVideo
             Controls["PNL_SettingsForm"].Dispose();
             Controls["PB_triangle"].Dispose();
             sender.BackColor = Color.White;
-            sender.BackgroundImage = GetImage(sender.Name.Substring(2) + "_hover");
+            sender.BackgroundImage = Main.GetImage(sender.Name.Substring(2) + "_hover");
             sender.Width = 200;
             int pX = sender.Name == "B_lang" ? 0 : sender.Name == "B_password" ? 200 : 400;
             sender.Location = new Point(pX, sender.Location.Y);
@@ -159,7 +159,7 @@ namespace ClubVideo
         {
             if (!bClicked)
             {
-                Pass_AddTextBox(sender);
+                Pass_AddTextBox_Label(sender);
                 Pass_AddButon(sender);
 
                 LoadLanguage("password");
@@ -298,11 +298,7 @@ namespace ClubVideo
 
 
         // Fenêtre Settings PASSWORD
-        private void Pass_AddLabel()
-        {
-
-        }
-        private void Pass_AddTextBox(Button sender)
+        private void Pass_AddTextBox_Label(Button sender)
         {
             int pX = sender.Width + Controls["PB_triangle"].Width + 45;
 
@@ -596,7 +592,7 @@ namespace ClubVideo
 
         private Bitmap ChangeImageColor_GetPixel(string imgName)
         {
-            Bitmap img = new Bitmap(GetImage(imgName));
+            Bitmap img = new Bitmap(Main.GetImage(imgName));
             for (int i = 0; i < img.Width; i++)
             {
                 for (int j = 0; j < img.Height; j++)
@@ -605,7 +601,7 @@ namespace ClubVideo
 
                     if ((pixel.R > 30 || pixel.G > 100 || pixel.B > 150))
                     {
-                        Color newColor = ColorTranslator.FromHtml(Properties.Settings.Default.UI_Color);
+                        Color newColor = Main.GetColor();
                         pixel = Color.FromArgb(pixel.A, newColor.R, newColor.G, newColor.B);
                         img.SetPixel(i, j, pixel);
                     }
@@ -614,21 +610,6 @@ namespace ClubVideo
             return img;
         }
 
-        // A FAIRE PEUT-ÊTRE SI ON A LE TEMPS // A FAIRE PEUT-ÊTRE SI ON A LE TEMPS // A FAIRE PEUT-ÊTRE SI ON A LE TEMPS // A FAIRE PEUT-ÊTRE SI ON A LE TEMPS
-        private void ChangeImageColor_HSL(HSLColor prevColor, HSLColor newColor) 
-        {
-            foreach (Control c in Controls)
-            {
-                if (c is PictureBox)
-                {
-
-                }
-                else if (c is Button)
-                {
-
-                }
-            }
-        }
         private void AddLabel(Button sender)
         {
             Label LBL = CreateLabel(sender);
@@ -688,12 +669,6 @@ namespace ClubVideo
             LBL.Location = new Point(pX, pY);
 
             return LBL;
-        }
-
-        private Image GetImage(string imgName)
-        {
-            object img = Properties.Resources.ResourceManager.GetObject(imgName);
-            return (Image)img;
         }
 
         private void User_Settings_FormClosing(object sender, FormClosingEventArgs e)

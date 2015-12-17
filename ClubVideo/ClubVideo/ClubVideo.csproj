@@ -37,7 +37,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
+    <Reference Include="Oracle.DataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -312,6 +312,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\member_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unlocked_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Locked_Blue_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unlocked_Blue_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchMembers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchMovies.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

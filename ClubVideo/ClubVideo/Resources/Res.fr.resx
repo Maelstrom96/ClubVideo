@@ -121,7 +121,7 @@
     <value>Retour</value>
   </data>
   <data name="Button_Admin_Menu_ManageUsers" xml:space="preserve">
-    <value>Gérer les usagées</value>
+    <value>Gérer les usagers</value>
   </data>
   <data name="Button_Menu_Administration" xml:space="preserve">
     <value>Administration</value>
@@ -133,7 +133,7 @@
     <value>Déconnexion</value>
   </data>
   <data name="Button_Menu_POS" xml:space="preserve">
-    <value>Point de ventes</value>
+    <value>Points de vente</value>
   </data>
   <data name="Button_Menu_SearchMembers" xml:space="preserve">
     <value>Rechercher un membres</value>
@@ -154,7 +154,7 @@
     <value>Fermeture de l'application</value>
   </data>
   <data name="Manage_Users_Header" xml:space="preserve">
-    <value>Gestion des usagées</value>
+    <value>Gestion des usagers</value>
   </data>
   <data name="Manage_Users_ID" xml:space="preserve">
     <value>ID</value>
@@ -229,7 +229,7 @@
     <value>Mot de passe</value>
   </data>
   <data name="User_Settings_Lang_Selection" xml:space="preserve">
-    <value>Sélectionnez votre langage désiré</value>
+    <value>Sélectionnez votre langage:</value>
   </data>
   <data name="User_Settings_Pass_Button" xml:space="preserve">
     <value>Confirmer</value>
@@ -268,13 +268,13 @@
     <value>Affiche</value>
   </data>
   <data name="Manage_Movies_NAME_EN" xml:space="preserve">
-    <value>Nom anglais</value>
+    <value>Nom Anglais</value>
   </data>
   <data name="Manage_Movies_NAME_FR" xml:space="preserve">
     <value>Nom Français</value>
   </data>
   <data name="Manage_Movies_NBCOPIES" xml:space="preserve">
-    <value>Nombre de copies total</value>
+    <value>Nombre de copies disponibles</value>
   </data>
   <data name="Manage_Movies_RATING" xml:space="preserve">
     <value>Classification</value>
@@ -331,7 +331,7 @@
     <value>Effectuer une recherche sur toutes les colonnes du tableau.</value>
   </data>
   <data name="Manage_Members_TELEPHONENUMBER" xml:space="preserve">
-    <value>N. de téléphone</value>
+    <value>No. de téléphone</value>
   </data>
   <data name="Add_Mobie_Menu_Cancel" xml:space="preserve">
     <value>Annuler</value>
