@@ -122,6 +122,8 @@ namespace ClubVideo
             User_Settings usettingsForm = new User_Settings();
             usettingsForm.ShowDialog();
             LoadLanguage();
+            menu = Submenu.NULL;
+            Close();
         }
 
         private void bt_Administration_Click(object sender, EventArgs e)
