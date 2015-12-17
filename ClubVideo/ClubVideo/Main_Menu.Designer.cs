@@ -51,7 +51,7 @@
             this.bt_Settings.Name = "bt_Settings";
             this.bt_Settings.Size = new System.Drawing.Size(126, 161);
             this.bt_Settings.TabIndex = 0;
-            this.bt_Settings.Text = "Settings";
+            this.bt_Settings.Text = "settings";
             this.bt_Settings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_Settings.UseVisualStyleBackColor = true;
             this.bt_Settings.TextChanged += new System.EventHandler(this.Button_Permissions);
@@ -74,7 +74,7 @@
             this.bt_POS.Name = "bt_POS";
             this.bt_POS.Size = new System.Drawing.Size(126, 161);
             this.bt_POS.TabIndex = 0;
-            this.bt_POS.Text = "POS";
+            this.bt_POS.Text = "pos";
             this.bt_POS.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_POS.UseVisualStyleBackColor = true;
             this.bt_POS.TextChanged += new System.EventHandler(this.Button_Permissions);
@@ -95,7 +95,7 @@
             this.bt_SearchMovies.Name = "bt_SearchMovies";
             this.bt_SearchMovies.Size = new System.Drawing.Size(126, 161);
             this.bt_SearchMovies.TabIndex = 0;
-            this.bt_SearchMovies.Text = "Search Movies";
+            this.bt_SearchMovies.Text = "search Movies";
             this.bt_SearchMovies.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_SearchMovies.UseVisualStyleBackColor = true;
             this.bt_SearchMovies.TextChanged += new System.EventHandler(this.Button_Permissions);
@@ -117,7 +117,7 @@
             this.bt_Administration.Name = "bt_Administration";
             this.bt_Administration.Size = new System.Drawing.Size(120, 161);
             this.bt_Administration.TabIndex = 0;
-            this.bt_Administration.Text = "Administration";
+            this.bt_Administration.Text = "administration";
             this.bt_Administration.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_Administration.UseVisualStyleBackColor = true;
             this.bt_Administration.TextChanged += new System.EventHandler(this.Button_Permissions);
@@ -139,7 +139,7 @@
             this.bt_SearchMembers.Name = "bt_SearchMembers";
             this.bt_SearchMembers.Size = new System.Drawing.Size(135, 161);
             this.bt_SearchMembers.TabIndex = 0;
-            this.bt_SearchMembers.Text = "Search Members";
+            this.bt_SearchMembers.Text = "search Members";
             this.bt_SearchMembers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_SearchMembers.UseVisualStyleBackColor = true;
             this.bt_SearchMembers.TextChanged += new System.EventHandler(this.Button_Permissions);
@@ -180,7 +180,7 @@
             this.bt_Exit.Name = "bt_Exit";
             this.bt_Exit.Size = new System.Drawing.Size(120, 161);
             this.bt_Exit.TabIndex = 0;
-            this.bt_Exit.Text = "Exit";
+            this.bt_Exit.Text = "exit";
             this.bt_Exit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_Exit.UseVisualStyleBackColor = true;
             this.bt_Exit.TextChanged += new System.EventHandler(this.Button_Permissions);
