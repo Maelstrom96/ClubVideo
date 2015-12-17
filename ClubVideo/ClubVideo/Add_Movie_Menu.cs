@@ -15,6 +15,7 @@ namespace ClubVideo
         public Add_Movie_Menu()
         {
             InitializeComponent();
+            LoadLanguage();
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -36,6 +37,18 @@ namespace ClubVideo
                 lb_Url.Hide();
                 tb_Url.Hide();
             }
+        }
+
+        private void LoadLanguage()
+        {
+            // Header 
+            Text = Main.resManager.GetString("Add_Movie_Menu_Header", Main.culInfo);
+
+            rb_IMDB.Text = Main.resManager.GetString("Add_Movie_Menu_From_IMDB", Main.culInfo);
+            rb_Manual.Text = Main.resManager.GetString("Add_Movie_Menu_From_Manual", Main.culInfo);
+            lb_Url.Text = Main.resManager.GetString("Add_Movie_Menu_URL", Main.culInfo);
+            bt_OK.Text = Main.resManager.GetString("Add_Movie_Menu_OK", Main.culInfo);
+            bt_Cancel.Text = Main.resManager.GetString("Add_Mobie_Menu_Cancel", Main.culInfo);
         }
 
         private void MoveItemsForm(bool Down = true)
@@ -86,6 +99,8 @@ namespace ClubVideo
                 {
                     ImportFromIMDB();
                     MessageBox.Show("MOVIE_IMPORT_SUCCESS");
+                    DialogResult = DialogResult.OK;
+                    Close();
                 }
                 catch (Exception ex)
                 {

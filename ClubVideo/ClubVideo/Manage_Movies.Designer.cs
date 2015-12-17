@@ -84,6 +84,7 @@
             this.btn_Add.Size = new System.Drawing.Size(53, 57);
             this.btn_Add.TabIndex = 7;
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Visible = false;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_Modify
@@ -98,6 +99,7 @@
             this.btn_Modify.Size = new System.Drawing.Size(53, 57);
             this.btn_Modify.TabIndex = 8;
             this.btn_Modify.UseVisualStyleBackColor = true;
+            this.btn_Modify.Visible = false;
             this.btn_Modify.Click += new System.EventHandler(this.btn_Modify_Click);
             // 
             // btn_Delete
@@ -112,6 +114,8 @@
             this.btn_Delete.Size = new System.Drawing.Size(53, 57);
             this.btn_Delete.TabIndex = 9;
             this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Visible = false;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // Manage_Movies
             // 

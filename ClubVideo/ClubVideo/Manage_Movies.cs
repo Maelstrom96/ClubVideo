@@ -15,7 +15,6 @@ namespace ClubVideo
         BindingSource source;
         DataTable ds;
         private bool Modification_Mode;
-        MovieObject oMovie;
         
 
         public Manage_Movies(bool Modification = false)
@@ -27,6 +26,12 @@ namespace ClubVideo
 
             LoadMovies();
             LoadLanguage();
+            if (Modification_Mode)
+            {
+                btn_Add.Visible = true;
+                btn_Delete.Visible = true;
+                btn_Modify.Visible = true;
+            }
         }
 
         private void LoadMovies()
@@ -122,6 +127,12 @@ namespace ClubVideo
                 default:
                     break;
             }
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            Database_Connector.Delete.Movie(int.Parse(dgv_SearchResults.SelectedRows[0].Cells[0].Value.ToString()));
+            LoadMovies();
         }
     }
 }

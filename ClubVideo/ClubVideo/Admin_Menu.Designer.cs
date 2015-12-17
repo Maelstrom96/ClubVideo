@@ -47,13 +47,14 @@
             this.bt_ManageMovies.Image = global::ClubVideo.Properties.Resources.ManageMovies;
             this.bt_ManageMovies.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_ManageMovies.Location = new System.Drawing.Point(-1, -1);
-            this.bt_ManageMovies.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_ManageMovies.Margin = new System.Windows.Forms.Padding(2);
             this.bt_ManageMovies.Name = "bt_ManageMovies";
             this.bt_ManageMovies.Size = new System.Drawing.Size(118, 121);
             this.bt_ManageMovies.TabIndex = 1;
             this.bt_ManageMovies.Text = "manage Movies";
             this.bt_ManageMovies.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_ManageMovies.UseVisualStyleBackColor = true;
+            this.bt_ManageMovies.Click += new System.EventHandler(this.bt_ManageMovies_Click);
             // 
             // bt_Back
             // 
@@ -64,7 +65,7 @@
             this.bt_Back.Image = global::ClubVideo.Properties.Resources.Back;
             this.bt_Back.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_Back.Location = new System.Drawing.Point(866, -1);
-            this.bt_Back.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Back.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Back.Name = "bt_Back";
             this.bt_Back.Size = new System.Drawing.Size(118, 121);
             this.bt_Back.TabIndex = 2;
@@ -82,7 +83,7 @@
             this.bt_ManageMembers.Image = global::ClubVideo.Properties.Resources.ManageMembers;
             this.bt_ManageMembers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_ManageMembers.Location = new System.Drawing.Point(121, -1);
-            this.bt_ManageMembers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_ManageMembers.Margin = new System.Windows.Forms.Padding(2);
             this.bt_ManageMembers.Name = "bt_ManageMembers";
             this.bt_ManageMembers.Size = new System.Drawing.Size(118, 121);
             this.bt_ManageMembers.TabIndex = 2;
@@ -100,7 +101,7 @@
             this.bt_Settings.Image = global::ClubVideo.Properties.Resources.Settings;
             this.bt_Settings.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_Settings.Location = new System.Drawing.Point(725, -1);
-            this.bt_Settings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Settings.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Settings.Name = "bt_Settings";
             this.bt_Settings.Size = new System.Drawing.Size(118, 121);
             this.bt_Settings.TabIndex = 4;
@@ -117,7 +118,7 @@
             this.bt_ManageUsers.Image = global::ClubVideo.Properties.Resources.ManageMovies;
             this.bt_ManageUsers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.bt_ManageUsers.Location = new System.Drawing.Point(603, -1);
-            this.bt_ManageUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_ManageUsers.Margin = new System.Windows.Forms.Padding(2);
             this.bt_ManageUsers.Name = "bt_ManageUsers";
             this.bt_ManageUsers.Size = new System.Drawing.Size(118, 121);
             this.bt_ManageUsers.TabIndex = 1;
@@ -135,7 +136,7 @@
             this.button2.Image = global::ClubVideo.Properties.Resources.ManageMovies;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button2.Location = new System.Drawing.Point(481, -1);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(118, 121);
             this.button2.TabIndex = 1;
@@ -168,7 +169,7 @@
             this.Controls.Add(this.bt_Back);
             this.Controls.Add(this.bt_ManageMembers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Admin_Menu";
