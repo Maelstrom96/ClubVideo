@@ -16,6 +16,8 @@ namespace ClubVideo
         {
             InitializeComponent();
             LoadLanguage();
+
+            dgv_View.DataSource = Database.GetData.Categories();
         }
 
         private void LoadLanguage()
@@ -35,6 +37,14 @@ namespace ClubVideo
             {
                 column.HeaderText = Main.resManager.GetString("Manage_Members_" + column.Name, Main.culInfo);
             }
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            CategoryCU formCategory = new CategoryCU();
+            DialogResult dr = formCategory.ShowDialog();
+
+            if (dr == DialogResult.OK) dgv_View.DataSource = Database.GetData.Categories();
         }
     }
 }

@@ -59,6 +59,7 @@
             this.btn_Add.Size = new System.Drawing.Size(53, 57);
             this.btn_Add.TabIndex = 7;
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // btn_Modify
             // 
