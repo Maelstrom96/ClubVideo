@@ -60,5 +60,19 @@ namespace ClubVideo
             categories.ShowDialog();
             Show();
         }
+
+        private void bt_Back_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.FromArgb(82,82,82);
+            ((Button)sender).ForeColor = Color.White;
+            ((Button)sender).Image = Main.GetImage(((Button)sender).Name.Substring(3) + "_White");
+        }
+
+        private void bt_Back_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = Color.White;
+            ((Button)sender).ForeColor = Color.Black;
+            ((Button)sender).Image = Main.GetImage(((Button)sender).Name.Substring(3));
+        }
     }
 }

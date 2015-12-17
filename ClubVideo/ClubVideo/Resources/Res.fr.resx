@@ -136,10 +136,10 @@
     <value>Points de vente</value>
   </data>
   <data name="Button_Menu_SearchMembers" xml:space="preserve">
-    <value>Rechercher un membres</value>
+    <value>Rechercher un membre</value>
   </data>
   <data name="Button_Menu_SearchMovies" xml:space="preserve">
-    <value>Rechercher un films</value>
+    <value>Rechercher un film</value>
   </data>
   <data name="Button_Menu_Settings" xml:space="preserve">
     <value>Paramètres</value>

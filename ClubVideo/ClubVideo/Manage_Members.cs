@@ -35,6 +35,7 @@ namespace ClubVideo
                 btn_Add.Hide();
                 btn_Delete.Hide();
                 btn_Modify.Hide();
+                
             }
         }
 

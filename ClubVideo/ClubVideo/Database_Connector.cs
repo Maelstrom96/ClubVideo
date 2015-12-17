@@ -385,7 +385,8 @@ namespace ClubVideo
                 cmd.Parameters.Add(new OracleParameter("city", obj.City));
                 cmd.Parameters.Add(new OracleParameter("province", obj.Province));
                 cmd.Parameters.Add(new OracleParameter("telephonenumber", obj.TelNumber));
-
+                if (obj.Name == "" || obj.LastName == "" || obj.Address == "" || obj.PostalCode == "" || obj.City == "" || obj.Province == "" || obj.TelNumber == "")
+                    throw new Exception("Les champs ne doivent pas etre vides");
                 cmd.ExecuteNonQuery();
                 CloseConnection();
                 Database.Update.Members();
