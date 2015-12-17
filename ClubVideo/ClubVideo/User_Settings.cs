@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClubVideo.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -290,8 +291,11 @@ namespace ClubVideo
 
         private void UpdateLanguage(RadioButton sender)
         {
-            Database_Connector.Update.LanguageSetting(sender.Text.ToLower());
+            if (Database_Connector.Update.Settings("Language", sender.Text.ToLower()) == 0)
+                Database_Connector.Insert.Settings("Language", sender.Text.ToLower());
+
             Main.culInfo = CultureInfo.CreateSpecificCulture(sender.Text.ToLower());
+            Settings.Default.Language = sender.Text.ToLower();
             LoadLanguage("lang");
             SaveSettings();
         }
