@@ -320,6 +320,23 @@ namespace ClubVideo
 
         public static class Insert
         {
+            public static void Category(CategoryObject obj)
+            {
+                string insert = "INSERT INTO members VALUES (CATEGORYID.NEXTVAL, :name_en, :name_fr, :description_en, :description_fr, :price)";
+
+                OracleCommand cmd = new OracleCommand(insert, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("name_en", obj.Name_En));
+                cmd.Parameters.Add(new OracleParameter("name_fr", obj.Name_Fr));
+                cmd.Parameters.Add(new OracleParameter("description_en", obj.Description_En));
+                cmd.Parameters.Add(new OracleParameter("description_fr", obj.Description_Fr));
+                cmd.Parameters.Add(new OracleParameter("price", obj.Price));
+
+                cmd.ExecuteNonQuery();
+                CloseConnection();
+                Database.Update.Categories();
+            }
+
             public static void UserPermissions(int userid, List<string> ParamsToAdd)
             {
                 string insert = "INSERT INTO user_permissions VALUES (:userid, :permission)";
