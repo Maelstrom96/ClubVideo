@@ -93,11 +93,6 @@ namespace ClubVideo
             }
         }
 
-        private void CategoryCU_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult = DialogResult.Abort;
-        }
-
         private void InsertCategory()
         {
             // Checks
