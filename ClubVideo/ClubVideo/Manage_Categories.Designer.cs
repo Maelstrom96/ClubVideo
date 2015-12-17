@@ -94,6 +94,7 @@
             this.btn_Modify.Size = new System.Drawing.Size(53, 57);
             this.btn_Modify.TabIndex = 8;
             this.btn_Modify.UseVisualStyleBackColor = true;
+            this.btn_Modify.Click += new System.EventHandler(this.btn_Modify_Click);
             // 
             // btn_Delete
             // 

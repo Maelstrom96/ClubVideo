@@ -68,5 +68,29 @@ namespace ClubVideo
             }
             LoadCategories();
         }
+
+        private CategoryObject GetCategoryFromSelected()
+        {
+            CategoryObject obj = new CategoryObject();
+
+            DataGridViewRow dgvRow = dgv_View.SelectedRows[0];
+
+            obj.ID = int.Parse(dgvRow.Cells[0].Value.ToString());
+            obj.Name_En = dgvRow.Cells[1].Value.ToString();
+            obj.Name_Fr = dgvRow.Cells[2].Value.ToString();
+            obj.Description_En = dgvRow.Cells[3].Value.ToString();
+            obj.Description_Fr = dgvRow.Cells[4].Value.ToString();
+            obj.Price = decimal.Parse(dgvRow.Cells[5].Value.ToString());
+
+            return obj;
+        }
+
+        private void btn_Modify_Click(object sender, EventArgs e)
+        {
+            CategoryCU formCategory = new CategoryCU(GetCategoryFromSelected());
+            DialogResult dr = formCategory.ShowDialog();
+
+            if (dr == DialogResult.OK) LoadCategories();
+        }
     }
 }
