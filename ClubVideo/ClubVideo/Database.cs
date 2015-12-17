@@ -35,6 +35,7 @@ namespace ClubVideo
         private static string Permissions_Select = "SELECT * FROM permissions";
         private static string Users_Select = "SELECT ID, USERNAME, NAME, LASTNAME FROM Users";
         private static string Members_Select = "SELECT * FROM Members";
+        private static string Categories_Select = "SELECT * FROM CATEGORIES";
 
         public static DataSet DataSet
         {
@@ -62,6 +63,7 @@ namespace ClubVideo
             GetDBData("Permissions", Permissions_Select);
             GetDBData("Users", Users_Select);
             GetDBData("Members", Members_Select);
+            GetDBData("Categories", Categories_Select);
         }
 
         public static class GetData
@@ -112,6 +114,16 @@ namespace ClubVideo
 
                 return tmp;
             }
+
+            public static DataTable Categories()
+            {
+                DataTable tmp = DS.Tables["Categories"].Clone();
+
+                foreach (DataRow dr in DS.Tables["Categories"].Rows)
+                    tmp.Rows.Add(dr.ItemArray);
+
+                return tmp;
+            }
         }
 
         public static class Update
@@ -146,6 +158,12 @@ namespace ClubVideo
             {
                 DS.Tables["Members"].Clear();
                 GetDBData("Members", Members_Select);
+            }
+
+            public static void Categories()
+            {
+                DS.Tables["Categories"].Clear();
+                GetDBData("Categories", Categories_Select);
             }
         }
     }
