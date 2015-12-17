@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClubVideo
 {
-    class CategoryObject
+    public class CategoryObject
     {
         public int ID { get; set; }
         public string Name_En { get; set; }
