@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgv_View = new System.Windows.Forms.DataGridView();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Modify = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.tb_Search = new System.Windows.Forms.TextBox();
             this.lb_Search = new System.Windows.Forms.Label();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_View)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,5 +131,6 @@
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.TextBox tb_Search;
         private System.Windows.Forms.Label lb_Search;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
