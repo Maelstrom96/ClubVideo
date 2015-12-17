@@ -40,7 +40,7 @@ namespace ClubVideo
             source = new BindingSource();
             source.DataSource = ds;
             dgv_SearchResults.DataSource = source;
-            dgv_SearchResults.Columns[8].Visible = false;
+            dgv_SearchResults.Columns[9].Visible = false;
         }
 
         private void LoadLanguage()

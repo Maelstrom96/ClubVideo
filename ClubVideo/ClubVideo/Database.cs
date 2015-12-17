@@ -25,6 +25,7 @@ namespace ClubVideo
                 Movies.name_fr,
                 Movies.description_fr,
                 Movies.description_en,
+                Movies.Directors,
                 Movies.releasedate,
                 Movies.rating,
                 Movies.runtime,
@@ -68,21 +69,21 @@ namespace ClubVideo
 
         public static class GetData
         {
-            public static List<string> ListPermissions()
+            public static List<string> List(string Table, string Column, bool Sort = true)
             {
-                List<string> ListPermissions = new List<string>();
+                List<string> List = new List<string>();
 
-                if (DS.Tables["Permissions"].Rows.Count == 0) throw new Exception("PERMLIST_EMPTY");
+                if (DS.Tables[Table].Rows.Count == 0) throw new Exception("LIST_EMPTY");
 
-                foreach(DataRow dr in DS.Tables["Permissions"].Rows)
+                foreach (DataRow dr in DS.Tables[Table].Rows)
                 {
-                    ListPermissions.Add(dr["Permission"].ToString());
+                    List.Add(dr[Column].ToString());
                 }
 
                 // SORT
-                ListPermissions = ListPermissions.OrderBy(q => q).ToList();
+                if (Sort) List = List.OrderBy(q => q).ToList();
 
-                return ListPermissions;
+                return List;
             }
 
             public static DataTable Users()

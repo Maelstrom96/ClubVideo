@@ -102,7 +102,7 @@ namespace ClubVideo
 
                 if (userid == Main.user.ID) throw new Exception("You can't change your own permissions!");
 
-                List<string> perms = Database.GetData.ListPermissions();
+                List<string> perms = Database.GetData.List("Permissions", "Permission");
                 List<string> userPerms = Database_Connector.Select.UserPermissions(userid);
 
                 SidebySideSelection sbs_Form = new SidebySideSelection(perms, userPerms, "Users Permissions Edit");
