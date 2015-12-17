@@ -212,6 +212,7 @@
             // 
             // cb_Provinces
             // 
+            this.cb_Provinces.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Provinces.FormattingEnabled = true;
             this.cb_Provinces.Location = new System.Drawing.Point(307, 161);
             this.cb_Provinces.Name = "cb_Provinces";

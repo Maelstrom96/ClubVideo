@@ -42,6 +42,7 @@
             this.bt_Settings.AutoSize = true;
             this.bt_Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bt_Settings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_Settings.Enabled = false;
             this.bt_Settings.FlatAppearance.BorderSize = 0;
             this.bt_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Settings.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -79,6 +80,7 @@
             this.bt_ManageGroups.AutoSize = true;
             this.bt_ManageGroups.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bt_ManageGroups.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_ManageGroups.Enabled = false;
             this.bt_ManageGroups.FlatAppearance.BorderSize = 0;
             this.bt_ManageGroups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ManageGroups.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
