@@ -41,16 +41,16 @@
             // 
             // lb_Search
             // 
-            this.lb_Search.AutoSize = true;
-            this.lb_Search.Location = new System.Drawing.Point(480, 48);
+            this.lb_Search.Location = new System.Drawing.Point(436, 45);
             this.lb_Search.Name = "lb_Search";
-            this.lb_Search.Size = new System.Drawing.Size(47, 13);
+            this.lb_Search.Size = new System.Drawing.Size(86, 15);
             this.lb_Search.TabIndex = 0;
             this.lb_Search.Text = "Search :";
+            this.lb_Search.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // tb_Search
             // 
-            this.tb_Search.Location = new System.Drawing.Point(533, 45);
+            this.tb_Search.Location = new System.Drawing.Point(524, 43);
             this.tb_Search.Name = "tb_Search";
             this.tb_Search.Size = new System.Drawing.Size(171, 20);
             this.tb_Search.TabIndex = 1;
@@ -119,7 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 452);
+            this.ClientSize = new System.Drawing.Size(716, 451);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.btn_Modify);
             this.Controls.Add(this.btn_Delete);
