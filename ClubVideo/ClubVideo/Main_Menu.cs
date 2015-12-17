@@ -255,9 +255,11 @@ namespace ClubVideo
                 if (c is Button)
                 {
                     Button sender = (Button)c;
-                    //sender.Image = Img_ToColor(c.Name.Substring(3), true);
                     if (sender.Name != "bt_Exit")
+                    {
                         sender.FlatAppearance.MouseDownBackColor = Main.GetColor();
+                        sender.Image = Img_ToColor(c.Name.Substring(3), true);
+                    }
                     else
                         sender.FlatAppearance.MouseDownBackColor = Color.FromArgb(152, 38, 38);
                 }
