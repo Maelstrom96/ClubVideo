@@ -22,7 +22,8 @@ namespace ClubVideo
         }
         public static User user { get; set; }
         
-        //public static Color BLUE = Color.FromArgb(34, 105, 159);
+        public static Color BLUE = Color.FromArgb(34, 105, 159);
+        public static Color previousColor = BLUE;
 
         public Main()
         {
@@ -102,6 +103,12 @@ namespace ClubVideo
         {
             foreach (Form form in Application.OpenForms)
                 form.Refresh();
+        }
+
+        public static Image GetImage(string imgName)
+        {
+            object img = Properties.Resources.ResourceManager.GetObject(imgName);
+            return (Image)img;
         }
     }
 }
