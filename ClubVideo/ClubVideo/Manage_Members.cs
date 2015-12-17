@@ -102,7 +102,7 @@ namespace ClubVideo
                 "or ADDRESS like '%" + tb_Search.Text + "%'" +
                 "or POSTALCODE like '%" + tb_Search.Text + "%'" +
                 "or CONVERT(TELEPHONENUMBER, 'System.String') like '%" + tb_Search.Text + "%'"+
-                "or PROVINCE like '%" + tb_Search + "%'";
+                "or PROVINCE like '%" + tb_Search.Text + "%'";
 
         }
 
