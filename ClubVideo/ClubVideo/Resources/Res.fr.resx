@@ -333,7 +333,7 @@
   <data name="Manage_Members_TELEPHONENUMBER" xml:space="preserve">
     <value>No. de téléphone</value>
   </data>
-  <data name="Add_Mobie_Menu_Cancel" xml:space="preserve">
+  <data name="Add_Movie_Menu_Cancel" xml:space="preserve">
     <value>Annuler</value>
   </data>
   <data name="Add_Movie_Menu_From_IMDB" xml:space="preserve">
@@ -413,5 +413,11 @@
   </data>
   <data name="Manage_Categories_Search_Tip" xml:space="preserve">
     <value>Effectuer une recherche sur toutes les colonnes du tableau.</value>
+  </data>
+  <data name="Add_Movie_Menu_Category_Column" xml:space="preserve">
+    <value>NAME_FR</value>
+  </data>
+  <data name="Manage_Movies_DIRECTORS" xml:space="preserve">
+    <value>Réalisateurs</value>
   </data>
 </root>
