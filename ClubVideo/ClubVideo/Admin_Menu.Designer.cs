@@ -35,6 +35,7 @@
             this.bt_ManageUsers = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.bt_ManageCategories = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,7 +83,7 @@
             this.bt_ManageMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ManageMembers.Image = global::ClubVideo.Properties.Resources.ManageMembers;
             this.bt_ManageMembers.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.bt_ManageMembers.Location = new System.Drawing.Point(121, -1);
+            this.bt_ManageMembers.Location = new System.Drawing.Point(243, -1);
             this.bt_ManageMembers.Margin = new System.Windows.Forms.Padding(2);
             this.bt_ManageMembers.Name = "bt_ManageMembers";
             this.bt_ManageMembers.Size = new System.Drawing.Size(118, 121);
@@ -155,6 +156,24 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
+            // bt_ManageCategories
+            // 
+            this.bt_ManageCategories.AutoSize = true;
+            this.bt_ManageCategories.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bt_ManageCategories.FlatAppearance.BorderSize = 0;
+            this.bt_ManageCategories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_ManageCategories.Image = global::ClubVideo.Properties.Resources.ManageMovies;
+            this.bt_ManageCategories.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.bt_ManageCategories.Location = new System.Drawing.Point(121, -1);
+            this.bt_ManageCategories.Margin = new System.Windows.Forms.Padding(2);
+            this.bt_ManageCategories.Name = "bt_ManageCategories";
+            this.bt_ManageCategories.Size = new System.Drawing.Size(118, 121);
+            this.bt_ManageCategories.TabIndex = 1;
+            this.bt_ManageCategories.Text = "manage Categories";
+            this.bt_ManageCategories.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.bt_ManageCategories.UseVisualStyleBackColor = true;
+            this.bt_ManageCategories.Click += new System.EventHandler(this.bt_ManageCategories_Click);
+            // 
             // Admin_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,6 +182,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.bt_Settings);
+            this.Controls.Add(this.bt_ManageCategories);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.bt_ManageUsers);
             this.Controls.Add(this.bt_ManageMovies);
@@ -189,5 +209,6 @@
         private System.Windows.Forms.Button bt_ManageUsers;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button bt_ManageCategories;
     }
 }

@@ -351,4 +351,67 @@
   <data name="Add_Movie_Menu_URL" xml:space="preserve">
     <value>Lien :</value>
   </data>
+  <data name="CategoryCU_Add" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="CategoryCU_Description_En" xml:space="preserve">
+    <value>Description anglais :</value>
+  </data>
+  <data name="CategoryCU_Description_Fr" xml:space="preserve">
+    <value>Description francais :</value>
+  </data>
+  <data name="CategoryCU_Header_Add" xml:space="preserve">
+    <value>Ajouter une catégorie...</value>
+  </data>
+  <data name="CategoryCU_Header_Modify" xml:space="preserve">
+    <value>Modifier une catégorie...</value>
+  </data>
+  <data name="CategoryCU_Modify" xml:space="preserve">
+    <value>Modifier</value>
+  </data>
+  <data name="CategoryCU_Name_En" xml:space="preserve">
+    <value>Nom anglais :</value>
+  </data>
+  <data name="CategoryCU_Name_Fr" xml:space="preserve">
+    <value>Nom français :</value>
+  </data>
+  <data name="CategoryCU_Price" xml:space="preserve">
+    <value>Prix :</value>
+  </data>
+  <data name="Manage_Categories_Add_Tip" xml:space="preserve">
+    <value>Ajouter une categorie...</value>
+  </data>
+  <data name="Manage_Categories_Delete_Tip" xml:space="preserve">
+    <value>Supprimer une categorie...</value>
+  </data>
+  <data name="Manage_Categories_DESCRIPTION_EN" xml:space="preserve">
+    <value>Description anglais</value>
+  </data>
+  <data name="Manage_Categories_DESCRIPTION_FR" xml:space="preserve">
+    <value>Description français</value>
+  </data>
+  <data name="Manage_Categories_Header" xml:space="preserve">
+    <value>Ajout et suppression de catégories</value>
+  </data>
+  <data name="Manage_Categories_ID" xml:space="preserve">
+    <value>Identifiant</value>
+  </data>
+  <data name="Manage_Categories_Modify_Tip" xml:space="preserve">
+    <value>Modifier une catégorie...</value>
+  </data>
+  <data name="Manage_Categories_NAME_EN" xml:space="preserve">
+    <value>Nom anglais</value>
+  </data>
+  <data name="Manage_Categories_NAME_FR" xml:space="preserve">
+    <value>Nom français</value>
+  </data>
+  <data name="Manage_Categories_PRICE" xml:space="preserve">
+    <value>Prix</value>
+  </data>
+  <data name="Manage_Categories_Search" xml:space="preserve">
+    <value>Recherche : </value>
+  </data>
+  <data name="Manage_Categories_Search_Tip" xml:space="preserve">
+    <value>Effectuer une recherche sur toutes les colonnes du tableau.</value>
+  </data>
 </root>

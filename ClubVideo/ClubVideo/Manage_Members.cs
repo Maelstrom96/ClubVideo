@@ -88,9 +88,9 @@ namespace ClubVideo
             lb_Search.Text = Main.resManager.GetString("Manage_Members_Search", Main.culInfo);
 
             // Set tb_Search position relative to lb_Search
-            int height_Diff = (tb_Search.Height - lb_Search.Height) / 2;
-            SizeF width = lb_Search.CreateGraphics().MeasureString(lb_Search.Text, lb_Search.Font);
-            tb_Search.Location = new Point(lb_Search.Location.X + (int)width.Width, lb_Search.Location.Y - height_Diff);
+            //int height_Diff = (tb_Search.Height - lb_Search.Height) / 2;
+            //SizeF width = lb_Search.CreateGraphics().MeasureString(lb_Search.Text, lb_Search.Font);
+            //tb_Search.Location = new Point(lb_Search.Location.X + (int)width.Width, lb_Search.Location.Y - height_Diff);
         }
 
         private void Search()
