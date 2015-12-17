@@ -41,12 +41,12 @@
             this.txb_Adress = new System.Windows.Forms.TextBox();
             this.txb_PostalCode = new System.Windows.Forms.TextBox();
             this.txb_City = new System.Windows.Forms.TextBox();
-            this.txb_Province = new System.Windows.Forms.TextBox();
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Cancel = new System.Windows.Forms.Button();
             this.btn_Previous = new System.Windows.Forms.Button();
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_Modify = new System.Windows.Forms.Button();
+            this.cb_Provinces = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -129,9 +129,11 @@
             // txb_Telephone
             // 
             this.txb_Telephone.Location = new System.Drawing.Point(76, 124);
+            this.txb_Telephone.MaxLength = 10;
             this.txb_Telephone.Name = "txb_Telephone";
             this.txb_Telephone.Size = new System.Drawing.Size(100, 20);
             this.txb_Telephone.TabIndex = 2;
+            this.txb_Telephone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txb_Telephone_KeyPress);
             // 
             // txb_Adress
             // 
@@ -143,6 +145,7 @@
             // txb_PostalCode
             // 
             this.txb_PostalCode.Location = new System.Drawing.Point(307, 88);
+            this.txb_PostalCode.MaxLength = 6;
             this.txb_PostalCode.Name = "txb_PostalCode";
             this.txb_PostalCode.Size = new System.Drawing.Size(100, 20);
             this.txb_PostalCode.TabIndex = 4;
@@ -153,13 +156,6 @@
             this.txb_City.Name = "txb_City";
             this.txb_City.Size = new System.Drawing.Size(100, 20);
             this.txb_City.TabIndex = 5;
-            // 
-            // txb_Province
-            // 
-            this.txb_Province.Location = new System.Drawing.Point(307, 161);
-            this.txb_Province.Name = "txb_Province";
-            this.txb_Province.Size = new System.Drawing.Size(100, 20);
-            this.txb_Province.TabIndex = 6;
             // 
             // btn_Add
             // 
@@ -214,17 +210,25 @@
             this.btn_Modify.Visible = false;
             this.btn_Modify.Click += new System.EventHandler(this.btn_Modify_Click);
             // 
+            // cb_Provinces
+            // 
+            this.cb_Provinces.FormattingEnabled = true;
+            this.cb_Provinces.Location = new System.Drawing.Point(307, 161);
+            this.cb_Provinces.Name = "cb_Provinces";
+            this.cb_Provinces.Size = new System.Drawing.Size(100, 21);
+            this.cb_Provinces.TabIndex = 11;
+            // 
             // UpdateMembers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 287);
+            this.Controls.Add(this.cb_Provinces);
             this.Controls.Add(this.btn_Modify);
             this.Controls.Add(this.btn_Next);
             this.Controls.Add(this.btn_Previous);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.txb_Province);
             this.Controls.Add(this.txb_City);
             this.Controls.Add(this.txb_PostalCode);
             this.Controls.Add(this.txb_Adress);
@@ -260,11 +264,11 @@
         private System.Windows.Forms.TextBox txb_Adress;
         private System.Windows.Forms.TextBox txb_PostalCode;
         private System.Windows.Forms.TextBox txb_City;
-        private System.Windows.Forms.TextBox txb_Province;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Cancel;
         private System.Windows.Forms.Button btn_Previous;
         private System.Windows.Forms.Button btn_Next;
         private System.Windows.Forms.Button btn_Modify;
+        private System.Windows.Forms.ComboBox cb_Provinces;
     }
 }

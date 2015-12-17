@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,9 +16,17 @@ namespace ClubVideo
     public partial class UpdateMembers : Form
     {
         BindingSource _bs;
+        private string _caZipRegEx = @"^([ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ])\ {0,1}(\d[ABCEGHJKLMNPRSTVWXYZ]\d)$";
+        private string[] lineOfContents = File.ReadAllLines("../../Resources/Provinces.txt");
+
         public UpdateMembers()
         {
             InitializeComponent();
+            foreach (var line in lineOfContents)
+            {
+                string[] tokens = line.Split(',');
+                cb_Provinces.Items.Add(tokens[0]);
+            }
         }
 
         public UpdateMembers(BindingSource source, string header, bool modif)
@@ -23,6 +34,12 @@ namespace ClubVideo
             InitializeComponent();
             Text = header;
             _bs = source;
+
+            foreach (var line in lineOfContents)
+            {
+                string[] tokens = line.Split(',');
+                cb_Provinces.Items.Add(tokens[0]);
+            }
             if (!modif)
             {
                 btn_Next.Visible = true;
@@ -40,7 +57,7 @@ namespace ClubVideo
             txb_Adress.DataBindings.Add("text", _bs, "ADDRESS");
             txb_PostalCode.DataBindings.Add("text", _bs, "POSTALCODE");
             txb_City.DataBindings.Add("text", _bs, "CITY");
-            txb_Province.DataBindings.Add("text", _bs, "PROVINCE");
+            cb_Provinces.DataBindings.Add("text", _bs, "PROVINCE");
             txb_Telephone.DataBindings.Add("text", _bs, "TELEPHONENUMBER").ToString();
         }
 
@@ -54,12 +71,14 @@ namespace ClubVideo
                 oMember.Address = txb_Adress.Text.ToString();
                 oMember.PostalCode = txb_PostalCode.Text.ToString();
                 oMember.City = txb_City.Text.ToString();
-                oMember.Province = txb_Province.Text.ToString();
+                oMember.Province = cb_Provinces.Text.ToString();
                 oMember.TelNumber = txb_Telephone.Text.ToString();
+                if (!IsCanadianZipCode(txb_PostalCode.Text.ToString()))
+                    throw new Exception("Le code postal est invalide. Le format est A8A8A8");
                 Database_Connector.Insert.Member(oMember);
                 MessageBox.Show("Ajout fait!");
                 this.Close();
-                
+
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
@@ -90,7 +109,7 @@ namespace ClubVideo
                 oMember.Address = txb_Adress.Text.ToString();
                 oMember.PostalCode = txb_PostalCode.Text.ToString();
                 oMember.City = txb_City.Text.ToString();
-                oMember.Province = txb_Province.Text.ToString();
+                oMember.Province = cb_Provinces.Text.ToString();
                 oMember.TelNumber = txb_Telephone.Text.ToString();
                 Database_Connector.Update.Member(oMember);
                 MessageBox.Show("Modification fait!");
@@ -98,6 +117,22 @@ namespace ClubVideo
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void txb_Telephone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+                e.Handled = true;
+        }
+
+        private bool IsCanadianZipCode(string zipCode)
+        {
+            bool validZipCode = true;
+            if (!Regex.Match(zipCode, _caZipRegEx).Success)
+            {
+                validZipCode = false;
+            }
+            return validZipCode;
         }
     }
 }
