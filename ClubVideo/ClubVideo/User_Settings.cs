@@ -472,11 +472,10 @@ namespace ClubVideo
             CB.FlatStyle = FlatStyle.Popup;
             CB.DropDownStyle = ComboBoxStyle.DropDownList;
             CB.Cursor = Cursors.Hand;
-            //CB.SelectedValueChanged += CB_fontStyle_SelectedValueChanged;
             CB.SelectedIndexChanged += CB_fontStyle_SelectedIndexChanged;
             
             //CB.DrawMode = DrawMode.OwnerDrawFixed;
-            CB.DrawItem += CB_fontStyle_DrawItem;
+            //CB.DrawItem += CB_fontStyle_DrawItem;
 
             int pX = Controls["LBL_fontStyle"].Location.X + Controls["LBL_fontStyle"].Width + 10;
             CB.Location = new Point(pX, Controls["LBL_fontStyle"].Location.Y);
@@ -488,7 +487,6 @@ namespace ClubVideo
                     CB.SelectedIndex = CB.Items.Count - 1;
             }
 
-            CB.DrawMode = DrawMode.Normal;
             return CB;
         }
 
@@ -520,6 +518,7 @@ namespace ClubVideo
             return B;
         }
 
+        bool CBdrawned = false;
         void B_fontColor_Click(object sender, EventArgs e)
         {
             Color prevColor = ColorTranslator.FromHtml(Properties.Settings.Default.UI_Color);
@@ -547,12 +546,16 @@ namespace ClubVideo
         }
         void CB_fontStyle_DrawItem(object send, DrawItemEventArgs e)
         {
-            // IF NOT DRAWN
             ComboBox sender = (ComboBox)send;
-            Brush brush = Brushes.Black;
-            string text = sender.Items[e.Index].ToString();
-            e.Graphics.DrawString(text, new Font(text, 10), brush, e.Bounds);
-            sender.Refresh();
+            if (!CBdrawned)
+            {
+                e.DrawBackground();
+                Brush brush = Brushes.Black;
+                string text = sender.Items[e.Index].ToString();
+                e.Graphics.DrawString(text, new Font(text, 10), brush, e.Bounds);
+                sender.Refresh();
+                //CBdrawned = true;
+            }
         }
 
         void UpdateColors()
