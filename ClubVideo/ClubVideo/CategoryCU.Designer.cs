@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lb_Name_Fr = new System.Windows.Forms.Label();
             this.tb_Name_Fr = new System.Windows.Forms.TextBox();
             this.bt_OK = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lb_Name_En = new System.Windows.Forms.Label();
             this.tb_Name_En = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lb_Description_Fr = new System.Windows.Forms.Label();
+            this.lb_Description_En = new System.Windows.Forms.Label();
+            this.lb_Price = new System.Windows.Forms.Label();
             this.tb_Price = new System.Windows.Forms.TextBox();
             this.tb_Description_En = new System.Windows.Forms.TextBox();
             this.tb_Description_Fr = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label1
+            // lb_Name_Fr
             // 
-            this.label1.Location = new System.Drawing.Point(4, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "name_fr :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lb_Name_Fr.Location = new System.Drawing.Point(4, 28);
+            this.lb_Name_Fr.Name = "lb_Name_Fr";
+            this.lb_Name_Fr.Size = new System.Drawing.Size(110, 17);
+            this.lb_Name_Fr.TabIndex = 0;
+            this.lb_Name_Fr.Text = "name_fr :";
+            this.lb_Name_Fr.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // tb_Name_Fr
             // 
@@ -66,14 +66,14 @@
             this.bt_OK.Text = "ok";
             this.bt_OK.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // lb_Name_En
             // 
-            this.label2.Location = new System.Drawing.Point(4, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "name_en :";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lb_Name_En.Location = new System.Drawing.Point(4, 54);
+            this.lb_Name_En.Name = "lb_Name_En";
+            this.lb_Name_En.Size = new System.Drawing.Size(110, 17);
+            this.lb_Name_En.TabIndex = 0;
+            this.lb_Name_En.Text = "name_en :";
+            this.lb_Name_En.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // tb_Name_En
             // 
@@ -82,32 +82,32 @@
             this.tb_Name_En.Size = new System.Drawing.Size(181, 20);
             this.tb_Name_En.TabIndex = 1;
             // 
-            // label3
+            // lb_Description_Fr
             // 
-            this.label3.Location = new System.Drawing.Point(4, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "decription_fr :";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lb_Description_Fr.Location = new System.Drawing.Point(4, 97);
+            this.lb_Description_Fr.Name = "lb_Description_Fr";
+            this.lb_Description_Fr.Size = new System.Drawing.Size(110, 17);
+            this.lb_Description_Fr.TabIndex = 0;
+            this.lb_Description_Fr.Text = "decription_fr :";
+            this.lb_Description_Fr.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label4
+            // lb_Description_En
             // 
-            this.label4.Location = new System.Drawing.Point(4, 187);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 17);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "decription_en :";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lb_Description_En.Location = new System.Drawing.Point(4, 187);
+            this.lb_Description_En.Name = "lb_Description_En";
+            this.lb_Description_En.Size = new System.Drawing.Size(110, 17);
+            this.lb_Description_En.TabIndex = 0;
+            this.lb_Description_En.Text = "decription_en :";
+            this.lb_Description_En.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label5
+            // lb_Price
             // 
-            this.label5.Location = new System.Drawing.Point(117, 286);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 17);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "price :";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lb_Price.Location = new System.Drawing.Point(123, 286);
+            this.lb_Price.Name = "lb_Price";
+            this.lb_Price.Size = new System.Drawing.Size(110, 17);
+            this.lb_Price.TabIndex = 0;
+            this.lb_Price.Text = "price :";
+            this.lb_Price.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // tb_Price
             // 
@@ -139,15 +139,15 @@
             this.ClientSize = new System.Drawing.Size(326, 352);
             this.Controls.Add(this.bt_OK);
             this.Controls.Add(this.tb_Price);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lb_Price);
             this.Controls.Add(this.tb_Description_Fr);
             this.Controls.Add(this.tb_Description_En);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lb_Description_En);
+            this.Controls.Add(this.lb_Description_Fr);
             this.Controls.Add(this.tb_Name_En);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lb_Name_En);
             this.Controls.Add(this.tb_Name_Fr);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lb_Name_Fr);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CategoryCU";
@@ -159,14 +159,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lb_Name_Fr;
         private System.Windows.Forms.TextBox tb_Name_Fr;
         private System.Windows.Forms.Button bt_OK;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lb_Name_En;
         private System.Windows.Forms.TextBox tb_Name_En;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lb_Description_Fr;
+        private System.Windows.Forms.Label lb_Description_En;
+        private System.Windows.Forms.Label lb_Price;
         private System.Windows.Forms.TextBox tb_Price;
         private System.Windows.Forms.TextBox tb_Description_En;
         private System.Windows.Forms.TextBox tb_Description_Fr;
