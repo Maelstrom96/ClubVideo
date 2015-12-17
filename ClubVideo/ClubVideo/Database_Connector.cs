@@ -12,6 +12,7 @@ using System.Drawing;
 using ClubVideo.Properties;
 using System.IO;
 using System.Drawing.Imaging;
+using System.Globalization;
 
 namespace ClubVideo
 {
@@ -134,12 +135,15 @@ namespace ClubVideo
                 Year = new String(Year.TakeWhile(Char.IsDigit).ToArray());
                 if (Year.Equals(string.Empty)) Year = "0";
 
+                string date = data["Released"];
+
                 // EN
                 movie.Nom_en = data["Title"];
                 movie.Description_en = data["Plot"];
                 movie.Rated = data["Rated"];
                 movie.Runtime = int.Parse(runtime);
                 movie.Year = int.Parse(Year); // Released -> Release date.
+                movie.Date = DateTime.ParseExact(date, "dd MMM yyyy", CultureInfo.InvariantCulture);
                 movie.Director = data["Director"];
 
                 // FR
@@ -402,7 +406,7 @@ namespace ClubVideo
 
             public static void Movie(MovieObject movie)
             {
-                string insert = "INSERT INTO movies VALUES (MOVIEID.NEXTVAL, :name_en, :name_fr, :desc_en, :desc_fr, :releasedate, :rating, :runtime, :image)";
+                string insert = "INSERT INTO movies VALUES (MOVIEID.NEXTVAL, :name_en, :name_fr, :desc_en, :desc_fr, :directors, :releasedate, :rating, :runtime, :image, :category, :deletedate)";
 
                 OracleCommand cmd = new OracleCommand(insert, GetConnection());
 
@@ -410,7 +414,8 @@ namespace ClubVideo
                 cmd.Parameters.Add(new OracleParameter("name_fr", movie.Nom_fr));
                 cmd.Parameters.Add(new OracleParameter("desc_en", movie.Description_en));
                 cmd.Parameters.Add(new OracleParameter("desc_fr", movie.Description_fr));
-                cmd.Parameters.Add(new OracleParameter("releasedate", movie.Year));
+                cmd.Parameters.Add(new OracleParameter("directors", movie.Director));
+                cmd.Parameters.Add(new OracleParameter("releasedate", movie.Date));
                 cmd.Parameters.Add(new OracleParameter("rating", movie.Rated));
                 cmd.Parameters.Add(new OracleParameter("runtime", movie.Runtime));
 
@@ -425,6 +430,8 @@ namespace ClubVideo
                 image.Value = imageBt;
 
                 cmd.Parameters.Add(image);
+                cmd.Parameters.Add(new OracleParameter("category", movie.Category));
+                cmd.Parameters.Add(new OracleParameter("deletedate", DBNull.Value));
 
                 cmd.ExecuteNonQuery();
                 CloseConnection();
