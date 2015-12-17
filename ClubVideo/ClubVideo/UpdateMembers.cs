@@ -55,7 +55,7 @@ namespace ClubVideo
                 oMember.PostalCode = txb_PostalCode.Text.ToString();
                 oMember.City = txb_City.Text.ToString();
                 oMember.Province = txb_Province.Text.ToString();
-                oMember.TelNumber = int.Parse(txb_Telephone.Text.ToString());
+                oMember.TelNumber = txb_Telephone.Text.ToString();
                 Database_Connector.Insert.Member(oMember);
                 MessageBox.Show("Ajout fait!");
                 this.Close();
@@ -91,7 +91,7 @@ namespace ClubVideo
                 oMember.PostalCode = txb_PostalCode.Text.ToString();
                 oMember.City = txb_City.Text.ToString();
                 oMember.Province = txb_Province.Text.ToString();
-                oMember.TelNumber = int.Parse(txb_Telephone.Text.ToString());
+                oMember.TelNumber = txb_Telephone.Text.ToString();
                 Database_Connector.Update.Member(oMember);
                 MessageBox.Show("Modification fait!");
                 this.Close();
