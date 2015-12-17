@@ -518,7 +518,24 @@ namespace ClubVideo
 
                 cmd.ExecuteNonQuery();
 
-                 Database.Update.Movies();
+                Database.Update.Movies();
+            }
+
+            public static void Category(CategoryObject obj)
+            {
+                string update = "UPDATE categories SET NAME_EN=:nameEN, NAME_FR=:nameFR, DESCRIPTION_EN=:descEN, DESCRIPTION_FR=:descFR, PRICE=:price WHERE ID=:categoryID";
+                OracleCommand cmd = new OracleCommand(update, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("nameEN", obj.Name_En));
+                cmd.Parameters.Add(new OracleParameter("nameFR", obj.Name_Fr));
+                cmd.Parameters.Add(new OracleParameter("descEN", obj.Description_En));
+                cmd.Parameters.Add(new OracleParameter("descFR", obj.Description_Fr));
+                cmd.Parameters.Add(new OracleParameter("price", obj.Price));
+                cmd.Parameters.Add(new OracleParameter("categoryID", obj.ID));
+
+                cmd.ExecuteNonQuery();
+
+                Database.Update.Categories();
             }
         }
     }
