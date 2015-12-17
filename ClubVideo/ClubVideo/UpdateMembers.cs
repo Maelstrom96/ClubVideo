@@ -70,11 +70,11 @@ namespace ClubVideo
                 oMember.Name = txb_Name.Text.ToString();
                 oMember.LastName = txb_LastName.Text.ToString();
                 oMember.Address = txb_Adress.Text.ToString();
-                oMember.PostalCode = txb_PostalCode.Text.ToString();
+                oMember.PostalCode = txb_PostalCode.Text.ToString().ToUpper();
                 oMember.City = txb_City.Text.ToString();
                 oMember.Province = cb_Provinces.Text.ToString();
                 oMember.TelNumber = txb_Telephone.Text.ToString();
-                if (!IsCanadianZipCode(txb_PostalCode.Text.ToString()))
+                if (!IsCanadianZipCode(oMember.PostalCode))
                     throw new Exception("Le code postal est invalide. Le format est A8A8A8");
                 Database_Connector.Insert.Member(oMember);
                 MessageBox.Show("Ajout fait!");
@@ -108,7 +108,7 @@ namespace ClubVideo
                 oMember.Name = txb_Name.Text.ToString();
                 oMember.LastName = txb_LastName.Text.ToString();
                 oMember.Address = txb_Adress.Text.ToString();
-                oMember.PostalCode = txb_PostalCode.Text.ToString();
+                oMember.PostalCode = txb_PostalCode.Text.ToString().ToUpper();
                 oMember.City = txb_City.Text.ToString();
                 oMember.Province = cb_Provinces.Text.ToString();
                 oMember.TelNumber = txb_Telephone.Text.ToString();

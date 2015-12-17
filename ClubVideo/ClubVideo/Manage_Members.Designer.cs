@@ -77,6 +77,7 @@
             // 
             this.btn_Delete.BackgroundImage = global::ClubVideo.Properties.Resources.member_delete;
             this.btn_Delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Delete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Delete.FlatAppearance.BorderSize = 0;
             this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Delete.Location = new System.Drawing.Point(125, 6);
@@ -91,6 +92,7 @@
             // 
             this.btn_Modify.BackgroundImage = global::ClubVideo.Properties.Resources.member_edit;
             this.btn_Modify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Modify.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Modify.FlatAppearance.BorderSize = 0;
             this.btn_Modify.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Modify.Location = new System.Drawing.Point(68, 6);
@@ -105,6 +107,7 @@
             // 
             this.btn_Add.BackgroundImage = global::ClubVideo.Properties.Resources.member_add;
             this.btn_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_Add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Add.FlatAppearance.BorderSize = 0;
             this.btn_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Add.Location = new System.Drawing.Point(11, 6);
