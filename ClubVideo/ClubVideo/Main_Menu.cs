@@ -59,7 +59,8 @@ namespace ClubVideo
                 if (c is Button)
                 {
                     c.Font = new Font(Main.GetFont(), 9);
-                    c.ForeColor = Main.GetColor();
+                    if (c.Name != "bt_Exit")
+                        c.ForeColor = Main.GetColor();
                 }
             }
         }
@@ -220,7 +221,7 @@ namespace ClubVideo
                         //    img.SetPixel(i, j, pixel);
                         //}
                     }
-                    else
+                    else if (pixel.R < Main.GetColor().R * 0.9 && pixel.G < Main.GetColor().G * 0.9 && pixel.B < Main.GetColor().B * 0.9)
                     {
                         if ((start && (pixel.R > Main.BLUE.R * 0.9 || pixel.G > Main.BLUE.G * 0.9 || pixel.B > Main.BLUE.B * 0.9))
                             || (pixel.R > Main.previousColor.R * 0.9 || pixel.G > Main.previousColor.G * 0.9 || pixel.B > Main.previousColor.B * 0.9))
@@ -257,12 +258,12 @@ namespace ClubVideo
                 if (c is Button)
                 {
                     Button sender = (Button)c;
-                    if (sender.Name != "bt_Exit")
+                    if (sender.Name != "bt_Exit" && sender.Name != "bt_Logout")
                     {
                         sender.FlatAppearance.MouseDownBackColor = Main.GetColor();
                         sender.Image = Img_ToColor(c.Name.Substring(3), true);
                     }
-                    else
+                    else if (sender.Name == "bt_Exit")
                         sender.FlatAppearance.MouseDownBackColor = Color.FromArgb(152, 38, 38);
                 }
             }
