@@ -30,22 +30,43 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgv_View = new System.Windows.Forms.DataGridView();
-            this.btn_Add = new System.Windows.Forms.Button();
-            this.btn_Modify = new System.Windows.Forms.Button();
-            this.btn_Delete = new System.Windows.Forms.Button();
             this.tb_Search = new System.Windows.Forms.TextBox();
             this.lb_Search = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.btn_Add = new System.Windows.Forms.Button();
+            this.btn_Modify = new System.Windows.Forms.Button();
+            this.btn_Delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_View)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_View
             // 
+            this.dgv_View.AllowUserToAddRows = false;
+            this.dgv_View.AllowUserToDeleteRows = false;
             this.dgv_View.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_View.Location = new System.Drawing.Point(12, 68);
+            this.dgv_View.MultiSelect = false;
             this.dgv_View.Name = "dgv_View";
-            this.dgv_View.Size = new System.Drawing.Size(470, 340);
+            this.dgv_View.ReadOnly = true;
+            this.dgv_View.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_View.Size = new System.Drawing.Size(708, 340);
             this.dgv_View.TabIndex = 0;
+            // 
+            // tb_Search
+            // 
+            this.tb_Search.Location = new System.Drawing.Point(549, 43);
+            this.tb_Search.Name = "tb_Search";
+            this.tb_Search.Size = new System.Drawing.Size(171, 20);
+            this.tb_Search.TabIndex = 11;
+            // 
+            // lb_Search
+            // 
+            this.lb_Search.Location = new System.Drawing.Point(461, 45);
+            this.lb_Search.Name = "lb_Search";
+            this.lb_Search.Size = new System.Drawing.Size(86, 15);
+            this.lb_Search.TabIndex = 10;
+            this.lb_Search.Text = "Search :";
+            this.lb_Search.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // btn_Add
             // 
@@ -86,28 +107,13 @@
             this.btn_Delete.Size = new System.Drawing.Size(53, 57);
             this.btn_Delete.TabIndex = 9;
             this.btn_Delete.UseVisualStyleBackColor = true;
-            // 
-            // tb_Search
-            // 
-            this.tb_Search.Location = new System.Drawing.Point(312, 42);
-            this.tb_Search.Name = "tb_Search";
-            this.tb_Search.Size = new System.Drawing.Size(171, 20);
-            this.tb_Search.TabIndex = 11;
-            // 
-            // lb_Search
-            // 
-            this.lb_Search.Location = new System.Drawing.Point(224, 44);
-            this.lb_Search.Name = "lb_Search";
-            this.lb_Search.Size = new System.Drawing.Size(86, 15);
-            this.lb_Search.TabIndex = 10;
-            this.lb_Search.Text = "Search :";
-            this.lb_Search.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // Manage_Categories
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 420);
+            this.ClientSize = new System.Drawing.Size(732, 420);
             this.Controls.Add(this.tb_Search);
             this.Controls.Add(this.lb_Search);
             this.Controls.Add(this.btn_Add);
