@@ -46,6 +46,7 @@ namespace ClubVideo
                 btn_Previous.Visible = true;
                 btn_Add.Visible = false;
                 foreach (var tb in this.Controls.OfType<TextBox>()) tb.ReadOnly = true;
+                cb_Provinces.Enabled = false;
             }
             if (modif)
             {
