@@ -15,8 +15,14 @@ namespace ClubVideo
         public Manage_Categories()
         {
             InitializeComponent();
-            LoadLanguage();
 
+            LoadCategories();
+
+            LoadLanguage();
+        }
+
+        private void LoadCategories()
+        {
             dgv_View.DataSource = Database.GetData.Categories();
         }
 
@@ -35,7 +41,7 @@ namespace ClubVideo
             // DGV Column Header Text
             foreach (DataGridViewColumn column in dgv_View.Columns)
             {
-                column.HeaderText = Main.resManager.GetString("Manage_Members_" + column.Name, Main.culInfo);
+                column.HeaderText = Main.resManager.GetString("Manage_Categories_" + column.Name, Main.culInfo);
             }
         }
 
@@ -44,7 +50,23 @@ namespace ClubVideo
             CategoryCU formCategory = new CategoryCU();
             DialogResult dr = formCategory.ShowDialog();
 
-            if (dr == DialogResult.OK) dgv_View.DataSource = Database.GetData.Categories();
+            if (dr == DialogResult.OK) LoadCategories();
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dgv_View.SelectedRows)
+            {
+                try
+                {
+                    Database_Connector.Delete.Category(int.Parse(row.Cells[0].Value.ToString()));
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            LoadCategories();
         }
     }
 }

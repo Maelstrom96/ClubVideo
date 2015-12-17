@@ -316,6 +316,18 @@ namespace ClubVideo
 
                 Database.Update.Movies();
             }
+            public static void Category(int id)
+            {
+                string delete = "DELETE FROM categories where id=:categoryid";
+
+                OracleCommand cmd = new OracleCommand(delete, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("categoryid", id));
+
+                cmd.ExecuteNonQuery();
+
+                Database.Update.Categories();
+            }
         }
 
         public static class Insert

@@ -153,7 +153,6 @@
             this.MinimizeBox = false;
             this.Name = "CategoryCU";
             this.Text = "CategoryCU";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CategoryCU_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
