@@ -37,7 +37,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
+    <Reference Include="Oracle.DataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -57,6 +57,13 @@
     <Compile Include="Add_Movie_Menu.Designer.cs">
       <DependentUpon>Add_Movie_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="CategoryCU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryCU.Designer.cs">
+      <DependentUpon>CategoryCU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryObject.cs" />
     <Compile Include="HSLColor.cs" />
     <Compile Include="Manage_Categories.cs">
       <SubType>Form</SubType>
@@ -152,6 +159,9 @@
     </Compile>
     <EmbeddedResource Include="Add_Movie_Menu.resx">
       <DependentUpon>Add_Movie_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CategoryCU.resx">
+      <DependentUpon>CategoryCU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage_Categories.resx">
       <DependentUpon>Manage_Categories.cs</DependentUpon>
