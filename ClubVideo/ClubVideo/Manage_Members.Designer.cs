@@ -131,7 +131,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(732, 490);
             this.Name = "Manage_Members";
-            this.Text = "Manage_Movies";
+            this.Text = "Manage_Members";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SearchResults)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
