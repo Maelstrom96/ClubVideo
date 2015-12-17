@@ -16,5 +16,10 @@ namespace ClubVideo
         {
             InitializeComponent();
         }
+
+        private void LoadLanguage()
+        {
+
+        }
     }
 }
