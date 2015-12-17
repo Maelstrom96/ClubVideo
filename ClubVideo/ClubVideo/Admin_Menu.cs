@@ -48,7 +48,17 @@ namespace ClubVideo
         private void bt_ManageMovies_Click(object sender, EventArgs e)
         {
             Manage_Movies movies = new Manage_Movies(true);
+            Hide();
             movies.ShowDialog();
+            Show();
+        }
+
+        private void bt_ManageCategories_Click(object sender, EventArgs e)
+        {
+            Manage_Categories categories = new Manage_Categories();
+            Hide();
+            categories.ShowDialog();
+            Show();
         }
     }
 }
