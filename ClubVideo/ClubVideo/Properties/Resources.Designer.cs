@@ -93,6 +93,16 @@ namespace ClubVideo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Back_White {
+            get {
+                object obj = ResourceManager.GetObject("Back_White", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Delete_User {
             get {
                 object obj = ResourceManager.GetObject("Delete_User", resourceCulture);
@@ -283,6 +293,26 @@ namespace ClubVideo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ManageCategories {
+            get {
+                object obj = ResourceManager.GetObject("ManageCategories", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ManageGroups {
+            get {
+                object obj = ResourceManager.GetObject("ManageGroups", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ManageMembers {
             get {
                 object obj = ResourceManager.GetObject("ManageMembers", resourceCulture);
@@ -296,6 +326,16 @@ namespace ClubVideo.Properties {
         internal static System.Drawing.Bitmap ManageMovies {
             get {
                 object obj = ResourceManager.GetObject("ManageMovies", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ManageUsers {
+            get {
+                object obj = ResourceManager.GetObject("ManageUsers", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

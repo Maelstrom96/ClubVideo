@@ -46,7 +46,7 @@
             this.bt_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Settings.Image = global::ClubVideo.Properties.Resources.Settings;
-            this.bt_Settings.Location = new System.Drawing.Point(587, 0);
+            this.bt_Settings.Location = new System.Drawing.Point(599, 0);
             this.bt_Settings.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Settings.Name = "bt_Settings";
             this.bt_Settings.Size = new System.Drawing.Size(126, 161);
@@ -69,7 +69,7 @@
             this.bt_POS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_POS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_POS.Image = global::ClubVideo.Properties.Resources.POS;
-            this.bt_POS.Location = new System.Drawing.Point(-1, 0);
+            this.bt_POS.Location = new System.Drawing.Point(0, 0);
             this.bt_POS.Margin = new System.Windows.Forms.Padding(2);
             this.bt_POS.Name = "bt_POS";
             this.bt_POS.Size = new System.Drawing.Size(126, 161);
@@ -90,7 +90,7 @@
             this.bt_SearchMovies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_SearchMovies.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_SearchMovies.Image = global::ClubVideo.Properties.Resources.SearchMovies;
-            this.bt_SearchMovies.Location = new System.Drawing.Point(164, 0);
+            this.bt_SearchMovies.Location = new System.Drawing.Point(169, 0);
             this.bt_SearchMovies.Margin = new System.Windows.Forms.Padding(2);
             this.bt_SearchMovies.Name = "bt_SearchMovies";
             this.bt_SearchMovies.Size = new System.Drawing.Size(126, 161);
@@ -112,7 +112,7 @@
             this.bt_Administration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Administration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Administration.Image = global::ClubVideo.Properties.Resources.Administration;
-            this.bt_Administration.Location = new System.Drawing.Point(463, 0);
+            this.bt_Administration.Location = new System.Drawing.Point(475, 0);
             this.bt_Administration.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Administration.Name = "bt_Administration";
             this.bt_Administration.Size = new System.Drawing.Size(120, 161);
@@ -134,7 +134,7 @@
             this.bt_SearchMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_SearchMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_SearchMembers.Image = global::ClubVideo.Properties.Resources.SearchMembers;
-            this.bt_SearchMembers.Location = new System.Drawing.Point(286, 0);
+            this.bt_SearchMembers.Location = new System.Drawing.Point(297, 0);
             this.bt_SearchMembers.Margin = new System.Windows.Forms.Padding(2);
             this.bt_SearchMembers.Name = "bt_SearchMembers";
             this.bt_SearchMembers.Size = new System.Drawing.Size(135, 161);
@@ -155,7 +155,7 @@
             this.bt_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Logout.Image = global::ClubVideo.Properties.Resources.Unlocked_Blue_small;
-            this.bt_Logout.Location = new System.Drawing.Point(744, 0);
+            this.bt_Logout.Location = new System.Drawing.Point(768, 0);
             this.bt_Logout.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Logout.Name = "bt_Logout";
             this.bt_Logout.Size = new System.Drawing.Size(120, 161);
@@ -175,7 +175,7 @@
             this.bt_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Exit.Image = global::ClubVideo.Properties.Resources.Exit;
-            this.bt_Exit.Location = new System.Drawing.Point(866, 0);
+            this.bt_Exit.Location = new System.Drawing.Point(890, 0);
             this.bt_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Exit.Name = "bt_Exit";
             this.bt_Exit.Size = new System.Drawing.Size(120, 161);
@@ -193,7 +193,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(983, 160);
+            this.ClientSize = new System.Drawing.Size(1011, 160);
             this.ControlBox = false;
             this.Controls.Add(this.bt_Settings);
             this.Controls.Add(this.bt_POS);
@@ -209,6 +209,7 @@
             this.Name = "Main_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Menu_FormClosed);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Main_Menu_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
 
