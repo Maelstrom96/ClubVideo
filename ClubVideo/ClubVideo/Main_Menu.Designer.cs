@@ -185,6 +185,8 @@
             this.bt_Exit.UseVisualStyleBackColor = true;
             this.bt_Exit.TextChanged += new System.EventHandler(this.Button_Permissions);
             this.bt_Exit.Click += new System.EventHandler(this.bt_Exit_Click);
+            this.bt_Exit.MouseEnter += new System.EventHandler(this.bt_Exit_MouseEnter);
+            this.bt_Exit.MouseLeave += new System.EventHandler(this.bt_Exit_MouseLeave);
             // 
             // Main_Menu
             // 

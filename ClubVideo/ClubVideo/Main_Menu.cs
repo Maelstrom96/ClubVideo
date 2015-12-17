@@ -36,15 +36,7 @@ namespace ClubVideo
             //AddMovieForm.ShowDialog();
 
             LoadLanguage();
-
-            foreach (Control c in Controls)
-            {
-                if (c is Button)
-                {
-                    //Button sender = (Button)c;
-                    //sender.Image = Img_ToColor(c.Name.Substring(3), true);
-                }
-            }
+            RefreshColors();
         }
 
         private void LoadLanguage()
@@ -240,6 +232,36 @@ namespace ClubVideo
             }
             Main.previousColor = Main.GetColor();
             return img;
+        }
+
+        private void bt_Exit_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.Exit_White;
+            ((Button)sender).BackColor = Color.FromArgb(152, 38, 38);
+            ((Button)sender).ForeColor = Color.White;
+        }
+
+        private void bt_Exit_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).Image = Properties.Resources.Exit;
+            ((Button)sender).BackColor = Color.White;
+            ((Button)sender).ForeColor = Color.Black;
+        }
+
+        private void RefreshColors()
+        {
+            foreach (Control c in Controls)
+            {
+                if (c is Button)
+                {
+                    Button sender = (Button)c;
+                    //sender.Image = Img_ToColor(c.Name.Substring(3), true);
+                    if (sender.Name != "bt_Exit")
+                        sender.FlatAppearance.MouseDownBackColor = Main.GetColor();
+                    else
+                        sender.FlatAppearance.MouseDownBackColor = Color.FromArgb(152, 38, 38);
+                }
+            }
         }
     }
 }
