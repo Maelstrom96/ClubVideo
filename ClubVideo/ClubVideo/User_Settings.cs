@@ -135,8 +135,6 @@ namespace ClubVideo
                 Form_Fonts(sender);
         }
 
-
-        // Construction/Destruction des différents sous-forms (A FAIRE: SÉPARER LES CONSTRUCTION/DESTRUCTION)
         private void Form_Lang()
         {
             if (!bClicked)
@@ -473,12 +471,7 @@ namespace ClubVideo
             CB.DropDownStyle = ComboBoxStyle.DropDownList;
             CB.Cursor = Cursors.Hand;
             CB.SelectedIndexChanged += CB_fontStyle_SelectedIndexChanged;
-            
-            //CB.DrawMode = DrawMode.OwnerDrawFixed;
-            //CB.DrawItem += CB_fontStyle_DrawItem;
-
-            int pX = Controls["LBL_fontStyle"].Location.X + Controls["LBL_fontStyle"].Width + 10;
-            CB.Location = new Point(pX, Controls["LBL_fontStyle"].Location.Y);
+            CB.Location = new Point(Controls["B_fontColor"].Location.X, Controls["LBL_fontStyle"].Location.Y);
 
             foreach (string s in Properties.Settings.Default.Fonts)
             {
@@ -488,18 +481,6 @@ namespace ClubVideo
             }
 
             return CB;
-        }
-
-        void CB_fontStyle_SelectedIndexChanged(object send, EventArgs e)
-        {
-            ComboBox sender = (ComboBox)send;
-            string font = sender.Text != "" ? sender.Text : Properties.Settings.Default.Fonts[0];
-            Properties.Settings.Default.UI_Font = font;
-
-            Controls["LBL_select"].Font = new Font(Main.GetFont(), 14);
-            Controls["LBL_fontColor"].Font = new Font(Main.GetFont(), 14);
-            Controls["LBL_fontStyle"].Font = new Font(Main.GetFont(), 14);
-            Main.RefreshForms();
         }
         private Button Fonts_CreateButton()
         {
@@ -518,7 +499,20 @@ namespace ClubVideo
             return B;
         }
 
-        bool CBdrawned = false;
+        void CB_fontStyle_SelectedIndexChanged(object send, EventArgs e)
+        {
+            ComboBox sender = (ComboBox)send;
+            string font = sender.Text != "" ? sender.Text : Properties.Settings.Default.Fonts[0];
+            Properties.Settings.Default.UI_Font = font;
+
+            Controls["LBL_select"].Font = new Font(Main.GetFont(), 14);
+            Controls["LBL_fontColor"].Font = new Font(Main.GetFont(), 14);
+            Controls["LBL_fontStyle"].Font = new Font(Main.GetFont(), 14);
+
+            if (Database_Connector.Update.Settings("UI_Font", font) == 0)
+                Database_Connector.Insert.Settings("UI_Font", font);
+            Main.RefreshForms();
+        }
         void B_fontColor_Click(object sender, EventArgs e)
         {
             Color prevColor = ColorTranslator.FromHtml(Properties.Settings.Default.UI_Color);
@@ -528,7 +522,6 @@ namespace ClubVideo
         
             if (DR == DialogResult.OK && CD.Color != Color.White)
             {
-                HSLColor HSLnewColor = new HSLColor(CD.Color);
                 Properties.Settings.Default.UI_Color = ColorTranslator.ToHtml(CD.Color);
                 Controls["LBL_fontColor"].ForeColor = Main.GetColor();
                 Controls["LBL_fontStyle"].ForeColor = Main.GetColor();
@@ -539,23 +532,14 @@ namespace ClubVideo
                 Controls["PB_triangle"].BackgroundImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
 
                 ((Button)sender).BackColor = Main.GetColor();
+
+                if (Database_Connector.Update.Settings("UI_Color", ColorTranslator.ToHtml(CD.Color).ToString()) == 0)
+                    Database_Connector.Insert.Settings("UI_Color", ColorTranslator.ToHtml(CD.Color).ToString());
+                
                 UpdateColors();
             }
 
             Main.RefreshForms();
-        }
-        void CB_fontStyle_DrawItem(object send, DrawItemEventArgs e)
-        {
-            ComboBox sender = (ComboBox)send;
-            if (!CBdrawned)
-            {
-                e.DrawBackground();
-                Brush brush = Brushes.Black;
-                string text = sender.Items[e.Index].ToString();
-                e.Graphics.DrawString(text, new Font(text, 10), brush, e.Bounds);
-                sender.Refresh();
-                //CBdrawned = true;
-            }
         }
 
         void UpdateColors()
