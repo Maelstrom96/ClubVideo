@@ -29,6 +29,11 @@ namespace ClubVideo
         {
             bt_Back.Text = Main.resManager.GetString("Button_Admin_Menu_Back", Main.culInfo);
             bt_ManageUsers.Text = Main.resManager.GetString("Button_Admin_Menu_ManageUsers", Main.culInfo);
+            bt_Settings.Text = Main.resManager.GetString("Button_Admin_Menu_Settings", Main.culInfo);
+            bt_ManageCategories.Text = Main.resManager.GetString("Button_Admin_Menu_ManageCategories", Main.culInfo);
+            bt_ManageGroups.Text = Main.resManager.GetString("Button_Admin_Menu_ManageGroups", Main.culInfo);
+            bt_ManageMembers.Text = Main.resManager.GetString("Button_Admin_Menu_ManageMembers", Main.culInfo);
+            bt_ManageMovies.Text = Main.resManager.GetString("Button_Admin_Menu_ManageMovies", Main.culInfo);
         }
 
         private void bt_ManageUsers_Click(object sender, EventArgs e)
