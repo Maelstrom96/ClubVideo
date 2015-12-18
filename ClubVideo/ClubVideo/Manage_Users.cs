@@ -23,6 +23,7 @@ namespace ClubVideo
             Main.UpdateFonts(this);
             Main.RefreshColors(this);
             UpdateHeight();
+            LoadPermissions();
         }
 
         private void LoadLanguage()
@@ -45,7 +46,7 @@ namespace ClubVideo
             int dgvHeight = (dgv_Users.ColumnHeadersVisible ? dgv_Users.ColumnHeadersHeight : 0) +
               dgv_Users.Rows.OfType<DataGridViewRow>().Where(r => r.Visible).Sum(r => r.Height);
 
-            dgv_Users.Height = dgvHeight + 3;
+            //dgv_Users.Height = dgvHeight + 3;
 
             this.Height = 39 + dgv_Users.Location.Y + dgvHeight < 600 ? 39 + dgv_Users.Location.Y + dgvHeight : 600;
         }
@@ -59,6 +60,24 @@ namespace ClubVideo
             dgv_Users.DataSource = bs_Users;
             dgv_Users.Columns[3].Width = (int)(dgv_Users.Columns[0].Width * 1.5);
             dgv_Users.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
+
+        private void LoadPermissions()
+        {
+            Button[] bt_Perms = { bt_AddUser, bt_DeleteUsers, bt_EditUser, bt_GroupsEdit, bt_PermsEdit };
+
+            foreach (Button button in bt_Perms)
+            {
+                string PermString = Name.ToString() + '.' + button.Name.ToString();
+
+                int index = PermString.IndexOf("bt_");
+                string cleanPerm = (index < 0)
+                    ? PermString
+                    : PermString.Remove(index, 3);
+
+                button.Enabled = Main.user.Permissions.HasPermission(cleanPerm);
+                button.Visible = button.Enabled;
+            }
         }
 
         private void bt_AddUser_Click(object sender, EventArgs e)

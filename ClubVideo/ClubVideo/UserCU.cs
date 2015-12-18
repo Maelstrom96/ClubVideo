@@ -108,5 +108,21 @@ namespace ClubVideo
                 bt_Finish_Click(null, null);
             }
         }
+
+        private void bt_Finish_MouseEnter(object send, EventArgs e)
+        {
+            Button sender = (Button)send;
+            sender.Image = Main.Img_ToWhite("AddUser");
+            sender.FlatAppearance.MouseOverBackColor = Main.GetColor();
+            sender.ForeColor = Color.White;
+        }
+
+        private void bt_Finish_MouseLeave(object send, EventArgs e)
+        {
+            Button sender = (Button)send;
+            sender.Image = Main.Img_ToColor("AddUser", false);
+            sender.FlatAppearance.MouseOverBackColor = Color.White;
+            sender.ForeColor = Main.GetColor();
+        }
     }
 }

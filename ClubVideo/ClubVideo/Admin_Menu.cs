@@ -36,6 +36,19 @@ namespace ClubVideo
             bt_ManageMovies.Text = Main.resManager.GetString("Button_Admin_Menu_ManageMovies", Main.culInfo);
         }
 
+        private void Button_Permissions(object sender, EventArgs e)
+        {
+            Button bt = (Button)sender;
+            string PermString = this.Name.ToString() + '.' + bt.Name.ToString();
+
+            int index = PermString.IndexOf("bt_");
+            string cleanPerm = (index < 0)
+                ? PermString
+                : PermString.Remove(index, 3);
+
+            bt.Enabled = Main.user.Permissions.HasPermission(cleanPerm);
+        }
+
         private void bt_ManageUsers_Click(object sender, EventArgs e)
         {
             Manage_Users musers_Form = new Manage_Users();
