@@ -18,6 +18,15 @@ namespace ClubVideo
         public POS()
         {
             InitializeComponent();
+
+            UpdateDB();
+        }
+
+        private void UpdateDB()
+        {
+            Database.Update.Movies();
+            Database.Update.Locations();
+            Database.Update.Copies();
         }
 
         private void txb_NameSearch_TextChanged(object sender, EventArgs e)
