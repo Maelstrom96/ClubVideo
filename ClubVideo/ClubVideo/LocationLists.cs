@@ -12,9 +12,19 @@ namespace ClubVideo
 {
     public partial class LocationLists : Form
     {
+        private DataTable ds;
         public LocationLists()
         {
             InitializeComponent();
+        }
+
+        private void LocationLists_Load(object sender, EventArgs e)
+        {
+            ds = Database.GetData.Locations();
+
+            BindingSource source = new BindingSource();
+            source.DataSource = ds;
+            dgv_Locations.DataSource = source;
         }
     }
 }

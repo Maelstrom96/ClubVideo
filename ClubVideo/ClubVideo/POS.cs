@@ -20,7 +20,6 @@ namespace ClubVideo
         public POS()
         {
             InitializeComponent();
-
             UpdateDB();
         }
 
@@ -114,6 +113,5 @@ namespace ClubVideo
                 MessageBox.Show(ex.Message);
             }
         }
-        
     }
 }

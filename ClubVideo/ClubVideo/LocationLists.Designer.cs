@@ -28,19 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.dgv_Locations = new System.Windows.Forms.DataGridView();
+            this.btn_Quit = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Locations)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dgv_Locations
+            // 
+            this.dgv_Locations.AllowUserToAddRows = false;
+            this.dgv_Locations.AllowUserToDeleteRows = false;
+            this.dgv_Locations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Locations.Location = new System.Drawing.Point(12, 12);
+            this.dgv_Locations.Name = "dgv_Locations";
+            this.dgv_Locations.ReadOnly = true;
+            this.dgv_Locations.Size = new System.Drawing.Size(770, 501);
+            this.dgv_Locations.TabIndex = 0;
+            // 
+            // btn_Quit
+            // 
+            this.btn_Quit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btn_Quit.Location = new System.Drawing.Point(707, 535);
+            this.btn_Quit.Name = "btn_Quit";
+            this.btn_Quit.Size = new System.Drawing.Size(75, 23);
+            this.btn_Quit.TabIndex = 1;
+            this.btn_Quit.Text = "Quitter";
+            this.btn_Quit.UseVisualStyleBackColor = true;
             // 
             // LocationLists
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 570);
+            this.Controls.Add(this.btn_Quit);
+            this.Controls.Add(this.dgv_Locations);
             this.Name = "LocationLists";
             this.Text = "LocationLists";
+            this.Load += new System.EventHandler(this.LocationLists_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Locations)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgv_Locations;
+        private System.Windows.Forms.Button btn_Quit;
     }
 }
