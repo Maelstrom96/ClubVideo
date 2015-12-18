@@ -37,6 +37,7 @@ namespace ClubVideo
 
             LoadLanguage();
             RefreshColors();
+            Main.UpdateFonts();
         }
 
         private void LoadLanguage()
@@ -48,8 +49,7 @@ namespace ClubVideo
             bt_SearchMovies.Text = Main.resManager.GetString("Button_Menu_SearchMovies", Main.culInfo);
             bt_POS.Text = Main.resManager.GetString("Button_Menu_POS", Main.culInfo);
             bt_Administration.Text = Main.resManager.GetString("Button_Menu_Administration", Main.culInfo);
-
-            UpdateFonts();
+            this.Refresh();
         }
 
         private void UpdateFonts()

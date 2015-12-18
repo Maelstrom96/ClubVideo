@@ -216,7 +216,7 @@
             this.lb_Date.Location = new System.Drawing.Point(313, 81);
             this.lb_Date.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Date.Name = "lb_Date";
-            this.lb_Date.Size = new System.Drawing.Size(59, 14);
+            this.lb_Date.Size = new System.Drawing.Size(87, 15);
             this.lb_Date.TabIndex = 2;
             this.lb_Date.Text = "R";
             this.lb_Date.Click += new System.EventHandler(this.EditLabel_OnClick);

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,8 @@ namespace ClubVideo
             {
                 btn_Modify.Location = new Point(lb_DescFR.Location.X + 350, lb_DescFR.Location.Y + 130);
                 btn_Modify.Visible = true;
+
+                SetLabelCursor(System.Windows.Forms.Cursors.IBeam);
             }
             else
             {
@@ -46,22 +49,22 @@ namespace ClubVideo
                 btn_Previous.Location = new Point(lb_DescFR.Location.X + 175, lb_DescFR.Location.Y + 130);
                 btn_Next.Visible = true;
                 btn_Previous.Visible = true;
+
+                SetLabelCursor(System.Windows.Forms.Cursors.Default);
             }
 
             Text = Header;
 
             _bs = bs;
 
-            SetLabelCursor(System.Windows.Forms.Cursors.Default);
-
             lb_TitreEN.DataBindings.Add("text", bs, "NAME_EN");
             lb_TitreFR.DataBindings.Add("text", bs, "NAME_FR");
             lb_DescEN.DataBindings.Add("text", bs, "DESCRIPTION_EN");
             lb_DescFR.DataBindings.Add("text", bs, "DESCRIPTION_FR");
             lb_Rating.DataBindings.Add("text", bs, "RATING");
-            lb_Date.DataBindings.Add("text", bs, "RELEASEDATE");
+            lb_Date.DataBindings.Add("text", bs, "RELEASEDATE", true);
             lb_Time.DataBindings.Add("text", bs, "RUNTIME");
-            //lb_Director.DataBindings.Add("text", bs, "DIRECTOR");
+            lb_Director.DataBindings.Add("text", bs, "DIRECTORS");
             pictureBox1.DataBindings.Add("image", bs, "IMAGE", true);
         }
 
@@ -92,7 +95,7 @@ namespace ClubVideo
             lb_Rating.Text = movie.Rated;
             lb_Time.Text = movie.Runtime.ToString();
             lb_Director.Text = movie.Director;
-            lb_Date.Text = movie.Year.ToString();
+            lb_Date.Text = movie.Date.ToString("dd/MM/yyyy");
         }
 
         private void SaveFinalMovie()
@@ -182,13 +185,15 @@ namespace ClubVideo
         {
             try
             {
+                string date = lb_Date.Text;
+
                 MovieObject oMovie = new MovieObject();
                 oMovie.ID = int.Parse(((DataRowView)this._bs.Current).Row["ID"].ToString());
                 oMovie.Nom_en = lb_TitreEN.Text.ToString();
                 oMovie.Nom_fr = lb_TitreFR.Text.ToString();
                 oMovie.Description_fr = lb_DescFR.Text.ToString();
                 oMovie.Description_en = lb_DescEN.Text.ToString();
-                oMovie.Year = int.Parse(lb_Date.Text.ToString());
+                oMovie.Date = DateTime.ParseExact(date, "dd/MM/yyyy", CultureInfo.InvariantCulture);
                 oMovie.Rated = lb_Rating.Text.ToString();
                 oMovie.Runtime = int.Parse(lb_Time.Text.ToString());
                 oMovie.Director = lb_Director.Text.ToString();
