@@ -37,6 +37,7 @@
             this.lb_Line = new System.Windows.Forms.Label();
             this.lb_Category = new System.Windows.Forms.Label();
             this.cb_Categories = new System.Windows.Forms.ComboBox();
+            this.btn_IMDB = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rb_IMDB
@@ -61,6 +62,7 @@
             this.rb_Manual.TabStop = true;
             this.rb_Manual.Text = "Manual Import";
             this.rb_Manual.UseVisualStyleBackColor = true;
+            this.rb_Manual.Visible = false;
             // 
             // bt_Cancel
             // 
@@ -130,11 +132,22 @@
             this.cb_Categories.Size = new System.Drawing.Size(166, 21);
             this.cb_Categories.TabIndex = 7;
             // 
+            // btn_IMDB
+            // 
+            this.btn_IMDB.Location = new System.Drawing.Point(184, 23);
+            this.btn_IMDB.Name = "btn_IMDB";
+            this.btn_IMDB.Size = new System.Drawing.Size(75, 23);
+            this.btn_IMDB.TabIndex = 8;
+            this.btn_IMDB.Text = "TO IMDB";
+            this.btn_IMDB.UseVisualStyleBackColor = true;
+            this.btn_IMDB.Click += new System.EventHandler(this.btn_IMDB_Click);
+            // 
             // Add_Movie_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 185);
+            this.ClientSize = new System.Drawing.Size(278, 187);
+            this.Controls.Add(this.btn_IMDB);
             this.Controls.Add(this.cb_Categories);
             this.Controls.Add(this.lb_Category);
             this.Controls.Add(this.lb_Line);
@@ -166,5 +179,6 @@
         private System.Windows.Forms.Label lb_Line;
         private System.Windows.Forms.Label lb_Category;
         private System.Windows.Forms.ComboBox cb_Categories;
+        private System.Windows.Forms.Button btn_IMDB;
     }
 }
