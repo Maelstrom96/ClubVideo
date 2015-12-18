@@ -512,16 +512,31 @@ namespace ClubVideo
 
             public static void Movie(MovieObject obj)
             {
-                string update = "UPDATE movies SET NAME_EN=:nameEN, NAME_FR=:nameFR, DESCRIPTION_EN=:descEN, DESCRIPTION_FR=:descFR, RELEASEDATE=:year, RATING=:rated, RUNTIME=:runtime WHERE ID=:movieID";
+                string update = "UPDATE movies SET NAME_EN=:nameEN, NAME_FR=:nameFR, DESCRIPTION_EN=:descEN, DESCRIPTION_FR=:descFR, DIRECTORS=:directors, RELEASEDATE=:datevar, RATING=:rated, RUNTIME=:runtime, IMAGE=:image, CATEGORY=:categoryvar WHERE ID=:movieID";
                 OracleCommand cmd = new OracleCommand(update, GetConnection());
                 
                 cmd.Parameters.Add(new OracleParameter("nameEN", obj.Nom_en));
                 cmd.Parameters.Add(new OracleParameter("nameFR", obj.Nom_fr));
                 cmd.Parameters.Add(new OracleParameter("descEN", obj.Description_en));
                 cmd.Parameters.Add(new OracleParameter("descFR", obj.Description_fr));
-                cmd.Parameters.Add(new OracleParameter("year", obj.Year));
+                cmd.Parameters.Add(new OracleParameter("directors", obj.Director));
+                cmd.Parameters.Add(new OracleParameter("datevar", obj.Date));
                 cmd.Parameters.Add(new OracleParameter("rated", obj.Rated));
                 cmd.Parameters.Add(new OracleParameter("runtime", obj.Runtime));
+
+                // Add Image
+                OracleParameter image = new OracleParameter("image", OracleDbType.Blob);
+
+                Image pb_Image = obj.Poster;
+                MemoryStream memoryStream = new MemoryStream();
+                pb_Image.Save(memoryStream, ImageFormat.Jpeg);
+                byte[] imageBt = memoryStream.ToArray();
+
+                image.Value = imageBt;
+
+                cmd.Parameters.Add(image);
+
+                cmd.Parameters.Add(new OracleParameter("categoryvar", obj.Category));
                 cmd.Parameters.Add(new OracleParameter("movieID", obj.ID));
 
                 cmd.ExecuteNonQuery();
