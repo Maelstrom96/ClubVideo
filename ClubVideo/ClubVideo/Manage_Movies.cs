@@ -31,6 +31,10 @@ namespace ClubVideo
                 btn_Add.Visible = true;
                 btn_Delete.Visible = true;
                 btn_Modify.Visible = true;
+                btn_AddCopies.Visible = true;
+                btn_DeleteCopies.Visible = true;
+                txb_CopiesToAdd.Visible = true;
+                txb_CopiesToDelete.Visible = true;
             }
             Main.UpdateFonts(this);
         }
@@ -136,11 +140,14 @@ namespace ClubVideo
 
         private void btn_AddCopies_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < int.Parse(txb_CopiesToAdd.Text.ToString()); ++i)
+            if (txb_CopiesToAdd.Text != "")
             {
-                Database_Connector.Insert.Copies(int.Parse(dgv_SearchResults.SelectedRows[0].Cells[0].Value.ToString()));
+                for (int i = 0; i < int.Parse(txb_CopiesToAdd.Text.ToString()); ++i)
+                {
+                    Database_Connector.Insert.Copies(int.Parse(dgv_SearchResults.SelectedRows[0].Cells[0].Value.ToString()));
+                }
+                LoadMovies();
             }
-            LoadMovies();
         }
 
         private void btn_DeleteCopies_Click(object sender, EventArgs e)

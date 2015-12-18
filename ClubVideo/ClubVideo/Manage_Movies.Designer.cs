@@ -123,37 +123,41 @@
             // 
             // btn_AddCopies
             // 
-            this.btn_AddCopies.Location = new System.Drawing.Point(184, 42);
+            this.btn_AddCopies.Location = new System.Drawing.Point(207, 12);
             this.btn_AddCopies.Name = "btn_AddCopies";
             this.btn_AddCopies.Size = new System.Drawing.Size(75, 23);
             this.btn_AddCopies.TabIndex = 10;
             this.btn_AddCopies.Text = "AjouterCopies";
             this.btn_AddCopies.UseVisualStyleBackColor = true;
+            this.btn_AddCopies.Visible = false;
             this.btn_AddCopies.Click += new System.EventHandler(this.btn_AddCopies_Click);
             // 
             // txb_CopiesToAdd
             // 
-            this.txb_CopiesToAdd.Location = new System.Drawing.Point(284, 37);
+            this.txb_CopiesToAdd.Location = new System.Drawing.Point(288, 12);
             this.txb_CopiesToAdd.Name = "txb_CopiesToAdd";
             this.txb_CopiesToAdd.Size = new System.Drawing.Size(100, 20);
             this.txb_CopiesToAdd.TabIndex = 11;
+            this.txb_CopiesToAdd.Visible = false;
             // 
             // btn_DeleteCopies
             // 
-            this.btn_DeleteCopies.Location = new System.Drawing.Point(400, 12);
+            this.btn_DeleteCopies.Location = new System.Drawing.Point(207, 41);
             this.btn_DeleteCopies.Name = "btn_DeleteCopies";
             this.btn_DeleteCopies.Size = new System.Drawing.Size(75, 23);
             this.btn_DeleteCopies.TabIndex = 12;
             this.btn_DeleteCopies.Text = "DeleteCopies";
             this.btn_DeleteCopies.UseVisualStyleBackColor = true;
+            this.btn_DeleteCopies.Visible = false;
             this.btn_DeleteCopies.Click += new System.EventHandler(this.btn_DeleteCopies_Click);
             // 
             // txb_CopiesToDelete
             // 
-            this.txb_CopiesToDelete.Location = new System.Drawing.Point(481, 12);
+            this.txb_CopiesToDelete.Location = new System.Drawing.Point(288, 45);
             this.txb_CopiesToDelete.Name = "txb_CopiesToDelete";
             this.txb_CopiesToDelete.Size = new System.Drawing.Size(100, 20);
             this.txb_CopiesToDelete.TabIndex = 11;
+            this.txb_CopiesToDelete.Visible = false;
             // 
             // Manage_Movies
             // 

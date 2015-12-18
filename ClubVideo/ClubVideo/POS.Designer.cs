@@ -53,7 +53,7 @@
             this.dgv_Movies.Name = "dgv_Movies";
             this.dgv_Movies.ReadOnly = true;
             this.dgv_Movies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Movies.Size = new System.Drawing.Size(556, 150);
+            this.dgv_Movies.Size = new System.Drawing.Size(660, 150);
             this.dgv_Movies.TabIndex = 0;
             this.dgv_Movies.DoubleClick += new System.EventHandler(this.dgv_Movies_DoubleClick);
             // 
@@ -83,7 +83,7 @@
             this.dgv_Members.Name = "dgv_Members";
             this.dgv_Members.ReadOnly = true;
             this.dgv_Members.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Members.Size = new System.Drawing.Size(556, 83);
+            this.dgv_Members.Size = new System.Drawing.Size(660, 83);
             this.dgv_Members.TabIndex = 3;
             // 
             // label2
@@ -148,7 +148,7 @@
             this.dgv_Copies.Name = "dgv_Copies";
             this.dgv_Copies.ReadOnly = true;
             this.dgv_Copies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Copies.Size = new System.Drawing.Size(556, 150);
+            this.dgv_Copies.Size = new System.Drawing.Size(660, 150);
             this.dgv_Copies.TabIndex = 10;
             // 
             // label3
@@ -164,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 600);
+            this.ClientSize = new System.Drawing.Size(684, 600);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgv_Copies);
             this.Controls.Add(this.btn_Location);
@@ -177,9 +177,9 @@
             this.Controls.Add(this.txb_NameSearch);
             this.Controls.Add(this.dgv_Movies);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(599, 639);
+            this.MaximumSize = new System.Drawing.Size(700, 639);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(599, 639);
+            this.MinimumSize = new System.Drawing.Size(700, 639);
             this.Name = "POS";
             this.Text = "POS";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Movies)).EndInit();
