@@ -62,7 +62,7 @@ namespace ClubVideo
             coalesce(NBCategory.NBFilm, 0) as NBFilm
         from Categories left outer join NBCategory on NBCategory.CATEGORY = Categories.ID";
 
-        private static string Copies_Select = "SELECT * FROM MOVIES_COPIES";
+        private static string Copies_Select = "SELECT movies_copies.id, MOVIES_COPIES.MOVIE_ID FROM MOVIES_COPIES left outer JOIN RENTALS on RENTALS.COPY_ID=MOVIES_COPIES.ID where (RENTALS.STARTDATE is null and RENTALS.RETURNDATE is null) or (RENTALS.STARTDATE is not null and rentals.returndate is not null) group by MOVIES_COPIES.ID, MOVIES_COPIES.MOVIE_ID";
 
         public static DataSet DataSet
         {
