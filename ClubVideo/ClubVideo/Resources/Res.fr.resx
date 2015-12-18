@@ -429,4 +429,7 @@
   <data name="Manage_Movies_CATEGORY_FR" xml:space="preserve">
     <value>Catégorie français</value>
   </data>
+  <data name="Manage_Movies_NBCOPIESFREE" xml:space="preserve">
+    <value>Nombre de copie libre</value>
+  </data>
 </root>
