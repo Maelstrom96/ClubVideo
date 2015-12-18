@@ -50,6 +50,8 @@
             this.dtp = new System.Windows.Forms.DateTimePicker();
             this.lb_Category = new System.Windows.Forms.Label();
             this.cb_Categories = new System.Windows.Forms.ComboBox();
+            this.lb_Date = new System.Windows.Forms.Label();
+            this.lb_Category_Value = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -290,7 +292,7 @@
             // lb_Category
             // 
             this.lb_Category.AutoSize = true;
-            this.lb_Category.Location = new System.Drawing.Point(209, 196);
+            this.lb_Category.Location = new System.Drawing.Point(188, 224);
             this.lb_Category.Name = "lb_Category";
             this.lb_Category.Size = new System.Drawing.Size(54, 13);
             this.lb_Category.TabIndex = 10;
@@ -301,16 +303,36 @@
             this.cb_Categories.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cb_Categories.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cb_Categories.FormattingEnabled = true;
-            this.cb_Categories.Location = new System.Drawing.Point(269, 193);
+            this.cb_Categories.Location = new System.Drawing.Point(248, 221);
             this.cb_Categories.Name = "cb_Categories";
             this.cb_Categories.Size = new System.Drawing.Size(166, 21);
             this.cb_Categories.TabIndex = 11;
+            // 
+            // lb_Date
+            // 
+            this.lb_Date.AutoSize = true;
+            this.lb_Date.Location = new System.Drawing.Point(314, 81);
+            this.lb_Date.Name = "lb_Date";
+            this.lb_Date.Size = new System.Drawing.Size(15, 13);
+            this.lb_Date.TabIndex = 12;
+            this.lb_Date.Text = "R";
+            // 
+            // lb_Category_Value
+            // 
+            this.lb_Category_Value.AutoSize = true;
+            this.lb_Category_Value.Location = new System.Drawing.Point(245, 224);
+            this.lb_Category_Value.Name = "lb_Category_Value";
+            this.lb_Category_Value.Size = new System.Drawing.Size(22, 13);
+            this.lb_Category_Value.TabIndex = 13;
+            this.lb_Category_Value.Text = "cat";
             // 
             // InsertMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(494, 583);
+            this.Controls.Add(this.lb_Category_Value);
+            this.Controls.Add(this.lb_Date);
             this.Controls.Add(this.cb_Categories);
             this.Controls.Add(this.lb_Category);
             this.Controls.Add(this.dtp);
@@ -371,5 +393,7 @@
         private System.Windows.Forms.DateTimePicker dtp;
         private System.Windows.Forms.Label lb_Category;
         private System.Windows.Forms.ComboBox cb_Categories;
+        private System.Windows.Forms.Label lb_Date;
+        private System.Windows.Forms.Label lb_Category_Value;
     }
 }
