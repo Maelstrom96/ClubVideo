@@ -30,16 +30,14 @@ namespace ClubVideo
             LoadLanguage();
             if (Modification_Mode)
             {
-                bt_AddUser.Visible = true;
-                bt_DeleteUsers.Visible = true;
-                bt_EditUser.Visible = true;
+                bt_AddMovie.Visible = true;
+                bt_DeleteMovie.Visible = true;
+                bt_EditMovie.Visible = true;
                 btn_AddCopies.Visible = true;
-                btn_DeleteCopies.Visible = true;
                 txb_CopiesToAdd.Visible = true;
-                txb_CopiesToDelete.Visible = true;
             }
             Main.UpdateFonts(this);
-            //Main.RefreshColors(this);
+            Main.RefreshColors(this);
         }
 
         private void LoadMovies()
@@ -59,9 +57,7 @@ namespace ClubVideo
 
             // DGV Column text
             foreach (DataGridViewColumn column in dgv_SearchResults.Columns)
-            {
                 column.HeaderText = Main.resManager.GetString("Manage_Movies_" + column.Name, Main.culInfo);
-            }
 
             // lb_Search text
             lb_Search.Text = Main.resManager.GetString("Manage_Movies_Search", Main.culInfo);
@@ -74,7 +70,7 @@ namespace ClubVideo
 
         private void LoadPermissions()
         {
-            Button[] bt_Perms = { bt_AddUser, bt_DeleteUsers, bt_EditUser };
+            Button[] bt_Perms = { bt_AddMovie, bt_DeleteMovie, bt_EditMovie };
 
             foreach (Button button in bt_Perms)
             {
@@ -93,9 +89,9 @@ namespace ClubVideo
         private void Search()
         {
             source.Filter = "CONVERT(ID, 'System.String') like '" + tb_Search.Text + "%'" +
-                "or NAME_EN like '" + tb_Search.Text + "%'" +
-                "or NAME_FR like '" + tb_Search.Text + "%'" +
-                "or CONVERT(RELEASEDATE, 'System.String') like '%" + tb_Search.Text + "%'";
+                            "or NAME_EN like '" + tb_Search.Text + "%'" +
+                            "or NAME_FR like '" + tb_Search.Text + "%'" +
+                            "or CONVERT(RELEASEDATE, 'System.String') like '%" + tb_Search.Text + "%'";
         }
 
         private MovieObject GetMovieFromSelectedRow()
@@ -189,15 +185,6 @@ namespace ClubVideo
                 }
                 LoadMovies();
             }
-        }
-
-        private void btn_DeleteCopies_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < int.Parse(txb_CopiesToDelete.Text.ToString()); ++i)
-            {
-                Database_Connector.Delete.Copies(int.Parse(dgv_SearchResults.SelectedRows[0].Cells[0].Value.ToString()));
-            }
-            LoadMovies();
         }
 
         private void bt_MouseEnter(object send, EventArgs e)

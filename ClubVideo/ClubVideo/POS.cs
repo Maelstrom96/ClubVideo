@@ -20,6 +20,7 @@ namespace ClubVideo
         public POS()
         {
             InitializeComponent();
+            cb_NbJours.SelectedIndex = 0;
             UpdateDB();
         }
 
@@ -42,19 +43,21 @@ namespace ClubVideo
             }
             else
                 dgv_Members.DataSource = null;
+
             SearchMembers();
         }
 
         private void SearchMembers()
         {
             _bsMembers.Filter = "NAME like '" + txb_NameSearch.Text + "%'" +
-                "or LAST_NAME like '" + txb_NameSearch.Text + "%'";
+                                "or LAST_NAME like '" + txb_NameSearch.Text + "%'";
         }
 
         private void SearchMovies()
         {
-            _bsMovies.Filter = "NAME_EN like '" + txb_MoviesSearch.Text + "%'" +
-                "or NAME_FR like '" + txb_MoviesSearch.Text + "%'";
+            _bsMovies.Filter = "CONVERT(ID, 'System.String') like '" + txb_MoviesSearch.Text + "%'" +
+                               "or NAME_EN like '" + txb_MoviesSearch.Text + "%'" +
+                               "or NAME_FR like '" + txb_MoviesSearch.Text + "%'";
         }
 
         private void txb_MoviesSearch_TextChanged(object sender, EventArgs e)
@@ -67,14 +70,20 @@ namespace ClubVideo
                 DeleteUnwantedRows();
             }
             else
+            {
                 dgv_Movies.DataSource = null;
+                dgv_Copies.DataSource = null;
+            }
             SearchMovies();
         }
 
         private void dgv_Movies_DoubleClick(object sender, EventArgs e)
         {
-            _bsCopies.Filter = "movie_id = '" + dgv_Movies.SelectedRows[0].Cells[0].Value + "'";
-            dgv_Copies.DataSource = _bsCopies;
+            if (dgv_Movies.SelectedRows.Count == 1)
+            {
+                _bsCopies.Filter = "movie_id = '" + dgv_Movies.SelectedRows[0].Cells[0].Value + "'";
+                dgv_Copies.DataSource = _bsCopies;
+            }
         }
 
         private void DeleteUnwantedRows()
@@ -109,10 +118,7 @@ namespace ClubVideo
                 MessageBox.Show("Location faite!");
                 UpdateDB();
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            catch(Exception ex){ MessageBox.Show(ex.Message); }
         }
     }
 }

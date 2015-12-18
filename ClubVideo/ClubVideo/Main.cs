@@ -115,7 +115,7 @@ namespace ClubVideo
         {
             foreach (Control c in form.Controls)
             {
-                if (c is TextBox || c is DataGridView)
+                if (c is TextBox || c is DataGridView || c is ListBox)
                 {
                     c.Font = new Font(Properties.Settings.Default.Fonts[0], c.Font.Size);
                     c.ForeColor = Color.Black;
@@ -154,22 +154,25 @@ namespace ClubVideo
         public static Image Img_ToColor(string imgName, bool start)
         {
             Bitmap img = new Bitmap(Main.GetImage(imgName));
-            for (int i = 0; i < img.Width; i++)
+            if (imgName[0] != '_')
             {
-                for (int j = 0; j < img.Height; j++)
+                for (int i = 0; i < img.Width; i++)
                 {
-                    Color pixel = img.GetPixel(i, j);
-
-                    if ((start && (pixel.R > Main.BLUE.R * 0.9 || pixel.G > Main.BLUE.G * 0.9 || pixel.B > Main.BLUE.B * 0.9))
-                        || (pixel.R > Main.previousColor.R * 0.9 || pixel.G > Main.previousColor.G * 0.9 || pixel.B > Main.previousColor.B * 0.9))
+                    for (int j = 0; j < img.Height; j++)
                     {
-                        Color newColor = Main.GetColor();
-                        pixel = Color.FromArgb(pixel.A, newColor.R, newColor.G, newColor.B);
-                        img.SetPixel(i, j, pixel);
+                        Color pixel = img.GetPixel(i, j);
+
+                        if ((start && (pixel.R > Main.BLUE.R * 0.9 || pixel.G > Main.BLUE.G * 0.9 || pixel.B > Main.BLUE.B * 0.9))
+                            || (pixel.R > Main.previousColor.R * 0.9 || pixel.G > Main.previousColor.G * 0.9 || pixel.B > Main.previousColor.B * 0.9))
+                        {
+                            Color newColor = Main.GetColor();
+                            pixel = Color.FromArgb(pixel.A, newColor.R, newColor.G, newColor.B);
+                            img.SetPixel(i, j, pixel);
+                        }
                     }
                 }
+                Main.previousColor = Main.GetColor();
             }
-            Main.previousColor = Main.GetColor();
 
             return img;
         }
@@ -181,7 +184,7 @@ namespace ClubVideo
                 if (c is Button)
                 {
                     Button sender = (Button)c;
-                    if (sender.Name != "bt_Exit" && sender.Name != "bt_Logout" && sender.Name != "bt_Back")
+                    if (sender.Name != "bt_Exit" && sender.Name != "bt_Logout" && sender.Name != "bt_Back" && sender.Name != "btn_AddCopies")
                     {
                         sender.FlatAppearance.MouseDownBackColor = Main.GetColor();
                         sender.Image = Main.Img_ToColor(c.Name.Substring(3), true);

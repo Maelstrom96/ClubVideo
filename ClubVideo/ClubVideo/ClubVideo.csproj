@@ -252,19 +252,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logout.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\ManageMovies.png" />
     <None Include="Resources\POS.png" />
     <None Include="Resources\Settings.png" />
     <None Include="Resources\ManageMembers.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Line1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Locked.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Administration.png" />
@@ -283,27 +274,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Erase.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Save.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Delete_User.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Add_User.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Edit_User.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Perm_User.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Group_User.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Search_Member.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fonts.png" />
@@ -337,15 +307,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Locked_Blue.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\member_edit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\member_add.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\member_delete.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Unlocked_Blue.png" />
@@ -397,6 +358,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PermsEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddMovie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteMovie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditMovie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddCategory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteCategory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditCategory.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
