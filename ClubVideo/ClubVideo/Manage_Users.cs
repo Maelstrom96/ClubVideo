@@ -22,6 +22,7 @@ namespace ClubVideo
             LoadLanguage();
             Main.UpdateFonts(this);
             Main.RefreshColors(this);
+            bt_GroupsEdit.Enabled = false;
             UpdateHeight();
             LoadPermissions();
         }

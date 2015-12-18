@@ -25,6 +25,8 @@ namespace ClubVideo
             LoadLanguage();
 
             Text = Main.resManager.GetString("UserCU_Header_Add", Main.culInfo);
+            Main.UpdateFonts(this);
+            Main.RefreshColors(this);
         }
 
         /// <summary>
@@ -44,10 +46,11 @@ namespace ClubVideo
             lb_ResetPassword.Show();
             Modify = true;
 
-            bt_Finish.BackgroundImage = ClubVideo.Properties.Resources.EditUser;
+            bt_AddUser.Image = Main.GetImage("EditUser");
 
             Text = Main.resManager.GetString("UserCU_Header_Modify", Main.culInfo);
             Main.UpdateFonts(this);
+            Main.RefreshColors(this);
         }
 
         private void LoadLanguage()
@@ -112,7 +115,7 @@ namespace ClubVideo
         private void bt_Finish_MouseEnter(object send, EventArgs e)
         {
             Button sender = (Button)send;
-            sender.Image = Main.Img_ToWhite("AddUser");
+            sender.Image = Main.Img_ToWhite(Modify ? "EditUser" : "AddUser");
             sender.FlatAppearance.MouseOverBackColor = Main.GetColor();
             sender.ForeColor = Color.White;
         }
@@ -120,7 +123,7 @@ namespace ClubVideo
         private void bt_Finish_MouseLeave(object send, EventArgs e)
         {
             Button sender = (Button)send;
-            sender.Image = Main.Img_ToColor("AddUser", false);
+            sender.Image = Main.Img_ToColor(Modify ? "EditUser" : "AddUser", false);
             sender.FlatAppearance.MouseOverBackColor = Color.White;
             sender.ForeColor = Main.GetColor();
         }

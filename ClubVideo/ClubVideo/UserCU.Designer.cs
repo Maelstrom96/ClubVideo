@@ -40,7 +40,7 @@
             this.tb_ConfPassword = new System.Windows.Forms.TextBox();
             this.lb_Line = new System.Windows.Forms.Label();
             this.lb_ResetPassword = new System.Windows.Forms.Label();
-            this.bt_Finish = new System.Windows.Forms.Button();
+            this.bt_AddUser = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lb_Username
@@ -161,23 +161,23 @@
             this.lb_ResetPassword.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lb_ResetPassword.Visible = false;
             // 
-            // bt_Finish
+            // bt_AddUser
             // 
-            this.bt_Finish.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.bt_Finish.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_Finish.FlatAppearance.BorderSize = 0;
-            this.bt_Finish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Finish.Image = global::ClubVideo.Properties.Resources.AddUser;
-            this.bt_Finish.Location = new System.Drawing.Point(0, 244);
-            this.bt_Finish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.bt_Finish.Name = "bt_Finish";
-            this.bt_Finish.Size = new System.Drawing.Size(302, 67);
-            this.bt_Finish.TabIndex = 4;
-            this.bt_Finish.TabStop = false;
-            this.bt_Finish.UseVisualStyleBackColor = true;
-            this.bt_Finish.Click += new System.EventHandler(this.bt_Finish_Click);
-            this.bt_Finish.MouseEnter += new System.EventHandler(this.bt_Finish_MouseEnter);
-            this.bt_Finish.MouseLeave += new System.EventHandler(this.bt_Finish_MouseLeave);
+            this.bt_AddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bt_AddUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_AddUser.FlatAppearance.BorderSize = 0;
+            this.bt_AddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_AddUser.Image = global::ClubVideo.Properties.Resources.AddUser;
+            this.bt_AddUser.Location = new System.Drawing.Point(0, 244);
+            this.bt_AddUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_AddUser.Name = "bt_AddUser";
+            this.bt_AddUser.Size = new System.Drawing.Size(302, 67);
+            this.bt_AddUser.TabIndex = 4;
+            this.bt_AddUser.TabStop = false;
+            this.bt_AddUser.UseVisualStyleBackColor = true;
+            this.bt_AddUser.Click += new System.EventHandler(this.bt_Finish_Click);
+            this.bt_AddUser.MouseEnter += new System.EventHandler(this.bt_Finish_MouseEnter);
+            this.bt_AddUser.MouseLeave += new System.EventHandler(this.bt_Finish_MouseLeave);
             // 
             // UserCU
             // 
@@ -186,7 +186,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(302, 311);
             this.Controls.Add(this.lb_ResetPassword);
-            this.Controls.Add(this.bt_Finish);
+            this.Controls.Add(this.bt_AddUser);
             this.Controls.Add(this.lb_Line);
             this.Controls.Add(this.tb_ConfPassword);
             this.Controls.Add(this.lb_ConfPassword);
@@ -222,7 +222,7 @@
         private System.Windows.Forms.Label lb_ConfPassword;
         private System.Windows.Forms.TextBox tb_ConfPassword;
         private System.Windows.Forms.Label lb_Line;
-        private System.Windows.Forms.Button bt_Finish;
+        private System.Windows.Forms.Button bt_AddUser;
         private System.Windows.Forms.Label lb_ResetPassword;
     }
 }
