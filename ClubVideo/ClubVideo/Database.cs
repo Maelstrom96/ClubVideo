@@ -30,8 +30,10 @@ namespace ClubVideo
                 Movies.rating,
                 Movies.runtime,
                 Movies.image,
+                Categories.NAME_EN as Category_EN,
+                Categories.NAME_FR as Category_FR,
                 coalesce(NBCopy.NBCOPIES, 0) as NBCOPIES
-            from Movies left outer join NBCopy on NBCopy.Movie_ID = Movies.ID";
+            from Movies left outer join NBCopy on NBCopy.Movie_ID = Movies.ID inner join Categories on Categories.ID = Movies.CATEGORY where DELETEDATE is null";
 
         private static string Permissions_Select = "SELECT * FROM permissions";
         private static string Users_Select = "SELECT ID, USERNAME, NAME, LASTNAME FROM Users";
