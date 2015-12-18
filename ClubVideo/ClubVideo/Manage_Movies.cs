@@ -55,9 +55,7 @@ namespace ClubVideo
 
             // DGV Column text
             foreach (DataGridViewColumn column in dgv_SearchResults.Columns)
-            {
                 column.HeaderText = Main.resManager.GetString("Manage_Movies_" + column.Name, Main.culInfo);
-            }
 
             // lb_Search text
             lb_Search.Text = Main.resManager.GetString("Manage_Movies_Search", Main.culInfo);
@@ -89,9 +87,9 @@ namespace ClubVideo
         private void Search()
         {
             source.Filter = "CONVERT(ID, 'System.String') like '" + tb_Search.Text + "%'" +
-                "or NAME_EN like '" + tb_Search.Text + "%'" +
-                "or NAME_FR like '" + tb_Search.Text + "%'" +
-                "or CONVERT(RELEASEDATE, 'System.String') like '%" + tb_Search.Text + "%'";
+                            "or NAME_EN like '" + tb_Search.Text + "%'" +
+                            "or NAME_FR like '" + tb_Search.Text + "%'" +
+                            "or CONVERT(RELEASEDATE, 'System.String') like '%" + tb_Search.Text + "%'";
         }
 
         private void dgv_SearchResults_MouseDoubleClick(object sender, MouseEventArgs e)
