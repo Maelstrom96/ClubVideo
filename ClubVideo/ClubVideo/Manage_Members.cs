@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.DataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -131,8 +132,26 @@ namespace ClubVideo
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            Database_Connector.Delete.Member(int.Parse(dgv_SearchResults.SelectedRows[0].Cells[0].Value.ToString()));
-            LoadMembers();
+            try
+            {
+                Database_Connector.Delete.Member(int.Parse(dgv_SearchResults.SelectedRows[0].Cells[0].Value.ToString()));
+                LoadMembers();
+            }
+            catch(OracleException sqle) 
+            {
+                switch (sqle.Number)
+                {
+                    case 02292:
+                        MessageBox.Show("CANNOT_DELETE_CHILD_FOUND");
+                        break;
+                    default: MessageBox.Show(sqle.Message.ToString());
+                        break;          
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dgv_SearchResults_SelectionChanged(object sender, EventArgs e)
