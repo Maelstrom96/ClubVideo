@@ -18,7 +18,7 @@ namespace ClubVideo
             LoadCategories();
             LoadLanguage();
             Main.UpdateFonts(this);
-            //Main.RefreshColors(this);
+            Main.RefreshColors(this);
         }
 
         private void LoadCategories()
@@ -32,9 +32,9 @@ namespace ClubVideo
             lb_Search.Text = Main.resManager.GetString("Manage_Categories_Search", Main.culInfo);
 
             // Tooltips
-            toolTip.SetToolTip(btn_Add, Main.resManager.GetString("Manage_Categories_Add_Tip", Main.culInfo));
-            toolTip.SetToolTip(btn_Modify, Main.resManager.GetString("Manage_Categories_Modify_Tip", Main.culInfo));
-            toolTip.SetToolTip(btn_Delete, Main.resManager.GetString("Manage_Categories_Delete_Tip", Main.culInfo));
+            toolTip.SetToolTip(bt_AddCategory, Main.resManager.GetString("Manage_Categories_Add_Tip", Main.culInfo));
+            toolTip.SetToolTip(bt_EditCategory, Main.resManager.GetString("Manage_Categories_Modify_Tip", Main.culInfo));
+            toolTip.SetToolTip(bt_DeleteCategory, Main.resManager.GetString("Manage_Categories_Delete_Tip", Main.culInfo));
             toolTip.SetToolTip(tb_Search, Main.resManager.GetString("Manage_Categories_Search_Tip", Main.culInfo));
             toolTip.SetToolTip(lb_Search, Main.resManager.GetString("Manage_Categories_Search_Tip", Main.culInfo));
 
@@ -95,18 +95,18 @@ namespace ClubVideo
 
         private void bt_MouseEnter(object send, EventArgs e)
         {
-            //Button sender = (Button)send;
-            //sender.Image = Main.Img_ToWhite(sender.Name.Substring(3));
-            //sender.FlatAppearance.MouseOverBackColor = Main.GetColor();
-            //sender.ForeColor = Color.White;
+            Button sender = (Button)send;
+            sender.Image = Main.Img_ToWhite(sender.Name.Substring(3));
+            sender.FlatAppearance.MouseOverBackColor = Main.GetColor();
+            sender.ForeColor = Color.White;
         }
 
         private void bt_MouseLeave(object send, EventArgs e)
         {
-            //Button sender = (Button)send;
-            //sender.Image = Main.Img_ToColor(sender.Name.Substring(3), false);
-            //sender.FlatAppearance.MouseOverBackColor = Color.White;
-            //sender.ForeColor = Main.GetColor();
+            Button sender = (Button)send;
+            sender.Image = Main.Img_ToColor(sender.Name.Substring(3), false);
+            sender.FlatAppearance.MouseOverBackColor = Color.White;
+            sender.ForeColor = Main.GetColor();
         }
     }
 }
