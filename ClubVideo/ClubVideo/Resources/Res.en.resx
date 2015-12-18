@@ -417,4 +417,19 @@
   <data name="Manage_Categories_Search_Tip" xml:space="preserve">
     <value>Search throughout all columns of the table.</value>
   </data>
+  <data name="Button_Admin_Menu_ManageCategories" xml:space="preserve">
+    <value>Manage Categories</value>
+  </data>
+  <data name="Button_Admin_Menu_ManageGroups" xml:space="preserve">
+    <value>Manage groups</value>
+  </data>
+  <data name="Button_Admin_Menu_ManageMembers" xml:space="preserve">
+    <value>Manage Members</value>
+  </data>
+  <data name="Button_Admin_Menu_ManageMovies" xml:space="preserve">
+    <value>Manage Movies</value>
+  </data>
+  <data name="Button_Admin_Menu_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
 </root>
