@@ -26,6 +26,7 @@ namespace ClubVideo
             LoadLanguage();
             LoadPermissions();
             SetButtonsVisibility();
+            Main.UpdateFonts(this);
         }
 
         private void SetButtonsVisibility()

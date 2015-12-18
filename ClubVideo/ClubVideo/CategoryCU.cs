@@ -23,6 +23,7 @@ namespace ClubVideo
         {
             InitializeComponent();
             LoadLanguage();
+            Main.UpdateFonts(this);
         }
 
         public CategoryCU(CategoryObject obj) : this()

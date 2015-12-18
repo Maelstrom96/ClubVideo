@@ -27,6 +27,7 @@ namespace ClubVideo
                 string[] tokens = line.Split(',');
                 cb_Provinces.Items.Add(tokens[0]);
             }
+            Main.UpdateFonts(this);
         }
 
         public UpdateMembers(BindingSource source, string header, bool modif)

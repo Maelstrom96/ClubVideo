@@ -111,21 +111,24 @@ namespace ClubVideo
             return (Image)img;
         }
 
-        public static void UpdateFonts()
+        public static void UpdateFonts(Form form)
         {
-            foreach (Form form in Application.OpenForms)
+            foreach (Control c in form.Controls)
             {
-                foreach (Control c in form.Controls)
+                if (c is TextBox || c is DataGridView)
                 {
-                    if (c.Name != "bt_Exit" || c.Name != "bt_Back")
-                    {
-                        c.Font = new Font(Main.GetFont(), c.Font.Size);
-                        c.ForeColor = Main.GetColor();
-                    }
+                    c.Font = new Font(Properties.Settings.Default.Fonts[0], c.Font.Size);
+                    c.ForeColor = Color.Black;
                 }
-                form.Update();
-                form.Refresh();
+                else
+                {
+                    c.Font = new Font(Main.GetFont(), c.Font.Size);
+                    if (c.Name != "bt_Exit" || c.Name != "bt_Back")
+                        c.ForeColor = Main.GetColor();
+                }
             }
+            form.Update();
+            form.Refresh();
         }
     }
 }

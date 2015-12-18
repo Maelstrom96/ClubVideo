@@ -37,7 +37,7 @@ namespace ClubVideo
 
             LoadLanguage();
             RefreshColors();
-            Main.UpdateFonts();
+            Main.UpdateFonts(this);
         }
 
         private void LoadLanguage()
@@ -50,19 +50,6 @@ namespace ClubVideo
             bt_POS.Text = Main.resManager.GetString("Button_Menu_POS", Main.culInfo);
             bt_Administration.Text = Main.resManager.GetString("Button_Menu_Administration", Main.culInfo);
             this.Refresh();
-        }
-
-        private void UpdateFonts()
-        {
-            foreach (Control c in this.Controls)
-            {
-                if (c is Button)
-                {
-                    c.Font = new Font(Main.GetFont(), 9);
-                    if (c.Name != "bt_Exit")
-                        c.ForeColor = Main.GetColor();
-                }
-            }
         }
 
         private void SwitchLanguage(string LanguageCode)

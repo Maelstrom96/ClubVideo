@@ -32,6 +32,7 @@ namespace ClubVideo
                 btn_Delete.Visible = true;
                 btn_Modify.Visible = true;
             }
+            Main.UpdateFonts(this);
         }
 
         private void LoadMovies()
@@ -106,7 +107,7 @@ namespace ClubVideo
 
         private void btn_Modify_Click(object sender, EventArgs e)
         {
-            InsertMovie movies = new InsertMovie(source, "Modification de film", true);
+            InsertMovie movies = new InsertMovie(source, "Modification de film");
             movies.ShowDialog();
             LoadMovies();
         }

@@ -41,13 +41,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.lb_Date = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lb_Director = new System.Windows.Forms.Label();
             this.btn_Next = new System.Windows.Forms.Button();
             this.btn_Previous = new System.Windows.Forms.Button();
             this.btn_Modify = new System.Windows.Forms.Button();
+            this.dtp = new System.Windows.Forms.DateTimePicker();
+            this.lb_Category = new System.Windows.Forms.Label();
+            this.cb_Categories = new System.Windows.Forms.ComboBox();
+            this.lb_Date = new System.Windows.Forms.Label();
+            this.lb_Category_Value = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -211,16 +215,6 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "FR";
             // 
-            // lb_Date
-            // 
-            this.lb_Date.Location = new System.Drawing.Point(313, 81);
-            this.lb_Date.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lb_Date.Name = "lb_Date";
-            this.lb_Date.Size = new System.Drawing.Size(87, 15);
-            this.lb_Date.TabIndex = 2;
-            this.lb_Date.Text = "R";
-            this.lb_Date.Click += new System.EventHandler(this.EditLabel_OnClick);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -288,11 +282,60 @@
             this.btn_Modify.Visible = false;
             this.btn_Modify.Click += new System.EventHandler(this.btn_Modify_Click);
             // 
+            // dtp
+            // 
+            this.dtp.Location = new System.Drawing.Point(314, 79);
+            this.dtp.Name = "dtp";
+            this.dtp.Size = new System.Drawing.Size(129, 20);
+            this.dtp.TabIndex = 9;
+            // 
+            // lb_Category
+            // 
+            this.lb_Category.AutoSize = true;
+            this.lb_Category.Location = new System.Drawing.Point(188, 224);
+            this.lb_Category.Name = "lb_Category";
+            this.lb_Category.Size = new System.Drawing.Size(54, 13);
+            this.lb_Category.TabIndex = 10;
+            this.lb_Category.Text = "category :";
+            // 
+            // cb_Categories
+            // 
+            this.cb_Categories.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cb_Categories.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cb_Categories.FormattingEnabled = true;
+            this.cb_Categories.Location = new System.Drawing.Point(248, 221);
+            this.cb_Categories.Name = "cb_Categories";
+            this.cb_Categories.Size = new System.Drawing.Size(166, 21);
+            this.cb_Categories.TabIndex = 11;
+            // 
+            // lb_Date
+            // 
+            this.lb_Date.AutoSize = true;
+            this.lb_Date.Location = new System.Drawing.Point(314, 81);
+            this.lb_Date.Name = "lb_Date";
+            this.lb_Date.Size = new System.Drawing.Size(15, 13);
+            this.lb_Date.TabIndex = 12;
+            this.lb_Date.Text = "R";
+            // 
+            // lb_Category_Value
+            // 
+            this.lb_Category_Value.AutoSize = true;
+            this.lb_Category_Value.Location = new System.Drawing.Point(245, 224);
+            this.lb_Category_Value.Name = "lb_Category_Value";
+            this.lb_Category_Value.Size = new System.Drawing.Size(22, 13);
+            this.lb_Category_Value.TabIndex = 13;
+            this.lb_Category_Value.Text = "cat";
+            // 
             // InsertMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(494, 583);
+            this.Controls.Add(this.lb_Category_Value);
+            this.Controls.Add(this.lb_Date);
+            this.Controls.Add(this.cb_Categories);
+            this.Controls.Add(this.lb_Category);
+            this.Controls.Add(this.dtp);
             this.Controls.Add(this.btn_Modify);
             this.Controls.Add(this.btn_Previous);
             this.Controls.Add(this.btn_Next);
@@ -305,7 +348,6 @@
             this.Controls.Add(this.lb_TxtEN);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lb_Date);
             this.Controls.Add(this.lb_Time);
             this.Controls.Add(this.lb_Rating);
             this.Controls.Add(this.lb_DescFR);
@@ -342,12 +384,16 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lb_Date;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lb_Director;
         private System.Windows.Forms.Button btn_Next;
         private System.Windows.Forms.Button btn_Previous;
         private System.Windows.Forms.Button btn_Modify;
+        private System.Windows.Forms.DateTimePicker dtp;
+        private System.Windows.Forms.Label lb_Category;
+        private System.Windows.Forms.ComboBox cb_Categories;
+        private System.Windows.Forms.Label lb_Date;
+        private System.Windows.Forms.Label lb_Category_Value;
     }
 }

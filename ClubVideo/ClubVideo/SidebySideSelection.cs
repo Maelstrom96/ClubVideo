@@ -33,6 +33,7 @@ namespace ClubVideo
             //Write list
             AddStringList(listSelectionAll, lv_Selection);
             AddStringList(listSelected, lv_Selected);
+            Main.UpdateFonts(this);
         }
 
         private void Init()
