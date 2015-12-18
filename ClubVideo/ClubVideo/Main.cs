@@ -115,9 +115,17 @@ namespace ClubVideo
         {
             foreach (Control c in form.Controls)
             {
-                c.Font = new Font(Main.GetFont(), c.Font.Size);
-                if (c.Name != "bt_Exit" || c.Name != "bt_Back")
-                    c.ForeColor = Main.GetColor();
+                if (c is TextBox || c is DataGridView)
+                {
+                    c.Font = new Font(Properties.Settings.Default.Fonts[0], c.Font.Size);
+                    c.ForeColor = Color.Black;
+                }
+                else
+                {
+                    c.Font = new Font(Main.GetFont(), c.Font.Size);
+                    if (c.Name != "bt_Exit" || c.Name != "bt_Back")
+                        c.ForeColor = Main.GetColor();
+                }
             }
             form.Update();
             form.Refresh();
