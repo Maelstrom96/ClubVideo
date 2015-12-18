@@ -450,4 +450,25 @@
   <data name="Button_Admin_Menu_Settings" xml:space="preserve">
     <value>Paramètres</value>
   </data>
+  <data name="POS_Film_Copies" xml:space="preserve">
+    <value>Copies disponible du film :</value>
+  </data>
+  <data name="POS_Header" xml:space="preserve">
+    <value>Point de vente</value>
+  </data>
+  <data name="POS_Rent" xml:space="preserve">
+    <value>Louer une copie</value>
+  </data>
+  <data name="POS_Search_Members" xml:space="preserve">
+    <value>Nom du film :</value>
+  </data>
+  <data name="POS_Search_Movies" xml:space="preserve">
+    <value>Nom du membre :</value>
+  </data>
+  <data name="POS_Nb_Days" xml:space="preserve">
+    <value>Nombre de jours :</value>
+  </data>
+  <data name="POS_RentList" xml:space="preserve">
+    <value>Liste des locations...</value>
+  </data>
 </root>

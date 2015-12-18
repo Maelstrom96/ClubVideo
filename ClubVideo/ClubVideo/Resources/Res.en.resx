@@ -450,4 +450,25 @@
   <data name="Manage_Movies_NBCOPIESFREE" xml:space="preserve">
     <value>Number of copy</value>
   </data>
+  <data name="POS_Film_Copies" xml:space="preserve">
+    <value>Available copies of movie :</value>
+  </data>
+  <data name="POS_Header" xml:space="preserve">
+    <value>Point of Sale</value>
+  </data>
+  <data name="POS_Rent" xml:space="preserve">
+    <value>Rent a copy</value>
+  </data>
+  <data name="POS_Search_Members" xml:space="preserve">
+    <value>Movie Name :</value>
+  </data>
+  <data name="POS_Search_Movies" xml:space="preserve">
+    <value>Member Name :</value>
+  </data>
+  <data name="POS_Nb_Days" xml:space="preserve">
+    <value>Number of days :</value>
+  </data>
+  <data name="POS_RentList" xml:space="preserve">
+    <value>Rented Movie List...</value>
+  </data>
 </root>
