@@ -39,7 +39,6 @@
             // 
             // bt_Settings
             // 
-            this.bt_Settings.AutoSize = true;
             this.bt_Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bt_Settings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_Settings.Enabled = false;
@@ -47,10 +46,10 @@
             this.bt_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Settings.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Settings.Image = global::ClubVideo.Properties.Resources.Settings;
-            this.bt_Settings.Location = new System.Drawing.Point(725, -1);
+            this.bt_Settings.Location = new System.Drawing.Point(739, -1);
             this.bt_Settings.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Settings.Name = "bt_Settings";
-            this.bt_Settings.Size = new System.Drawing.Size(120, 161);
+            this.bt_Settings.Size = new System.Drawing.Size(145, 161);
             this.bt_Settings.TabIndex = 4;
             this.bt_Settings.Text = "settings";
             this.bt_Settings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -60,17 +59,16 @@
             // 
             // bt_ManageCategories
             // 
-            this.bt_ManageCategories.AutoSize = true;
             this.bt_ManageCategories.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bt_ManageCategories.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_ManageCategories.FlatAppearance.BorderSize = 0;
             this.bt_ManageCategories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ManageCategories.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_ManageCategories.Image = global::ClubVideo.Properties.Resources.ManageCategories;
-            this.bt_ManageCategories.Location = new System.Drawing.Point(127, -1);
+            this.bt_ManageCategories.Location = new System.Drawing.Point(148, -1);
             this.bt_ManageCategories.Margin = new System.Windows.Forms.Padding(2);
             this.bt_ManageCategories.Name = "bt_ManageCategories";
-            this.bt_ManageCategories.Size = new System.Drawing.Size(127, 161);
+            this.bt_ManageCategories.Size = new System.Drawing.Size(145, 161);
             this.bt_ManageCategories.TabIndex = 1;
             this.bt_ManageCategories.Text = "manage Categories";
             this.bt_ManageCategories.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -81,7 +79,6 @@
             // 
             // bt_ManageGroups
             // 
-            this.bt_ManageGroups.AutoSize = true;
             this.bt_ManageGroups.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bt_ManageGroups.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_ManageGroups.Enabled = false;
@@ -89,10 +86,10 @@
             this.bt_ManageGroups.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ManageGroups.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_ManageGroups.Image = global::ClubVideo.Properties.Resources.ManageGroups;
-            this.bt_ManageGroups.Location = new System.Drawing.Point(469, -1);
+            this.bt_ManageGroups.Location = new System.Drawing.Point(445, -1);
             this.bt_ManageGroups.Margin = new System.Windows.Forms.Padding(2);
             this.bt_ManageGroups.Name = "bt_ManageGroups";
-            this.bt_ManageGroups.Size = new System.Drawing.Size(126, 161);
+            this.bt_ManageGroups.Size = new System.Drawing.Size(145, 161);
             this.bt_ManageGroups.TabIndex = 1;
             this.bt_ManageGroups.Text = "manage Groups";
             this.bt_ManageGroups.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -102,17 +99,16 @@
             // 
             // bt_ManageUsers
             // 
-            this.bt_ManageUsers.AutoSize = true;
             this.bt_ManageUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bt_ManageUsers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_ManageUsers.FlatAppearance.BorderSize = 0;
             this.bt_ManageUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ManageUsers.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_ManageUsers.Image = global::ClubVideo.Properties.Resources.ManageUsers;
-            this.bt_ManageUsers.Location = new System.Drawing.Point(597, -1);
+            this.bt_ManageUsers.Location = new System.Drawing.Point(592, -1);
             this.bt_ManageUsers.Margin = new System.Windows.Forms.Padding(2);
             this.bt_ManageUsers.Name = "bt_ManageUsers";
-            this.bt_ManageUsers.Size = new System.Drawing.Size(126, 161);
+            this.bt_ManageUsers.Size = new System.Drawing.Size(145, 161);
             this.bt_ManageUsers.TabIndex = 1;
             this.bt_ManageUsers.Text = "manage Users";
             this.bt_ManageUsers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -123,17 +119,16 @@
             // 
             // bt_ManageMovies
             // 
-            this.bt_ManageMovies.AutoSize = true;
             this.bt_ManageMovies.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bt_ManageMovies.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_ManageMovies.FlatAppearance.BorderSize = 0;
             this.bt_ManageMovies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ManageMovies.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_ManageMovies.Image = global::ClubVideo.Properties.Resources.ManageMovies;
-            this.bt_ManageMovies.Location = new System.Drawing.Point(-1, -1);
+            this.bt_ManageMovies.Location = new System.Drawing.Point(1, -1);
             this.bt_ManageMovies.Margin = new System.Windows.Forms.Padding(2);
             this.bt_ManageMovies.Name = "bt_ManageMovies";
-            this.bt_ManageMovies.Size = new System.Drawing.Size(126, 161);
+            this.bt_ManageMovies.Size = new System.Drawing.Size(145, 161);
             this.bt_ManageMovies.TabIndex = 1;
             this.bt_ManageMovies.Text = "manage Movies";
             this.bt_ManageMovies.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -151,10 +146,10 @@
             this.bt_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Back.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Back.Image = global::ClubVideo.Properties.Resources.Back;
-            this.bt_Back.Location = new System.Drawing.Point(893, -1);
+            this.bt_Back.Location = new System.Drawing.Point(947, -1);
             this.bt_Back.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Back.Name = "bt_Back";
-            this.bt_Back.Size = new System.Drawing.Size(126, 161);
+            this.bt_Back.Size = new System.Drawing.Size(145, 161);
             this.bt_Back.TabIndex = 2;
             this.bt_Back.Text = "back";
             this.bt_Back.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -165,17 +160,16 @@
             // 
             // bt_ManageMembers
             // 
-            this.bt_ManageMembers.AutoSize = true;
             this.bt_ManageMembers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bt_ManageMembers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_ManageMembers.FlatAppearance.BorderSize = 0;
             this.bt_ManageMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ManageMembers.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_ManageMembers.Image = global::ClubVideo.Properties.Resources.ManageMembers;
-            this.bt_ManageMembers.Location = new System.Drawing.Point(255, -1);
+            this.bt_ManageMembers.Location = new System.Drawing.Point(296, -1);
             this.bt_ManageMembers.Margin = new System.Windows.Forms.Padding(2);
             this.bt_ManageMembers.Name = "bt_ManageMembers";
-            this.bt_ManageMembers.Size = new System.Drawing.Size(126, 161);
+            this.bt_ManageMembers.Size = new System.Drawing.Size(145, 161);
             this.bt_ManageMembers.TabIndex = 2;
             this.bt_ManageMembers.Text = "manage Members";
             this.bt_ManageMembers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -189,7 +183,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1018, 160);
+            this.ClientSize = new System.Drawing.Size(1091, 160);
             this.ControlBox = false;
             this.Controls.Add(this.bt_Settings);
             this.Controls.Add(this.bt_ManageCategories);

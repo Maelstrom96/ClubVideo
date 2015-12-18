@@ -45,7 +45,7 @@ namespace ClubVideo
             int dgvHeight = (dgv_Users.ColumnHeadersVisible ? dgv_Users.ColumnHeadersHeight : 0) +
               dgv_Users.Rows.OfType<DataGridViewRow>().Where(r => r.Visible).Sum(r => r.Height);
 
-            dgv_Users.Height = dgvHeight + 3;
+            //dgv_Users.Height = dgvHeight + 3;
 
             this.Height = 39 + dgv_Users.Location.Y + dgvHeight < 600 ? 39 + dgv_Users.Location.Y + dgvHeight : 600;
         }

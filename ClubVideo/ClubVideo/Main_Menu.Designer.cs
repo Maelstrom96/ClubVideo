@@ -39,17 +39,16 @@
             // 
             // bt_Settings
             // 
-            this.bt_Settings.AutoSize = true;
             this.bt_Settings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bt_Settings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_Settings.FlatAppearance.BorderSize = 0;
             this.bt_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Settings.Image = global::ClubVideo.Properties.Resources.Settings;
-            this.bt_Settings.Location = new System.Drawing.Point(599, 0);
+            this.bt_Settings.Location = new System.Drawing.Point(644, 0);
             this.bt_Settings.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Settings.Name = "bt_Settings";
-            this.bt_Settings.Size = new System.Drawing.Size(126, 161);
+            this.bt_Settings.Size = new System.Drawing.Size(140, 161);
             this.bt_Settings.TabIndex = 0;
             this.bt_Settings.Text = "settings";
             this.bt_Settings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -61,7 +60,6 @@
             // 
             // bt_POS
             // 
-            this.bt_POS.AutoSize = true;
             this.bt_POS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bt_POS.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_POS.Enabled = false;
@@ -72,7 +70,7 @@
             this.bt_POS.Location = new System.Drawing.Point(0, 0);
             this.bt_POS.Margin = new System.Windows.Forms.Padding(2);
             this.bt_POS.Name = "bt_POS";
-            this.bt_POS.Size = new System.Drawing.Size(126, 161);
+            this.bt_POS.Size = new System.Drawing.Size(140, 161);
             this.bt_POS.TabIndex = 0;
             this.bt_POS.Text = "pos";
             this.bt_POS.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -84,17 +82,16 @@
             // 
             // bt_SearchMovies
             // 
-            this.bt_SearchMovies.AutoSize = true;
             this.bt_SearchMovies.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bt_SearchMovies.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_SearchMovies.FlatAppearance.BorderSize = 0;
             this.bt_SearchMovies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_SearchMovies.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_SearchMovies.Image = global::ClubVideo.Properties.Resources.SearchMovies;
-            this.bt_SearchMovies.Location = new System.Drawing.Point(169, 0);
+            this.bt_SearchMovies.Location = new System.Drawing.Point(179, 0);
             this.bt_SearchMovies.Margin = new System.Windows.Forms.Padding(2);
             this.bt_SearchMovies.Name = "bt_SearchMovies";
-            this.bt_SearchMovies.Size = new System.Drawing.Size(126, 161);
+            this.bt_SearchMovies.Size = new System.Drawing.Size(140, 161);
             this.bt_SearchMovies.TabIndex = 0;
             this.bt_SearchMovies.Text = "search Movies";
             this.bt_SearchMovies.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -106,17 +103,16 @@
             // 
             // bt_Administration
             // 
-            this.bt_Administration.AutoSize = true;
             this.bt_Administration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bt_Administration.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_Administration.FlatAppearance.BorderSize = 0;
             this.bt_Administration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Administration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Administration.Image = global::ClubVideo.Properties.Resources.Administration;
-            this.bt_Administration.Location = new System.Drawing.Point(475, 0);
+            this.bt_Administration.Location = new System.Drawing.Point(501, 0);
             this.bt_Administration.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Administration.Name = "bt_Administration";
-            this.bt_Administration.Size = new System.Drawing.Size(120, 161);
+            this.bt_Administration.Size = new System.Drawing.Size(140, 161);
             this.bt_Administration.TabIndex = 0;
             this.bt_Administration.Text = "administration";
             this.bt_Administration.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -128,17 +124,16 @@
             // 
             // bt_SearchMembers
             // 
-            this.bt_SearchMembers.AutoSize = true;
             this.bt_SearchMembers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bt_SearchMembers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_SearchMembers.FlatAppearance.BorderSize = 0;
             this.bt_SearchMembers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_SearchMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_SearchMembers.Image = global::ClubVideo.Properties.Resources.SearchMembers;
-            this.bt_SearchMembers.Location = new System.Drawing.Point(297, 0);
+            this.bt_SearchMembers.Location = new System.Drawing.Point(322, 0);
             this.bt_SearchMembers.Margin = new System.Windows.Forms.Padding(2);
             this.bt_SearchMembers.Name = "bt_SearchMembers";
-            this.bt_SearchMembers.Size = new System.Drawing.Size(135, 161);
+            this.bt_SearchMembers.Size = new System.Drawing.Size(140, 161);
             this.bt_SearchMembers.TabIndex = 0;
             this.bt_SearchMembers.Text = "search Members";
             this.bt_SearchMembers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -156,10 +151,10 @@
             this.bt_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Logout.Image = global::ClubVideo.Properties.Resources.Unlocked_Blue_small;
-            this.bt_Logout.Location = new System.Drawing.Point(768, 0);
+            this.bt_Logout.Location = new System.Drawing.Point(823, 0);
             this.bt_Logout.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Logout.Name = "bt_Logout";
-            this.bt_Logout.Size = new System.Drawing.Size(120, 161);
+            this.bt_Logout.Size = new System.Drawing.Size(140, 161);
             this.bt_Logout.TabIndex = 0;
             this.bt_Logout.Text = "logout";
             this.bt_Logout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -176,10 +171,10 @@
             this.bt_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Exit.Image = global::ClubVideo.Properties.Resources.Exit;
-            this.bt_Exit.Location = new System.Drawing.Point(890, 0);
+            this.bt_Exit.Location = new System.Drawing.Point(966, 0);
             this.bt_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Exit.Name = "bt_Exit";
-            this.bt_Exit.Size = new System.Drawing.Size(120, 161);
+            this.bt_Exit.Size = new System.Drawing.Size(140, 161);
             this.bt_Exit.TabIndex = 0;
             this.bt_Exit.Text = "exit";
             this.bt_Exit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -194,7 +189,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1011, 160);
+            this.ClientSize = new System.Drawing.Size(1106, 160);
             this.ControlBox = false;
             this.Controls.Add(this.bt_Settings);
             this.Controls.Add(this.bt_POS);
@@ -212,7 +207,6 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Menu_FormClosed);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Main_Menu_Paint);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
