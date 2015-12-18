@@ -46,6 +46,7 @@ namespace ClubVideo
         private static string Users_Select = "SELECT ID, USERNAME, NAME, LASTNAME FROM Users";
         private static string Members_Select = "SELECT * FROM Members";
         private static string Categories_Select = "SELECT * FROM CATEGORIES";
+        private static string Copies_Select = "SELECT * FROM MOVIES_COPIES";
 
         public static DataSet DataSet
         {
@@ -74,6 +75,7 @@ namespace ClubVideo
             GetDBData("Users", Users_Select);
             GetDBData("Members", Members_Select);
             GetDBData("Categories", Categories_Select);
+            GetDBData("Movies_Copies", Copies_Select);
         }
 
         public static class GetData
@@ -134,6 +136,16 @@ namespace ClubVideo
 
                 return tmp;
             }
+
+            public static DataTable Copies()
+            {
+                DataTable tmp = DS.Tables["Movies_Copies"].Clone();
+
+                foreach (DataRow dr in DS.Tables["Movies_Copies"].Rows)
+                    tmp.Rows.Add(dr.ItemArray);
+
+                return tmp;
+            }
         }
 
         public static class Update
@@ -144,12 +156,19 @@ namespace ClubVideo
                 Permissions();
                 Users();
                 Members();
+                Copies();
             }
 
             public static void Movies()
             {
                 DS.Tables["Movies"].Clear();
                 GetDBData("Movies", Movies_Select);
+            }
+
+            public static void Copies()
+            {
+                DS.Tables["Movies_Copies"].Clear();
+                GetDBData("Movies_Copies", Movies_Select);
             }
 
             public static void Permissions()

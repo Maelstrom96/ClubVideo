@@ -78,6 +78,7 @@
             this.bt_POS.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_POS.UseVisualStyleBackColor = true;
             this.bt_POS.TextChanged += new System.EventHandler(this.Button_Permissions);
+            this.bt_POS.Click += new System.EventHandler(this.bt_POS_Click);
             this.bt_POS.MouseEnter += new System.EventHandler(this.bt_MouseEnter);
             this.bt_POS.MouseLeave += new System.EventHandler(this.bt_MouseLeave);
             // 
