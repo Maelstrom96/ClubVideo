@@ -259,7 +259,7 @@
     <value>City</value>
   </data>
   <data name="Manage_Members_Delete_Tip" xml:space="preserve">
-    <value>Delete a member...</value>
+    <value>Delete a Member...</value>
   </data>
   <data name="Manage_Members_Header" xml:space="preserve">
     <value>Display and Search Members</value>
@@ -274,7 +274,7 @@
     <value>Last Name</value>
   </data>
   <data name="Manage_Members_Modify_Tip" xml:space="preserve">
-    <value>Modify a membre...</value>
+    <value>Modify a Membre...</value>
   </data>
   <data name="Manage_Members_NAME" xml:space="preserve">
     <value>Name</value>
@@ -289,7 +289,7 @@
     <value>Search : </value>
   </data>
   <data name="Manage_Members_Search_Tip" xml:space="preserve">
-    <value>Search all columns of the table.</value>
+    <value>Search throughout all columns of the table.</value>
   </data>
   <data name="Manage_Members_TELEPHONENUMBER" xml:space="preserve">
     <value>Telephone Number</value>
@@ -332,5 +332,89 @@
   </data>
   <data name="Manage_Movies_Search" xml:space="preserve">
     <value>Search : </value>
+  </data>
+  <data name="Add_Movie_Menu_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Add_Movie_Menu_Category_Column" xml:space="preserve">
+    <value>NAME_EN</value>
+  </data>
+  <data name="Add_Movie_Menu_From_IMDB" xml:space="preserve">
+    <value>Import from IMDB</value>
+  </data>
+  <data name="Add_Movie_Menu_From_Manual" xml:space="preserve">
+    <value>Import Manually</value>
+  </data>
+  <data name="Add_Movie_Menu_Header" xml:space="preserve">
+    <value>Add a Movie...</value>
+  </data>
+  <data name="Add_Movie_Menu_OK" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Add_Movie_Menu_URL" xml:space="preserve">
+    <value>Link :</value>
+  </data>
+  <data name="CategoryCU_Add" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="CategoryCU_Description_En" xml:space="preserve">
+    <value>English Description :</value>
+  </data>
+  <data name="CategoryCU_Description_Fr" xml:space="preserve">
+    <value>French Description :</value>
+  </data>
+  <data name="CategoryCU_Header_Add" xml:space="preserve">
+    <value>Add a Category...</value>
+  </data>
+  <data name="CategoryCU_Header_Modify" xml:space="preserve">
+    <value>Modify a Category...</value>
+  </data>
+  <data name="CategoryCU_Modify" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="CategoryCU_Name_En" xml:space="preserve">
+    <value>English Name :</value>
+  </data>
+  <data name="CategoryCU_Name_Fr" xml:space="preserve">
+    <value>French Name :</value>
+  </data>
+  <data name="CategoryCU_Price" xml:space="preserve">
+    <value>Price :</value>
+  </data>
+  <data name="Manage_Categories_Add_Tip" xml:space="preserve">
+    <value>Add a Category...</value>
+  </data>
+  <data name="Manage_Categories_Delete_Tip" xml:space="preserve">
+    <value>Delete a Category...</value>
+  </data>
+  <data name="Manage_Categories_DESCRIPTION_EN" xml:space="preserve">
+    <value>English Description</value>
+  </data>
+  <data name="Manage_Categories_DESCRIPTION_FR" xml:space="preserve">
+    <value>French Description</value>
+  </data>
+  <data name="Manage_Categories_Header" xml:space="preserve">
+    <value>Ajout et suppression de catégories</value>
+  </data>
+  <data name="Manage_Categories_ID" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="Manage_Categories_Modify_Tip" xml:space="preserve">
+    <value>Modify a Category...</value>
+  </data>
+  <data name="Manage_Categories_NAME_EN" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="Manage_Categories_NAME_FR" xml:space="preserve">
+    <value>French Name</value>
+  </data>
+  <data name="Manage_Categories_PRICE" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Manage_Categories_Search" xml:space="preserve">
+    <value>Search :</value>
+  </data>
+  <data name="Manage_Categories_Search_Tip" xml:space="preserve">
+    <value>Search throughout all columns of the table.</value>
   </data>
 </root>
