@@ -151,7 +151,7 @@
             // 
             // bt_Finish
             // 
-            this.bt_Finish.BackgroundImage = global::ClubVideo.Properties.Resources.Add_User;
+            this.bt_Finish.BackgroundImage = global::ClubVideo.Properties.Resources.AddUser;
             this.bt_Finish.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_Finish.FlatAppearance.BorderSize = 0;
             this.bt_Finish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

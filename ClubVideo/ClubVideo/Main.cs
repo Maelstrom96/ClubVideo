@@ -123,7 +123,7 @@ namespace ClubVideo
                 else
                 {
                     c.Font = new Font(Main.GetFont(), c.Font.Size);
-                    if (c.Name != "bt_Exit" || c.Name != "bt_Back")
+                    if (c.Name != "bt_Exit" && c.Name != "bt_Back" && c.Name != "bt_Logout")
                         c.ForeColor = Main.GetColor();
                 }
             }

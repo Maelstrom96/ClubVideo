@@ -44,7 +44,7 @@ namespace ClubVideo
             lb_ResetPassword.Show();
             Modify = true;
 
-            bt_Finish.BackgroundImage = ClubVideo.Properties.Resources.Edit_User;
+            bt_Finish.BackgroundImage = ClubVideo.Properties.Resources.EditUser;
 
             Text = Main.resManager.GetString("UserCU_Header_Modify", Main.culInfo);
             Main.UpdateFonts(this);

@@ -21,6 +21,7 @@ namespace ClubVideo
             LoadUsers();
             LoadLanguage();
             Main.UpdateFonts(this);
+            Main.RefreshColors(this);
         }
 
         private void LoadLanguage()
@@ -35,6 +36,7 @@ namespace ClubVideo
             dgv_Users.Columns[3].HeaderText = Main.resManager.GetString("Manage_Users_LastName", Main.culInfo);
 
             Text = Main.resManager.GetString("Manage_Users_Header", Main.culInfo);
+            lb_SearchUser.Text = Main.resManager.GetString("Manage_Users_Search", Main.culInfo);
         }
 
         private void LoadUsers()
@@ -123,6 +125,20 @@ namespace ClubVideo
             }
         }
 
+        private void bt_MouseEnter(object send, EventArgs e)
+        {
+            Button sender = (Button)send;
+            sender.Image = Main.Img_ToWhite(sender.Name.Substring(3));
+            sender.FlatAppearance.MouseOverBackColor = Main.GetColor();
+            sender.ForeColor = Color.White;
+        }
+        private void bt_MouseLeave(object send, EventArgs e)
+        {
+            Button sender = (Button)send;
+            sender.Image = Main.Img_ToColor(sender.Name.Substring(3), false);
+            sender.FlatAppearance.MouseOverBackColor = Color.White;
+            sender.ForeColor = Main.GetColor();
+        }
 
     }
 }

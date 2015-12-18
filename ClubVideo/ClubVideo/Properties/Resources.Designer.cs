@@ -63,9 +63,9 @@ namespace ClubVideo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Add_User {
+        internal static System.Drawing.Bitmap AddUser {
             get {
-                object obj = ResourceManager.GetObject("Add_User", resourceCulture);
+                object obj = ResourceManager.GetObject("AddUser", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace ClubVideo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Delete_User {
+        internal static System.Drawing.Bitmap DeleteUsers {
             get {
-                object obj = ResourceManager.GetObject("Delete_User", resourceCulture);
+                object obj = ResourceManager.GetObject("DeleteUsers", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace ClubVideo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Edit_User {
+        internal static System.Drawing.Bitmap EditUser {
             get {
-                object obj = ResourceManager.GetObject("Edit_User", resourceCulture);
+                object obj = ResourceManager.GetObject("EditUser", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +193,9 @@ namespace ClubVideo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Group_User {
+        internal static System.Drawing.Bitmap GroupsEdit {
             get {
-                object obj = ResourceManager.GetObject("Group_User", resourceCulture);
+                object obj = ResourceManager.GetObject("GroupsEdit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,16 +253,6 @@ namespace ClubVideo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Locked {
-            get {
-                object obj = ResourceManager.GetObject("Locked", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Locked_Blue {
             get {
                 object obj = ResourceManager.GetObject("Locked_Blue", resourceCulture);
@@ -276,16 +266,6 @@ namespace ClubVideo.Properties {
         internal static System.Drawing.Bitmap Locked_Blue_small {
             get {
                 object obj = ResourceManager.GetObject("Locked_Blue_small", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Logout {
-            get {
-                object obj = ResourceManager.GetObject("Logout", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -403,9 +383,9 @@ namespace ClubVideo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Perm_User {
+        internal static System.Drawing.Bitmap PermsEdit {
             get {
-                object obj = ResourceManager.GetObject("Perm_User", resourceCulture);
+                object obj = ResourceManager.GetObject("PermsEdit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -436,16 +416,6 @@ namespace ClubVideo.Properties {
         internal static System.Drawing.Bitmap Save {
             get {
                 object obj = ResourceManager.GetObject("Save", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Search_Member {
-            get {
-                object obj = ResourceManager.GetObject("Search_Member", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
