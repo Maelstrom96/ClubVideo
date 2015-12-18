@@ -78,6 +78,12 @@
       <DependentUpon>Manage_Members.cs</DependentUpon>
     </Compile>
     <Compile Include="MemberObject.cs" />
+    <Compile Include="POS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS.Designer.cs">
+      <DependentUpon>POS.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateMembers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Manage_Movies.resx">
       <DependentUpon>Manage_Movies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS.resx">
+      <DependentUpon>POS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateMembers.resx">
       <DependentUpon>UpdateMembers.cs</DependentUpon>

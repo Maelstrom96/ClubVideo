@@ -260,6 +260,7 @@ namespace ClubVideo
                     throw new Exception("ERROR_USERID_NOT_FOUND");
                 }
             }
+
         }
 
         public static class Delete

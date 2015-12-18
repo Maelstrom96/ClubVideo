@@ -297,5 +297,12 @@ namespace ClubVideo
 
             p.Dispose();
         }
+
+        private void bt_POS_Click(object sender, EventArgs e)
+        {
+            Hide();
+            POS pos = new POS();
+            pos.ShowDialog();
+        }
     }
 }
