@@ -15,10 +15,9 @@ namespace ClubVideo
         public Manage_Categories()
         {
             InitializeComponent();
-
             LoadCategories();
-
             LoadLanguage();
+            Main.UpdateFonts(this);
         }
 
         private void LoadCategories()

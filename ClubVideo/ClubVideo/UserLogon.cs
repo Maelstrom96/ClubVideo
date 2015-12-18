@@ -15,9 +15,7 @@ namespace ClubVideo
         public UserLogon()
         {
             DialogResult = DialogResult.Abort;
-
             InitializeComponent();
-
             InitText();
         }
 

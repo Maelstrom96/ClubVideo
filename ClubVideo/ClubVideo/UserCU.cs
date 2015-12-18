@@ -47,6 +47,7 @@ namespace ClubVideo
             bt_Finish.BackgroundImage = ClubVideo.Properties.Resources.Edit_User;
 
             Text = Main.resManager.GetString("UserCU_Header_Modify", Main.culInfo);
+            Main.UpdateFonts(this);
         }
 
         private void LoadLanguage()

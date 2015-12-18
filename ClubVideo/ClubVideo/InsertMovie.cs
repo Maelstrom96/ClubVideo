@@ -26,8 +26,8 @@ namespace ClubVideo
             edit = _edit;
 
             InitializeComponent();
-
             LoadText();
+            Main.UpdateFonts(this);
         }
 
         public InsertMovie(BindingSource bs, string Header, bool _edit = false)

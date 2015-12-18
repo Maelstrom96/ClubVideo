@@ -32,6 +32,7 @@ namespace ClubVideo
                 btn_Delete.Visible = true;
                 btn_Modify.Visible = true;
             }
+            Main.UpdateFonts(this);
         }
 
         private void LoadMovies()

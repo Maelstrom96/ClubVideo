@@ -20,6 +20,7 @@ namespace ClubVideo
 
             LoadUsers();
             LoadLanguage();
+            Main.UpdateFonts(this);
         }
 
         private void LoadLanguage()
