@@ -96,7 +96,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(294, 326);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(294, 326);
             this.Name = "UserLogon";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

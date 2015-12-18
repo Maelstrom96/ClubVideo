@@ -330,6 +330,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(494, 583);
             this.Controls.Add(this.lb_Category_Value);
             this.Controls.Add(this.lb_Date);
@@ -358,7 +359,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(510, 622);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(510, 622);
             this.Name = "InsertMovie";
             this.Text = "InsertMovie";
             this.Load += new System.EventHandler(this.InsertMovie_Load);

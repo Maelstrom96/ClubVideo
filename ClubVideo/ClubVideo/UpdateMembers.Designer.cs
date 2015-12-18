@@ -223,6 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(212, 325);
             this.Controls.Add(this.cb_Provinces);
             this.Controls.Add(this.btn_Modify);
@@ -243,6 +244,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(228, 364);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(228, 364);
             this.Name = "UpdateMembers";
             this.Text = "UpdateMembers";
             this.ResumeLayout(false);
