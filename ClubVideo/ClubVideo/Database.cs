@@ -197,7 +197,7 @@ namespace ClubVideo
             public static void Copies()
             {
                 DS.Tables["Movies_Copies"].Clear();
-                GetDBData("Movies_Copies", Movies_Select);
+                GetDBData("Movies_Copies", Copies_Select);
             }
 
             public static void Permissions()
