@@ -114,7 +114,7 @@ namespace ClubVideo
                 lb_Rating.Text = movie.Rated;
                 lb_Time.Text = movie.Runtime.ToString();
                 lb_Director.Text = movie.Director;
-                lb_Date.Text = movie.Date.ToString("dd/MM/yyyy");
+                dtp.Text = movie.Date.ToString("dd/MM/yyyy");
                 cb_Categories.Text = CategoryObject.GetCategoryName(movie.Category);
             }
             catch(Exception)
