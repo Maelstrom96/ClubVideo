@@ -63,7 +63,9 @@ namespace ClubVideo
         from Categories left outer join NBCategory on NBCategory.CATEGORY = Categories.ID";
 
         private static string Locations_Select = "SELECT * FROM RENTALS";
-        private static string Copies_Select = "SELECT movies_copies.id, MOVIES_COPIES.MOVIE_ID FROM MOVIES_COPIES left outer JOIN RENTALS on RENTALS.COPY_ID=MOVIES_COPIES.ID where (RENTALS.STARTDATE is null and RENTALS.RETURNDATE is null) or (RENTALS.STARTDATE is not null and rentals.returndate is not null) group by MOVIES_COPIES.ID, MOVIES_COPIES.MOVIE_ID";
+        private static string Copies_Select = @"select movies_copies.id, movies_copies.MOVIE_ID from movies_copies where movies_copies.DELETEDATE is null
+        minus
+        select copy_id as id, movies_copies.MOVIE_ID from rentals inner join movies_copies on movies_copies.ID=rentals.COPY_ID where rentals.startdate is not null and rentals.returndate is null";
 
         public static DataSet DataSet
         {

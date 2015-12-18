@@ -107,6 +107,8 @@ namespace ClubVideo
                 int copieID = int.Parse(dgv_Copies.SelectedRows[0].Cells[0].Value.ToString());
                 int locationTime = int.Parse(cb_NbJours.SelectedItem.ToString());
                 Database_Connector.Insert.Locations(memberID, copieID, locationTime);
+                MessageBox.Show("Location faite!");
+                UpdateDB();
             }
             catch(Exception ex)
             {
