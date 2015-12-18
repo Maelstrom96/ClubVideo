@@ -108,5 +108,20 @@ namespace ClubVideo
             //sender.FlatAppearance.MouseOverBackColor = Color.White;
             //sender.ForeColor = Main.GetColor();
         }
+
+        private void Search()
+        {
+            //------------------------------------------------------------------------TODOCOLISSDETBK-----------------------------------***********************************//
+
+
+            //source.Filter = "CONVERT(ID, 'System.String') like '" + tb_Search.Text + "%'" +
+            //                "or NAME like '" + tb_Search.Text + "%'" +
+            //                "or LAST_NAME like '" + tb_Search.Text + "%'";
+        }
+
+        private void tb_Search_TextChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
     }
 }
