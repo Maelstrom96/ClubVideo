@@ -405,6 +405,15 @@ namespace ClubVideo
                 cmd.ExecuteNonQuery();
             }
 
+            public static void Copies(int movie)
+            {
+                string insert = "INSERT INTO movies_copies VALUES (COPIESID.NEXTVAL, :movieID, null)";
+
+                OracleCommand cmd = new OracleCommand(insert, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("movieID", movie));
+                cmd.ExecuteNonQuery();
+            }
             public static void Movie(MovieObject movie)
             {
                 string insert = "INSERT INTO movies VALUES (MOVIEID.NEXTVAL, :name_en, :name_fr, :desc_en, :desc_fr, :directors, :releasedate, :rating, :runtime, :image, :category, :deletedate)";

@@ -34,6 +34,8 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.btn_Modify = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_AddCopies = new System.Windows.Forms.Button();
+            this.txb_CopiesToAdd = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_SearchResults)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,11 +119,30 @@
             this.btn_Delete.Visible = false;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
+            // btn_AddCopies
+            // 
+            this.btn_AddCopies.Location = new System.Drawing.Point(312, 13);
+            this.btn_AddCopies.Name = "btn_AddCopies";
+            this.btn_AddCopies.Size = new System.Drawing.Size(75, 23);
+            this.btn_AddCopies.TabIndex = 10;
+            this.btn_AddCopies.Text = "AjouterCopies";
+            this.btn_AddCopies.UseVisualStyleBackColor = true;
+            this.btn_AddCopies.Click += new System.EventHandler(this.btn_AddCopies_Click);
+            // 
+            // txb_CopiesToAdd
+            // 
+            this.txb_CopiesToAdd.Location = new System.Drawing.Point(412, 8);
+            this.txb_CopiesToAdd.Name = "txb_CopiesToAdd";
+            this.txb_CopiesToAdd.Size = new System.Drawing.Size(100, 20);
+            this.txb_CopiesToAdd.TabIndex = 11;
+            // 
             // Manage_Movies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 452);
+            this.ClientSize = new System.Drawing.Size(716, 451);
+            this.Controls.Add(this.txb_CopiesToAdd);
+            this.Controls.Add(this.btn_AddCopies);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.btn_Modify);
             this.Controls.Add(this.btn_Delete);
@@ -148,5 +169,7 @@
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button btn_Modify;
         private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.Button btn_AddCopies;
+        private System.Windows.Forms.TextBox txb_CopiesToAdd;
     }
 }
