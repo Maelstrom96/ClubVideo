@@ -122,7 +122,9 @@
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.dgv_View);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(748, 459);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(748, 459);
             this.Name = "Manage_Categories";
             this.Text = "Manage_Categories";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_View)).EndInit();
