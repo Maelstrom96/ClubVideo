@@ -16,7 +16,7 @@ namespace ClubVideo
     public partial class UpdateMembers : Form
     {
         BindingSource _bs;
-        private string _caZipRegEx = @"^([ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ])\ {0,1}(\d[ABCEGHJKLMNPRSTVWXYZ]\d)$";
+        private string _caZipRegEx = @"^([ABCDEFGHIJKLMNOPQRSTUVWXYZ]\d[ABCDEFGHIJKLMNOPQRSTUVWXYZ])\ {0,1}(\d[ABCDEFGHIJKLMNOPQRSTUVWXYZ]\d)$";
         private string[] lineOfContents = File.ReadAllLines("../../Resources/Provinces.txt");
 
         public UpdateMembers()
