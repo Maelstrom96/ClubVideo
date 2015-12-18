@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lb_LastName = new System.Windows.Forms.Label();
+            this.lb_Name = new System.Windows.Forms.Label();
+            this.lb_Address = new System.Windows.Forms.Label();
+            this.lb_PostalCode = new System.Windows.Forms.Label();
+            this.lb_City = new System.Windows.Forms.Label();
+            this.lb_Province = new System.Windows.Forms.Label();
+            this.lb_PhoneNumber = new System.Windows.Forms.Label();
             this.txb_Name = new System.Windows.Forms.TextBox();
             this.txb_LastName = new System.Windows.Forms.TextBox();
             this.txb_Telephone = new System.Windows.Forms.TextBox();
@@ -49,68 +49,68 @@
             this.cb_Provinces = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // label1
+            // lb_LastName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nom";
+            this.lb_LastName.AutoSize = true;
+            this.lb_LastName.Location = new System.Drawing.Point(15, 52);
+            this.lb_LastName.Name = "lb_LastName";
+            this.lb_LastName.Size = new System.Drawing.Size(29, 13);
+            this.lb_LastName.TabIndex = 0;
+            this.lb_LastName.Text = "Nom";
             // 
-            // label2
+            // lb_Name
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Prenom";
+            this.lb_Name.AutoSize = true;
+            this.lb_Name.Location = new System.Drawing.Point(15, 21);
+            this.lb_Name.Name = "lb_Name";
+            this.lb_Name.Size = new System.Drawing.Size(43, 13);
+            this.lb_Name.TabIndex = 0;
+            this.lb_Name.Text = "Prenom";
             // 
-            // label3
+            // lb_Address
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 120);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Adresse";
+            this.lb_Address.AutoSize = true;
+            this.lb_Address.Location = new System.Drawing.Point(15, 120);
+            this.lb_Address.Name = "lb_Address";
+            this.lb_Address.Size = new System.Drawing.Size(45, 13);
+            this.lb_Address.TabIndex = 0;
+            this.lb_Address.Text = "Adresse";
             // 
-            // label4
+            // lb_PostalCode
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 154);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Code Postal";
+            this.lb_PostalCode.AutoSize = true;
+            this.lb_PostalCode.Location = new System.Drawing.Point(15, 154);
+            this.lb_PostalCode.Name = "lb_PostalCode";
+            this.lb_PostalCode.Size = new System.Drawing.Size(64, 13);
+            this.lb_PostalCode.TabIndex = 0;
+            this.lb_PostalCode.Text = "Code Postal";
             // 
-            // label5
+            // lb_City
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 189);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Ville";
+            this.lb_City.AutoSize = true;
+            this.lb_City.Location = new System.Drawing.Point(15, 189);
+            this.lb_City.Name = "lb_City";
+            this.lb_City.Size = new System.Drawing.Size(26, 13);
+            this.lb_City.TabIndex = 0;
+            this.lb_City.Text = "Ville";
             // 
-            // label6
+            // lb_Province
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 228);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Province";
+            this.lb_Province.AutoSize = true;
+            this.lb_Province.Location = new System.Drawing.Point(15, 228);
+            this.lb_Province.Name = "lb_Province";
+            this.lb_Province.Size = new System.Drawing.Size(49, 13);
+            this.lb_Province.TabIndex = 0;
+            this.lb_Province.Text = "Province";
             // 
-            // label7
+            // lb_PhoneNumber
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 86);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Telephone";
+            this.lb_PhoneNumber.AutoSize = true;
+            this.lb_PhoneNumber.Location = new System.Drawing.Point(15, 86);
+            this.lb_PhoneNumber.Name = "lb_PhoneNumber";
+            this.lb_PhoneNumber.Size = new System.Drawing.Size(58, 13);
+            this.lb_PhoneNumber.TabIndex = 0;
+            this.lb_PhoneNumber.Text = "Telephone";
             // 
             // txb_Name
             // 
@@ -159,6 +159,7 @@
             // 
             // btn_Add
             // 
+            this.btn_Add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Add.Location = new System.Drawing.Point(0, 266);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(212, 23);
@@ -169,6 +170,7 @@
             // 
             // btn_Cancel
             // 
+            this.btn_Cancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Cancel.Location = new System.Drawing.Point(0, 295);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(212, 23);
@@ -179,6 +181,7 @@
             // 
             // btn_Previous
             // 
+            this.btn_Previous.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Previous.Location = new System.Drawing.Point(0, 266);
             this.btn_Previous.Name = "btn_Previous";
             this.btn_Previous.Size = new System.Drawing.Size(106, 23);
@@ -190,6 +193,7 @@
             // 
             // btn_Next
             // 
+            this.btn_Next.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Next.Location = new System.Drawing.Point(105, 266);
             this.btn_Next.Name = "btn_Next";
             this.btn_Next.Size = new System.Drawing.Size(107, 23);
@@ -201,6 +205,7 @@
             // 
             // btn_Modify
             // 
+            this.btn_Modify.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Modify.Location = new System.Drawing.Point(0, 266);
             this.btn_Modify.Name = "btn_Modify";
             this.btn_Modify.Size = new System.Drawing.Size(212, 23);
@@ -212,6 +217,7 @@
             // 
             // cb_Provinces
             // 
+            this.cb_Provinces.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cb_Provinces.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Provinces.FormattingEnabled = true;
             this.cb_Provinces.Location = new System.Drawing.Point(94, 225);
@@ -223,6 +229,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(212, 325);
             this.Controls.Add(this.cb_Provinces);
             this.Controls.Add(this.btn_Modify);
@@ -236,13 +243,13 @@
             this.Controls.Add(this.txb_Telephone);
             this.Controls.Add(this.txb_LastName);
             this.Controls.Add(this.txb_Name);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lb_PhoneNumber);
+            this.Controls.Add(this.lb_Province);
+            this.Controls.Add(this.lb_City);
+            this.Controls.Add(this.lb_PostalCode);
+            this.Controls.Add(this.lb_Address);
+            this.Controls.Add(this.lb_Name);
+            this.Controls.Add(this.lb_LastName);
             this.Name = "UpdateMembers";
             this.Text = "UpdateMembers";
             this.ResumeLayout(false);
@@ -252,13 +259,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lb_LastName;
+        private System.Windows.Forms.Label lb_Name;
+        private System.Windows.Forms.Label lb_Address;
+        private System.Windows.Forms.Label lb_PostalCode;
+        private System.Windows.Forms.Label lb_City;
+        private System.Windows.Forms.Label lb_Province;
+        private System.Windows.Forms.Label lb_PhoneNumber;
         private System.Windows.Forms.TextBox txb_Name;
         private System.Windows.Forms.TextBox txb_LastName;
         private System.Windows.Forms.TextBox txb_Telephone;

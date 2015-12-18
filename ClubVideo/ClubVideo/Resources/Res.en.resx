@@ -319,7 +319,7 @@
     <value>French Title</value>
   </data>
   <data name="Manage_Movies_NBCOPIES" xml:space="preserve">
-    <value>Total Number of copies</value>
+    <value>Copies</value>
   </data>
   <data name="Manage_Movies_RATING" xml:space="preserve">
     <value>Rating</value>
@@ -448,6 +448,57 @@
     <value>Poster</value>
   </data>
   <data name="Manage_Movies_NBCOPIESFREE" xml:space="preserve">
-    <value>Number of copy</value>
+    <value>Available Copies</value>
+  </data>
+  <data name="Add_Movie_Menu_CATEGORY" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Add_Movie_Menu_TOIMDB" xml:space="preserve">
+    <value>To IMDB</value>
+  </data>
+  <data name="Manage_Movies_ADDCOPY" xml:space="preserve">
+    <value>Add Copies</value>
+  </data>
+  <data name="Update_Members_ADD" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Update_Members_ADDRESS" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Update_Members_CANCEL" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Update_Members_CITY" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Update_Members_Header" xml:space="preserve">
+    <value>Update Members</value>
+  </data>
+  <data name="Update_Members_LASTNAME" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Update_Members_MODIFY" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="Update_Members_NAME" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Update_Members_NEXT" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Update_Members_PHONE" xml:space="preserve">
+    <value>Phone Number</value>
+  </data>
+  <data name="Update_Members_POSTALCODE" xml:space="preserve">
+    <value>Postal Code</value>
+  </data>
+  <data name="Update_Members_PREVIOUS" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="Update_Members_PROVINCE" xml:space="preserve">
+    <value>Province</value>
+  </data>
+  <data name="User_Permission_Header" xml:space="preserve">
+    <value>User Permissions</value>
   </data>
 </root>

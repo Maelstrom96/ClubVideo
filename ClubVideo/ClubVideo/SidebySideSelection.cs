@@ -30,10 +30,11 @@ namespace ClubVideo
             startSelectionAllList = new List<string>(listSelectionAll);
             startSelectedList = new List<string>(listSelected);
 
-            //Write list
+            // Write list
             AddStringList(listSelectionAll, lv_Selection);
             AddStringList(listSelected, lv_Selected);
             Main.UpdateFonts(this);
+            this.Text = Main.resManager.GetString("User_Permission_Header", Main.culInfo);
         }
 
         private void Init()

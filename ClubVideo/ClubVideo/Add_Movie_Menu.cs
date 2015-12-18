@@ -50,6 +50,8 @@ namespace ClubVideo
             lb_Url.Text = Main.resManager.GetString("Add_Movie_Menu_URL", Main.culInfo);
             bt_OK.Text = Main.resManager.GetString("Add_Movie_Menu_OK", Main.culInfo);
             bt_Cancel.Text = Main.resManager.GetString("Add_Movie_Menu_Cancel", Main.culInfo);
+            btn_IMDB.Text = Main.resManager.GetString("Add_Movie_Menu_TOIMDB", Main.culInfo);
+            lb_Category.Text = Main.resManager.GetString("Add_Movie_Menu_CATEGORY", Main.culInfo);
         }
 
         private void LoadCategories()

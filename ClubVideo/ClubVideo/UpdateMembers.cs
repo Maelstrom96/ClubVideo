@@ -28,6 +28,7 @@ namespace ClubVideo
                 cb_Provinces.Items.Add(tokens[0]);
             }
             Main.UpdateFonts(this);
+            LoadLanguage();
         }
 
         public UpdateMembers(BindingSource source, string header, bool modif)
@@ -61,6 +62,26 @@ namespace ClubVideo
             txb_City.DataBindings.Add("text", _bs, "CITY");
             cb_Provinces.DataBindings.Add("text", _bs, "PROVINCE");
             txb_Telephone.DataBindings.Add("text", _bs, "TELEPHONENUMBER").ToString();
+
+            LoadLanguage();
+        }
+
+        private void LoadLanguage()
+        {
+            this.Text = Main.resManager.GetString("Update_Members_Header", Main.culInfo);
+            lb_Name.Text = Main.resManager.GetString("Update_Members_NAME", Main.culInfo);
+            lb_LastName.Text = Main.resManager.GetString("Update_Members_LASTNAME", Main.culInfo);
+            lb_PhoneNumber.Text = Main.resManager.GetString("Update_Members_PHONE", Main.culInfo);
+            lb_Address.Text = Main.resManager.GetString("Update_Members_ADDRESS", Main.culInfo);
+            lb_PostalCode.Text = Main.resManager.GetString("Update_Members_POSTALCODE", Main.culInfo);
+            lb_City.Text = Main.resManager.GetString("Update_Members_CITY", Main.culInfo);
+            lb_Province.Text = Main.resManager.GetString("Update_Members_PROVINCE", Main.culInfo);
+
+            btn_Add.Text = Main.resManager.GetString("Update_Members_ADD", Main.culInfo);
+            btn_Modify.Text = Main.resManager.GetString("Update_Members_MODIFY", Main.culInfo);
+            btn_Cancel.Text = Main.resManager.GetString("Update_Members_CANCEL", Main.culInfo);
+            btn_Previous.Text = Main.resManager.GetString("Update_Members_PREVIOUS", Main.culInfo);
+            btn_Next.Text = Main.resManager.GetString("Update_Members_NEXT", Main.culInfo);
         }
 
         private void btn_Add_Click(object sender, EventArgs e)

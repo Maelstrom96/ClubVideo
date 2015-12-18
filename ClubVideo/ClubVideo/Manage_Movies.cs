@@ -59,8 +59,8 @@ namespace ClubVideo
             foreach (DataGridViewColumn column in dgv_SearchResults.Columns)
                 column.HeaderText = Main.resManager.GetString("Manage_Movies_" + column.Name, Main.culInfo);
 
-            // lb_Search text
             lb_Search.Text = Main.resManager.GetString("Manage_Movies_Search", Main.culInfo);
+            btn_AddCopies.Text = Main.resManager.GetString("Manage_Movies_ADDCOPY", Main.culInfo);
         }
 
         private void LoadPermissions()

@@ -450,4 +450,58 @@
   <data name="Button_Admin_Menu_Settings" xml:space="preserve">
     <value>Paramètres</value>
   </data>
+  <data name="Manage_Movies_ADDCOPIE" xml:space="preserve">
+    <value>Ajouter des copies</value>
+  </data>
+  <data name="Add_Movie_Menu_CATEGORY" xml:space="preserve">
+    <value>Categorie</value>
+  </data>
+  <data name="Add_Movie_Menu_TOIMDB" xml:space="preserve">
+    <value>Vers IMDB</value>
+  </data>
+  <data name="Manage_Movies_ADDCOPY" xml:space="preserve">
+    <value>Ajouter une copie</value>
+  </data>
+  <data name="Update_Members_ADD" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="Update_Members_ADDRESS" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="Update_Members_CANCEL" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="Update_Members_CITY" xml:space="preserve">
+    <value>Ville</value>
+  </data>
+  <data name="Update_Members_Header" xml:space="preserve">
+    <value>Mise à jour d'un membre</value>
+  </data>
+  <data name="Update_Members_LASTNAME" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="Update_Members_MODIFY" xml:space="preserve">
+    <value>Modifier</value>
+  </data>
+  <data name="Update_Members_NAME" xml:space="preserve">
+    <value>Prénom</value>
+  </data>
+  <data name="Update_Members_NEXT" xml:space="preserve">
+    <value>Suivant</value>
+  </data>
+  <data name="Update_Members_PHONE" xml:space="preserve">
+    <value>Téléphone</value>
+  </data>
+  <data name="Update_Members_POSTALCODE" xml:space="preserve">
+    <value>Code Postal</value>
+  </data>
+  <data name="Update_Members_PREVIOUS" xml:space="preserve">
+    <value>Précédent</value>
+  </data>
+  <data name="Update_Members_PROVINCE" xml:space="preserve">
+    <value>Province</value>
+  </data>
+  <data name="User_Permission_Header" xml:space="preserve">
+    <value>Droits des usagers</value>
+  </data>
 </root>
