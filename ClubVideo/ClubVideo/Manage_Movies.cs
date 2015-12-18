@@ -37,7 +37,7 @@ namespace ClubVideo
                 txb_CopiesToDelete.Visible = true;
             }
             Main.UpdateFonts(this);
-            Main.RefreshColors(this);
+            //Main.RefreshColors(this);
         }
 
         private void LoadMovies()

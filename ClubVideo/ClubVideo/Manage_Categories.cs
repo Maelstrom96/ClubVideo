@@ -18,7 +18,7 @@ namespace ClubVideo
             LoadCategories();
             LoadLanguage();
             Main.UpdateFonts(this);
-            Main.RefreshColors(this);
+            //Main.RefreshColors(this);
         }
 
         private void LoadCategories()
