@@ -50,7 +50,9 @@ namespace ClubVideo
 
             Text = Main.resManager.GetString("UserCU_Header_Modify", Main.culInfo);
             Main.UpdateFonts(this);
-            Main.RefreshColors(this);
+
+            bt_AddUser.FlatAppearance.MouseDownBackColor = Main.GetColor();
+            bt_AddUser.Image = Main.Img_ToColor("EditUser", true);
         }
 
         private void LoadLanguage()

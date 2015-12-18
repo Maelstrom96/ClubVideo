@@ -28,15 +28,16 @@ namespace ClubVideo
             LoadLanguage();
             if (Modification_Mode)
             {
-                btn_Add.Visible = true;
-                btn_Delete.Visible = true;
-                btn_Modify.Visible = true;
+                bt_AddUser.Visible = true;
+                bt_DeleteUsers.Visible = true;
+                bt_EditUser.Visible = true;
                 btn_AddCopies.Visible = true;
                 btn_DeleteCopies.Visible = true;
                 txb_CopiesToAdd.Visible = true;
                 txb_CopiesToDelete.Visible = true;
             }
             Main.UpdateFonts(this);
+            Main.RefreshColors(this);
         }
 
         private void LoadMovies()
@@ -71,7 +72,7 @@ namespace ClubVideo
 
         private void LoadPermissions()
         {
-            Button[] bt_Perms = { btn_Add, btn_Delete, btn_Modify };
+            Button[] bt_Perms = { bt_AddUser, bt_DeleteUsers, bt_EditUser };
 
             foreach (Button button in bt_Perms)
             {
@@ -157,6 +158,22 @@ namespace ClubVideo
                 Database_Connector.Delete.Copies(int.Parse(dgv_SearchResults.SelectedRows[0].Cells[0].Value.ToString()));
             }
             LoadMovies();
+        }
+
+        private void bt_MouseEnter(object send, EventArgs e)
+        {
+            Button sender = (Button)send;
+            sender.Image = Main.Img_ToWhite(sender.Name.Substring(3));
+            sender.FlatAppearance.MouseOverBackColor = Main.GetColor();
+            sender.ForeColor = Color.White;
+        }
+
+        private void bt_MouseLeave(object send, EventArgs e)
+        {
+            Button sender = (Button)send;
+            sender.Image = Main.Img_ToColor(sender.Name.Substring(3), false);
+            sender.FlatAppearance.MouseOverBackColor = Color.White;
+            sender.ForeColor = Main.GetColor();
         }
     }
 }
