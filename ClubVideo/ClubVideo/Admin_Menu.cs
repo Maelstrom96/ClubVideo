@@ -16,6 +16,7 @@ namespace ClubVideo
         {
             InitializeComponent();
             LoadLanguage();
+            Main.RefreshColors(this);
             Main.UpdateFonts(this);
         }
 
@@ -73,6 +74,22 @@ namespace ClubVideo
             ((Button)sender).BackColor = Color.White;
             ((Button)sender).ForeColor = Color.Black;
             ((Button)sender).Image = Main.GetImage(((Button)sender).Name.Substring(3));
+        }
+
+        private void bt_MouseEnter(object send, EventArgs e)
+        {
+            Button sender = (Button)send;
+            sender.Image = Main.Img_ToWhite(sender.Name.Substring(3));
+            sender.FlatAppearance.MouseOverBackColor = Main.GetColor();
+            sender.ForeColor = Color.White;
+        }
+
+        private void bt_MouseLeave(object send, EventArgs e)
+        {
+            Button sender = (Button)send;
+            sender.Image = Main.Img_ToColor(sender.Name.Substring(3), false);
+            sender.FlatAppearance.MouseOverBackColor = Color.White;
+            sender.ForeColor = Main.GetColor();
         }
     }
 }
