@@ -33,8 +33,6 @@
             this.dgv_SearchResults = new System.Windows.Forms.DataGridView();
             this.btn_AddCopies = new System.Windows.Forms.Button();
             this.txb_CopiesToAdd = new System.Windows.Forms.TextBox();
-            this.btn_DeleteCopies = new System.Windows.Forms.Button();
-            this.txb_CopiesToDelete = new System.Windows.Forms.TextBox();
             this.bt_AddMovie = new System.Windows.Forms.Button();
             this.bt_EditMovie = new System.Windows.Forms.Button();
             this.bt_DeleteMovie = new System.Windows.Forms.Button();
@@ -78,7 +76,7 @@
             // 
             // btn_AddCopies
             // 
-            this.btn_AddCopies.Location = new System.Drawing.Point(189, 6);
+            this.btn_AddCopies.Location = new System.Drawing.Point(221, 34);
             this.btn_AddCopies.Name = "btn_AddCopies";
             this.btn_AddCopies.Size = new System.Drawing.Size(127, 23);
             this.btn_AddCopies.TabIndex = 10;
@@ -89,30 +87,11 @@
             // 
             // txb_CopiesToAdd
             // 
-            this.txb_CopiesToAdd.Location = new System.Drawing.Point(322, 7);
+            this.txb_CopiesToAdd.Location = new System.Drawing.Point(354, 36);
             this.txb_CopiesToAdd.Name = "txb_CopiesToAdd";
             this.txb_CopiesToAdd.Size = new System.Drawing.Size(100, 20);
             this.txb_CopiesToAdd.TabIndex = 11;
             this.txb_CopiesToAdd.Visible = false;
-            // 
-            // btn_DeleteCopies
-            // 
-            this.btn_DeleteCopies.Location = new System.Drawing.Point(189, 34);
-            this.btn_DeleteCopies.Name = "btn_DeleteCopies";
-            this.btn_DeleteCopies.Size = new System.Drawing.Size(127, 23);
-            this.btn_DeleteCopies.TabIndex = 12;
-            this.btn_DeleteCopies.Text = "DeleteCopies";
-            this.btn_DeleteCopies.UseVisualStyleBackColor = true;
-            this.btn_DeleteCopies.Visible = false;
-            this.btn_DeleteCopies.Click += new System.EventHandler(this.btn_DeleteCopies_Click);
-            // 
-            // txb_CopiesToDelete
-            // 
-            this.txb_CopiesToDelete.Location = new System.Drawing.Point(322, 36);
-            this.txb_CopiesToDelete.Name = "txb_CopiesToDelete";
-            this.txb_CopiesToDelete.Size = new System.Drawing.Size(100, 20);
-            this.txb_CopiesToDelete.TabIndex = 11;
-            this.txb_CopiesToDelete.Visible = false;
             // 
             // bt_AddMovie
             // 
@@ -139,10 +118,10 @@
             this.bt_EditMovie.FlatAppearance.BorderSize = 0;
             this.bt_EditMovie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_EditMovie.Image = global::ClubVideo.Properties.Resources.EditMovie;
-            this.bt_EditMovie.Location = new System.Drawing.Point(61, -3);
+            this.bt_EditMovie.Location = new System.Drawing.Point(61, -1);
             this.bt_EditMovie.Margin = new System.Windows.Forms.Padding(2);
             this.bt_EditMovie.Name = "bt_EditMovie";
-            this.bt_EditMovie.Size = new System.Drawing.Size(55, 61);
+            this.bt_EditMovie.Size = new System.Drawing.Size(55, 59);
             this.bt_EditMovie.TabIndex = 8;
             this.bt_EditMovie.UseVisualStyleBackColor = true;
             this.bt_EditMovie.Visible = false;
@@ -173,8 +152,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 451);
-            this.Controls.Add(this.btn_DeleteCopies);
-            this.Controls.Add(this.txb_CopiesToDelete);
             this.Controls.Add(this.txb_CopiesToAdd);
             this.Controls.Add(this.btn_AddCopies);
             this.Controls.Add(this.bt_AddMovie);
@@ -205,7 +182,5 @@
         private System.Windows.Forms.Button bt_DeleteMovie;
         private System.Windows.Forms.Button btn_AddCopies;
         private System.Windows.Forms.TextBox txb_CopiesToAdd;
-        private System.Windows.Forms.Button btn_DeleteCopies;
-        private System.Windows.Forms.TextBox txb_CopiesToDelete;
     }
 }
