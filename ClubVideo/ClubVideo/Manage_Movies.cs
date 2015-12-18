@@ -28,16 +28,16 @@ namespace ClubVideo
             LoadLanguage();
             if (Modification_Mode)
             {
-                bt_AddUser.Visible = true;
-                bt_DeleteUsers.Visible = true;
-                bt_EditUser.Visible = true;
+                bt_AddMovie.Visible = true;
+                bt_DeleteMovie.Visible = true;
+                bt_EditMovie.Visible = true;
                 btn_AddCopies.Visible = true;
                 btn_DeleteCopies.Visible = true;
                 txb_CopiesToAdd.Visible = true;
                 txb_CopiesToDelete.Visible = true;
             }
             Main.UpdateFonts(this);
-            //Main.RefreshColors(this);
+            Main.RefreshColors(this);
         }
 
         private void LoadMovies()
@@ -72,7 +72,7 @@ namespace ClubVideo
 
         private void LoadPermissions()
         {
-            Button[] bt_Perms = { bt_AddUser, bt_DeleteUsers, bt_EditUser };
+            Button[] bt_Perms = { bt_AddMovie, bt_DeleteMovie, bt_EditMovie };
 
             foreach (Button button in bt_Perms)
             {
