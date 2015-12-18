@@ -107,7 +107,7 @@ namespace ClubVideo
 
         private void btn_Modify_Click(object sender, EventArgs e)
         {
-            InsertMovie movies = new InsertMovie(source, "Modification de film", true);
+            InsertMovie movies = new InsertMovie(source, "Modification de film");
             movies.ShowDialog();
             LoadMovies();
         }
