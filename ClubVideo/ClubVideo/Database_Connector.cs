@@ -310,16 +310,21 @@ namespace ClubVideo
 
             public static void Movie(int id)
             {
-                string delete = "DELETE FROM movies where id=:movieid";
-
+                string delete = "UPDATE movies SET DELETEDATE=:datevar where id=:movieid";
                 OracleCommand cmd = new OracleCommand(delete, GetConnection());
-
+                cmd.Parameters.Add(new OracleParameter("datevar", DateTime.Now));
                 cmd.Parameters.Add(new OracleParameter("movieid", id));
-
                 cmd.ExecuteNonQuery();
-
                 Database.Update.Movies();
+
+                /****** OLD *******/
+                //string delete = "DELETE FROM movies where id=:movieid";
+                //OracleCommand cmd = new OracleCommand(delete, GetConnection());
+                //cmd.Parameters.Add(new OracleParameter("movieid", id));
+                //cmd.ExecuteNonQuery();
+                //Database.Update.Movies();
             }
+
             public static void Category(int id)
             {
                 string delete = "DELETE FROM categories where id=:categoryid";
