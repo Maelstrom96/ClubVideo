@@ -22,6 +22,7 @@ namespace ClubVideo
             LoadLanguage();
             Main.UpdateFonts(this);
             Main.RefreshColors(this);
+            UpdateHeight();
         }
 
         private void LoadLanguage()
@@ -37,8 +38,6 @@ namespace ClubVideo
 
             Text = Main.resManager.GetString("Manage_Users_Header", Main.culInfo);
             lb_SearchUser.Text = Main.resManager.GetString("Manage_Users_Search", Main.culInfo);
-            UpdateHeight();
-            this.Height += 21;
         }
 
         private void UpdateHeight()
@@ -46,7 +45,9 @@ namespace ClubVideo
             int dgvHeight = (dgv_Users.ColumnHeadersVisible ? dgv_Users.ColumnHeadersHeight : 0) +
               dgv_Users.Rows.OfType<DataGridViewRow>().Where(r => r.Visible).Sum(r => r.Height);
 
-            this.Height = 99 + dgvHeight < 600 ? 99 + dgvHeight : 600;
+            dgv_Users.Height = dgvHeight + 3;
+
+            this.Height = 39 + dgv_Users.Location.Y + dgvHeight < 600 ? 39 + dgv_Users.Location.Y + dgvHeight : 600;
         }
 
         private void LoadUsers()
