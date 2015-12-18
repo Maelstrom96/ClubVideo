@@ -182,7 +182,7 @@
             this.Controls.Add(this.dgv_Users);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(578, 600);
+            this.MaximumSize = new System.Drawing.Size(578, 488);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(578, 193);
             this.Name = "Manage_Users";

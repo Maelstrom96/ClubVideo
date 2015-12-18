@@ -61,6 +61,8 @@
             this.ClientSize = new System.Drawing.Size(794, 570);
             this.Controls.Add(this.btn_Quit);
             this.Controls.Add(this.dgv_Locations);
+            this.MaximumSize = new System.Drawing.Size(810, 609);
+            this.MinimumSize = new System.Drawing.Size(810, 609);
             this.Name = "LocationLists";
             this.Text = "LocationLists";
             this.Load += new System.EventHandler(this.LocationLists_Load);

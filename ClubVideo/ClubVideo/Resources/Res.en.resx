@@ -442,12 +442,12 @@
     <value>Category (French)</value>
   </data>
   <data name="Manage_Movies_DIRECTORS" xml:space="preserve">
-    <value>Réalisateurs</value>
+    <value>Directors</value>
   </data>
   <data name="Manage_Movies_IMAGE1" xml:space="preserve">
-    <value>Affiche</value>
+    <value>Poster</value>
   </data>
   <data name="Manage_Movies_NBCOPIESFREE" xml:space="preserve">
-    <value>Nombre de copie libre</value>
+    <value>Number of copy</value>
   </data>
 </root>
