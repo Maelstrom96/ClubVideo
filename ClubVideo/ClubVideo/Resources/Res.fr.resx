@@ -420,6 +420,9 @@
   <data name="Manage_Movies_DIRECTORS" xml:space="preserve">
     <value>Réalisateurs</value>
   </data>
+  <data name="Manage_Movies_Category" xml:space="preserve">
+    <value>Catégorie :</value>
+  </data>
   <data name="Manage_Movies_CATEGORY_EN" xml:space="preserve">
     <value>Catégorie anglais</value>
   </data>
