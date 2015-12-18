@@ -95,18 +95,18 @@ namespace ClubVideo
 
         private void bt_MouseEnter(object send, EventArgs e)
         {
-            Button sender = (Button)send;
-            sender.Image = Main.Img_ToWhite(sender.Name.Substring(3));
-            sender.FlatAppearance.MouseOverBackColor = Main.GetColor();
-            sender.ForeColor = Color.White;
+            //Button sender = (Button)send;
+            //sender.Image = Main.Img_ToWhite(sender.Name.Substring(3));
+            //sender.FlatAppearance.MouseOverBackColor = Main.GetColor();
+            //sender.ForeColor = Color.White;
         }
 
         private void bt_MouseLeave(object send, EventArgs e)
         {
-            Button sender = (Button)send;
-            sender.Image = Main.Img_ToColor(sender.Name.Substring(3), false);
-            sender.FlatAppearance.MouseOverBackColor = Color.White;
-            sender.ForeColor = Main.GetColor();
+            //Button sender = (Button)send;
+            //sender.Image = Main.Img_ToColor(sender.Name.Substring(3), false);
+            //sender.FlatAppearance.MouseOverBackColor = Color.White;
+            //sender.ForeColor = Main.GetColor();
         }
     }
 }
