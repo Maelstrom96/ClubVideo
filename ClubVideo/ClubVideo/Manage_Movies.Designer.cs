@@ -42,17 +42,17 @@
             // lb_Search
             // 
             this.lb_Search.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.lb_Search.Location = new System.Drawing.Point(460, 39);
+            this.lb_Search.Location = new System.Drawing.Point(465, 37);
             this.lb_Search.Name = "lb_Search";
             this.lb_Search.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lb_Search.Size = new System.Drawing.Size(70, 17);
+            this.lb_Search.Size = new System.Drawing.Size(74, 17);
             this.lb_Search.TabIndex = 0;
             this.lb_Search.Text = "Search :";
-            this.lb_Search.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lb_Search.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tb_Search
             // 
-            this.tb_Search.Location = new System.Drawing.Point(533, 36);
+            this.tb_Search.Location = new System.Drawing.Point(540, 36);
             this.tb_Search.Name = "tb_Search";
             this.tb_Search.Size = new System.Drawing.Size(171, 20);
             this.tb_Search.TabIndex = 1;
