@@ -95,8 +95,7 @@ namespace ClubVideo
             {
                 MovieObject movie = new MovieObject();
 
-                string date = row.Cells[6].Value.ToString();
-                date = date.Substring(0, date.Length - 9);
+                DateTime date = (DateTime)row.Cells[6].Value;
 
                 movie.ID = int.Parse(row.Cells[0].Value.ToString());
                 movie.Nom_en = row.Cells[1].Value.ToString();
@@ -104,7 +103,7 @@ namespace ClubVideo
                 movie.Description_en = row.Cells[3].Value.ToString();
                 movie.Description_fr = row.Cells[4].Value.ToString();
                 movie.Director = row.Cells[5].Value.ToString();
-                movie.Date = DateTime.ParseExact(date, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                movie.Date = date;
                 movie.Rated = row.Cells[7].Value.ToString();
                 movie.Runtime = int.Parse(row.Cells[8].Value.ToString());
 
