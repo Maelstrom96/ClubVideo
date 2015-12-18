@@ -17,6 +17,35 @@ namespace ClubVideo
         public string Description_Fr { get; set; }
         public decimal Price { get; set; }
 
+
+        public static string GetCategoryName(int id)
+        {
+            CultureInfo tmp = CultureInfo.CreateSpecificCulture("fr");
+
+            DataTable dt = Database.GetData.Categories();
+
+            string name = string.Empty;
+            string column = string.Empty;
+
+            // FR
+            if (Main.culInfo.Equals(tmp))
+                column = "NAME_FR";
+            // EN
+            else
+                column = "NAME_EN";
+
+
+            foreach (DataRow row in dt.Rows)
+            {
+                if (int.Parse(row["ID"].ToString()) == id)
+                {
+                    name = row[column].ToString();
+                }
+            } 
+
+            return name;
+        }
+
         public static int GetCategoryID(string Name)
         {
             CultureInfo tmp =  CultureInfo.CreateSpecificCulture("fr");
