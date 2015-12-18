@@ -18,16 +18,32 @@ namespace ClubVideo
         MovieObject finalMovie;
         BindingSource _bs;
 
-        public InsertMovie(MovieObject movie_, bool _edit = true)
+        public InsertMovie(MovieObject movie_, string Header, bool _edit = true)
         {
+            InitializeComponent();
+
             if (movie_ == null) movie = new MovieObject();
             else movie = movie_;
 
             edit = _edit;
+            Text = Header;
 
-            InitializeComponent();
             LoadText();
             LoadLanguage();
+            LoadCategories();
+
+            Height += 30;
+            btn_Modify.Location = new Point(lb_DescFR.Location.X + 350, lb_DescFR.Location.Y + 130);
+            btn_Modify.Visible = true;
+
+            SetLabelCursor(System.Windows.Forms.Cursors.IBeam);
+
+            dtp.Format = DateTimePickerFormat.Custom;
+            dtp.CustomFormat = "dd/MM/yyyy";
+
+            // Text Hide
+            lb_Category_Value.Hide();
+            lb_Date.Hide();
         }
 
         // Constructeur lors de la visualisation DGV
@@ -88,15 +104,23 @@ namespace ClubVideo
 
         private void LoadText()
         {
-            pictureBox1.Image = movie.Poster;
-            lb_TitreEN.Text = movie.Nom_en;
-            lb_TitreFR.Text = movie.Nom_fr;
-            lb_DescEN.Text = movie.Description_en;
-            lb_DescFR.Text = movie.Description_fr;
-            lb_Rating.Text = movie.Rated;
-            lb_Time.Text = movie.Runtime.ToString();
-            lb_Director.Text = movie.Director;
-            //lb_Date.Text = movie.Date.ToString("dd/MM/yyyy");
+            try
+            {
+                pictureBox1.Image = movie.Poster;
+                lb_TitreEN.Text = movie.Nom_en;
+                lb_TitreFR.Text = movie.Nom_fr;
+                lb_DescEN.Text = movie.Description_en;
+                lb_DescFR.Text = movie.Description_fr;
+                lb_Rating.Text = movie.Rated;
+                lb_Time.Text = movie.Runtime.ToString();
+                lb_Director.Text = movie.Director;
+                lb_Date.Text = movie.Date.ToString("dd/MM/yyyy");
+                cb_Categories.Text = CategoryObject.GetCategoryName(movie.Category);
+            }
+            catch(Exception)
+            {
+
+            }
         }
 
         private void SaveFinalMovie()
@@ -128,7 +152,7 @@ namespace ClubVideo
                 TBTemp.Location = lb.Location;
                 TBTemp.Text = lb.Text;
                 TBTemp.Font = lb.Font;
-                TBTemp.Size = lb.Size;
+                TBTemp.Size = new Size(lb.Size.Width + 10, lb.Size.Height + 5);
                 TBTemp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EditTextBox_Finish);
                 TBTemp.LostFocus += new System.EventHandler(EditTextBox_LostFocus);
                 TBTemp.Multiline = true;
@@ -167,6 +191,18 @@ namespace ClubVideo
             }
         }
 
+        private void LoadCategories()
+        {
+            List<string> CategoriesList = Database.GetData.List("Categories", Main.resManager.GetString("Add_Movie_Menu_Category_Column", Main.culInfo));
+
+            cb_Categories.Items.Clear();
+
+            foreach (string category in CategoriesList)
+            {
+                cb_Categories.Items.Add(category);
+            }
+        }
+
         private void InsertMovie_Click(object sender, EventArgs e)
         {
             Focus();
@@ -187,7 +223,8 @@ namespace ClubVideo
             try
             {
                 MovieObject oMovie = new MovieObject();
-                oMovie.ID = int.Parse(((DataRowView)this._bs.Current).Row["ID"].ToString());
+                oMovie.Category = CategoryObject.GetCategoryID(cb_Categories.Text);
+                oMovie.ID = movie.ID;
                 oMovie.Nom_en = lb_TitreEN.Text.ToString();
                 oMovie.Nom_fr = lb_TitreFR.Text.ToString();
                 oMovie.Description_fr = lb_DescFR.Text.ToString();
