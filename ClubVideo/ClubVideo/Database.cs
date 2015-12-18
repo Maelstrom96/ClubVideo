@@ -13,27 +13,34 @@ namespace ClubVideo
         private static DataSet DS = new DataSet();
 
         private static string Movies_Select = @"with NBCopy as
-            (
-              select movie_id, count(movie_id) as NBCOPIES
-              from movies_copies
-              group by movies_copies.movie_id
-            )
+        (
+          select movie_id, count(movie_id) as NBCOPIES
+          from movies_copies
+          group by movies_copies.movie_id
+        ),
+        NBCopyFree as
+        (  
+          select movie_id, count(movie_id) as NBCOPIESFREE 
+          from movies_copies left outer join rentals on rentals.copy_id = movies_copies.id where rentals.returndate is not null or rentals.id is null
+          group by movies_copies.movie_id
+        )
 
-            select
-                Movies.id,
-                Movies.name_en,
-                Movies.name_fr,
-                Movies.description_fr,
-                Movies.description_en,
-                Movies.Directors,
-                Movies.releasedate,
-                Movies.rating,
-                Movies.runtime,
-                Movies.image,
-                Categories.NAME_EN as Category_EN,
-                Categories.NAME_FR as Category_FR,
-                coalesce(NBCopy.NBCOPIES, 0) as NBCOPIES
-            from Movies left outer join NBCopy on NBCopy.Movie_ID = Movies.ID inner join Categories on Categories.ID = Movies.CATEGORY where DELETEDATE is null";
+        select
+            Movies.id,
+            Movies.name_en,
+            Movies.name_fr,
+            Movies.description_fr,
+            Movies.description_en,
+            Movies.Directors,
+            Movies.releasedate,
+            Movies.rating,
+            Movies.runtime,
+            Movies.image,
+            Categories.NAME_EN as Category_EN,
+            Categories.NAME_FR as Category_FR,
+            coalesce(NBCopy.NBCOPIES, 0) as NBCOPIES,
+            coalesce(NBCopyFree.NBCOPIESFREE, 0) as NBCOPIESFREE
+        from Movies left outer join NBCopy on NBCopy.Movie_ID = Movies.ID left outer join NbCopyFree on NbCopyFree.movie_id=Movies.ID inner join Categories on Categories.ID = Movies.CATEGORY where DELETEDATE is null";
 
         private static string Permissions_Select = "SELECT * FROM permissions";
         private static string Users_Select = "SELECT ID, USERNAME, NAME, LASTNAME FROM Users";
