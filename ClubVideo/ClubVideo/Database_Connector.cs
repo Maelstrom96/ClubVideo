@@ -450,6 +450,21 @@ namespace ClubVideo
                 CloseConnection();
                 Database.Update.Movies();
             }
+
+            public static void Locations(int memberID, int copieID, int locationTime)
+            {
+                DateTime startDate = DateTime.Now;
+                DateTime endDate = startDate.AddDays(locationTime);
+                string insert = "INSERT INTO RENTALS VALUES (LOCATIONSID.NEXTVAL, :memberID, :copieID, :startDate, :endDate, null)";
+
+                OracleCommand cmd = new OracleCommand(insert, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("memberID", memberID));
+                cmd.Parameters.Add(new OracleParameter("copieID", copieID));
+                cmd.Parameters.Add(new OracleParameter("startDate", startDate));
+                cmd.Parameters.Add(new OracleParameter("endDateDate", endDate));
+                cmd.ExecuteNonQuery();
+            }
         }
 
         public static class Update

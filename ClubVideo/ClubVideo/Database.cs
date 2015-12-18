@@ -45,8 +45,25 @@ namespace ClubVideo
         private static string Permissions_Select = "SELECT * FROM permissions";
         private static string Users_Select = "SELECT ID, USERNAME, NAME, LASTNAME FROM Users";
         private static string Members_Select = "SELECT * FROM Members";
-        private static string Categories_Select = "SELECT * FROM CATEGORIES";
-        private static string Copies_Select = "SELECT * FROM MOVIES_COPIES";
+        private static string Categories_Select = @"with NBCategory as
+        (
+          select Movies.CATEGORY, count(Movies.CATEGORY) as NBFilm
+          from movies where Movies.DELETEDATE is null
+          group by Movies.CATEGORY
+        )
+
+        select
+            categories.ID,
+            categories.NAME_EN,
+            categories.NAME_FR,
+            categories.DESCRIPTION_EN,
+            categories.DESCRIPTION_FR,
+            categories.PRICE,
+            coalesce(NBCategory.NBFilm, 0) as NBFilm
+        from Categories left outer join NBCategory on NBCategory.CATEGORY = Categories.ID";
+
+        private static string Locations_Select = "SELECT * FROM RENTALS";
+        private static string Copies_Select = "SELECT movies_copies.id, MOVIES_COPIES.MOVIE_ID FROM MOVIES_COPIES left outer JOIN RENTALS on RENTALS.COPY_ID=MOVIES_COPIES.ID where (RENTALS.STARTDATE is null and RENTALS.RETURNDATE is null) or (RENTALS.STARTDATE is not null and rentals.returndate is not null) group by MOVIES_COPIES.ID, MOVIES_COPIES.MOVIE_ID";
 
         public static DataSet DataSet
         {
@@ -76,6 +93,7 @@ namespace ClubVideo
             GetDBData("Members", Members_Select);
             GetDBData("Categories", Categories_Select);
             GetDBData("Movies_Copies", Copies_Select);
+            GetDBData("Rentals", Locations_Select);
         }
 
         public static class GetData
@@ -146,6 +164,16 @@ namespace ClubVideo
 
                 return tmp;
             }
+
+            public static DataTable Locations()
+            {
+                DataTable tmp = DS.Tables["Rentals"].Clone();
+
+                foreach (DataRow dr in DS.Tables["Rentals"].Rows)
+                    tmp.Rows.Add(dr.ItemArray);
+
+                return tmp;
+        }
         }
 
         public static class Update
@@ -157,6 +185,7 @@ namespace ClubVideo
                 Users();
                 Members();
                 Copies();
+                Locations();
             }
 
             public static void Movies()
@@ -168,7 +197,7 @@ namespace ClubVideo
             public static void Copies()
             {
                 DS.Tables["Movies_Copies"].Clear();
-                GetDBData("Movies_Copies", Movies_Select);
+                GetDBData("Movies_Copies", Copies_Select);
             }
 
             public static void Permissions()
@@ -194,6 +223,12 @@ namespace ClubVideo
                 DS.Tables["Categories"].Clear();
                 GetDBData("Categories", Categories_Select);
             }
+            public static void Locations()
+            {
+                DS.Tables["Rentals"].Clear();
+                GetDBData("Rentals", Movies_Select);
+            }
+            
         }
     }
 }

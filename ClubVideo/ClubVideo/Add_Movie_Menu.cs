@@ -141,5 +141,10 @@ namespace ClubVideo
 
             }
         }
+
+        private void btn_IMDB_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.imdb.com/movies-in-theaters/?ref_=nv_tp_inth_1");
+        }
     }
 }

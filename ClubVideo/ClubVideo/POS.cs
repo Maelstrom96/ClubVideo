@@ -15,9 +15,22 @@ namespace ClubVideo
         private BindingSource _bsMembers = new BindingSource();
         private DataTable dt;
         private BindingSource _bsMovies = new BindingSource();
+        private BindingSource _bsCopies = new BindingSource();
+
         public POS()
         {
             InitializeComponent();
+
+            UpdateDB();
+        }
+
+        private void UpdateDB()
+        {
+            Database.Update.Movies();
+            Database.Update.Copies();
+
+            _bsMovies.DataSource = Database.GetData.Movies();
+            _bsCopies.DataSource = Database.GetData.Copies();
         }
 
         private void txb_NameSearch_TextChanged(object sender, EventArgs e)
@@ -61,11 +74,8 @@ namespace ClubVideo
 
         private void dgv_Movies_DoubleClick(object sender, EventArgs e)
         {
-            DataTable dt = Database.GetData.Copies();
-            BindingSource _bs = new BindingSource();
-            _bs.DataSource = dt;
-            _bs.Filter = "movie_id = '" + dgv_Movies.SelectedRows[0].Cells[0].Value + "'"; 
-            dgv_Copies.DataSource = _bs;
+            _bsCopies.Filter = "movie_id = '" + dgv_Movies.SelectedRows[0].Cells[0].Value + "'";
+            dgv_Copies.DataSource = _bsCopies;
         }
 
         private void DeleteUnwantedRows()
@@ -82,5 +92,27 @@ namespace ClubVideo
             ReturnLocation oReturn = new ReturnLocation();
             oReturn.ShowDialog();
         }
+
+        private void btn_LocationList_Click(object sender, EventArgs e)
+        {
+            LocationLists location = new LocationLists();
+            location.ShowDialog();
+        }
+
+        private void btn_Location_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int memberID = int.Parse(dgv_Members.SelectedRows[0].Cells[0].Value.ToString());
+                int copieID = int.Parse(dgv_Copies.SelectedRows[0].Cells[0].Value.ToString());
+                int locationTime = int.Parse(cb_NbJours.SelectedItem.ToString());
+                Database_Connector.Insert.Locations(memberID, copieID, locationTime);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        
     }
 }
