@@ -101,7 +101,7 @@ namespace ClubVideo
                 MovieObject movie = new MovieObject();
 
                 string date = row.Cells[6].Value.ToString();
-                date = date.Substring(0, 10);
+                date = date.Substring(0, date.Length - 9);
 
                 movie.ID = int.Parse(row.Cells[0].Value.ToString());
                 movie.Nom_en = row.Cells[1].Value.ToString();
