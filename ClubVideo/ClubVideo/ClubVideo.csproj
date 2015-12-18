@@ -84,6 +84,12 @@
     <Compile Include="POS.Designer.cs">
       <DependentUpon>POS.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReturnLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnLocation.Designer.cs">
+      <DependentUpon>ReturnLocation.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateMembers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="POS.resx">
       <DependentUpon>POS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReturnLocation.resx">
+      <DependentUpon>ReturnLocation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateMembers.resx">
       <DependentUpon>UpdateMembers.cs</DependentUpon>
