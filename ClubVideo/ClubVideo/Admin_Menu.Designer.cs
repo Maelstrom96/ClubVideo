@@ -73,6 +73,7 @@
             this.bt_ManageCategories.Text = "manage Categories";
             this.bt_ManageCategories.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_ManageCategories.UseVisualStyleBackColor = true;
+            this.bt_ManageCategories.TextChanged += new System.EventHandler(this.Button_Permissions);
             this.bt_ManageCategories.Click += new System.EventHandler(this.bt_ManageCategories_Click);
             this.bt_ManageCategories.MouseEnter += new System.EventHandler(this.bt_MouseEnter);
             this.bt_ManageCategories.MouseLeave += new System.EventHandler(this.bt_MouseLeave);
@@ -113,6 +114,7 @@
             this.bt_ManageUsers.Text = "manage Users";
             this.bt_ManageUsers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_ManageUsers.UseVisualStyleBackColor = true;
+            this.bt_ManageUsers.TextChanged += new System.EventHandler(this.Button_Permissions);
             this.bt_ManageUsers.Click += new System.EventHandler(this.bt_ManageUsers_Click);
             this.bt_ManageUsers.MouseEnter += new System.EventHandler(this.bt_MouseEnter);
             this.bt_ManageUsers.MouseLeave += new System.EventHandler(this.bt_MouseLeave);
@@ -133,6 +135,7 @@
             this.bt_ManageMovies.Text = "manage Movies";
             this.bt_ManageMovies.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_ManageMovies.UseVisualStyleBackColor = true;
+            this.bt_ManageMovies.TextChanged += new System.EventHandler(this.Button_Permissions);
             this.bt_ManageMovies.Click += new System.EventHandler(this.bt_ManageMovies_Click);
             this.bt_ManageMovies.MouseEnter += new System.EventHandler(this.bt_MouseEnter);
             this.bt_ManageMovies.MouseLeave += new System.EventHandler(this.bt_MouseLeave);
@@ -174,6 +177,7 @@
             this.bt_ManageMembers.Text = "manage Members";
             this.bt_ManageMembers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_ManageMembers.UseVisualStyleBackColor = true;
+            this.bt_ManageMembers.TextChanged += new System.EventHandler(this.Button_Permissions);
             this.bt_ManageMembers.Click += new System.EventHandler(this.bt_ManageMembers_Click);
             this.bt_ManageMembers.MouseEnter += new System.EventHandler(this.bt_MouseEnter);
             this.bt_ManageMembers.MouseLeave += new System.EventHandler(this.bt_MouseLeave);
