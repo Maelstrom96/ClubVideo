@@ -159,9 +159,9 @@
             // 
             // btn_Add
             // 
-            this.btn_Add.Location = new System.Drawing.Point(112, 295);
+            this.btn_Add.Location = new System.Drawing.Point(0, 266);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(75, 23);
+            this.btn_Add.Size = new System.Drawing.Size(212, 23);
             this.btn_Add.TabIndex = 7;
             this.btn_Add.Text = "Ajouter";
             this.btn_Add.UseVisualStyleBackColor = true;
@@ -169,9 +169,9 @@
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(67, 324);
+            this.btn_Cancel.Location = new System.Drawing.Point(0, 295);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(75, 23);
+            this.btn_Cancel.Size = new System.Drawing.Size(212, 23);
             this.btn_Cancel.TabIndex = 11;
             this.btn_Cancel.Text = "Annuler";
             this.btn_Cancel.UseVisualStyleBackColor = true;
@@ -201,9 +201,9 @@
             // 
             // btn_Modify
             // 
-            this.btn_Modify.Location = new System.Drawing.Point(17, 295);
+            this.btn_Modify.Location = new System.Drawing.Point(0, 266);
             this.btn_Modify.Name = "btn_Modify";
-            this.btn_Modify.Size = new System.Drawing.Size(75, 23);
+            this.btn_Modify.Size = new System.Drawing.Size(212, 23);
             this.btn_Modify.TabIndex = 8;
             this.btn_Modify.Text = "Modifier";
             this.btn_Modify.UseVisualStyleBackColor = true;
@@ -223,7 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(212, 364);
+            this.ClientSize = new System.Drawing.Size(212, 325);
             this.Controls.Add(this.cb_Provinces);
             this.Controls.Add(this.btn_Modify);
             this.Controls.Add(this.btn_Next);
