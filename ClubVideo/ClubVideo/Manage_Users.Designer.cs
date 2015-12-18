@@ -152,7 +152,6 @@
             // 
             this.bt_GroupsEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_GroupsEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_GroupsEdit.Enabled = false;
             this.bt_GroupsEdit.FlatAppearance.BorderSize = 0;
             this.bt_GroupsEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_GroupsEdit.Image = global::ClubVideo.Properties.Resources.GroupsEdit;

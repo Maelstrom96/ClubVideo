@@ -27,22 +27,23 @@ namespace ClubVideo
             LoadPermissions();
             SetButtonsVisibility();
             Main.UpdateFonts(this);
+            Main.RefreshColors(this);
         }
 
         private void SetButtonsVisibility()
         {
             if (!Modification_Mode)
             {
-                btn_Add.Hide();
-                btn_Delete.Hide();
-                btn_Modify.Hide();
+                bt_AddUser.Hide();
+                bt_DeleteUsers.Hide();
+                bt_EditUser.Hide();
                 
             }
         }
 
         private void LoadPermissions()
         {
-            Button[] bt_Perms = { btn_Add, btn_Delete, btn_Modify };
+            Button[] bt_Perms = { bt_AddUser, bt_DeleteUsers, bt_EditUser };
 
             foreach (Button button in bt_Perms)
             {
@@ -74,9 +75,9 @@ namespace ClubVideo
             else Text = Main.resManager.GetString("Manage_Members_Header", Main.culInfo);
 
             // tooltips
-            toolTip.SetToolTip(btn_Add, Main.resManager.GetString("Manage_Members_Add_Tip", Main.culInfo));
-            toolTip.SetToolTip(btn_Modify, Main.resManager.GetString("Manage_Members_Modify_Tip", Main.culInfo));
-            toolTip.SetToolTip(btn_Delete, Main.resManager.GetString("Manage_Members_Delete_Tip", Main.culInfo));
+            toolTip.SetToolTip(bt_AddUser, Main.resManager.GetString("Manage_Members_Add_Tip", Main.culInfo));
+            toolTip.SetToolTip(bt_EditUser, Main.resManager.GetString("Manage_Members_Modify_Tip", Main.culInfo));
+            toolTip.SetToolTip(bt_DeleteUsers, Main.resManager.GetString("Manage_Members_Delete_Tip", Main.culInfo));
             toolTip.SetToolTip(tb_Search, Main.resManager.GetString("Manage_Members_Search_Tip", Main.culInfo));
             toolTip.SetToolTip(lb_Search, Main.resManager.GetString("Manage_Members_Search_Tip", Main.culInfo));
 
@@ -136,8 +137,8 @@ namespace ClubVideo
 
         private void dgv_SearchResults_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgv_SearchResults.SelectedRows.Count == 1 && Modification_Mode && btn_Delete.Enabled) btn_Delete.Visible = true;
-            else btn_Delete.Visible = false;
+            if (dgv_SearchResults.SelectedRows.Count == 1 && Modification_Mode && bt_DeleteUsers.Enabled) bt_DeleteUsers.Visible = true;
+            else bt_DeleteUsers.Visible = false;
         }
 
         private void btn_Modify_Click(object sender, EventArgs e)
@@ -145,6 +146,22 @@ namespace ClubVideo
             UpdateMembers members = new UpdateMembers(source, "Detail Membre", true);
             members.ShowDialog();
             LoadMembers();
+        }
+
+        private void bt_MouseEnter(object send, EventArgs e)
+        {
+            Button sender = (Button)send;
+            sender.Image = Main.Img_ToWhite(sender.Name.Substring(3));
+            sender.FlatAppearance.MouseOverBackColor = Main.GetColor();
+            sender.ForeColor = Color.White;
+        }
+
+        private void bt_MouseLeave(object send, EventArgs e)
+        {
+            Button sender = (Button)send;
+            sender.Image = Main.Img_ToColor(sender.Name.Substring(3), false);
+            sender.FlatAppearance.MouseOverBackColor = Color.White;
+            sender.ForeColor = Main.GetColor();
         }
     }
 }

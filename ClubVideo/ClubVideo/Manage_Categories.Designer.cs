@@ -81,6 +81,8 @@
             this.btn_Add.TabIndex = 7;
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            this.btn_Add.MouseEnter += new System.EventHandler(this.bt_MouseEnter);
+            this.btn_Add.MouseLeave += new System.EventHandler(this.bt_MouseLeave);
             // 
             // btn_Modify
             // 
@@ -95,6 +97,8 @@
             this.btn_Modify.TabIndex = 8;
             this.btn_Modify.UseVisualStyleBackColor = true;
             this.btn_Modify.Click += new System.EventHandler(this.btn_Modify_Click);
+            this.btn_Modify.MouseEnter += new System.EventHandler(this.bt_MouseEnter);
+            this.btn_Modify.MouseLeave += new System.EventHandler(this.bt_MouseLeave);
             // 
             // btn_Delete
             // 
@@ -109,6 +113,8 @@
             this.btn_Delete.TabIndex = 9;
             this.btn_Delete.UseVisualStyleBackColor = true;
             this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
+            this.btn_Delete.MouseEnter += new System.EventHandler(this.bt_MouseEnter);
+            this.btn_Delete.MouseLeave += new System.EventHandler(this.bt_MouseLeave);
             // 
             // Manage_Categories
             // 
@@ -127,6 +133,8 @@
             this.MinimumSize = new System.Drawing.Size(748, 459);
             this.Name = "Manage_Categories";
             this.Text = "Manage_Categories";
+            this.MouseEnter += new System.EventHandler(this.bt_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.bt_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_View)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
