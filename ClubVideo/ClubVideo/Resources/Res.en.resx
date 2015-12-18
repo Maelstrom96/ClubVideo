@@ -417,4 +417,22 @@
   <data name="Manage_Categories_Search_Tip" xml:space="preserve">
     <value>Search throughout all columns of the table.</value>
   </data>
+  <data name="Manage_Movies_Category" xml:space="preserve">
+    <value>Category :</value>
+  </data>
+  <data name="Manage_Movies_CATEGORY_EN" xml:space="preserve">
+    <value>Category (English)</value>
+  </data>
+  <data name="Manage_Movies_CATEGORY_FR" xml:space="preserve">
+    <value>Category (French)</value>
+  </data>
+  <data name="Manage_Movies_DIRECTORS" xml:space="preserve">
+    <value>Réalisateurs</value>
+  </data>
+  <data name="Manage_Movies_IMAGE1" xml:space="preserve">
+    <value>Affiche</value>
+  </data>
+  <data name="Manage_Movies_NBCOPIESFREE" xml:space="preserve">
+    <value>Nombre de copie libre</value>
+  </data>
 </root>
