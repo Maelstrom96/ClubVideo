@@ -62,8 +62,8 @@
             this.bt_OK.Location = new System.Drawing.Point(239, 324);
             this.bt_OK.Name = "bt_OK";
             this.bt_OK.Size = new System.Drawing.Size(75, 23);
-            this.bt_OK.TabIndex = 2;
-            this.bt_OK.Text = "ok";
+            this.bt_OK.TabIndex = 6;
+            this.bt_OK.Text = "Ajouter";
             this.bt_OK.UseVisualStyleBackColor = true;
             this.bt_OK.Click += new System.EventHandler(this.bt_OK_Click);
             // 
@@ -81,7 +81,7 @@
             this.tb_Name_En.Location = new System.Drawing.Point(120, 51);
             this.tb_Name_En.Name = "tb_Name_En";
             this.tb_Name_En.Size = new System.Drawing.Size(181, 20);
-            this.tb_Name_En.TabIndex = 1;
+            this.tb_Name_En.TabIndex = 2;
             // 
             // lb_Description_Fr
             // 
@@ -115,7 +115,7 @@
             this.tb_Price.Location = new System.Drawing.Point(239, 283);
             this.tb_Price.Name = "tb_Price";
             this.tb_Price.Size = new System.Drawing.Size(62, 20);
-            this.tb_Price.TabIndex = 1;
+            this.tb_Price.TabIndex = 5;
             // 
             // tb_Description_En
             // 
@@ -123,7 +123,7 @@
             this.tb_Description_En.Multiline = true;
             this.tb_Description_En.Name = "tb_Description_En";
             this.tb_Description_En.Size = new System.Drawing.Size(181, 78);
-            this.tb_Description_En.TabIndex = 1;
+            this.tb_Description_En.TabIndex = 4;
             // 
             // tb_Description_Fr
             // 
@@ -131,7 +131,7 @@
             this.tb_Description_Fr.Multiline = true;
             this.tb_Description_Fr.Name = "tb_Description_Fr";
             this.tb_Description_Fr.Size = new System.Drawing.Size(181, 78);
-            this.tb_Description_Fr.TabIndex = 1;
+            this.tb_Description_Fr.TabIndex = 3;
             // 
             // CategoryCU
             // 
