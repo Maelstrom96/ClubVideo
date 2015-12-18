@@ -15,8 +15,8 @@ namespace ClubVideo
         public Admin_Menu()
         {
             InitializeComponent();
-
             LoadLanguage();
+            Main.UpdateFonts();
         }
 
         private void bt_Back_Click(object sender, EventArgs e)
