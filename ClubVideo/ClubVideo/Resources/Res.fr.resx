@@ -435,4 +435,19 @@
   <data name="Manage_Movies_NBCOPIESFREE" xml:space="preserve">
     <value>Nombre de copie libre</value>
   </data>
+  <data name="Button_Admin_Menu_ManageCategories" xml:space="preserve">
+    <value>Gestion des catégories</value>
+  </data>
+  <data name="Button_Admin_Menu_ManageGroups" xml:space="preserve">
+    <value>Gestion des groupes</value>
+  </data>
+  <data name="Button_Admin_Menu_ManageMembers" xml:space="preserve">
+    <value>Gestion des membres</value>
+  </data>
+  <data name="Button_Admin_Menu_ManageMovies" xml:space="preserve">
+    <value>Gestion des films</value>
+  </data>
+  <data name="Button_Admin_Menu_Settings" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
 </root>
