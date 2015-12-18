@@ -133,8 +133,6 @@
             this.MinimumSize = new System.Drawing.Size(748, 459);
             this.Name = "Manage_Categories";
             this.Text = "Manage_Categories";
-            this.MouseEnter += new System.EventHandler(this.bt_MouseEnter);
-            this.MouseLeave += new System.EventHandler(this.bt_MouseLeave);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_View)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
