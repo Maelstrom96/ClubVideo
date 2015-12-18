@@ -62,6 +62,7 @@ namespace ClubVideo
             coalesce(NBCategory.NBFilm, 0) as NBFilm
         from Categories left outer join NBCategory on NBCategory.CATEGORY = Categories.ID";
 
+        private static string Locations_Select = "SELECT * FROM RENTALS";
         private static string Copies_Select = "SELECT movies_copies.id, MOVIES_COPIES.MOVIE_ID FROM MOVIES_COPIES left outer JOIN RENTALS on RENTALS.COPY_ID=MOVIES_COPIES.ID where (RENTALS.STARTDATE is null and RENTALS.RETURNDATE is null) or (RENTALS.STARTDATE is not null and rentals.returndate is not null) group by MOVIES_COPIES.ID, MOVIES_COPIES.MOVIE_ID";
 
         public static DataSet DataSet
@@ -92,6 +93,7 @@ namespace ClubVideo
             GetDBData("Members", Members_Select);
             GetDBData("Categories", Categories_Select);
             GetDBData("Movies_Copies", Copies_Select);
+            GetDBData("Rentals", Locations_Select);
         }
 
         public static class GetData
@@ -162,6 +164,16 @@ namespace ClubVideo
 
                 return tmp;
             }
+
+            public static DataTable Locations()
+            {
+                DataTable tmp = DS.Tables["Rentals"].Clone();
+
+                foreach (DataRow dr in DS.Tables["Rentals"].Rows)
+                    tmp.Rows.Add(dr.ItemArray);
+
+                return tmp;
+        }
         }
 
         public static class Update
@@ -173,6 +185,7 @@ namespace ClubVideo
                 Users();
                 Members();
                 Copies();
+                Locations();
             }
 
             public static void Movies()
@@ -210,6 +223,12 @@ namespace ClubVideo
                 DS.Tables["Categories"].Clear();
                 GetDBData("Categories", Categories_Select);
             }
+            public static void Locations()
+            {
+                DS.Tables["Rentals"].Clear();
+                GetDBData("Rentals", Movies_Select);
+            }
+            
         }
     }
 }

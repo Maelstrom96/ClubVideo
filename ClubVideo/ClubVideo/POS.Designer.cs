@@ -39,6 +39,8 @@
             this.btn_Location = new System.Windows.Forms.Button();
             this.dgv_Copies = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_LocationList = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Movies)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Members)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Copies)).BeginInit();
@@ -89,7 +91,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 128);
+            this.label2.Location = new System.Drawing.Point(13, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 5;
@@ -97,7 +99,7 @@
             // 
             // txb_MoviesSearch
             // 
-            this.txb_MoviesSearch.Location = new System.Drawing.Point(101, 125);
+            this.txb_MoviesSearch.Location = new System.Drawing.Point(101, 131);
             this.txb_MoviesSearch.Name = "txb_MoviesSearch";
             this.txb_MoviesSearch.Size = new System.Drawing.Size(100, 20);
             this.txb_MoviesSearch.TabIndex = 6;
@@ -107,7 +109,7 @@
             // 
             this.btn_Return.Location = new System.Drawing.Point(12, 561);
             this.btn_Return.Name = "btn_Return";
-            this.btn_Return.Size = new System.Drawing.Size(123, 23);
+            this.btn_Return.Size = new System.Drawing.Size(83, 23);
             this.btn_Return.TabIndex = 7;
             this.btn_Return.Text = "Retour ...";
             this.btn_Return.UseVisualStyleBackColor = true;
@@ -132,12 +134,13 @@
             // 
             // btn_Location
             // 
-            this.btn_Location.Location = new System.Drawing.Point(417, 561);
+            this.btn_Location.Location = new System.Drawing.Point(521, 561);
             this.btn_Location.Name = "btn_Location";
             this.btn_Location.Size = new System.Drawing.Size(151, 23);
             this.btn_Location.TabIndex = 9;
             this.btn_Location.Text = "Location";
             this.btn_Location.UseVisualStyleBackColor = true;
+            this.btn_Location.Click += new System.EventHandler(this.btn_Location_Click);
             // 
             // dgv_Copies
             // 
@@ -160,11 +163,32 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Nombre de jours :";
             // 
+            // btn_LocationList
+            // 
+            this.btn_LocationList.Location = new System.Drawing.Point(101, 561);
+            this.btn_LocationList.Name = "btn_LocationList";
+            this.btn_LocationList.Size = new System.Drawing.Size(128, 23);
+            this.btn_LocationList.TabIndex = 12;
+            this.btn_LocationList.Text = "Liste des locations ...";
+            this.btn_LocationList.UseVisualStyleBackColor = true;
+            this.btn_LocationList.Click += new System.EventHandler(this.btn_LocationList_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 322);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 13);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Copies du film:";
+            // 
             // POS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 600);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btn_LocationList);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgv_Copies);
             this.Controls.Add(this.btn_Location);
@@ -203,5 +227,7 @@
         private System.Windows.Forms.Button btn_Location;
         private System.Windows.Forms.DataGridView dgv_Copies;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_LocationList;
+        private System.Windows.Forms.Label label4;
     }
 }

@@ -82,5 +82,20 @@ namespace ClubVideo
             ReturnLocation oReturn = new ReturnLocation();
             oReturn.ShowDialog();
         }
+
+        private void btn_LocationList_Click(object sender, EventArgs e)
+        {
+            LocationLists location = new LocationLists();
+            location.ShowDialog();
+        }
+
+        private void btn_Location_Click(object sender, EventArgs e)
+        {
+            int memberID = int.Parse(dgv_Members.SelectedRows[0].Cells[0].Value.ToString());
+            int copieID = int.Parse(dgv_Copies.SelectedRows[0].Cells[0].Value.ToString());
+            int locationTime = int.Parse(cb_NbJours.SelectedItem.ToString());
+            Database_Connector.Insert.Locations(memberID, copieID, locationTime);
+        }
+        
     }
 }

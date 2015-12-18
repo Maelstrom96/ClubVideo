@@ -65,6 +65,12 @@
     </Compile>
     <Compile Include="CategoryObject.cs" />
     <Compile Include="HSLColor.cs" />
+    <Compile Include="LocationLists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationLists.Designer.cs">
+      <DependentUpon>LocationLists.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manage_Categories.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CategoryCU.resx">
       <DependentUpon>CategoryCU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationLists.resx">
+      <DependentUpon>LocationLists.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage_Categories.resx">
       <DependentUpon>Manage_Categories.cs</DependentUpon>
