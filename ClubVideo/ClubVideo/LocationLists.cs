@@ -20,6 +20,7 @@ namespace ClubVideo
 
         private void LocationLists_Load(object sender, EventArgs e)
         {
+            Database.Update.Locations();
             ds = Database.GetData.Locations();
 
             BindingSource source = new BindingSource();
