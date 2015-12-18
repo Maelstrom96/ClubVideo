@@ -14,15 +14,15 @@ namespace ClubVideo
 
         private static string Movies_Select = @"with NBCopy as
         (
-          select movie_id, count(movie_id) as NBCOPIES
-          from movies_copies
-          group by movies_copies.movie_id
+            select movie_id, count(movie_id) as NBCOPIES
+            from movies_copies
+            group by movies_copies.movie_id
         ),
         NBCopyFree as
-        (  
-          select movie_id, count(movie_id) as NBCOPIESFREE 
-          from movies_copies left outer join rentals on rentals.copy_id = movies_copies.id where rentals.returndate is not null or rentals.id is null
-          group by movies_copies.movie_id
+        (       
+            select MOVIE_ID, count(MOVIE_ID) as NBCOPIESFREE from (select movies_copies.id, movies_copies.MOVIE_ID from movies_copies where movies_copies.DELETEDATE is null
+            minus
+            select copy_id as id, movies_copies.MOVIE_ID from rentals inner join movies_copies on movies_copies.ID=rentals.COPY_ID where rentals.startdate is not null and rentals.returndate is null) group by movie_id
         )
 
         select
