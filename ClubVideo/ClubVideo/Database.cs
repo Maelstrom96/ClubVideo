@@ -45,7 +45,23 @@ namespace ClubVideo
         private static string Permissions_Select = "SELECT * FROM permissions";
         private static string Users_Select = "SELECT ID, USERNAME, NAME, LASTNAME FROM Users";
         private static string Members_Select = "SELECT * FROM Members";
-        private static string Categories_Select = "SELECT * FROM CATEGORIES";
+        private static string Categories_Select = @"with NBCategory as
+        (
+          select Movies.CATEGORY, count(Movies.CATEGORY) as NBFilm
+          from movies where Movies.DELETEDATE is null
+          group by Movies.CATEGORY
+        )
+
+        select
+            categories.ID,
+            categories.NAME_EN,
+            categories.NAME_FR,
+            categories.DESCRIPTION_EN,
+            categories.DESCRIPTION_FR,
+            categories.PRICE,
+            coalesce(NBCategory.NBFilm, 0) as NBFilm
+        from Categories left outer join NBCategory on NBCategory.CATEGORY = Categories.ID";
+
         private static string Copies_Select = "SELECT * FROM MOVIES_COPIES";
         private static string Locations_Select = "SELECT * FROM RENTALS";
 
