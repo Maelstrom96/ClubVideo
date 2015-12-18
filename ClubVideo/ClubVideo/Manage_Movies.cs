@@ -132,5 +132,23 @@ namespace ClubVideo
             Database_Connector.Delete.Movie(int.Parse(dgv_SearchResults.SelectedRows[0].Cells[0].Value.ToString()));
             LoadMovies();
         }
+
+        private void btn_AddCopies_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < int.Parse(txb_CopiesToAdd.Text.ToString()); ++i)
+            {
+                Database_Connector.Insert.Copies(int.Parse(dgv_SearchResults.SelectedRows[0].Cells[0].Value.ToString()));
+            }
+            LoadMovies();
+        }
+
+        private void btn_DeleteCopies_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < int.Parse(txb_CopiesToDelete.Text.ToString()); ++i)
+            {
+                Database_Connector.Delete.Copies(int.Parse(dgv_SearchResults.SelectedRows[0].Cells[0].Value.ToString()));
+            }
+            LoadMovies();
+        }
     }
 }

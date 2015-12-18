@@ -110,5 +110,22 @@ namespace ClubVideo
             object img = Properties.Resources.ResourceManager.GetObject(imgName);
             return (Image)img;
         }
+
+        public static void UpdateFonts()
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                foreach (Control c in form.Controls)
+                {
+                    if (c.Name != "bt_Exit" || c.Name != "bt_Back")
+                    {
+                        c.Font = new Font(Main.GetFont(), c.Font.Size);
+                        c.ForeColor = Main.GetColor();
+                    }
+                }
+                form.Update();
+                form.Refresh();
+            }
+        }
     }
 }
