@@ -87,8 +87,6 @@ namespace ClubVideo
             source.Filter = "CONVERT(ID, 'System.String') like '" + tb_Search.Text + "%'" +
                 "or NAME_EN like '" + tb_Search.Text + "%'" +
                 "or NAME_FR like '" + tb_Search.Text + "%'" +
-                "or DESCRIPTION_EN like '%" + tb_Search.Text + "%'" +
-                "or DESCRIPTION_FR like '%" + tb_Search.Text + "%'" +
                 "or CONVERT(RELEASEDATE, 'System.String') like '%" + tb_Search.Text + "%'";
         }
 
