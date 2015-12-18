@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -87,6 +89,37 @@ namespace ClubVideo
                             "or CONVERT(RELEASEDATE, 'System.String') like '%" + tb_Search.Text + "%'";
         }
 
+        private MovieObject GetMovieFromSelectedRow()
+        {
+            foreach (DataGridViewRow row in dgv_SearchResults.SelectedRows)
+            {
+                MovieObject movie = new MovieObject();
+
+                string date = row.Cells[6].Value.ToString();
+                date = date.Substring(0, 10);
+
+                movie.ID = int.Parse(row.Cells[0].Value.ToString());
+                movie.Nom_en = row.Cells[1].Value.ToString();
+                movie.Nom_fr = row.Cells[2].Value.ToString();
+                movie.Description_en = row.Cells[3].Value.ToString();
+                movie.Description_fr = row.Cells[4].Value.ToString();
+                movie.Director = row.Cells[5].Value.ToString();
+                movie.Date = DateTime.ParseExact(date, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                movie.Rated = row.Cells[7].Value.ToString();
+                movie.Runtime = int.Parse(row.Cells[8].Value.ToString());
+
+                var data = (Byte[])(row.Cells[9].Value);
+                var stream = new MemoryStream(data);
+                movie.Poster = Image.FromStream(stream);
+
+                movie.Category = CategoryObject.GetCategoryID(row.Cells[11].Value.ToString());
+
+                return movie;
+            }
+
+            return new MovieObject();
+        }
+
         private void dgv_SearchResults_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if(dgv_SearchResults.SelectedRows.Count  == 1)
@@ -103,7 +136,7 @@ namespace ClubVideo
 
         private void btn_Modify_Click(object sender, EventArgs e)
         {
-            InsertMovie movies = new InsertMovie(source, "Modification de film");
+            InsertMovie movies = new InsertMovie(GetMovieFromSelectedRow(), "Modification de film");
             movies.ShowDialog();
             LoadMovies();
         }
@@ -126,8 +159,15 @@ namespace ClubVideo
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            Database_Connector.Delete.Movie(int.Parse(dgv_SearchResults.SelectedRows[0].Cells[0].Value.ToString()));
-            LoadMovies();
+            try
+            {
+                Database_Connector.Delete.Movie(int.Parse(dgv_SearchResults.SelectedRows[0].Cells[0].Value.ToString()));
+                LoadMovies();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btn_AddCopies_Click(object sender, EventArgs e)
