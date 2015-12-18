@@ -274,7 +274,7 @@
     <value>Nom Français</value>
   </data>
   <data name="Manage_Movies_NBCOPIES" xml:space="preserve">
-    <value>Nombre de copies disponibles</value>
+    <value>Nombre de copies totals</value>
   </data>
   <data name="Manage_Movies_RATING" xml:space="preserve">
     <value>Classification</value>
@@ -433,7 +433,7 @@
     <value>Nombre de films</value>
   </data>
   <data name="Manage_Movies_NBCOPIESFREE" xml:space="preserve">
-    <value>Nombre de copie libre</value>
+    <value>Nombre de copies disponibles</value>
   </data>
   <data name="Button_Admin_Menu_ManageCategories" xml:space="preserve">
     <value>Gestion des catégories</value>
