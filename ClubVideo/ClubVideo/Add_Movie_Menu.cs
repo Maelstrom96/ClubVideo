@@ -69,7 +69,6 @@ namespace ClubVideo
             int Deplacement = 20; // Define the movement
 
             if (!Down) Deplacement *= -1;
-
             // Move
             rb_Manual.Location = new Point(rb_Manual.Location.X, rb_Manual.Location.Y + Deplacement);
             //lb_Url.Location = new Point(lb_Url.Location.X, lb_Url.Location.Y + Deplacement);
@@ -79,7 +78,7 @@ namespace ClubVideo
             lb_Category.Location = new Point(lb_Category.Location.X, lb_Category.Location.Y + Deplacement);
             cb_Categories.Location = new Point(cb_Categories.Location.X, cb_Categories.Location.Y + Deplacement);
 
-            Height += Deplacement;
+            //Height += Deplacement;
         }
 
         private void ImportFromIMDB()
