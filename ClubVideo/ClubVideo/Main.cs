@@ -130,5 +130,68 @@ namespace ClubVideo
             form.Update();
             form.Refresh();
         }
+
+        // OPÉRATIONS SUR LES IMAGES
+        public static Image Img_ToWhite(string imgName)
+        {
+            Bitmap img = new Bitmap(Main.GetImage(imgName));
+
+            for (int i = 0; i < img.Width; i++)
+            {
+                for (int j = 0; j < img.Height; j++)
+                {
+                    Color pixel = img.GetPixel(i, j);
+                    if ((pixel.R > Main.GetColor().R * 0.9 || pixel.G > Main.GetColor().G * 0.9 || pixel.B > Main.GetColor().B * 0.9))
+                    {
+                        pixel = Color.FromArgb(pixel.A, Color.White.R, Color.White.G, Color.White.B);
+                        img.SetPixel(i, j, pixel);
+                    }
+                }
+            }
+            return img;
+        }
+
+        public static Image Img_ToColor(string imgName, bool start)
+        {
+            Bitmap img = new Bitmap(Main.GetImage(imgName));
+            for (int i = 0; i < img.Width; i++)
+            {
+                for (int j = 0; j < img.Height; j++)
+                {
+                    Color pixel = img.GetPixel(i, j);
+
+                    if ((start && (pixel.R > Main.BLUE.R * 0.9 || pixel.G > Main.BLUE.G * 0.9 || pixel.B > Main.BLUE.B * 0.9))
+                        || (pixel.R > Main.previousColor.R * 0.9 || pixel.G > Main.previousColor.G * 0.9 || pixel.B > Main.previousColor.B * 0.9))
+                    {
+                        Color newColor = Main.GetColor();
+                        pixel = Color.FromArgb(pixel.A, newColor.R, newColor.G, newColor.B);
+                        img.SetPixel(i, j, pixel);
+                    }
+                }
+            }
+            Main.previousColor = Main.GetColor();
+
+            return img;
+        }
+
+        public static void RefreshColors(Form form)
+        {
+            foreach (Control c in form.Controls)
+            {
+                if (c is Button)
+                {
+                    Button sender = (Button)c;
+                    if (sender.Name != "bt_Exit" && sender.Name != "bt_Logout" && sender.Name != "bt_Back")
+                    {
+                        sender.FlatAppearance.MouseDownBackColor = Main.GetColor();
+                        sender.Image = Main.Img_ToColor(c.Name.Substring(3), true);
+                    }
+                    else if (sender.Name == "bt_Logout")
+                        sender.ForeColor = Color.Black;
+                    else if (sender.Name == "bt_Exit")
+                        sender.FlatAppearance.MouseDownBackColor = Color.FromArgb(137, 34, 34);
+                }
+            }
+        }
     }
 }

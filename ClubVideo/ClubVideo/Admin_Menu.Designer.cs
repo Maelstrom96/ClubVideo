@@ -55,6 +55,8 @@
             this.bt_Settings.Text = "settings";
             this.bt_Settings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_Settings.UseVisualStyleBackColor = true;
+            this.bt_Settings.MouseEnter += new System.EventHandler(this.bt_MouseEnter);
+            this.bt_Settings.MouseLeave += new System.EventHandler(this.bt_MouseLeave);
             // 
             // bt_ManageCategories
             // 
@@ -74,6 +76,8 @@
             this.bt_ManageCategories.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_ManageCategories.UseVisualStyleBackColor = true;
             this.bt_ManageCategories.Click += new System.EventHandler(this.bt_ManageCategories_Click);
+            this.bt_ManageCategories.MouseEnter += new System.EventHandler(this.bt_MouseEnter);
+            this.bt_ManageCategories.MouseLeave += new System.EventHandler(this.bt_MouseLeave);
             // 
             // bt_ManageGroups
             // 
@@ -93,6 +97,8 @@
             this.bt_ManageGroups.Text = "manage Groups";
             this.bt_ManageGroups.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_ManageGroups.UseVisualStyleBackColor = true;
+            this.bt_ManageGroups.MouseEnter += new System.EventHandler(this.bt_MouseEnter);
+            this.bt_ManageGroups.MouseLeave += new System.EventHandler(this.bt_MouseLeave);
             // 
             // bt_ManageUsers
             // 
@@ -112,6 +118,8 @@
             this.bt_ManageUsers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_ManageUsers.UseVisualStyleBackColor = true;
             this.bt_ManageUsers.Click += new System.EventHandler(this.bt_ManageUsers_Click);
+            this.bt_ManageUsers.MouseEnter += new System.EventHandler(this.bt_MouseEnter);
+            this.bt_ManageUsers.MouseLeave += new System.EventHandler(this.bt_MouseLeave);
             // 
             // bt_ManageMovies
             // 
@@ -131,6 +139,8 @@
             this.bt_ManageMovies.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_ManageMovies.UseVisualStyleBackColor = true;
             this.bt_ManageMovies.Click += new System.EventHandler(this.bt_ManageMovies_Click);
+            this.bt_ManageMovies.MouseEnter += new System.EventHandler(this.bt_MouseEnter);
+            this.bt_ManageMovies.MouseLeave += new System.EventHandler(this.bt_MouseLeave);
             // 
             // bt_Back
             // 
@@ -171,6 +181,8 @@
             this.bt_ManageMembers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.bt_ManageMembers.UseVisualStyleBackColor = true;
             this.bt_ManageMembers.Click += new System.EventHandler(this.bt_ManageMembers_Click);
+            this.bt_ManageMembers.MouseEnter += new System.EventHandler(this.bt_MouseEnter);
+            this.bt_ManageMembers.MouseLeave += new System.EventHandler(this.bt_MouseLeave);
             // 
             // Admin_Menu
             // 
