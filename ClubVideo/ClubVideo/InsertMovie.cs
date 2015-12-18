@@ -35,6 +35,9 @@ namespace ClubVideo
             InitializeComponent();
             edit = _edit;
 
+            dtp.Format = DateTimePickerFormat.Custom;
+            dtp.CustomFormat = "dd/MM/yyyy";
+
             Height += 30;
             if(edit)
             {
@@ -62,10 +65,11 @@ namespace ClubVideo
             lb_DescEN.DataBindings.Add("text", bs, "DESCRIPTION_EN");
             lb_DescFR.DataBindings.Add("text", bs, "DESCRIPTION_FR");
             lb_Rating.DataBindings.Add("text", bs, "RATING");
-            lb_Date.DataBindings.Add("text", bs, "RELEASEDATE", true);
+            dtp.DataBindings.Add("Value", bs, "RELEASEDATE", true);
             lb_Time.DataBindings.Add("text", bs, "RUNTIME");
             lb_Director.DataBindings.Add("text", bs, "DIRECTORS");
             pictureBox1.DataBindings.Add("image", bs, "IMAGE", true);
+            //cb_Categories.DataBindings.Add(new Binding( "SelectedValue", this.bindingSource1, "MyEnum", true, DataSourceUpdateMode.OnPropertyChanged));
         }
 
         private void LoadLanguage()
@@ -79,8 +83,6 @@ namespace ClubVideo
             lb_TitreFR.Cursor = cursormode;
             lb_Rating.Cursor = cursormode;
             lb_Time.Cursor = cursormode;
-            lb_Date.Cursor = cursormode;
-            lb_DescEN.Cursor = cursormode;
             lb_DescFR.Cursor = cursormode;
             lb_Director.Cursor = cursormode;
         }
@@ -95,7 +97,7 @@ namespace ClubVideo
             lb_Rating.Text = movie.Rated;
             lb_Time.Text = movie.Runtime.ToString();
             lb_Director.Text = movie.Director;
-            lb_Date.Text = movie.Date.ToString("dd/MM/yyyy");
+            //lb_Date.Text = movie.Date.ToString("dd/MM/yyyy");
         }
 
         private void SaveFinalMovie()
@@ -185,15 +187,14 @@ namespace ClubVideo
         {
             try
             {
-                string date = lb_Date.Text;
-
                 MovieObject oMovie = new MovieObject();
                 oMovie.ID = int.Parse(((DataRowView)this._bs.Current).Row["ID"].ToString());
                 oMovie.Nom_en = lb_TitreEN.Text.ToString();
                 oMovie.Nom_fr = lb_TitreFR.Text.ToString();
                 oMovie.Description_fr = lb_DescFR.Text.ToString();
                 oMovie.Description_en = lb_DescEN.Text.ToString();
-                oMovie.Date = DateTime.ParseExact(date, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                //oMovie.Date = DateTime.ParseExact(date, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                oMovie.Date = DateTime.ParseExact(dtp.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
                 oMovie.Rated = lb_Rating.Text.ToString();
                 oMovie.Runtime = int.Parse(lb_Time.Text.ToString());
                 oMovie.Director = lb_Director.Text.ToString();
