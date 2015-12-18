@@ -39,22 +39,24 @@
             // lv_Selection
             // 
             this.lv_Selection.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lv_Selection.ItemHeight = 17;
-            this.lv_Selection.Location = new System.Drawing.Point(12, 12);
+            this.lv_Selection.ItemHeight = 15;
+            this.lv_Selection.Location = new System.Drawing.Point(9, 10);
+            this.lv_Selection.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lv_Selection.Name = "lv_Selection";
             this.lv_Selection.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.lv_Selection.Size = new System.Drawing.Size(355, 412);
+            this.lv_Selection.Size = new System.Drawing.Size(267, 334);
             this.lv_Selection.Sorted = true;
             this.lv_Selection.TabIndex = 3;
             // 
             // lv_Selected
             // 
             this.lv_Selected.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lv_Selected.ItemHeight = 17;
-            this.lv_Selected.Location = new System.Drawing.Point(469, 12);
+            this.lv_Selected.ItemHeight = 15;
+            this.lv_Selected.Location = new System.Drawing.Point(352, 10);
+            this.lv_Selected.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lv_Selected.Name = "lv_Selected";
             this.lv_Selected.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.lv_Selected.Size = new System.Drawing.Size(355, 412);
+            this.lv_Selected.Size = new System.Drawing.Size(267, 334);
             this.lv_Selected.Sorted = true;
             this.lv_Selected.TabIndex = 3;
             // 
@@ -64,9 +66,10 @@
             this.bt_Accept.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_Accept.FlatAppearance.BorderSize = 0;
             this.bt_Accept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Accept.Location = new System.Drawing.Point(390, 344);
+            this.bt_Accept.Location = new System.Drawing.Point(292, 280);
+            this.bt_Accept.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_Accept.Name = "bt_Accept";
-            this.bt_Accept.Size = new System.Drawing.Size(59, 54);
+            this.bt_Accept.Size = new System.Drawing.Size(44, 44);
             this.bt_Accept.TabIndex = 1;
             this.bt_Accept.UseVisualStyleBackColor = true;
             this.bt_Accept.Click += new System.EventHandler(this.bt_Accept_Click);
@@ -77,9 +80,10 @@
             this.bt_Remove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_Remove.FlatAppearance.BorderSize = 0;
             this.bt_Remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Remove.Location = new System.Drawing.Point(390, 242);
+            this.bt_Remove.Location = new System.Drawing.Point(292, 197);
+            this.bt_Remove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_Remove.Name = "bt_Remove";
-            this.bt_Remove.Size = new System.Drawing.Size(59, 54);
+            this.bt_Remove.Size = new System.Drawing.Size(44, 44);
             this.bt_Remove.TabIndex = 1;
             this.bt_Remove.UseVisualStyleBackColor = true;
             this.bt_Remove.Click += new System.EventHandler(this.bt_Remove_Click);
@@ -90,9 +94,10 @@
             this.bt_Erase.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_Erase.FlatAppearance.BorderSize = 0;
             this.bt_Erase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Erase.Location = new System.Drawing.Point(389, 175);
+            this.bt_Erase.Location = new System.Drawing.Point(292, 142);
+            this.bt_Erase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_Erase.Name = "bt_Erase";
-            this.bt_Erase.Size = new System.Drawing.Size(59, 54);
+            this.bt_Erase.Size = new System.Drawing.Size(44, 44);
             this.bt_Erase.TabIndex = 1;
             this.bt_Erase.UseVisualStyleBackColor = true;
             this.bt_Erase.Click += new System.EventHandler(this.bt_Erase_Click);
@@ -103,18 +108,20 @@
             this.bt_Add.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_Add.FlatAppearance.BorderSize = 0;
             this.bt_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Add.Location = new System.Drawing.Point(390, 106);
+            this.bt_Add.Location = new System.Drawing.Point(292, 86);
+            this.bt_Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_Add.Name = "bt_Add";
-            this.bt_Add.Size = new System.Drawing.Size(59, 54);
+            this.bt_Add.Size = new System.Drawing.Size(44, 44);
             this.bt_Add.TabIndex = 1;
             this.bt_Add.UseVisualStyleBackColor = true;
             this.bt_Add.Click += new System.EventHandler(this.bt_Add_Click);
             // 
             // SidebySideSelection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 436);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(627, 354);
             this.Controls.Add(this.lv_Selected);
             this.Controls.Add(this.lv_Selection);
             this.Controls.Add(this.bt_Accept);
@@ -122,8 +129,11 @@
             this.Controls.Add(this.bt_Erase);
             this.Controls.Add(this.bt_Add);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(643, 393);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(643, 393);
             this.Name = "SidebySideSelection";
             this.ResumeLayout(false);
 

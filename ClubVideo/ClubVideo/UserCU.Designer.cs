@@ -56,7 +56,7 @@
             // tb_Username
             // 
             this.tb_Username.Location = new System.Drawing.Point(104, 21);
-            this.tb_Username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_Username.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Username.Name = "tb_Username";
             this.tb_Username.Size = new System.Drawing.Size(180, 20);
             this.tb_Username.TabIndex = 1;
@@ -75,7 +75,7 @@
             // tb_Name
             // 
             this.tb_Name.Location = new System.Drawing.Point(104, 56);
-            this.tb_Name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_Name.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(180, 20);
             this.tb_Name.TabIndex = 2;
@@ -94,7 +94,7 @@
             // tb_LastName
             // 
             this.tb_LastName.Location = new System.Drawing.Point(104, 79);
-            this.tb_LastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_LastName.Margin = new System.Windows.Forms.Padding(2);
             this.tb_LastName.Name = "tb_LastName";
             this.tb_LastName.Size = new System.Drawing.Size(180, 20);
             this.tb_LastName.TabIndex = 3;
@@ -113,7 +113,7 @@
             // tb_Password
             // 
             this.tb_Password.Location = new System.Drawing.Point(104, 160);
-            this.tb_Password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_Password.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Password.Name = "tb_Password";
             this.tb_Password.PasswordChar = '●';
             this.tb_Password.Size = new System.Drawing.Size(180, 20);
@@ -133,7 +133,7 @@
             // tb_ConfPassword
             // 
             this.tb_ConfPassword.Location = new System.Drawing.Point(104, 183);
-            this.tb_ConfPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_ConfPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tb_ConfPassword.Name = "tb_ConfPassword";
             this.tb_ConfPassword.PasswordChar = '●';
             this.tb_ConfPassword.Size = new System.Drawing.Size(180, 20);
@@ -169,7 +169,7 @@
             this.bt_AddUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_AddUser.Image = global::ClubVideo.Properties.Resources.AddUser;
             this.bt_AddUser.Location = new System.Drawing.Point(0, 244);
-            this.bt_AddUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_AddUser.Margin = new System.Windows.Forms.Padding(2);
             this.bt_AddUser.Name = "bt_AddUser";
             this.bt_AddUser.Size = new System.Drawing.Size(302, 67);
             this.bt_AddUser.TabIndex = 4;
@@ -199,9 +199,11 @@
             this.Controls.Add(this.tb_Username);
             this.Controls.Add(this.lb_Username);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(318, 350);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(318, 350);
             this.Name = "UserCU";
             this.Text = "Add_User";
             this.ResumeLayout(false);

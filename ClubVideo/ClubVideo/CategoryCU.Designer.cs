@@ -137,6 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(326, 352);
             this.Controls.Add(this.bt_OK);
             this.Controls.Add(this.tb_Price);
@@ -150,7 +151,9 @@
             this.Controls.Add(this.tb_Name_Fr);
             this.Controls.Add(this.lb_Name_Fr);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(342, 391);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(342, 391);
             this.Name = "CategoryCU";
             this.Text = "CategoryCU";
             this.ResumeLayout(false);

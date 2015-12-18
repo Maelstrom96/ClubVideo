@@ -32,7 +32,7 @@ namespace ClubVideo
             LoadLanguage();
             LoadCategories();
 
-            Height += 30;
+            this.Height += 30;
             btn_Modify.Location = new Point(lb_DescFR.Location.X + 350, lb_DescFR.Location.Y + 130);
             btn_Modify.Visible = true;
 
@@ -80,7 +80,6 @@ namespace ClubVideo
             btn_Previous.Visible = true;
 
             SetLabelCursor(System.Windows.Forms.Cursors.Default);
-            Height += 30;
 
             // Hide
             dtp.Hide();
@@ -114,7 +113,7 @@ namespace ClubVideo
                 lb_Rating.Text = movie.Rated;
                 lb_Time.Text = movie.Runtime.ToString();
                 lb_Director.Text = movie.Director;
-                lb_Date.Text = movie.Date.ToString("dd/MM/yyyy");
+                dtp.Text = movie.Date.ToString("dd/MM/yyyy");
                 cb_Categories.Text = CategoryObject.GetCategoryName(movie.Category);
             }
             catch(Exception)

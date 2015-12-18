@@ -119,7 +119,7 @@
             this.lb_Category.Name = "lb_Category";
             this.lb_Category.Size = new System.Drawing.Size(100, 18);
             this.lb_Category.TabIndex = 6;
-            this.lb_Category.Text = "dep";
+            this.lb_Category.Text = "Category";
             this.lb_Category.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // cb_Categories
@@ -146,7 +146,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 187);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(278, 197);
             this.Controls.Add(this.btn_IMDB);
             this.Controls.Add(this.cb_Categories);
             this.Controls.Add(this.lb_Category);
@@ -158,7 +159,9 @@
             this.Controls.Add(this.rb_Manual);
             this.Controls.Add(this.rb_IMDB);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(294, 236);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(294, 236);
             this.Name = "Add_Movie_Menu";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

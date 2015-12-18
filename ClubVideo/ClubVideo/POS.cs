@@ -22,6 +22,7 @@ namespace ClubVideo
             InitializeComponent();
             cb_NbJours.SelectedIndex = 0;
             UpdateDB();
+            LoadLanguage();
         }
 
         private void UpdateDB()
@@ -75,6 +76,19 @@ namespace ClubVideo
                 dgv_Copies.DataSource = null;
             }
             SearchMovies();
+        }
+
+        private void LoadLanguage()
+        {
+            Text = Main.resManager.GetString("POS_Header", Main.culInfo);
+
+            lb_Film_Copies.Text = Main.resManager.GetString("POS_Film_Copies", Main.culInfo);
+            lb_Search_Members.Text = Main.resManager.GetString("POS_Search_Members", Main.culInfo);
+            lb_Search_Movies.Text = Main.resManager.GetString("POS_Search_Movies", Main.culInfo);
+            lb_Nb_Days.Text = Main.resManager.GetString("POS_Nb_Days", Main.culInfo); 
+
+            btn_Location.Text = Main.resManager.GetString("POS_Rent", Main.culInfo);
+            btn_LocationList.Text = Main.resManager.GetString("POS_RentList", Main.culInfo);
         }
 
         private void dgv_Movies_DoubleClick(object sender, EventArgs e)

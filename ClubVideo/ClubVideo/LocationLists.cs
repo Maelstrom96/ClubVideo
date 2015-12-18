@@ -26,6 +26,7 @@ namespace ClubVideo
             BindingSource source = new BindingSource();
             source.DataSource = ds;
             dgv_Locations.DataSource = source;
+            dgv_Locations.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
     }
 }

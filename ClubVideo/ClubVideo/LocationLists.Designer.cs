@@ -38,16 +38,16 @@
             this.dgv_Locations.AllowUserToAddRows = false;
             this.dgv_Locations.AllowUserToDeleteRows = false;
             this.dgv_Locations.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Locations.Location = new System.Drawing.Point(12, 12);
+            this.dgv_Locations.Location = new System.Drawing.Point(2, 1);
             this.dgv_Locations.Name = "dgv_Locations";
             this.dgv_Locations.ReadOnly = true;
-            this.dgv_Locations.Size = new System.Drawing.Size(770, 501);
+            this.dgv_Locations.Size = new System.Drawing.Size(259, 492);
             this.dgv_Locations.TabIndex = 0;
             // 
             // btn_Quit
             // 
             this.btn_Quit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btn_Quit.Location = new System.Drawing.Point(707, 535);
+            this.btn_Quit.Location = new System.Drawing.Point(176, 499);
             this.btn_Quit.Name = "btn_Quit";
             this.btn_Quit.Size = new System.Drawing.Size(75, 23);
             this.btn_Quit.TabIndex = 1;
@@ -58,11 +58,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 570);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(263, 529);
             this.Controls.Add(this.btn_Quit);
             this.Controls.Add(this.dgv_Locations);
-            this.MaximumSize = new System.Drawing.Size(810, 609);
-            this.MinimumSize = new System.Drawing.Size(810, 609);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(279, 568);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(279, 568);
             this.Name = "LocationLists";
             this.Text = "LocationLists";
             this.Load += new System.EventHandler(this.LocationLists_Load);
