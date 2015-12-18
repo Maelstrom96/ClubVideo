@@ -57,7 +57,7 @@
             this.dgv_Users.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Users.RowTemplate.Height = 24;
             this.dgv_Users.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Users.Size = new System.Drawing.Size(562, 502);
+            this.dgv_Users.Size = new System.Drawing.Size(562, 389);
             this.dgv_Users.TabIndex = 0;
             this.dgv_Users.SelectionChanged += new System.EventHandler(this.dgv_Users_SelectionChanged);
             // 
@@ -183,7 +183,7 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(578, 488);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(578, 193);
+            this.MinimumSize = new System.Drawing.Size(578, 488);
             this.Name = "Manage_Users";
             this.Text = "Manage_Users";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Users)).EndInit();

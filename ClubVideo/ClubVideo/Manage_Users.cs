@@ -22,7 +22,6 @@ namespace ClubVideo
             LoadLanguage();
             Main.UpdateFonts(this);
             Main.RefreshColors(this);
-            UpdateHeight();
             LoadPermissions();
             bt_GroupsEdit.Enabled = false;
         }
@@ -40,16 +39,6 @@ namespace ClubVideo
 
             Text = Main.resManager.GetString("Manage_Users_Header", Main.culInfo);
             lb_SearchUser.Text = Main.resManager.GetString("Manage_Users_Search", Main.culInfo);
-        }
-
-        private void UpdateHeight()
-        {
-            int dgvHeight = (dgv_Users.ColumnHeadersVisible ? dgv_Users.ColumnHeadersHeight : 0) +
-              dgv_Users.Rows.OfType<DataGridViewRow>().Where(r => r.Visible).Sum(r => r.Height);
-
-            //dgv_Users.Height = dgvHeight + 3;
-
-            this.Height = 39 + dgv_Users.Location.Y + dgvHeight < 600 ? 39 + dgv_Users.Location.Y + dgvHeight : 600;
         }
 
         private void LoadUsers()
@@ -87,7 +76,6 @@ namespace ClubVideo
             AddUser_Form.ShowDialog();
 
             LoadUsers();
-            UpdateHeight();
         }
 
         private void bt_EditUser_Click(object sender, EventArgs e)
@@ -110,7 +98,6 @@ namespace ClubVideo
         {
             if (dgv_Users.SelectedRows.Count > 1) bt_EditUser.Enabled = false;
             else bt_EditUser.Enabled = true;
-            UpdateHeight();
         }
 
         private void bt_DeleteUsers_Click(object sender, EventArgs e)
