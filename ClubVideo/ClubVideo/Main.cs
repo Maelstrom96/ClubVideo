@@ -115,7 +115,7 @@ namespace ClubVideo
         {
             foreach (Control c in form.Controls)
             {
-                if (c is TextBox || c is DataGridView)
+                if (c is TextBox || c is DataGridView || c is ListBox)
                 {
                     c.Font = new Font(Properties.Settings.Default.Fonts[0], c.Font.Size);
                     c.ForeColor = Color.Black;
