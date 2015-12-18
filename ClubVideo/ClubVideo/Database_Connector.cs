@@ -275,61 +275,61 @@ namespace ClubVideo
                     cmd.Parameters.Clear();
                     cmd.Parameters.Add(new OracleParameter("userid", userid));
                     cmd.Parameters.Add(new OracleParameter("permission", param));
-
                     cmd.ExecuteNonQuery();
                 }
-
                 if (userid == Main.user.ID) Database.Update.Permissions();
             }
 
             public static void User(int id)
             {
                 string delete = "DELETE FROM users where id=:userid";
-
                 OracleCommand cmd = new OracleCommand(delete, GetConnection());
-
                 cmd.Parameters.Add(new OracleParameter("userid", id));
-
                 cmd.ExecuteNonQuery();
-
                 Database.Update.Users();
+            }
+
+            public static void Copies(int movieId)
+            {
+                string delete = "DELETE FROM movies_copies where movie_id=:movieid";
+                OracleCommand cmd = new OracleCommand(delete, GetConnection());
+                cmd.Parameters.Add(new OracleParameter("movieid", movieId));
+                cmd.ExecuteNonQuery();
+                Database.Update.Movies();
             }
 
             public static void Member(int id)
             {
                 string delete = "DELETE FROM members where id=:memberid";
-
                 OracleCommand cmd = new OracleCommand(delete, GetConnection());
-
                 cmd.Parameters.Add(new OracleParameter("memberid", id));
-
                 cmd.ExecuteNonQuery();
-
                 Database.Update.Members();
             }
 
             public static void Movie(int id)
             {
-                string delete = "DELETE FROM movies where id=:movieid";
-
+                string delete = "UPDATE movies SET DELETEDATE=:datevar where id=:movieid";
                 OracleCommand cmd = new OracleCommand(delete, GetConnection());
-
+                cmd.Parameters.Add(new OracleParameter("datevar", DateTime.Now));
                 cmd.Parameters.Add(new OracleParameter("movieid", id));
-
                 cmd.ExecuteNonQuery();
-
                 Database.Update.Movies();
+
+                /****** OLD *******/
+                //string delete = "DELETE FROM movies where id=:movieid";
+                //OracleCommand cmd = new OracleCommand(delete, GetConnection());
+                //cmd.Parameters.Add(new OracleParameter("movieid", id));
+                //cmd.ExecuteNonQuery();
+                //Database.Update.Movies();
             }
+
             public static void Category(int id)
             {
                 string delete = "DELETE FROM categories where id=:categoryid";
-
                 OracleCommand cmd = new OracleCommand(delete, GetConnection());
-
                 cmd.Parameters.Add(new OracleParameter("categoryid", id));
-
                 cmd.ExecuteNonQuery();
-
                 Database.Update.Categories();
             }
         }
@@ -405,6 +405,17 @@ namespace ClubVideo
                 cmd.ExecuteNonQuery();
             }
 
+            public static void Copies(int movie)
+            {
+                string insert = "INSERT INTO movies_copies VALUES (COPIESID.NEXTVAL, :movieID, null)";
+
+                OracleCommand cmd = new OracleCommand(insert, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("movieID", movie));
+                cmd.ExecuteNonQuery();
+
+                Database.Update.Movies();
+            }
             public static void Movie(MovieObject movie)
             {
                 string insert = "INSERT INTO movies VALUES (MOVIEID.NEXTVAL, :name_en, :name_fr, :desc_en, :desc_fr, :directors, :releasedate, :rating, :runtime, :image, :category, :deletedate)";
