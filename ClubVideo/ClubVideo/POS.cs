@@ -53,7 +53,8 @@ namespace ClubVideo
 
         private void SearchMovies()
         {
-            _bsMovies.Filter = "NAME_EN like '" + txb_MoviesSearch.Text + "%'" +
+            _bsMovies.Filter = "CONVERT(ID, 'System.String') like '" + txb_MoviesSearch.Text + "%'" +
+                "or NAME_EN like '" + txb_MoviesSearch.Text + "%'" +
                 "or NAME_FR like '" + txb_MoviesSearch.Text + "%'";
         }
 
