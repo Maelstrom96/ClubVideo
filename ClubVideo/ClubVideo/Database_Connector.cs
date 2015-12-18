@@ -587,6 +587,20 @@ namespace ClubVideo
 
                 Database.Update.Categories();
             }
+
+            public static void Rentals(int copyID)
+            {
+                string update = "UPDATE rentals SET RETURNDATE=:returnDate where copy_id = :copyID and RETURNDATE is null";
+                DateTime returnDate = DateTime.Now;
+                OracleCommand cmd = new OracleCommand(update, GetConnection());
+
+                cmd.Parameters.Add(new OracleParameter("returnDate", returnDate));
+                cmd.Parameters.Add(new OracleParameter("copyID", copyID.ToString()));
+
+                cmd.ExecuteNonQuery();
+
+                Database.Update.Locations();
+            }
         }
     }
 }

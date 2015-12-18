@@ -62,7 +62,7 @@ namespace ClubVideo
             coalesce(NBCategory.NBFilm, 0) as NBFilm
         from Categories left outer join NBCategory on NBCategory.CATEGORY = Categories.ID";
 
-        private static string Locations_Select = "SELECT * FROM RENTALS";
+        private static string Locations_Select = "select copy_id as id, movies_copies.MOVIE_ID from rentals inner join movies_copies on movies_copies.ID=rentals.COPY_ID where rentals.startdate is not null and rentals.returndate is null";
         private static string Copies_Select = @"select movies_copies.id, movies_copies.MOVIE_ID from movies_copies where movies_copies.DELETEDATE is null
         minus
         select copy_id as id, movies_copies.MOVIE_ID from rentals inner join movies_copies on movies_copies.ID=rentals.COPY_ID where rentals.startdate is not null and rentals.returndate is null";
@@ -228,7 +228,7 @@ namespace ClubVideo
             public static void Locations()
             {
                 DS.Tables["Rentals"].Clear();
-                GetDBData("Rentals", Movies_Select);
+                GetDBData("Rentals", Locations_Select);
             }
             
         }
